@@ -264,9 +264,9 @@ All source-data files and training scripts are versioned in the public repositor
 
 ## 5. Methods (extended)
 
-### 5.1 Heat-kernel risk map
+### 5.1 Heat-kernel risk map (closed-form structural prior; no learning)
 
-Heat map = $G_\sigma * M_t$ where $M_t$ is the baseline segmentation mask in standardised crop coordinates and $G_\sigma$ is a Gaussian kernel at $\sigma = 2.5$ voxels. The kernel parameter was selected on a held-out UCSF development subset (N=80) not used in any external validation, and frozen before all reported experiments.
+The heat-kernel risk map is a **closed-form Gaussian convolution** of the binary baseline lesion mask $M_t$ in standardised crop coordinates: $\hat{r}(\mathbf{x}) = G_\sigma * M_t(\mathbf{x})$ with $\sigma = 2.5$ voxels. **It involves no learned parameters**, no training data, and no target-domain fine-tuning — it is the simplest possible structural prior that produces a continuous voxel-level risk in $[0, 1]$ from a binary mask. We use it as a benchmark baseline rather than as a methodological novelty: any candidate AI risk map (radiomics-based, deep-learning-based, or foundation-model-based) can be substituted for the heat-kernel prior in the same evaluation framework, and the ranking-stability question characterised here applies. The kernel parameter $\sigma = 2.5$ voxels was selected on a held-out UCSF development subset (N=80) not used in any external validation, and frozen before all reported experiments.
 
 ### 5.2 Lightweight 3D U-Net
 
@@ -300,7 +300,7 @@ Python 3.11.9; PyTorch 2.12 (CUDA 12.8); MONAI 1.5.2 (UNETR + SwinUNETR); nibabe
 
 ## CRediT author contributions
 
-[Author roles to be filled at acceptance.]
+This work is sole-authored. All CRediT contributor roles — Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Writing (original draft), Writing (review and editing), Visualization, and Project administration — were performed by the corresponding author. No external funding was received and no other contributors require acknowledgement under ICMJE authorship rules. Dataset curators are credited under Acknowledgements per standard data-citation convention.
 
 ## Acknowledgements
 

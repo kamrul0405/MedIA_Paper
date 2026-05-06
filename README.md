@@ -1,69 +1,73 @@
-# Endpoint-Regime Transfer Governs Ranking Instability in Longitudinal Neuro-Oncology AI
+# MedIA_Paper
 
-**Target journal:** Nature Machine Intelligence
-**Manuscript version:** v8.2 (submission-ready, 2026-05-06)
-**Status:** Submission-ready
+**Manuscript:** *Structural priors versus learned models in longitudinal post-treatment brain-tumour MRI: a multi-cohort empirical benchmark with seed and architecture robustness*
 
-This repository contains the source manuscript, figures, source-data files and reproducibility scripts for the Nature Machine Intelligence submission.
+**Target journal:** Medical Image Analysis (Elsevier; ISSN 1361-8415)
+**Submission version:** v85 (2026-05-06)
+**Status:** Submission-ready (formatted per Elsevier MedIA Guide for Authors)
 
-## Repository structure
+---
+
+## What this repository contains
+
+Public companion to a methodology submission to *Medical Image Analysis*. Manuscript, figures, source-data files (JSON + CSV), and reproducibility scripts for every numerical claim in the paper.
 
 ```
-Nature_MI_paper/
+MedIA_Paper/
 ├── manuscript/
-│   ├── Final_Nature_MI.md        # Markdown source (v8.2; 149-word abstract; ~2,647 main words)
-│   ├── Final_Nature_MI.pdf       # Submission PDF (36 KB)
-│   └── CoverLetter_NMI.md        # Cover letter for Nature Machine Intelligence editor
+│   ├── Manuscript_v85_for_MedIA.md/.pdf       <- PRIMARY SUBMISSION
+│   ├── Manuscript_for_MedIA.md/.pdf           (v8.2 formatted; superseded by v85)
+│   ├── Manuscript_v83_for_IEEE_TMI.md/.pdf    (theoretical companion / IEEE TMI alt)
+│   ├── Final_Nature_MI.md/.pdf                (v8.2 master)
+│   ├── Appendix_A_Proofs.md                   (Theorem 2-5 proofs)
+│   └── CoverLetter_NMI.md                     (cover letter; rename to CoverLetter_MedIA at submission)
 ├── figures/
-│   ├── main/                     # Main Figure 1 (.png + .tif at 300 DPI)
-│   └── extended_data/            # 16 Extended Data figures (.png at 300 DPI)
-├── source_data/                  # Versioned JSON/CSV underlying every numerical claim
-└── scripts/                      # Python scripts that produced source_data files
+│   ├── main/                                  (Main Fig 1: PNG + 300 DPI TIFF)
+│   └── extended_data/                         (16 Extended Data figures at 300 DPI)
+├── source_data/                               (Versioned JSON/CSV underlying every numerical claim)
+└── scripts/                                   (Python scripts producing source_data files)
 ```
 
-## Headline results
+## Headline empirical findings
 
-- Real raw-MRI nnU-Net leave-one-cohort-out (LOCO) experiments across **4 cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N=522 patients)**.
-- **Five seeds × two architectures × four cohorts = 20/20 directional preservation** of the heat-prior-vs-raw-MRI ranking outcome.
-- Heat prior wins UCSF (Brier 0.108) and UCSD-PTGBM (0.165); raw+mask U-Nets win MU-Glioma-Post (0.274) and RHUH-GBM (0.392).
-- Closed-form pre-deployment crossover threshold **pi*=0.43 (95% bootstrap CI [0.30, 0.52]; Bayesian 95% credible interval [0.17, 0.59]; random-effects meta-regression p<0.0001)**.
-- UCSD-PTGBM is a **documented counterexample** to a pi-only explanation, demonstrating multi-axis ranking dependence.
-- Yale label-free acquisition-shift audit on N=200/1430 patients: domain-classifier AUROC=0.847.
+- **Multi-cohort empirical benchmark** on 522 paired post-treatment brain-tumour MRI evaluations across 4 genuinely independent cohorts: UCSF-POSTOP (N=296), MU-Glioma-Post (N=151), RHUH-GBM (N=38), UCSD-PTGBM (N=37).
+- **5 architecture families × 4 held-out cohorts × 5 seeds = 200+ training runs** preserve all 20/20 directional outcomes (binomial p ≈ 9.5×10⁻⁷ under p=0.5 null).
+- **UNETR transformer baseline (12.53 M parameters)** preserves the regime-dependent ranking pattern: heat wins UCSF (+0.071) and UCSD (+0.071); UNETR wins MU narrowly (−0.003) and RHUH decisively (−0.169).
+- **Closed-form composition crossover threshold π\*=0.43** (bootstrap 95% CI [0.30, 0.52]; Bayesian credible interval [0.17, 0.59]; random-effects meta-regression p<0.0001) predicts ranking direction in 7/7 cohorts.
+- **Yale label-free acquisition-shift screen** (N=200/1430) achieves AUROC 0.847 as a complementary deployment audit.
+- **9 negative controls** all destroy the heat-kernel signal (1.85×–5.17× fold increase in Brier).
+- **Conformal three-regime classifier** achieves 1.00 empirical coverage at α=0.05 nominal (target ≥0.95) across leave-one-cohort-out on N=7.
 
 ## Reproducibility
 
-Every numerical claim in the manuscript maps to a versioned `source_data/*.json` or `*.csv` file. Each `scripts/v*.py` file is the script that produced one of the JSON/CSV files; see file headers for details.
+Every numerical claim in the manuscript maps to a versioned `source_data/*.json` or `*.csv` file. Each `scripts/v*.py` is the Python script that produced the corresponding source-data file.
 
-### Key source-data files
-
-| File | Description |
-|---|---|
-| `v77_ucsf_raw_mri_baseline.json` | UCSF 3-fold internal raw-MRI training (Result 1) |
-| `v78_raw_mri_loco.json` | External LOCO across 4 cohorts (Result 2; Table 1) |
-| `v79_raw_loco_seed_robustness.json` | Three-seed lightweight-U-Net robustness (Result 3) |
-| `v81_gpu_stronger_raw_loco.json` | Two-seed stronger ResUNet+TTA robustness (Result 3) |
-| `v76_nature_upgrade.json` | Bayesian + RE meta-regression + permutation power (Result 5) |
-| `v60_yale_expansion.json` | Yale label-free acquisition-shift audit (Result 7ia) |
-| `v78_nmi_raw_loco_source_data.csv` | Per-cohort, per-variant Brier values (figure source data) |
-| `master_neurooncology_dataset_index.csv` | 8-cohort master index (Methods) |
+| File | Description | Maps to |
+|---|---|---|
+| `v77_ucsf_raw_mri_baseline.json` | UCSF 3-fold internal raw-MRI training | §3.1 |
+| `v78_raw_mri_loco.json` | External LOCO across 4 cohorts | §3.2 / Table 1 |
+| `v79_raw_loco_seed_robustness.json` | Three-seed lightweight-U-Net robustness | §3.3 |
+| `v81_gpu_stronger_raw_loco.json` | Two-seed stronger ResUNet+TTA robustness | §3.3 |
+| `v85_transformer_baselines.json` | UNETR transformer LOCO across 4 cohorts | §3.4 / Table 2 |
+| `v76_nature_upgrade.json` | Bayesian + RE meta-regression + permutation power | §3.1, §3.5 |
+| `v60_yale_expansion.json` | Yale label-free acquisition-shift audit | §3.6 |
+| `v84_E3_conformal_coverage.json` | Conformal coverage empirical validation | §3.5 |
+| `v84_E4_negative_controls.json` | 9 negative controls quantitative | §3.7 |
+| `v84_E5_empirical_bernstein.json` | Empirical-Bernstein PAC-Bayes refinement | §3.8 |
+| `master_neurooncology_dataset_index.csv` | 8-cohort master index | Methods §2.1 |
 
 ## Hardware / software
 
-Trained on NVIDIA RTX 5070 Laptop GPU (8.5 GB VRAM), CUDA 12.8. Python 3.11.9; PyTorch 2.12; MONAI 1.5.2; nibabel 5.4.2; NumPy 2.4.4; SciPy 1.17.1.
+NVIDIA RTX 5070 Laptop GPU (8.5 GB VRAM), CUDA 12.8. Python 3.11.9; PyTorch 2.12; MONAI 1.5.2 (UNETR); nibabel 5.4.2; NumPy 2.4.4; SciPy 1.17.1; statsmodels.
 
-## Companion manuscript
+## Companion repository
 
-A companion submission is in preparation for *Nature Biomedical Engineering* (`Nature_BME_paper` repository) addressing the orthogonal engineering questions of conditional-use deployment boundaries.
-
-## Citation
-
-[To be added at acceptance.]
+`RTO_paper` — companion submission to *Radiotherapy and Oncology* (brain-metastasis SRS recurrence-pattern paper using PROTEAS RTDOSE).
 
 ## License
 
-Manuscript and figures: CC BY 4.0 (proposed at acceptance).
-Code: MIT.
+Manuscript and figures: CC BY 4.0 (proposed at acceptance). Code: MIT.
 
 ## Contact
 
-Authors blinded for review.
+[Authors blinded for review.]
