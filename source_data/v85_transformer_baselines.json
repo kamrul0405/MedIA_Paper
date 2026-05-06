@@ -1,0 +1,77 @@
+{
+  "version": "v85",
+  "timestamp": "2026-05-06T06:35:33",
+  "device": "cuda",
+  "epochs": 22,
+  "seed": 8501,
+  "results": {
+    "unetr": [
+      {
+        "held_out": "UCSF-POSTOP",
+        "model": "unetr",
+        "n_test": 296,
+        "n_params_M": 12.53,
+        "transformer_brier_mean": 0.15498417520241156,
+        "transformer_brier_sd": 0.038768469967903264,
+        "heat_brier_mean": 0.0843849829759927,
+        "delta_transformer_minus_heat": 0.07059919222641886,
+        "transformer_beats_heat": false,
+        "elapsed_sec": 128.7239441871643
+      },
+      {
+        "held_out": "MU-Glioma-Post",
+        "model": "unetr",
+        "n_test": 151,
+        "n_params_M": 12.53,
+        "transformer_brier_mean": 0.2572410779678269,
+        "transformer_brier_sd": 0.1229941529519402,
+        "heat_brier_mean": 0.2598464491265203,
+        "delta_transformer_minus_heat": -0.0026053711586933592,
+        "transformer_beats_heat": true,
+        "elapsed_sec": 194.72085523605347
+      },
+      {
+        "held_out": "RHUH-GBM",
+        "model": "unetr",
+        "n_test": 38,
+        "n_params_M": 12.53,
+        "transformer_brier_mean": 0.31422014436439466,
+        "transformer_brier_sd": 0.10029458776875523,
+        "heat_brier_mean": 0.4831262005395011,
+        "delta_transformer_minus_heat": -0.16890605617510646,
+        "transformer_beats_heat": true,
+        "elapsed_sec": 251.14151692390442
+      },
+      {
+        "held_out": "UCSD-PTGBM",
+        "model": "unetr",
+        "n_test": 37,
+        "n_params_M": 12.53,
+        "transformer_brier_mean": 0.15802037957552317,
+        "transformer_brier_sd": 0.042609065682182805,
+        "heat_brier_mean": 0.0874559297729787,
+        "delta_transformer_minus_heat": 0.07056444980254448,
+        "transformer_beats_heat": false,
+        "elapsed_sec": 253.30341911315918
+      }
+    ],
+    "swinunetr": [
+      {
+        "held_out": "UCSF-POSTOP",
+        "error": "SwinUNETR.__init__() got an unexpected keyword argument 'img_size'"
+      },
+      {
+        "held_out": "MU-Glioma-Post",
+        "error": "SwinUNETR.__init__() got an unexpected keyword argument 'img_size'"
+      },
+      {
+        "held_out": "RHUH-GBM",
+        "error": "SwinUNETR.__init__() got an unexpected keyword argument 'img_size'"
+      },
+      {
+        "held_out": "UCSD-PTGBM",
+        "error": "SwinUNETR.__init__() got an unexpected keyword argument 'img_size'"
+      }
+    ]
+  }
+}
