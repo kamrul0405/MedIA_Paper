@@ -1,6 +1,6 @@
 """
-Build the Scientific Data (Nature Portfolio) Data Descriptor PDF from
-Manuscript_for_ScientificData.md.
+Build the Computers in Biology and Medicine (Elsevier) submission PDF from
+Manuscript_for_CompBioMed.md.
 
 Renders the markdown to a Times-New-Roman, single-column letter-size PDF with
 auto-embedded figures wherever a caption block contains a "Source image:"
@@ -13,10 +13,10 @@ from pathlib import Path
 
 ROOT = Path(__file__).parent.parent
 MS_DIR = ROOT / "manuscript"
-SRC_MD = MS_DIR / "Manuscript_for_ScientificData.md"
-OUT_PDF = MS_DIR / "Manuscript_for_ScientificData.pdf"
-HEADER = "Multi-cohort longitudinal post-treatment brain-tumour MRI benchmark"
-JOURNAL = "Scientific Data (Nature Portfolio)"
+SRC_MD = MS_DIR / "Manuscript_for_CompBioMed.md"
+OUT_PDF = MS_DIR / "Manuscript_for_CompBioMed.pdf"
+HEADER = "Structural priors vs learned models in longitudinal post-treatment brain-tumour MRI"
+JOURNAL = "Computers in Biology and Medicine (Elsevier)"
 
 from reportlab.lib import colors
 from reportlab.lib.pagesizes import letter
