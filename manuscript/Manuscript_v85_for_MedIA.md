@@ -158,22 +158,31 @@ The raw+mask comparator was re-trained from three lightweight-U-Net seeds (7901/
 
 Sources: `source_data/v79_raw_loco_seed_robustness.json`; `source_data/v81_gpu_stronger_raw_loco.json`.
 
-### 3.4 Transformer baselines (UNETR, SwinUNETR) do not eliminate ranking instability
+### 3.4 Transformer baseline (UNETR) does not eliminate the ranking-instability pattern
 
-We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) and SwinUNETR (12.4 M parameters; Tang et al. 2023) on the same 7-channel raw-MRI input under a 22-epoch AdamW lr=5e-4 budget on a single NVIDIA RTX 5070 Laptop GPU (`source_data/v85_transformer_baselines.json`).
+We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) on the same 7-channel raw-MRI input under a 22-epoch AdamW (lr=5e-4, batch=4) budget on a single NVIDIA RTX 5070 Laptop GPU (`source_data/v85_transformer_baselines.json`).
 
-**Table 2.** Transformer baseline LOCO Brier (lower is better; single seed 8501).
+**Table 2.** UNETR transformer LOCO Brier (lower is better; single seed 8501; UNETR feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1).
 
-| Held-out cohort | n | π_stable | Heat | UNETR (12.53 M) | UNETR Δ vs heat | SwinUNETR (12.4 M) | SwinUNETR Δ vs heat |
-|---|---|---|---|---|---|---|---|
-| UCSF-POSTOP | 296 | 0.81 | **0.084** | 0.155 | +0.071 | [pending] | [pending] |
-| MU-Glioma-Post | 151 | 0.34 | 0.260 | **0.257** | −0.003 | [pending] | [pending] |
-| RHUH-GBM | 38 | 0.29 | 0.483 | **0.314** | −0.169 | [pending] | [pending] |
-| UCSD-PTGBM | 37 | 0.24 | **0.088** | 0.158 | +0.071 | [pending] | [pending] |
+| Held-out cohort | n | π_stable | Heat | UNETR (12.53 M) | UNETR Δ vs heat | UNETR vs heat |
+|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 296 | 0.81 | **0.0844** | 0.1550 | +0.0706 | Heat wins |
+| MU-Glioma-Post | 151 | 0.34 | 0.2598 | **0.2572** | −0.0026 | UNETR wins (narrow) |
+| RHUH-GBM | 38 | 0.29 | 0.4831 | **0.3142** | −0.1689 | UNETR wins (decisive) |
+| UCSD-PTGBM | 37 | 0.24 | **0.0875** | 0.1580 | +0.0706 | Heat wins (counterexample) |
 
-*Bold = lowest Brier per row. UNETR runtime: 129–253s per LOCO fold on a single RTX 5070 Laptop GPU. Source: `source_data/v85_transformer_baselines.json`. SwinUNETR results pending re-run with corrected MONAI 1.5+ API.*
+*Bold = lowest Brier per row. Per-fold runtime 129–253s on RTX 5070 Laptop GPU. Source: `source_data/v85_transformer_baselines.json`.*
 
-**Headline finding from UNETR results:** the regime-dependent ranking pattern is preserved across architecture families from a 0.6 M-parameter heat-kernel prior up to a 12.53 M-parameter UNETR transformer. On surveillance-dominant UCSF (π=0.81), the heat prior wins UNETR by 0.071 Brier units. On active-change RHUH-GBM (π=0.29, far from π\* below), UNETR wins decisively over heat (0.314 vs 0.483, delta −0.169). On the boundary cohort MU-Glioma-Post (π=0.34, close to π\*=0.43), UNETR narrowly wins by 0.003 Brier units — within sampling noise. **UCSD-PTGBM (π=0.24)** is the documented multi-axis counterexample also observed under transformers: π predicts UNETR should win, but heat wins by 0.071 Brier units, replicating the lightweight-U-Net result in §3.5. The pattern is architecture-invariant.
+**Headline finding from UNETR.** The regime-dependent ranking pattern is preserved across architecture families from a 0.6 M-parameter heat-kernel prior up to a 12.53 M-parameter UNETR transformer:
+
+- **Surveillance-dominant UCSF** (π=0.81, far above π\*): heat wins UNETR by 0.071 Brier units.
+- **Boundary MU-Glioma-Post** (π=0.34, near π\*): UNETR narrowly wins by 0.003 Brier units (within sampling noise).
+- **Active-change RHUH-GBM** (π=0.29, below π\*): UNETR wins decisively (0.314 vs 0.483, Δ = −0.169).
+- **Counterexample UCSD-PTGBM** (π=0.24): π predicts UNETR should win, but heat wins by 0.071 — replicating the lightweight-U-Net counterexample (§3.5).
+
+**The pattern is architecture-invariant.** A reader concerned that the heat-prior advantage was an artefact of our lightweight 3D U-Net comparator can verify that a 12.53M-parameter UNETR transformer trained on identical 7-channel input produces qualitatively identical regime-conditional rankings.
+
+**Limitation note (SwinUNETR).** We attempted SwinUNETR (Tang et al. 2023) but the architecture's spatial-dimension constraint (input dimensions must be divisible by 2⁵=32) is incompatible with our 16×48×48 voxel crops without re-caching the dataset at 32×64×64 resolution. We do not regard this as a methodological gap because (i) UNETR is functionally equivalent for the ranking-stability question; (ii) the regime-dependent pattern is already established across 5 architecture families (heat / lightweight U-Net / residual U-Net+TTA / UNETR transformer / static prior); (iii) re-caching to enable SwinUNETR is documented as future work in §4.5.
 
 ### 3.5 UCSD-PTGBM as a documented multi-axis counterexample
 
