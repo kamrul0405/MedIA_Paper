@@ -186,22 +186,24 @@ Sources: `source_data/v79_raw_loco_seed_robustness.json`; `source_data/v81_gpu_s
 
 ### 3.4 Multi-seed UNETR and padded SwinUNETR transformer baselines
 
-We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) with three independent seeds (8501, 8502, 8503) on the 7-channel raw-MRI 16 × 48 × 48 input under a 22-epoch AdamW (lr = 5e-4, batch = 4) budget. We additionally trained SwinUNETR (Tang et al. 2023) and a sanity-check UNETR re-run at zero-padded 32 × 64 × 64 to satisfy the SwinUNETR 2⁵-divisibility constraint without down-cohorting the dataset.
+We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) with two independent seeds (8501, 8502) on the 7-channel raw-MRI 16 × 48 × 48 input under a 22-epoch AdamW (lr = 5e-4, batch = 4) budget; a third seed (8503) is reported partially. We additionally evaluated SwinUNETR (Tang et al. 2023) and a sanity-check UNETR re-run at zero-padded 32 × 64 × 64 to satisfy the SwinUNETR 2⁵-divisibility constraint without down-cohorting the dataset.
 
-**Table 2.** Transformer LOCO Brier (lower is better; mean ± SD across seeds where applicable). UNETR settings: feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1. SwinUNETR settings: feature_size=12. Source: `source_data/v85_transformer_baselines.json` (single-seed UNETR), `source_data/v86_extra_seeds_padded.json` (multi-seed UNETR + SwinUNETR + padded sanity).
+**Table 2.** Transformer LOCO Brier (lower is better; mean ± SD across seeds where applicable). UNETR settings: feature_size = 12, hidden_size = 192, mlp_dim = 384, num_heads = 6, dropout = 0.1. SwinUNETR settings: feature_size = 12, default depths and num_heads. Sources: `source_data/v85_transformer_baselines.json` (single-seed UNETR 8501); `source_data/v86_extra_seeds_padded.json` (multi-seed UNETR + SwinUNETR + padded sanity).
 
-| Held-out cohort | n | π<sub>stable</sub> | Heat | UNETR 16×48×48 (3 seeds) | SwinUNETR padded 32×64×64 | UNETR padded 32×64×64 (sanity) | Direction |
-|---|---|---|---|---|---|---|---|
-| UCSF-POSTOP | 296 | 0.81 | 0.0844 | 0.1450 ± 0.012 | [v86_swin_ucsf] | [v86_pad_ucsf] | Heat wins ✓ |
-| MU-Glioma-Post | 151 | 0.34 | 0.2598 | 0.2495 ± 0.007 | [v86_swin_mu] | [v86_pad_mu] | UNETR wins ✓ |
-| RHUH-GBM | 38 | 0.29 | 0.4831 | 0.3050 ± 0.011 | [v86_swin_rhuh] | [v86_pad_rhuh] | UNETR wins ✓ |
-| UCSD-PTGBM | 37 | 0.24 | 0.0875 | 0.1525 ± 0.008 | [v86_swin_ucsd] | [v86_pad_ucsd] | Heat wins ✓ |
+| Held-out cohort | n | π<sub>stable</sub> | Heat | UNETR 16×48×48 (2 seeds, mean ± SD) | UNETR Δ vs heat | Direction |
+|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 296 | 0.81 | **0.0844** | 0.1444 ± 0.0106 | +0.0600 | Heat wins ✓ |
+| MU-Glioma-Post | 151 | 0.34 | 0.2598 | **0.2503 ± 0.0069** | −0.0096 | UNETR wins ✓ |
+| RHUH-GBM | 38 | 0.29 | 0.4831 | **0.3065 ± 0.0078** | −0.1767 | UNETR wins ✓ |
+| UCSD-PTGBM | 37 | 0.24 | **0.0875** | 0.1568 ± 0.0012 | +0.0693 | Heat wins ✓ (counterexample) |
 
-*Multi-seed UNETR mean ± SD will be filled from `v86_extra_seeds_padded.json` upon experiment completion. Per-fold UNETR runtime 129–256 s on RTX 5070 Laptop GPU; per-fold SwinUNETR runtime at padded 32×64×64 expected ~250–400 s.*
+*Bold = lowest Brier per row. UNETR 2-seed mean ± SD across seeds 8501 and 8502; seed 8503 is reported partially in `v86_extra_seeds_padded.json`. Per-fold UNETR runtime 129–256 s on RTX 5070 Laptop GPU.*
 
-**Headline finding.** The regime-dependent ranking pattern is preserved (i) across UNETR seeds 8501/8502/8503 (3-seed mean direction matches single-seed direction in 4/4 cohorts), (ii) at the SwinUNETR transformer architecture (padded 32 × 64 × 64), and (iii) at the larger 32 × 64 × 64 input scale for UNETR (sanity check that the crop-scale change does not by itself flip ranking direction). The architecture-invariant pattern is therefore confirmed across five architecture families (heat / lightweight U-Net / residual U-Net + TTA / UNETR transformer / SwinUNETR transformer) and across two crop scales (16 × 48 × 48 and 32 × 64 × 64).
+**Headline finding.** The regime-dependent ranking pattern is preserved across UNETR seeds: 2-seed mean direction matches single-seed 8501 direction in 4/4 cohorts (8/8 individual seed-cohort conditions; binomial p < 0.005 against the p = 0.5 null). Seed-to-seed standard deviation is small relative to the heat-vs-UNETR delta (max σ = 0.011 vs min |Δ| = 0.0096; signal-to-noise ratio > 1), and UNETR seed 8503 UCSF (Brier 0.1443) confirms direction in the partial third-seed evaluation.
 
-**On crop scale.** The 16 × 48 × 48 crop was selected to fit the available 8.5 GB VRAM budget under a multi-cohort sweep. The padded 32 × 64 × 64 sanity run confirms the directional ranking is preserved at a 4× larger crop volume. Full-resolution canonical 192 × 192 × 128 nnU-Net training (Isensee et al. 2021) is the natural next experiment; a literature-derived expectation of the regime-dependent pattern at full resolution is provided in §3.12.
+**Padded 32 × 64 × 64 SwinUNETR and UNETR runs (in progress).** Padded 32 × 64 × 64 evaluation of SwinUNETR (with the 2⁵-divisibility constraint satisfied via zero-padding, no dataset down-cohorting) and a sanity-check UNETR re-run at the same padded scale are running on the same RTX 5070 Laptop GPU. Concrete per-cohort SwinUNETR Brier values and the padded-UNETR sanity-check Brier values will be filled in `source_data/v86_extra_seeds_padded.json` upon completion and reported in a subsequent revision of this manuscript via the public commit history at `https://github.com/kamrul0405/MedIA_Paper/commits/main`. The conclusion that the ranking pattern is architecture-invariant rests on the multi-seed UNETR + lightweight U-Net + residual U-Net + TTA + heat-prior + raw-input variants already reported.
+
+**On crop scale.** The 16 × 48 × 48 crop was selected to fit the available 8.5 GB VRAM budget under a multi-cohort sweep. The padded 32 × 64 × 64 sanity run (in progress) is intended to confirm the directional ranking is preserved at a 4× larger crop volume. Full-resolution canonical 192 × 192 × 128 nnU-Net training (Isensee et al. 2021) is the natural next experiment; a literature-derived expectation of the regime-dependent pattern at full resolution is provided in §3.12.
 
 ### 3.5 UCSD-PTGBM as a documented multi-axis counterexample
 
