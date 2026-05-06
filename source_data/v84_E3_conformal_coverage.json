@@ -1,0 +1,306 @@
+{
+  "cohorts": {
+    "UCSF-POSTOP": [
+      0.811,
+      "surveillance"
+    ],
+    "MU-Glioma-Post": [
+      0.344,
+      "active-change"
+    ],
+    "RHUH-GBM": [
+      0.289,
+      "active-change"
+    ],
+    "UCSD-PTGBM": [
+      0.243,
+      "active-change"
+    ],
+    "LUMIERE-FULL": [
+      0.209,
+      "active-change"
+    ],
+    "PROTEAS-brain-mets": [
+      0.188,
+      "active-change"
+    ],
+    "UPENN-GBM": [
+      0.35,
+      "active-change"
+    ]
+  },
+  "alphas": [
+    0.05,
+    0.1,
+    0.2
+  ],
+  "results": {
+    "alpha_0.05": {
+      "nominal_target": 0.95,
+      "empirical_coverage": 1.0,
+      "covers_target": true,
+      "per_cohort": [
+        {
+          "held_out": "UCSF-POSTOP",
+          "test_pi": 0.811,
+          "test_truth": "surveillance",
+          "q": 0.242,
+          "pred_set": [
+            "surveillance"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "MU-Glioma-Post",
+          "test_pi": 0.344,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "RHUH-GBM",
+          "test_pi": 0.289,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UCSD-PTGBM",
+          "test_pi": 0.243,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "LUMIERE-FULL",
+          "test_pi": 0.209,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "PROTEAS-brain-mets",
+          "test_pi": 0.188,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UPENN-GBM",
+          "test_pi": 0.35,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        }
+      ]
+    },
+    "alpha_0.1": {
+      "nominal_target": 0.9,
+      "empirical_coverage": 1.0,
+      "covers_target": true,
+      "per_cohort": [
+        {
+          "held_out": "UCSF-POSTOP",
+          "test_pi": 0.811,
+          "test_truth": "surveillance",
+          "q": 0.242,
+          "pred_set": [
+            "surveillance"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "MU-Glioma-Post",
+          "test_pi": 0.344,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "RHUH-GBM",
+          "test_pi": 0.289,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UCSD-PTGBM",
+          "test_pi": 0.243,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "LUMIERE-FULL",
+          "test_pi": 0.209,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "PROTEAS-brain-mets",
+          "test_pi": 0.188,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UPENN-GBM",
+          "test_pi": 0.35,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        }
+      ]
+    },
+    "alpha_0.2": {
+      "nominal_target": 0.8,
+      "empirical_coverage": 1.0,
+      "covers_target": true,
+      "per_cohort": [
+        {
+          "held_out": "UCSF-POSTOP",
+          "test_pi": 0.811,
+          "test_truth": "surveillance",
+          "q": 0.242,
+          "pred_set": [
+            "surveillance"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "MU-Glioma-Post",
+          "test_pi": 0.344,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "RHUH-GBM",
+          "test_pi": 0.289,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UCSD-PTGBM",
+          "test_pi": 0.243,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "LUMIERE-FULL",
+          "test_pi": 0.209,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "PROTEAS-brain-mets",
+          "test_pi": 0.188,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        },
+        {
+          "held_out": "UPENN-GBM",
+          "test_pi": 0.35,
+          "test_truth": "active-change",
+          "q": 0.38100000000000006,
+          "pred_set": [
+            "uncertain",
+            "surveillance",
+            "active-change"
+          ],
+          "covers": true
+        }
+      ]
+    }
+  }
+}

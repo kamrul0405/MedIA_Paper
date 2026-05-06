@@ -1,0 +1,54 @@
+{
+  "version": "v84_master",
+  "timestamp": "2026-05-06",
+  "E1_seeds_completed": 12,
+  "E1_rasn_beats_best_count": 2,
+  "E1_rasn_beats_best_per_cohort": {
+    "UCSF-POSTOP": 0,
+    "MU-Glioma-Post": 2,
+    "RHUH-GBM": 0,
+    "UCSD-PTGBM": 0
+  },
+  "E1_mean_regret_vs_oracle": 0.03872537615460221,
+  "E1_per_cohort_mean_regret": {
+    "UCSF-POSTOP": 0.027211597510760337,
+    "MU-Glioma-Post": -0.006627609079526854,
+    "RHUH-GBM": 0.11730488121770975,
+    "UCSD-PTGBM": 0.017012634969465614
+  },
+  "E2_hard_router_summary": [
+    {
+      "cohort": "UCSF-POSTOP",
+      "rasn_brier": 0.11123930987260128,
+      "heat_brier": 0.0843849829759927,
+      "learnt_brier": 0.13011447672191
+    },
+    {
+      "cohort": "MU-Glioma-Post",
+      "rasn_brier": 0.2709923586530599,
+      "heat_brier": 0.2598464491265203,
+      "learnt_brier": 0.2937345423963883
+    },
+    {
+      "cohort": "RHUH-GBM",
+      "rasn_brier": 0.4670870372731435,
+      "heat_brier": 0.4831262005395011,
+      "learnt_brier": 0.3007253502544604
+    },
+    {
+      "cohort": "UCSD-PTGBM",
+      "rasn_brier": 0.10879351929906245,
+      "heat_brier": 0.0874559297729787,
+      "learnt_brier": 0.12653261715093175
+    }
+  ],
+  "E3_coverage": {
+    "alpha_0.05": 1.0,
+    "alpha_0.1": 1.0,
+    "alpha_0.2": 1.0
+  },
+  "E4_max_fold_increase": 5.174313152486065,
+  "E4_min_fold_increase": 1.8485068299462546,
+  "E4_baseline_brier": 0.0843849829759927,
+  "E5_bernstein_factor_at_dpi_010": 1.9054104303723376
+}

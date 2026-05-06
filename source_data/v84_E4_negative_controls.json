@@ -1,0 +1,36 @@
+{
+  "ucsf_baseline_heat_brier": 0.0843849829759927,
+  "controls": {
+    "label_permutation": 0.3297898368406537,
+    "endpoint_permutation": 0.3384783990379121,
+    "patient_id_shuffle": 0.33401410216213884,
+    "timepoint_reversal": 0.15598621737602092,
+    "random_mask_shift_5vox": 0.16034088651586725,
+    "gaussian_blob_no_boundary": 0.43663432728499174,
+    "selector_feature_perm": 0.32752839056774974,
+    "cohort_label_perm": 0.2867016493456086,
+    "null_model_0.5": 0.25
+  },
+  "controls_destroy_signal": {
+    "label_permutation": true,
+    "endpoint_permutation": true,
+    "patient_id_shuffle": true,
+    "timepoint_reversal": true,
+    "random_mask_shift_5vox": true,
+    "gaussian_blob_no_boundary": true,
+    "selector_feature_perm": true,
+    "cohort_label_perm": true,
+    "null_model_0.5": true
+  },
+  "fold_increase": {
+    "label_permutation": 3.9081578879322407,
+    "endpoint_permutation": 4.01112125760822,
+    "patient_id_shuffle": 3.958217331834563,
+    "timepoint_reversal": 1.8485068299462546,
+    "random_mask_shift_5vox": 1.9001116177446382,
+    "gaussian_blob_no_boundary": 5.174313152486065,
+    "selector_feature_perm": 3.881358732523898,
+    "cohort_label_perm": 3.3975434874138024,
+    "null_model_0.5": 2.962612436280568
+  }
+}

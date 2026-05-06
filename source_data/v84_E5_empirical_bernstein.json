@@ -1,0 +1,60 @@
+{
+  "method": "Empirical-Bernstein PAC-Bayes bound on per-stratum Brier deviations",
+  "n_stable": 240,
+  "n_active": 56,
+  "L_hs": 0.041,
+  "L_ha": 0.274,
+  "L_ms": 0.14,
+  "L_ma": 0.199,
+  "estimated_variances": {
+    "var_hs": 0.02,
+    "var_ha": 0.06,
+    "var_ms": 0.04,
+    "var_ma": 0.06
+  },
+  "bounds_per_delta_pi": [
+    {
+      "delta_pi": 0.02,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    },
+    {
+      "delta_pi": 0.05,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    },
+    {
+      "delta_pi": 0.1,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    },
+    {
+      "delta_pi": 0.15,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    },
+    {
+      "delta_pi": 0.2,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    },
+    {
+      "delta_pi": 0.3,
+      "delta_alpha": 0.05,
+      "hoeffding_per_stratum_t": 0.18148394886999197,
+      "empirical_bernstein_per_stratum_t": 0.09524664396558807,
+      "bernstein_tighter_factor": 1.9054104303723376
+    }
+  ],
+  "interpretation": "Empirical-Bernstein bound is tighter than Hoeffding by factor ~1.91\u00d7 at delta_pi=0.10, consistent with literature: Bernstein exploits low per-stratum variance (stable Brier ~0.04, active ~0.20) which Hoeffding ignores."
+}
