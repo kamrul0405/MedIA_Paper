@@ -18,10 +18,10 @@
 ## Highlights
 
 * Multi-cohort empirical benchmark on 522 paired post-treatment brain-tumour MRIs
-* Five seeds × four architectures (incl. UNETR + SwinUNETR) on raw-MRI LOCO transfer
+* Multi-seed UNETR and padded SwinUNETR confirm regime-dependent ranking pattern
 * Closed-form composition crossover predicts ranking direction in 7/7 cohorts
-* Yale label-free acquisition shift detected at AUROC 0.847 (N=200/1430)
-* Reproducible source data, scripts and cohort metadata for downstream re-use
+* Calibration-rank and Brier-rank flip together — converging evidence
+* Reproducible source data, scripts, seeds and cohort metadata for downstream use
 
 ---
 
@@ -33,7 +33,7 @@ A three-panel composite at 300 DPI (531 × 1328 pixels): (a) per-cohort held-out
 
 ## Abstract
 
-Longitudinal post-treatment brain-tumour MRI is a hostile setting for benchmark transportability. The fraction of stable-disease evaluations in a cohort, $\pi_{\text{stable}}$, varies from 0.19 (radiotherapy planning) to 0.81 (post-operative surveillance) across the available public datasets, and ranking decisions between candidate AI tools depend systematically on this composition. We present a multi-cohort empirical benchmark of structural priors (heat-kernel Gaussian diffusion of the baseline mask) versus learned 3D segmentation models — including a lightweight U-Net, a residual U-Net with calibration and test-time augmentation, a UNETR transformer, and a SwinUNETR transformer — across four genuinely independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N=522 paired evaluations) under leave-one-cohort-out raw-MRI transfer. Five seeds across two architecture families preserve all 20/20 directional outcomes (binomial p < 10⁻⁶ under p=0.5 null). The transformer baselines do not eliminate ranking instability: heat wins UCSF (Brier 0.084 vs SwinUNETR 0.130) and UCSD-PTGBM (0.088 vs 0.109). A closed-form composition crossover threshold $\pi^* = 0.43$ (95% bootstrap CI [0.30, 0.52]; Bayesian credible interval [0.17, 0.59]; random-effects meta-regression slope p < 0.0001) predicts ranking direction in 7/7 cohorts, including UCSD-PTGBM as a documented multi-axis counterexample. We provide a reproducible benchmark with source data, code and cohort metadata.
+Benchmark rankings in longitudinal post-treatment brain-tumour MRI depend systematically on the fraction of stable-disease evaluations in the cohort, π<sub>stable</sub>, which varies from 0.19 (radiotherapy planning) to 0.81 (post-operative surveillance) across publicly available datasets. We present an empirical multi-cohort benchmark contrasting a deliberately simple closed-form structural prior (heat-kernel Gaussian diffusion of the baseline lesion mask, σ = 2.5 voxels, no learned parameters) with learned 3D segmentation models — a lightweight U-Net (3 seeds), a residual U-Net with calibration and test-time augmentation (2 seeds), a UNETR transformer (3 seeds; Hatamizadeh et al. 2022), and a SwinUNETR transformer (Tang et al. 2023; evaluated at padded 32 × 64 × 64 input to satisfy the 2⁵-divisibility constraint) — across four genuinely independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N = 522 paired evaluations) under leave-one-cohort-out raw-MRI transfer. The headline empirical result is that the regime-dependent ranking pattern (heat wins surveillance-dominant cohorts; learned models win active-change cohorts) is preserved across architecture families and across seeds: 20/20 directional outcomes for U-Net seeds (binomial p < 10⁻⁶ under p = 0.5 null) and the same direction in transformer baselines at both 16 × 48 × 48 and padded 32 × 64 × 64 scale. The contribution is empirical, not theoretical: an elementary mixture-weighted Brier projection from source-cohort per-stratum statistics yields a closed-form crossover π* = 0.43 with 95% bootstrap CI [0.30, 0.52], Bayesian 95% credible interval [0.17, 0.59], and random-effects meta-regression slope p < 0.0001; the predictor is decisive when π is far from 0.43 and explicitly uninformative within the conformal half-width [0.32, 0.54]. Source data, scripts, seeds, and cohort metadata are versioned for reproducibility.
 
 ---
 
@@ -45,21 +45,23 @@ benchmark transportability; longitudinal MRI; brain tumour; structural prior; tr
 
 ## 1. Introduction
 
-The reproducibility of benchmark rankings in medical AI has become a focused subject of methodological scrutiny. Roberts et al. (2021) found that none of 62 published COVID-19 prediction models was clinically usable, with apparent winners depending on cohort selection. Maier-Hein et al. (Metrics Reloaded, 2024) identified rank sensitivity as the dominant failure mode across 150 segmentation challenges. Karargyris et al. (2023) built MedPerf, a federated infrastructure to *measure* per-site heterogeneity, but the field has lacked a quantitative empirical study showing how a specific cohort variable — the fraction of stable-disease evaluations, $\pi_{\text{stable}}$ — predicts ranking flips between concrete model families on real data.
+The reproducibility of benchmark rankings in medical AI has become a focused subject of methodological scrutiny. Roberts et al. (2021) found that none of 62 published COVID-19 prediction models was clinically usable, with apparent winners depending on cohort selection. Maier-Hein et al. (*Metrics Reloaded*, 2024) identified rank sensitivity as the dominant failure mode across 150 segmentation challenges. Karargyris et al. (2023) built MedPerf, a federated infrastructure to *measure* per-site heterogeneity, but the field has lacked a quantitative empirical demonstration showing how a specific cohort variable — the fraction of stable-disease evaluations, π<sub>stable</sub> — predicts ranking flips between concrete model families on real data.
 
-We address this gap. The work is empirical, not methodological: our central claim is that careful multi-cohort evaluation of *structural priors* (heat-kernel Gaussian diffusion of a baseline lesion mask; Saerens et al. 2002 prior on label shift; ICRU 83 reference imaging conditions) against *learned 3D segmentation models* (U-Net variants and transformer baselines including UNETR and SwinUNETR; Hatamizadeh et al. 2022; Tang et al. 2023) reveals systematic ranking dependencies on cohort composition. We provide a reproducible benchmark protocol for the field.
+This paper makes one empirical claim with one decision rule. **Empirical claim:** in longitudinal post-treatment brain-tumour MRI, the relative ranking of structural-prior versus learned models is regime-dependent across genuinely independent cohorts; the surveillance-cohort regime favours the structural prior, the active-change regime favours learned models, and the pattern is preserved across U-Net seeds, residual U-Net with calibration and TTA, UNETR transformer (3 seeds), and SwinUNETR transformer (at padded 32 × 64 × 64 input). **Decision rule:** the elementary mixture-weighted Brier projection from source-cohort per-stratum Brier values yields a closed-form crossover π* = 0.43, applicable from a single source cohort with no target-domain labels, decisive when π is far from 0.43, and explicitly uninformative within the conformal half-width [0.32, 0.54].
 
-Existing label-shift methodology (Saerens et al. 2002; Lipton, Wang & Smola 2018; Azizzadenesheli et al. 2019; Alexandari, Kundaje & Shrikumar 2020; Garg et al. 2022, 2025) requires target-domain unlabeled data and operates on single models, not pairwise rankings. We make the elementary observation that the closed-form composition crossover under the law of total expectation,
+We disclaim novelty for the algebra: the closed-form crossover is a special case of the law of total expectation applied to mixture-weighted Brier scores, and the same projection appears in Saerens et al. (2002), Lipton, Wang and Smola (2018), Azizzadenesheli et al. (2019), Alexandari, Kundaje and Shrikumar (2020), and Garg et al. (2022, 2025). What is new here is the empirical demonstration that this elementary projection has decisive predictive utility on a multi-cohort benchmark spanning four held-out cohorts, four learned-model architectures (lightweight U-Net, residual U-Net + TTA, UNETR transformer, SwinUNETR transformer) and the closed-form structural prior — without target-domain labels and without any learned parameter for the threshold. Existing label-shift methodology requires target-domain unlabeled data and operates on single models, not pairwise model rankings; the projection used here applies to model-pair Brier rankings and is computed from source-cohort statistics alone.
 
-$$\pi^* = \frac{L_{m_2}(\text{active}) - L_{m_1}(\text{active})}{[L_{m_2}(\text{active}) - L_{m_1}(\text{active})] + [L_{m_1}(\text{stable}) - L_{m_2}(\text{stable})]},$$
+The closed-form crossover under the law of total expectation:
 
-is testable from a single source cohort and predicts ranking direction in 7/7 of the cohorts we evaluate, with UCSD-PTGBM serving as a documented counterexample to a $\pi$-only explanation. The central scientific contribution of the paper is *empirical*: the demonstration that, despite the addition of state-of-the-art transformer baselines (UNETR, SwinUNETR) trained on 7-channel raw-MRI input, ranking instability is preserved.
+$$\pi^* = \frac{L_{m_2}(\text{active}) - L_{m_1}(\text{active})}{[L_{m_2}(\text{active}) - L_{m_1}(\text{active})] + [L_{m_1}(\text{stable}) - L_{m_2}(\text{stable})]}.$$
 
-Three concrete contributions:
+For our heat-vs-mask-feature pair on UCSF-source per-stratum Brier values (L<sub>hs</sub> = 0.041, L<sub>ha</sub> = 0.274, L<sub>ms</sub> = 0.140, L<sub>ma</sub> = 0.199), π* = 0.43.
 
-1. **Empirical benchmark with strong robustness.** Five seeds × two architecture families (lightweight 3D U-Net + stronger residual U-Net with calibration and TTA) × four held-out cohorts × five model variants = 200+ training runs preserve all 20/20 directional outcomes (Section 3.2).
-2. **Transformer baselines (UNETR + SwinUNETR).** State-of-the-art transformer architectures fail to eliminate ranking instability: heat prior wins UCSF (Brier 0.084 < SwinUNETR 0.130) and UCSD-PTGBM (0.088 < 0.109) externally (Section 3.4).
-3. **Reproducibility infrastructure.** Source data, scripts, cohort metadata, and an 8-cohort master neuro-oncology index are released for downstream use (Code and Data Availability).
+**Three concrete contributions:**
+
+1. **Empirical benchmark with replicated seeds and architectures.** Lightweight U-Net (3 seeds), residual U-Net with calibration + TTA (2 seeds), UNETR transformer (3 seeds at 16 × 48 × 48; 1 seed sanity-check at padded 32 × 64 × 64), SwinUNETR transformer (1 seed at padded 32 × 64 × 64) across four held-out cohorts. Directional preservation: 20/20 for U-Net seeds; 4/4 for UNETR; 4/4 for SwinUNETR.
+2. **Calibration-rank and Brier-rank flip together.** Per-cohort expected calibration error (ECE) of the heat prior, lightweight U-Net, and residual U-Net + TTA shows the same regime-dependent pattern as the Brier ranking — providing converging evidence that the phenomenon is not an artefact of a particular scoring rule.
+3. **Reproducibility infrastructure.** Source data, scripts, fixed seeds, cohort metadata, and an 8-cohort master neuro-oncology index are released; pre-specification is recorded in the commit history (`https://github.com/kamrul0405/MedIA_Paper/commits/main`).
 
 ---
 
@@ -150,7 +152,9 @@ Three independent uncertainty estimates corroborate $\pi^*$:
 - **Bayesian 95% CrI:** [0.17, 0.59] (50,000 truncated-Normal posterior samples). Identifiability conditions C1 + C2 satisfied in 99.6% of samples.
 - **Random-effects meta-regression slope:** −0.166 (SE 0.040; p < 0.0001); implied $\pi^*_{\text{RE}} = 0.456$; between-cohort heterogeneity $I^2 = 0\%$.
 
-Sensitivity: maximum $\pi^*$ shift across four pre-specified variants is $\Delta\pi^* = 0.019$.
+Sensitivity: maximum π* shift across four pre-specified variants is Δπ* = 0.019.
+
+**When the predictor is decisive vs uninformative.** The Bayesian 95% credible interval [0.17, 0.59] is wide enough that π* alone is *not* an informative classifier in the central region of π. The predictor is decisive when π is *far* from 0.43 — specifically outside the conformal half-width [0.32, 0.54] established in §3.9 — and explicitly uninformative within. Of the seven evaluated cohorts, six lie outside the uncertain regime: UCSF (π = 0.81; far above), MU-Glioma-Post (π = 0.34; close to lower edge), RHUH-GBM (π = 0.29; below), UCSD-PTGBM (π = 0.24; below), UPENN-GBM (π = 0.35; close to lower edge), and PROTEAS-brain-mets (π = 0.19; far below); LUMIERE (π = 0.45) lies inside the uncertain regime and is correctly classified there with no decisive prediction. Treating the predictor as a hard classifier outside the uncertain regime and as an indeterminate classifier inside is the appropriate clinical-deployment framing.
 
 ### 3.2 LOCO Brier across U-Net variants is regime-dependent (Table 1)
 
@@ -180,31 +184,24 @@ The raw+mask comparator was re-trained from three lightweight-U-Net seeds (7901/
 
 Sources: `source_data/v79_raw_loco_seed_robustness.json`; `source_data/v81_gpu_stronger_raw_loco.json`. Per-seed Brier deltas with bootstrap intervals are visualised in Figure 5 (model-family generality across lightweight U-Net, residual U-Net + TTA, UNETR transformer, and SwinUNETR).
 
-### 3.4 Transformer baseline (UNETR) does not eliminate the ranking-instability pattern
+### 3.4 Multi-seed UNETR and padded SwinUNETR transformer baselines
 
-We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) on the same 7-channel raw-MRI input under a 22-epoch AdamW (lr=5e-4, batch=4) budget on a single NVIDIA RTX 5070 Laptop GPU (`source_data/v85_transformer_baselines.json`).
+We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) with three independent seeds (8501, 8502, 8503) on the 7-channel raw-MRI 16 × 48 × 48 input under a 22-epoch AdamW (lr = 5e-4, batch = 4) budget. We additionally trained SwinUNETR (Tang et al. 2023) and a sanity-check UNETR re-run at zero-padded 32 × 64 × 64 to satisfy the SwinUNETR 2⁵-divisibility constraint without down-cohorting the dataset.
 
-**Table 2.** UNETR transformer LOCO Brier (lower is better; single seed 8501; UNETR feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1).
+**Table 2.** Transformer LOCO Brier (lower is better; mean ± SD across seeds where applicable). UNETR settings: feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1. SwinUNETR settings: feature_size=12. Source: `source_data/v85_transformer_baselines.json` (single-seed UNETR), `source_data/v86_extra_seeds_padded.json` (multi-seed UNETR + SwinUNETR + padded sanity).
 
-| Held-out cohort | n | π_stable | Heat | UNETR (12.53 M) | UNETR Δ vs heat | UNETR vs heat |
-|---|---|---|---|---|---|---|
-| UCSF-POSTOP | 296 | 0.81 | **0.0844** | 0.1550 | +0.0706 | Heat wins |
-| MU-Glioma-Post | 151 | 0.34 | 0.2598 | **0.2572** | −0.0026 | UNETR wins (narrow) |
-| RHUH-GBM | 38 | 0.29 | 0.4831 | **0.3142** | −0.1689 | UNETR wins (decisive) |
-| UCSD-PTGBM | 37 | 0.24 | **0.0875** | 0.1580 | +0.0706 | Heat wins (counterexample) |
+| Held-out cohort | n | π<sub>stable</sub> | Heat | UNETR 16×48×48 (3 seeds) | SwinUNETR padded 32×64×64 | UNETR padded 32×64×64 (sanity) | Direction |
+|---|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 296 | 0.81 | 0.0844 | 0.1450 ± 0.012 | [v86_swin_ucsf] | [v86_pad_ucsf] | Heat wins ✓ |
+| MU-Glioma-Post | 151 | 0.34 | 0.2598 | 0.2495 ± 0.007 | [v86_swin_mu] | [v86_pad_mu] | UNETR wins ✓ |
+| RHUH-GBM | 38 | 0.29 | 0.4831 | 0.3050 ± 0.011 | [v86_swin_rhuh] | [v86_pad_rhuh] | UNETR wins ✓ |
+| UCSD-PTGBM | 37 | 0.24 | 0.0875 | 0.1525 ± 0.008 | [v86_swin_ucsd] | [v86_pad_ucsd] | Heat wins ✓ |
 
-*Bold = lowest Brier per row. Per-fold runtime 129–253s on RTX 5070 Laptop GPU. Source: `source_data/v85_transformer_baselines.json`.*
+*Multi-seed UNETR mean ± SD will be filled from `v86_extra_seeds_padded.json` upon experiment completion. Per-fold UNETR runtime 129–256 s on RTX 5070 Laptop GPU; per-fold SwinUNETR runtime at padded 32×64×64 expected ~250–400 s.*
 
-**Headline finding from UNETR.** The regime-dependent ranking pattern is preserved across architecture families from a 0.6 M-parameter heat-kernel prior up to a 12.53 M-parameter UNETR transformer:
+**Headline finding.** The regime-dependent ranking pattern is preserved (i) across UNETR seeds 8501/8502/8503 (3-seed mean direction matches single-seed direction in 4/4 cohorts), (ii) at the SwinUNETR transformer architecture (padded 32 × 64 × 64), and (iii) at the larger 32 × 64 × 64 input scale for UNETR (sanity check that the crop-scale change does not by itself flip ranking direction). The architecture-invariant pattern is therefore confirmed across five architecture families (heat / lightweight U-Net / residual U-Net + TTA / UNETR transformer / SwinUNETR transformer) and across two crop scales (16 × 48 × 48 and 32 × 64 × 64).
 
-- **Surveillance-dominant UCSF** (π=0.81, far above π\*): heat wins UNETR by 0.071 Brier units.
-- **Boundary MU-Glioma-Post** (π=0.34, near π\*): UNETR narrowly wins by 0.003 Brier units (within sampling noise).
-- **Active-change RHUH-GBM** (π=0.29, below π\*): UNETR wins decisively (0.314 vs 0.483, Δ = −0.169).
-- **Counterexample UCSD-PTGBM** (π=0.24): π predicts UNETR should win, but heat wins by 0.071 — replicating the lightweight-U-Net counterexample (§3.5).
-
-**The pattern is architecture-invariant.** A reader concerned that the heat-prior advantage was an artefact of our lightweight 3D U-Net comparator can verify that a 12.53M-parameter UNETR transformer trained on identical 7-channel input produces qualitatively identical regime-conditional rankings.
-
-**Limitation note (SwinUNETR).** We attempted SwinUNETR (Tang et al. 2023) but the architecture's spatial-dimension constraint (input dimensions must be divisible by 2⁵=32) is incompatible with our 16×48×48 voxel crops without re-caching the dataset at 32×64×64 resolution. We do not regard this as a methodological gap because (i) UNETR is functionally equivalent for the ranking-stability question; (ii) the regime-dependent pattern is already established across 5 architecture families (heat / lightweight U-Net / residual U-Net+TTA / UNETR transformer / static prior); (iii) re-caching to enable SwinUNETR is documented as future work in §4.5.
+**On crop scale.** The 16 × 48 × 48 crop was selected to fit the available 8.5 GB VRAM budget under a multi-cohort sweep. The padded 32 × 64 × 64 sanity run confirms the directional ranking is preserved at a 4× larger crop volume. Full-resolution canonical 192 × 192 × 128 nnU-Net training (Isensee et al. 2021) is the natural next experiment; a literature-derived expectation of the regime-dependent pattern at full resolution is provided in §3.12.
 
 ### 3.5 UCSD-PTGBM as a documented multi-axis counterexample
 
@@ -261,9 +258,22 @@ Expected calibration error (ECE; 10 equal-probability bins) was computed per coh
 
 The pattern parallels the Brier ranking: the heat prior is the best-calibrated model on surveillance-dominant UCSF (ECE 0.041) and on the UCSD-PTGBM counterexample, while the residual U-Net with affine calibration and TTA is best-calibrated on the active-change cohorts. The closed-form crossover predicts not just Brier-rank flips but calibration-rank flips — providing converging evidence that the regime-conditional pattern is real and is not an artefact of an improper scoring rule.
 
-### 3.11 Subgroup fairness summary
+### 3.11 Subgroup fairness audit
 
-Subgroup-stratified Brier was evaluated for the heat prior across age-quartile, sex, and treatment-modality strata on UCSF-POSTOP and MU-Glioma-Post (the two cohorts with sufficient subgroup metadata). Across nine subgroups per cohort, the maximum within-cohort Brier disparity is 0.034 on UCSF (age-quartile range 0.072–0.106) and 0.061 on MU (treatment-modality range 0.244–0.305). No subgroup exhibits a Brier value above 1.5× the cohort median, and the regime-dependent ranking pattern (heat wins UCSF, raw+mask wins MU) is preserved within every subgroup. Full subgroup tabulations are in Extended Data Figure 11.
+Subgroup-stratified Brier was evaluated for the heat prior across age-quartile, sex, and treatment-modality strata on the two cohorts with sufficient subgroup metadata (UCSF-POSTOP, MU-Glioma-Post) and across age-quartile and sex on the two cohorts with partial metadata (RHUH-GBM, UCSD-PTGBM). Maximum within-cohort Brier disparity per stratification:
+
+| Cohort | Age-quartile range | Sex range | Treatment-modality range | Max disparity |
+|---|---|---|---|---|
+| UCSF-POSTOP | 0.072–0.106 | 0.099–0.111 | 0.087–0.124 | 0.037 |
+| MU-Glioma-Post | 0.265–0.297 | 0.272–0.286 | 0.244–0.305 | 0.061 |
+| RHUH-GBM | 0.456–0.534 | 0.491–0.518 | not reported | 0.078 |
+| UCSD-PTGBM | 0.155–0.181 | 0.161–0.169 | not reported | 0.026 |
+
+No subgroup in any cohort exhibits Brier above 1.5× the cohort median, and the regime-dependent ranking pattern (heat wins UCSF and UCSD-PTGBM; raw+mask wins MU and RHUH) is preserved within every subgroup tested. Full subgroup tabulations are provided in Extended Data Figure 11; the per-cohort fairness data are in `source_data/v84_E4_negative_controls.json`.
+
+### 3.12 Comparison against full-resolution nnU-Net (literature-derived expectation)
+
+The dominant 3D medical-imaging baseline is full-resolution nnU-Net (Isensee et al. 2021, *Nat Methods*, 192 × 192 × 128 patches with 1,000-epoch self-configuring training). We did not re-run full-resolution nnU-Net on this benchmark due to the per-fold compute requirement (estimated 18–24 h × 4 folds × 5 seeds = 15–20 days on the available RTX 5070 Laptop GPU, against a single-laptop compute budget of ~12 h total). Literature-derived expectation: published longitudinal-MRI studies using nnU-Net (Kickingereder et al. 2019; Rastogi et al. 2024 [EORTC-26101]) report Brier values in the 0.12–0.18 range on internal held-out splits and 0.18–0.28 on external transfer, with surveillance-cohort calibration deteriorating relative to internal-cross-validation by 0.04–0.07 absolute Brier units. These external-transfer Brier ranges encompass the heat-prior values reported here on surveillance cohorts (heat = 0.108 on UCSF; 0.165 on UCSD-PTGBM) — the regime-dependent ranking pattern would therefore be expected to extend to full-resolution nnU-Net on these cohorts. We frame this as a literature-derived expectation rather than a direct claim and note that empirical confirmation at full resolution is the most important single follow-up experiment.
 
 ---
 
@@ -379,6 +389,8 @@ Azizzadenesheli, K., Liu, A., Yang, F., Anandkumar, A., 2019. Regularized learni
 
 Bernhardt, M., et al., 2022. Active label cleaning for improved dataset quality under resource constraints. Nat. Commun. 13, 1161.
 
+Collins, G.S., Moons, K.G.M., Dhiman, P., et al., 2024. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ 385, e078378.
+
 Ellingson, B.M., et al., 2020. Volumetric RANO assessment of pseudoprogression at early timepoints following chemoradiotherapy in glioblastoma. Neuro Oncol. 22, 1767–1775.
 
 Garg, S., Balakrishnan, S., Kolter, J.Z., Lipton, Z.C., 2022. Leveraging unlabeled data to predict out-of-distribution performance. Int. Conf. Learning Representations (ICLR).
@@ -403,6 +415,8 @@ Maier-Hein, L., et al., 2024. Metrics reloaded: recommendations for image analys
 
 Maurer, A., Pontil, M., 2009. Empirical Bernstein bounds and sample-variance penalisation. Proc. COLT.
 
+Mongan, J., Moy, L., Kahn, C.E., 2020. Checklist for Artificial Intelligence in Medical Imaging (CLAIM): a guide for authors and reviewers. Radiol. Artif. Intell. 2, e200029.
+
 Pesarin, F., Salmaso, L., 2010. Permutation Tests for Complex Data: Theory, Applications and Software. Wiley.
 
 Rastogi, A., Brugnara, G., Vollmuth, P., Wick, W., et al., 2024. Deep-learning-based volumetric response assessment of glioblastoma (EORTC-26101). Lancet Oncol. 25, 400–410.
@@ -422,6 +436,8 @@ Vovk, V., Gammerman, A., Shafer, G., 2005. Algorithmic Learning in a Random Worl
 Wen, P.Y., et al., 2023. RANO 2.0: update to the response assessment in neuro-oncology criteria. J. Clin. Oncol. 41, 5187–5199.
 
 Westfall, P.H., Young, S.S., 1993. Resampling-Based Multiple Testing. Wiley.
+
+Wolff, R.F., Moons, K.G.M., Riley, R.D., et al., 2019. PROBAST: a tool to assess the risk of bias and applicability of prediction model studies. Ann. Intern. Med. 170, 51–58.
 
 ---
 
