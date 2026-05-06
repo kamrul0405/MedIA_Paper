@@ -1,0 +1,240 @@
+{
+  "version": "v79_raw_loco_seed_robustness",
+  "status": "RAW4_MASK_SEED_ROBUSTNESS_FOR_V78_LOCO",
+  "date": "2026-05-05",
+  "epochs": 24,
+  "batch_size": 10,
+  "seeds": [
+    7901,
+    7902,
+    7903
+  ],
+  "held_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "UCSD-PTGBM"
+  ],
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "heat_by_cohort": {
+    "UCSF-POSTOP": {
+      "brier_mean": 0.10794436235005993,
+      "brier_sd": 0.0643394946744495,
+      "dice_mean": 0.8473725289410602,
+      "auroc_mean": 0.9337093504652761,
+      "ece_mean": 0.1070977067467099,
+      "brier_stable": 0.08849995796723913,
+      "brier_active": 0.1912775239907205,
+      "n_stable": 240,
+      "n_active": 56
+    },
+    "MU-Glioma-Post": {
+      "brier_mean": 0.2790611436874266,
+      "brier_sd": 0.1522981025852488,
+      "dice_mean": 0.6458798286434875,
+      "auroc_mean": 0.7515506158940038,
+      "ece_mean": 0.26740256553539415,
+      "brier_stable": 0.1820213238063913,
+      "brier_active": 0.3300315541299907,
+      "n_stable": 52,
+      "n_active": 99
+    },
+    "RHUH-GBM": {
+      "brier_mean": 0.5037207326998836,
+      "brier_sd": 0.2604435370747789,
+      "dice_mean": 0.43242795517696564,
+      "auroc_mean": 0.6418755977459715,
+      "ece_mean": 0.3999447784084612,
+      "brier_stable": 0.3217700347304344,
+      "brier_active": 0.5778487948355852,
+      "n_stable": 11,
+      "n_active": 27
+    },
+    "UCSD-PTGBM": {
+      "brier_mean": 0.16542996143972552,
+      "brier_sd": 0.12052409863622655,
+      "dice_mean": 0.40202150029569317,
+      "auroc_mean": 0.5912872655404997,
+      "ece_mean": 0.18746698445092427,
+      "brier_stable": 0.14113993611600664,
+      "brier_active": 0.1732374695794923,
+      "n_stable": 9,
+      "n_active": 28
+    }
+  },
+  "seed_results": {
+    "UCSF-POSTOP": [
+      {
+        "seed": 7901,
+        "raw4_mask_brier": 0.1519210757435979,
+        "heat_brier": 0.10794436235005993,
+        "delta_raw4_mask_minus_heat": 0.04397671339353797,
+        "raw4_mask_wins": false,
+        "ece": 0.20641840171014245,
+        "auroc": 0.9121930523097659
+      },
+      {
+        "seed": 7902,
+        "raw4_mask_brier": 0.1476101672805443,
+        "heat_brier": 0.10794436235005993,
+        "delta_raw4_mask_minus_heat": 0.03966580493048437,
+        "raw4_mask_wins": false,
+        "ece": 0.18243715138366998,
+        "auroc": 0.9072269084449683
+      },
+      {
+        "seed": 7903,
+        "raw4_mask_brier": 0.1433605749814494,
+        "heat_brier": 0.10794436235005993,
+        "delta_raw4_mask_minus_heat": 0.035416212631389485,
+        "raw4_mask_wins": false,
+        "ece": 0.17628780048506668,
+        "auroc": 0.9095297657506117
+      }
+    ],
+    "MU-Glioma-Post": [
+      {
+        "seed": 7901,
+        "raw4_mask_brier": 0.26848982834559404,
+        "heat_brier": 0.2790611436874266,
+        "delta_raw4_mask_minus_heat": -0.010571315341832588,
+        "raw4_mask_wins": true,
+        "ece": 0.2701860734470607,
+        "auroc": 0.7141720410199283
+      },
+      {
+        "seed": 7902,
+        "raw4_mask_brier": 0.2712336913343297,
+        "heat_brier": 0.2790611436874266,
+        "delta_raw4_mask_minus_heat": -0.007827452353096953,
+        "raw4_mask_wins": true,
+        "ece": 0.2719298412920227,
+        "auroc": 0.7079144288844732
+      },
+      {
+        "seed": 7903,
+        "raw4_mask_brier": 0.2732880675042702,
+        "heat_brier": 0.2790611436874266,
+        "delta_raw4_mask_minus_heat": -0.005773076183156423,
+        "raw4_mask_wins": true,
+        "ece": 0.27532180437645715,
+        "auroc": 0.7135209337174566
+      }
+    ],
+    "RHUH-GBM": [
+      {
+        "seed": 7901,
+        "raw4_mask_brier": 0.3898780028286733,
+        "heat_brier": 0.5037207326998836,
+        "delta_raw4_mask_minus_heat": -0.1138427298712103,
+        "raw4_mask_wins": true,
+        "ece": 0.43178078424302685,
+        "auroc": 0.6304219980438405
+      },
+      {
+        "seed": 7902,
+        "raw4_mask_brier": 0.34761487829842064,
+        "heat_brier": 0.5037207326998836,
+        "delta_raw4_mask_minus_heat": -0.15610585440146296,
+        "raw4_mask_wins": true,
+        "ece": 0.39416564191258713,
+        "auroc": 0.6182256084074418
+      },
+      {
+        "seed": 7903,
+        "raw4_mask_brier": 0.35509051166866956,
+        "heat_brier": 0.5037207326998836,
+        "delta_raw4_mask_minus_heat": -0.14863022103121404,
+        "raw4_mask_wins": true,
+        "ece": 0.4069973369398742,
+        "auroc": 0.620270709990591
+      }
+    ],
+    "UCSD-PTGBM": [
+      {
+        "seed": 7901,
+        "raw4_mask_brier": 0.21772235153460046,
+        "heat_brier": 0.16542996143972552,
+        "delta_raw4_mask_minus_heat": 0.052292390094874935,
+        "raw4_mask_wins": false,
+        "ece": 0.2596812444841179,
+        "auroc": 0.5969300428844283
+      },
+      {
+        "seed": 7902,
+        "raw4_mask_brier": 0.21661397792332857,
+        "heat_brier": 0.16542996143972552,
+        "delta_raw4_mask_minus_heat": 0.051184016483603045,
+        "raw4_mask_wins": false,
+        "ece": 0.25286790689258626,
+        "auroc": 0.5992383286690602
+      },
+      {
+        "seed": 7903,
+        "raw4_mask_brier": 0.2135081482690136,
+        "heat_brier": 0.16542996143972552,
+        "delta_raw4_mask_minus_heat": 0.04807818682928808,
+        "raw4_mask_wins": false,
+        "ece": 0.24843954713692482,
+        "auroc": 0.5972098111163268
+      }
+    ]
+  },
+  "summary": {
+    "UCSF-POSTOP": {
+      "n_seeds": 3,
+      "mean_delta_raw4_mask_minus_heat": 0.03968624365180394,
+      "sd_delta": 0.004280286979944577,
+      "raw4_mask_win_count": 0,
+      "heat_win_count": 3,
+      "direction": "heat",
+      "all_seed_deltas": [
+        0.04397671339353797,
+        0.03966580493048437,
+        0.035416212631389485
+      ]
+    },
+    "MU-Glioma-Post": {
+      "n_seeds": 3,
+      "mean_delta_raw4_mask_minus_heat": -0.00805728129269532,
+      "sd_delta": 0.002407361784624617,
+      "raw4_mask_win_count": 3,
+      "heat_win_count": 0,
+      "direction": "raw4_mask",
+      "all_seed_deltas": [
+        -0.010571315341832588,
+        -0.007827452353096953,
+        -0.005773076183156423
+      ]
+    },
+    "RHUH-GBM": {
+      "n_seeds": 3,
+      "mean_delta_raw4_mask_minus_heat": -0.1395262684346291,
+      "sd_delta": 0.02255447601753497,
+      "raw4_mask_win_count": 3,
+      "heat_win_count": 0,
+      "direction": "raw4_mask",
+      "all_seed_deltas": [
+        -0.1138427298712103,
+        -0.15610585440146296,
+        -0.14863022103121404
+      ]
+    },
+    "UCSD-PTGBM": {
+      "n_seeds": 3,
+      "mean_delta_raw4_mask_minus_heat": 0.050518197802588684,
+      "sd_delta": 0.0021845739122106876,
+      "raw4_mask_win_count": 0,
+      "heat_win_count": 3,
+      "direction": "heat",
+      "all_seed_deltas": [
+        0.052292390094874935,
+        0.051184016483603045,
+        0.04807818682928808
+      ]
+    }
+  },
+  "interpretation": "Positive delta means heat beats raw+mask for that held-out cohort; negative delta means raw+mask beats heat. This robustness check targets the reviewer-critical external raw-MRI comparator, not every exploratory input variant.",
+  "runtime_s": 535.17
+}

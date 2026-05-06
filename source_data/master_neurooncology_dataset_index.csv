@@ -1,0 +1,861 @@
+cohort,pid,disease,mask_avail,vol_ratio,endpoint_class,role,tier
+UCSF-POSTOP,UCSF-POSTOP:100001,glioma,manual_BraTS,0.9928,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100002,glioma,manual_BraTS,0.9742,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100003,glioma,manual_BraTS,0.9592,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100004,glioma,manual_BraTS,0.9804,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100005,glioma,manual_BraTS,1.1539,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100006,glioma,manual_BraTS,0.9198,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100007,glioma,manual_BraTS,1.0270,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100008,glioma,manual_BraTS,1.9272,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100009,glioma,manual_BraTS,0.9964,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100010,glioma,manual_BraTS,0.9307,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100011,glioma,manual_BraTS,1.0424,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100012,glioma,manual_BraTS,0.9764,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100013,glioma,manual_BraTS,0.9143,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100014,glioma,manual_BraTS,0.6971,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100015,glioma,manual_BraTS,1.1030,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100016,glioma,manual_BraTS,1.0892,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100017,glioma,manual_BraTS,2.0926,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100018,glioma,manual_BraTS,0.9873,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100019,glioma,manual_BraTS,1.3465,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100020,glioma,manual_BraTS,1.4967,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100021,glioma,manual_BraTS,1.0235,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100022,glioma,manual_BraTS,2.0806,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100023,glioma,manual_BraTS,0.8420,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100024,glioma,manual_BraTS,1.0467,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100025,glioma,manual_BraTS,0.9995,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100026,glioma,manual_BraTS,1.3034,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100027,glioma,manual_BraTS,1.1074,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100028,glioma,manual_BraTS,0.9457,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100029,glioma,manual_BraTS,1.0653,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100030,glioma,manual_BraTS,1.0234,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100031,glioma,manual_BraTS,1.0193,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100032,glioma,manual_BraTS,0.9808,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100033,glioma,manual_BraTS,1.2193,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100034,glioma,manual_BraTS,0.3636,response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100035,glioma,manual_BraTS,1.0739,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100036,glioma,manual_BraTS,0.9610,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100037,glioma,manual_BraTS,0.9691,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100038,glioma,manual_BraTS,1.3404,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100039,glioma,manual_BraTS,0.9754,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100040,glioma,manual_BraTS,1.1009,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100041,glioma,manual_BraTS,1.0399,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100042,glioma,manual_BraTS,1.0036,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100043,glioma,manual_BraTS,0.8783,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100044,glioma,manual_BraTS,1.0640,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100045,glioma,manual_BraTS,0.8951,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100046,glioma,manual_BraTS,0.9177,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100047,glioma,manual_BraTS,0.9799,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100048,glioma,manual_BraTS,1.1722,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100049,glioma,manual_BraTS,1.0223,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100051,glioma,manual_BraTS,0.9821,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100052,glioma,manual_BraTS,0.9886,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100053,glioma,manual_BraTS,0.9811,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100054,glioma,manual_BraTS,0.9817,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100055,glioma,manual_BraTS,0.9816,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100056,glioma,manual_BraTS,1.0063,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100057,glioma,manual_BraTS,1.0331,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100058,glioma,manual_BraTS,1.0337,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100059,glioma,manual_BraTS,0.9986,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100060,glioma,manual_BraTS,0.9987,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100061,glioma,manual_BraTS,1.0356,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100062,glioma,manual_BraTS,1.0082,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100063,glioma,manual_BraTS,1.3713,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100064,glioma,manual_BraTS,1.1116,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100065,glioma,manual_BraTS,0.9874,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100066,glioma,manual_BraTS,1.0399,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100067,glioma,manual_BraTS,1.0465,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100068,glioma,manual_BraTS,0.4907,response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100069,glioma,manual_BraTS,0.9919,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100070,glioma,manual_BraTS,0.9655,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100072,glioma,manual_BraTS,1.0567,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100073,glioma,manual_BraTS,0.9905,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100074,glioma,manual_BraTS,0.5264,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100075,glioma,manual_BraTS,1.0000,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100076,glioma,manual_BraTS,0.9625,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100077,glioma,manual_BraTS,1.1768,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100079,glioma,manual_BraTS,1.2852,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100080,glioma,manual_BraTS,0.9407,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100081,glioma,manual_BraTS,1.4266,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100082,glioma,manual_BraTS,0.8428,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100083,glioma,manual_BraTS,2.3053,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100084,glioma,manual_BraTS,1.2002,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100085,glioma,manual_BraTS,1.0065,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100086,glioma,manual_BraTS,1.0365,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100087,glioma,manual_BraTS,1.0186,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100088,glioma,manual_BraTS,1.4350,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100089,glioma,manual_BraTS,0.9876,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100090,glioma,manual_BraTS,1.0682,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100092,glioma,manual_BraTS,0.9973,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100093,glioma,manual_BraTS,1.0047,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100094,glioma,manual_BraTS,0.9849,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100095,glioma,manual_BraTS,1.0011,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100096,glioma,manual_BraTS,1.0241,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100097,glioma,manual_BraTS,1.0378,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100098,glioma,manual_BraTS,1.0243,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100099,glioma,manual_BraTS,0.8063,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100100,glioma,manual_BraTS,0.9831,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100101,glioma,manual_BraTS,0.9953,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100102,glioma,manual_BraTS,1.1591,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100103,glioma,manual_BraTS,1.1740,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100104,glioma,manual_BraTS,1.0208,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100105,glioma,manual_BraTS,2.8810,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100106,glioma,manual_BraTS,0.9750,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100107,glioma,manual_BraTS,1.0161,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100108,glioma,manual_BraTS,1.0899,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100109,glioma,manual_BraTS,1.6811,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100110,glioma,manual_BraTS,1.5574,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100111,glioma,manual_BraTS,1.0009,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100112,glioma,manual_BraTS,1.0145,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100113,glioma,manual_BraTS,0.9960,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100114,glioma,manual_BraTS,1.2629,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100115,glioma,manual_BraTS,0.9848,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100116,glioma,manual_BraTS,1.0341,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100117,glioma,manual_BraTS,0.9659,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100118,glioma,manual_BraTS,4.2273,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100119,glioma,manual_BraTS,1.0376,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100120,glioma,manual_BraTS,1.0812,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100121,glioma,manual_BraTS,1.0502,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100122,glioma,manual_BraTS,0.9664,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100123,glioma,manual_BraTS,0.9483,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100124,glioma,manual_BraTS,0.9811,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100125,glioma,manual_BraTS,1.3163,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100126,glioma,manual_BraTS,1.0527,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100127,glioma,manual_BraTS,1.0248,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100128,glioma,manual_BraTS,0.9756,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100129,glioma,manual_BraTS,0.9833,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100130,glioma,manual_BraTS,0.8210,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100131,glioma,manual_BraTS,1.0091,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100132,glioma,manual_BraTS,1.0202,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100133,glioma,manual_BraTS,0.9431,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100134,glioma,manual_BraTS,0.6399,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100135,glioma,manual_BraTS,1.1216,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100136,glioma,manual_BraTS,0.3523,response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100137,glioma,manual_BraTS,0.9757,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100138,glioma,manual_BraTS,1.0178,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100139,glioma,manual_BraTS,1.1655,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100140,glioma,manual_BraTS,0.9795,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100141,glioma,manual_BraTS,0.9740,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100142,glioma,manual_BraTS,1.1328,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100143,glioma,manual_BraTS,0.7870,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100144,glioma,manual_BraTS,0.9931,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100145,glioma,manual_BraTS,1.0000,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100146,glioma,manual_BraTS,0.9731,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100147,glioma,manual_BraTS,1.0487,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100148,glioma,manual_BraTS,0.9841,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100149,glioma,manual_BraTS,0.8590,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100150,glioma,manual_BraTS,1.0405,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100151,glioma,manual_BraTS,1.0000,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100152,glioma,manual_BraTS,1.0951,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100153,glioma,manual_BraTS,1.0428,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100154,glioma,manual_BraTS,1.0489,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100155,glioma,manual_BraTS,1.1228,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100156,glioma,manual_BraTS,1.3130,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100157,glioma,manual_BraTS,0.9953,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100158,glioma,manual_BraTS,1.0000,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100160,glioma,manual_BraTS,0.9382,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100161,glioma,manual_BraTS,1.0720,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100162,glioma,manual_BraTS,0.9551,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100163,glioma,manual_BraTS,0.9659,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100164,glioma,manual_BraTS,1.0403,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100165,glioma,manual_BraTS,1.1991,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100166,glioma,manual_BraTS,1.0733,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100167,glioma,manual_BraTS,1.0267,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100168,glioma,manual_BraTS,0.9942,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100169,glioma,manual_BraTS,1.1745,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100170,glioma,manual_BraTS,1.0069,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100171,glioma,manual_BraTS,1.2072,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100172,glioma,manual_BraTS,1.2311,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100173,glioma,manual_BraTS,1.1665,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100174,glioma,manual_BraTS,1.0393,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100175,glioma,manual_BraTS,0.9181,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100176,glioma,manual_BraTS,1.0739,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100177,glioma,manual_BraTS,1.0367,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100178,glioma,manual_BraTS,0.9802,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100179,glioma,manual_BraTS,1.0268,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100180,glioma,manual_BraTS,0.9349,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100181,glioma,manual_BraTS,1.0862,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100182,glioma,manual_BraTS,1.1070,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100183,glioma,manual_BraTS,1.0155,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100184,glioma,manual_BraTS,2.5404,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100185,glioma,manual_BraTS,1.0850,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100186,glioma,manual_BraTS,0.9684,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100187,glioma,manual_BraTS,0.9920,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100188,glioma,manual_BraTS,1.0583,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100189,glioma,manual_BraTS,1.0042,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100190,glioma,manual_BraTS,1.3054,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100191,glioma,manual_BraTS,1.3706,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100192,glioma,manual_BraTS,0.8960,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100193,glioma,manual_BraTS,1.4223,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100194,glioma,manual_BraTS,0.9310,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100195,glioma,manual_BraTS,0.9764,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100196,glioma,manual_BraTS,1.0277,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100197,glioma,manual_BraTS,1.0129,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100198,glioma,manual_BraTS,0.9895,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100199,glioma,manual_BraTS,1.1497,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100200,glioma,manual_BraTS,0.9761,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100201,glioma,manual_BraTS,1.0159,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100202,glioma,manual_BraTS,1.0655,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100203,glioma,manual_BraTS,1.1025,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100204,glioma,manual_BraTS,0.9737,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100205,glioma,manual_BraTS,0.8818,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100206,glioma,manual_BraTS,0.9966,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100207,glioma,manual_BraTS,0.9967,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100208,glioma,manual_BraTS,1.0142,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100209,glioma,manual_BraTS,1.0202,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100210,glioma,manual_BraTS,1.6439,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100211,glioma,manual_BraTS,0.9494,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100212,glioma,manual_BraTS,0.9965,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100213,glioma,manual_BraTS,1.4235,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100214,glioma,manual_BraTS,1.0023,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100215,glioma,manual_BraTS,0.9590,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100216,glioma,manual_BraTS,1.0654,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100217,glioma,manual_BraTS,0.9954,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100218,glioma,manual_BraTS,0.9865,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100219,glioma,manual_BraTS,1.0267,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100220,glioma,manual_BraTS,1.3736,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100221,glioma,manual_BraTS,1.0385,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100222,glioma,manual_BraTS,1.0386,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100223,glioma,manual_BraTS,1.1309,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100224,glioma,manual_BraTS,1.5521,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100225,glioma,manual_BraTS,1.0125,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100226,glioma,manual_BraTS,0.8622,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100227,glioma,manual_BraTS,1.0645,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100228,glioma,manual_BraTS,2.6944,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100229,glioma,manual_BraTS,1.1305,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100230,glioma,manual_BraTS,1.8760,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100231,glioma,manual_BraTS,0.9597,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100232,glioma,manual_BraTS,0.7351,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100233,glioma,manual_BraTS,1.0252,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100234,glioma,manual_BraTS,0.9037,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100235,glioma,manual_BraTS,0.9302,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100236,glioma,manual_BraTS,1.2033,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100237,glioma,manual_BraTS,1.0233,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100238,glioma,manual_BraTS,1.4838,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100239,glioma,manual_BraTS,1.0098,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100240,glioma,manual_BraTS,0.7721,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100241,glioma,manual_BraTS,1.4550,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100243,glioma,manual_BraTS,0.9452,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100244,glioma,manual_BraTS,0.8322,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100245,glioma,manual_BraTS,1.0891,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100246,glioma,manual_BraTS,2.2051,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100247,glioma,manual_BraTS,1.0046,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100248,glioma,manual_BraTS,1.2205,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100249,glioma,manual_BraTS,1.1707,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100250,glioma,manual_BraTS,0.9240,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100251,glioma,manual_BraTS,0.9822,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100252,glioma,manual_BraTS,0.9306,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100253,glioma,manual_BraTS,0.9044,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100254,glioma,manual_BraTS,0.9446,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100255,glioma,manual_BraTS,1.0091,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100256,glioma,manual_BraTS,1.3678,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100257,glioma,manual_BraTS,1.1936,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100258,glioma,manual_BraTS,0.9946,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100259,glioma,manual_BraTS,1.4046,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100260,glioma,manual_BraTS,2.5460,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100261,glioma,manual_BraTS,0.8796,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100262,glioma,manual_BraTS,1.0319,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100263,glioma,manual_BraTS,0.9497,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100264,glioma,manual_BraTS,0.9711,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100265,glioma,manual_BraTS,0.9852,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100266,glioma,manual_BraTS,0.3380,response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100267,glioma,manual_BraTS,1.2320,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100268,glioma,manual_BraTS,1.0855,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100269,glioma,manual_BraTS,1.1434,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100270,glioma,manual_BraTS,0.9482,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100271,glioma,manual_BraTS,1.3034,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100272,glioma,manual_BraTS,0.9670,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100273,glioma,manual_BraTS,1.0091,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100274,glioma,manual_BraTS,0.9618,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100275,glioma,manual_BraTS,0.9799,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100276,glioma,manual_BraTS,1.3042,modest_progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100277,glioma,manual_BraTS,1.0879,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100278,glioma,manual_BraTS,1.1366,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100279,glioma,manual_BraTS,1.1086,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100280,glioma,manual_BraTS,1.0276,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100281,glioma,manual_BraTS,1.0770,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100282,glioma,manual_BraTS,1.1839,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100283,glioma,manual_BraTS,1.0206,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100284,glioma,manual_BraTS,1.0281,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100285,glioma,manual_BraTS,0.8896,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100286,glioma,manual_BraTS,1.0251,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100287,glioma,manual_BraTS,0.9773,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100288,glioma,manual_BraTS,0.9814,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100289,glioma,manual_BraTS,1.0191,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100290,glioma,manual_BraTS,1.0364,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100291,glioma,manual_BraTS,0.9962,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100292,glioma,manual_BraTS,0.5769,modest_response,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100293,glioma,manual_BraTS,1.0084,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100294,glioma,manual_BraTS,1.0000,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100295,glioma,manual_BraTS,1.0556,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100296,glioma,manual_BraTS,0.9621,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100297,glioma,manual_BraTS,0.9355,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100298,glioma,manual_BraTS,1.5451,progression,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100299,glioma,manual_BraTS,0.9525,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100300,glioma,manual_BraTS,1.1698,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100301,glioma,manual_BraTS,0.9164,stable,locked_external,tier_1_locked
+UCSF-POSTOP,UCSF-POSTOP:100302,glioma,manual_BraTS,1.1651,stable,locked_external,tier_1_locked
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0003,glioma,manual_BraTS,1.2889,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0005,glioma,manual_BraTS,1.0264,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0006,glioma,manual_BraTS,0.4888,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0007,glioma,manual_BraTS,0.9748,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0008,glioma,manual_BraTS,0.6224,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0010,glioma,manual_BraTS,0.5098,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0011,glioma,manual_BraTS,0.9229,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0012,glioma,manual_BraTS,0.9957,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0013,glioma,manual_BraTS,1.2795,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0014,glioma,manual_BraTS,0.5255,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0018,glioma,manual_BraTS,2.8492,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0019,glioma,manual_BraTS,1.1204,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0020,glioma,manual_BraTS,0.9701,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0021,glioma,manual_BraTS,0.8307,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0022,glioma,manual_BraTS,0.6507,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0024,glioma,manual_BraTS,1.4208,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0025,glioma,manual_BraTS,0.2501,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0026,glioma,manual_BraTS,0.6065,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0029,glioma,manual_BraTS,1.3096,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0030,glioma,manual_BraTS,1.1575,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0031,glioma,manual_BraTS,1.0191,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0032,glioma,manual_BraTS,2.8058,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0033,glioma,manual_BraTS,0.6332,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0034,glioma,manual_BraTS,1.0548,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0035,glioma,manual_BraTS,0.9351,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0036,glioma,manual_BraTS,0.8399,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0037,glioma,manual_BraTS,0.9517,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0038,glioma,manual_BraTS,1.1748,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0039,glioma,manual_BraTS,0.7781,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0041,glioma,manual_BraTS,1.4948,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0044,glioma,manual_BraTS,0.9336,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0045,glioma,manual_BraTS,0.8627,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0051,glioma,manual_BraTS,1.0529,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0052,glioma,manual_BraTS,0.6673,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0053,glioma,manual_BraTS,1.4176,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0054,glioma,manual_BraTS,0.8388,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0055,glioma,manual_BraTS,0.6141,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0059,glioma,manual_BraTS,0.3643,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0060,glioma,manual_BraTS,1.0838,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0062,glioma,manual_BraTS,1.0812,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0064,glioma,manual_BraTS,0.7292,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0065,glioma,manual_BraTS,1.3208,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0066,glioma,manual_BraTS,0.1853,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0067,glioma,manual_BraTS,0.6321,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0068,glioma,manual_BraTS,5.4307,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0069,glioma,manual_BraTS,1.2139,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0070,glioma,manual_BraTS,1.1601,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0072,glioma,manual_BraTS,1.3229,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0073,glioma,manual_BraTS,1.2114,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0074,glioma,manual_BraTS,1.2684,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0078,glioma,manual_BraTS,1.1786,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0079,glioma,manual_BraTS,0.9103,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0080,glioma,manual_BraTS,2.0046,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0081,glioma,manual_BraTS,1.3558,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0082,glioma,manual_BraTS,0.6782,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0083,glioma,manual_BraTS,0.5847,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0084,glioma,manual_BraTS,0.7100,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0085,glioma,manual_BraTS,0.2944,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0087,glioma,manual_BraTS,1.9161,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0088,glioma,manual_BraTS,1.1277,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0089,glioma,manual_BraTS,1.0365,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0090,glioma,manual_BraTS,0.7183,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0091,glioma,manual_BraTS,0.8905,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0092,glioma,manual_BraTS,5.7687,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0093,glioma,manual_BraTS,3.8868,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0094,glioma,manual_BraTS,5.2238,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0095,glioma,manual_BraTS,1.1139,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0097,glioma,manual_BraTS,0.9594,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0099,glioma,manual_BraTS,1.3805,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0103,glioma,manual_BraTS,1.9740,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0105,glioma,manual_BraTS,4.0320,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0109,glioma,manual_BraTS,1.2560,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0110,glioma,manual_BraTS,1.0196,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0113,glioma,manual_BraTS,1.2996,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0114,glioma,manual_BraTS,0.8856,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0116,glioma,manual_BraTS,0.8592,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0117,glioma,manual_BraTS,0.5176,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0118,glioma,manual_BraTS,0.2506,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0121,glioma,manual_BraTS,1.7281,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0123,glioma,manual_BraTS,1.5405,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0125,glioma,manual_BraTS,1.5184,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0132,glioma,manual_BraTS,1.7021,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0135,glioma,manual_BraTS,4.6197,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0136,glioma,manual_BraTS,1.4536,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0138,glioma,manual_BraTS,0.3804,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0140,glioma,manual_BraTS,0.5039,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0142,glioma,manual_BraTS,0.9710,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0145,glioma,manual_BraTS,0.9726,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0147,glioma,manual_BraTS,0.9152,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0148,glioma,manual_BraTS,0.8085,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0149,glioma,manual_BraTS,0.6923,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0150,glioma,manual_BraTS,1.4440,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0151,glioma,manual_BraTS,1.0141,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0152,glioma,manual_BraTS,5.1044,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0156,glioma,manual_BraTS,0.3363,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0157,glioma,manual_BraTS,0.5334,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0159,glioma,manual_BraTS,0.3744,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0160,glioma,manual_BraTS,1.0071,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0162,glioma,manual_BraTS,1.2077,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0164,glioma,manual_BraTS,1.8398,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0169,glioma,manual_BraTS,1.8113,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0170,glioma,manual_BraTS,1.0738,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0171,glioma,manual_BraTS,1.2373,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0173,glioma,manual_BraTS,0.3935,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0186,glioma,manual_BraTS,1.2278,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0188,glioma,manual_BraTS,1.0741,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0189,glioma,manual_BraTS,2.8918,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0192,glioma,manual_BraTS,1.0924,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0195,glioma,manual_BraTS,0.8775,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0196,glioma,manual_BraTS,2.1364,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0197,glioma,manual_BraTS,0.6420,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0198,glioma,manual_BraTS,1.8923,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0199,glioma,manual_BraTS,0.6914,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0201,glioma,manual_BraTS,1.8905,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0202,glioma,manual_BraTS,3.8054,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0204,glioma,manual_BraTS,1.1693,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0205,glioma,manual_BraTS,0.7299,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0207,glioma,manual_BraTS,0.6985,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0208,glioma,manual_BraTS,0.2195,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0209,glioma,manual_BraTS,0.6088,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0210,glioma,manual_BraTS,1.2458,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0211,glioma,manual_BraTS,0.6742,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0212,glioma,manual_BraTS,0.9228,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0213,glioma,manual_BraTS,1.1073,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0214,glioma,manual_BraTS,0.7061,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0215,glioma,manual_BraTS,1.0312,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0220,glioma,manual_BraTS,0.3564,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0235,glioma,manual_BraTS,0.8077,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0236,glioma,manual_BraTS,0.2958,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0237,glioma,manual_BraTS,0.9509,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0238,glioma,manual_BraTS,1.6705,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0239,glioma,manual_BraTS,13.1508,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0240,glioma,manual_BraTS,1.1869,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0242,glioma,manual_BraTS,0.1809,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0249,glioma,manual_BraTS,0.5403,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0250,glioma,manual_BraTS,0.5801,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0251,glioma,manual_BraTS,1.6923,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0252,glioma,manual_BraTS,1.1866,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0254,glioma,manual_BraTS,2.0304,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0255,glioma,manual_BraTS,0.4413,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0256,glioma,manual_BraTS,3.7656,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0259,glioma,manual_BraTS,2.4535,progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0260,glioma,manual_BraTS,1.3279,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0264,glioma,manual_BraTS,1.2776,modest_progression,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0265,glioma,manual_BraTS,0.5015,modest_response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0267,glioma,manual_BraTS,1.0067,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0268,glioma,manual_BraTS,0.0573,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0270,glioma,manual_BraTS,0.2895,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0272,glioma,manual_BraTS,0.3886,response,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0274,glioma,manual_BraTS,0.9253,stable,discovery,discovery
+MU-Glioma-Post,MU-Glioma-Post:PatientID_0275,glioma,manual_BraTS,0.8480,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0001,glioma,manual_BraTS,0.9744,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0002,glioma,manual_BraTS,0.1835,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0003,glioma,manual_BraTS,0.7003,modest_response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0004,glioma,manual_BraTS,1.5057,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0005,glioma,manual_BraTS,1.1418,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0006,glioma,manual_BraTS,0.3174,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0008,glioma,manual_BraTS,0.3166,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0009,glioma,manual_BraTS,0.0795,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0010,glioma,manual_BraTS,1.8625,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0011,glioma,manual_BraTS,0.1996,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0012,glioma,manual_BraTS,0.0004,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0013,glioma,manual_BraTS,0.3081,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0014,glioma,manual_BraTS,0.6203,modest_response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0015,glioma,manual_BraTS,0.4645,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0016,glioma,manual_BraTS,0.3274,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0017,glioma,manual_BraTS,1.6870,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0018,glioma,manual_BraTS,0.6763,modest_response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0019,glioma,manual_BraTS,0.3466,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0020,glioma,manual_BraTS,0.2135,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0021,glioma,manual_BraTS,0.8451,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0022,glioma,manual_BraTS,0.6831,modest_response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0023,glioma,manual_BraTS,1.0535,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0024,glioma,manual_BraTS,1.6049,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0025,glioma,manual_BraTS,1.6112,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0026,glioma,manual_BraTS,0.9318,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0027,glioma,manual_BraTS,0.1815,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0028,glioma,manual_BraTS,0.9864,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0029,glioma,manual_BraTS,0.8562,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0030,glioma,manual_BraTS,0.9075,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0031,glioma,manual_BraTS,0.4685,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0032,glioma,manual_BraTS,0.3330,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0033,glioma,manual_BraTS,1.8402,progression,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0034,glioma,manual_BraTS,0.8680,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0035,glioma,manual_BraTS,0.3058,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0036,glioma,manual_BraTS,0.3233,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0037,glioma,manual_BraTS,1.0541,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0038,glioma,manual_BraTS,0.0092,response,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0039,glioma,manual_BraTS,1.0392,stable,discovery,discovery
+RHUH-GBM,RHUH-GBM:RHUH-0040,glioma,manual_BraTS,1.4693,modest_progression,discovery,discovery
+LUMIERE,LUMIERE:Patient-004,glioma,manual_BraTS,0.1474,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-006,glioma,manual_BraTS,0.1486,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-010,glioma,manual_BraTS,0.3505,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-018,glioma,manual_BraTS,0.0902,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-020,glioma,manual_BraTS,0.8825,stable,discovery,discovery
+LUMIERE,LUMIERE:Patient-021,glioma,manual_BraTS,0.2438,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-022,glioma,manual_BraTS,0.9302,stable,discovery,discovery
+LUMIERE,LUMIERE:Patient-027,glioma,manual_BraTS,2.3451,progression,discovery,discovery
+LUMIERE,LUMIERE:Patient-034,glioma,manual_BraTS,0.7998,modest_response,discovery,discovery
+LUMIERE,LUMIERE:Patient-035,glioma,manual_BraTS,7.7619,progression,discovery,discovery
+LUMIERE,LUMIERE:Patient-037,glioma,manual_BraTS,3.3387,progression,discovery,discovery
+LUMIERE,LUMIERE:Patient-039,glioma,manual_BraTS,0.9761,stable,discovery,discovery
+LUMIERE,LUMIERE:Patient-041,glioma,manual_BraTS,0.3216,response,discovery,discovery
+LUMIERE,LUMIERE:Patient-042,glioma,manual_BraTS,1.1577,stable,discovery,discovery
+LUMIERE,LUMIERE:Patient-045,glioma,manual_BraTS,2.0710,progression,discovery,discovery
+LUMIERE,LUMIERE:Patient-047,glioma,manual_BraTS,0.7691,modest_response,discovery,discovery
+UCSD-PTGBM,UCSD-PTGBM-0005,glioma,manual_BraTS,2.7743,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0007,glioma,manual_BraTS,1.0534,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0008,glioma,manual_BraTS,0.3202,response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0017,glioma,manual_BraTS,0.4394,response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0018,glioma,manual_BraTS,1.3659,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0019,glioma,manual_BraTS,0.3049,response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0022,glioma,manual_BraTS,1.0016,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0025,glioma,manual_BraTS,1.1342,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0032,glioma,manual_BraTS,1.9545,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0034,glioma,manual_BraTS,1.3044,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0036,glioma,manual_BraTS,2.1826,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0037,glioma,manual_BraTS,1.0502,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0047,glioma,manual_BraTS,0.6395,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0050,glioma,manual_BraTS,1.3365,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0053,glioma,manual_BraTS,1.6028,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0066,glioma,manual_BraTS,0.5596,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0073,glioma,manual_BraTS,0.4040,response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0101,glioma,manual_BraTS,1.6182,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0103,glioma,manual_BraTS,0.3995,response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0119,glioma,manual_BraTS,0.8529,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0120,glioma,manual_BraTS,0.6951,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0123,glioma,manual_BraTS,0.7310,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0124,glioma,manual_BraTS,2.7919,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0133,glioma,manual_BraTS,0.7428,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0135,glioma,manual_BraTS,1.3801,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0137,glioma,manual_BraTS,1.4523,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0140,glioma,manual_BraTS,0.9274,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0147,glioma,manual_BraTS,1.3218,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0150,glioma,manual_BraTS,1.3732,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0155,glioma,manual_BraTS,0.7870,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0162,glioma,manual_BraTS,1.0600,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0163,glioma,manual_BraTS,0.5457,modest_response,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0167,glioma,manual_BraTS,0.8384,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0172,glioma,manual_BraTS,1.2282,modest_progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0174,glioma,manual_BraTS,1.0121,stable,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0176,glioma,manual_BraTS,1.9327,progression,second_external,tier_2_small_external
+UCSD-PTGBM,UCSD-PTGBM-0178,glioma,manual_BraTS,1.3736,modest_progression,second_external,tier_2_small_external
+PROTEAS,P03_fu1,brain_metastasis,manual + RT_planning,0.8436,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P03_fu2,brain_metastasis,manual + RT_planning,1.5342,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04a_fu1,brain_metastasis,manual + RT_planning,0.0348,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04a_fu2,brain_metastasis,manual + RT_planning,0.0158,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04a_fu3,brain_metastasis,manual + RT_planning,0.0522,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04b_fu1,brain_metastasis,manual + RT_planning,2.6168,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04b_fu2,brain_metastasis,manual + RT_planning,0.3848,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04b_fu3,brain_metastasis,manual + RT_planning,0.3809,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P04b_fu4,brain_metastasis,manual + RT_planning,0.2758,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P05_fu1,brain_metastasis,manual + RT_planning,0.2093,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P05_fu2,brain_metastasis,manual + RT_planning,1.2279,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P06_fu1,brain_metastasis,manual + RT_planning,0.7954,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P06_fu2,brain_metastasis,manual + RT_planning,0.6909,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P07a_fu1,brain_metastasis,manual + RT_planning,0.9262,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P07a_fu2,brain_metastasis,manual + RT_planning,1.6336,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P07b_fu1,brain_metastasis,manual + RT_planning,0.6647,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P07b_fu2,brain_metastasis,manual + RT_planning,0.3459,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P08_fu1,brain_metastasis,manual + RT_planning,1.4226,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P08_fu2,brain_metastasis,manual + RT_planning,4.8958,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P08_fu3,brain_metastasis,manual + RT_planning,0.8029,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P08_fu4,brain_metastasis,manual + RT_planning,0.8964,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P09_fu1,brain_metastasis,manual + RT_planning,0.2064,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P09_fu3,brain_metastasis,manual + RT_planning,0.0140,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P09_fu4,brain_metastasis,manual + RT_planning,0.0465,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P10_fu1,brain_metastasis,manual + RT_planning,2.0688,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P10_fu2,brain_metastasis,manual + RT_planning,7.5548,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P10_fu3,brain_metastasis,manual + RT_planning,15.4911,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P11_fu1,brain_metastasis,manual + RT_planning,0.4389,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P11_fu2,brain_metastasis,manual + RT_planning,0.4533,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P11_fu3,brain_metastasis,manual + RT_planning,0.3563,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P11_fu4,brain_metastasis,manual + RT_planning,0.4629,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P12_fu1,brain_metastasis,manual + RT_planning,1.0140,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P12_fu2,brain_metastasis,manual + RT_planning,0.1540,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P13_fu1,brain_metastasis,manual + RT_planning,1.3508,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P13_fu2,brain_metastasis,manual + RT_planning,1.9367,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P13_fu3,brain_metastasis,manual + RT_planning,2.4464,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P13_fu4,brain_metastasis,manual + RT_planning,2.4172,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P14_fu1,brain_metastasis,manual + RT_planning,0.1302,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P15_fu2,brain_metastasis,manual + RT_planning,0.5295,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P15_fu3,brain_metastasis,manual + RT_planning,1.4225,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17a_fu1,brain_metastasis,manual + RT_planning,0.7200,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17a_fu2,brain_metastasis,manual + RT_planning,1.0888,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17a_fu3,brain_metastasis,manual + RT_planning,1.2086,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17a_fu4,brain_metastasis,manual + RT_planning,1.0407,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17b_fu1,brain_metastasis,manual + RT_planning,1.0002,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17b_fu2,brain_metastasis,manual + RT_planning,1.0647,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17b_fu3,brain_metastasis,manual + RT_planning,1.1088,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P17b_fu4,brain_metastasis,manual + RT_planning,0.7888,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P18_fu1,brain_metastasis,manual + RT_planning,0.1938,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P18_fu2,brain_metastasis,manual + RT_planning,0.2150,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P18_fu3,brain_metastasis,manual + RT_planning,0.1853,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P18_fu4,brain_metastasis,manual + RT_planning,0.2073,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P19_fu1,brain_metastasis,manual + RT_planning,0.3295,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P19_fu2,brain_metastasis,manual + RT_planning,0.3920,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P19_fu3,brain_metastasis,manual + RT_planning,0.1098,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P20b_fu3,brain_metastasis,manual + RT_planning,0.8090,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P20b_fu4,brain_metastasis,manual + RT_planning,0.4205,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P21_fu1,brain_metastasis,manual + RT_planning,3.6267,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P21_fu2,brain_metastasis,manual + RT_planning,0.7847,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P22_fu1,brain_metastasis,manual + RT_planning,1.8644,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P22_fu2,brain_metastasis,manual + RT_planning,7.1418,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P22_fu3,brain_metastasis,manual + RT_planning,12.1555,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P22_fu4,brain_metastasis,manual + RT_planning,8.2264,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23a_fu1,brain_metastasis,manual + RT_planning,0.0492,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23a_fu2,brain_metastasis,manual + RT_planning,0.2044,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23a_fu3,brain_metastasis,manual + RT_planning,0.6213,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23b_fu1,brain_metastasis,manual + RT_planning,1.4692,modest_progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23b_fu2,brain_metastasis,manual + RT_planning,4.8947,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P23b_fu3,brain_metastasis,manual + RT_planning,2.4509,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P24_fu1,brain_metastasis,manual + RT_planning,0.0640,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P25_fu1,brain_metastasis,manual + RT_planning,0.8676,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P25_fu3,brain_metastasis,manual + RT_planning,0.8676,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P25_fu4,brain_metastasis,manual + RT_planning,5.0769,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P26_fu1,brain_metastasis,manual + RT_planning,0.2293,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P26_fu2,brain_metastasis,manual + RT_planning,0.0063,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P32_fu1,brain_metastasis,manual + RT_planning,0.1051,response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P33_fu1,brain_metastasis,manual + RT_planning,0.6324,modest_response,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P33_fu2,brain_metastasis,manual + RT_planning,2.3361,progression,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P35_fu1,brain_metastasis,manual + RT_planning,0.8825,stable,cross_disease_external,tier_2_small_external_cross_disease
+PROTEAS,P35_fu3,brain_metastasis,manual + RT_planning,0.8287,stable,cross_disease_external,tier_2_small_external_cross_disease
+UPENN-GBM,UPENN-GBM-00036,glioma,manual_baseline + FLAIR_pseudo_followup,0.9447,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00042,glioma,manual_baseline + FLAIR_pseudo_followup,0.8445,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00045,glioma,manual_baseline + FLAIR_pseudo_followup,1.0784,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00051,glioma,manual_baseline + FLAIR_pseudo_followup,1.2371,modest_progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00052,glioma,manual_baseline + FLAIR_pseudo_followup,0.7854,modest_response,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00055,glioma,manual_baseline + FLAIR_pseudo_followup,0.9946,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00084,glioma,manual_baseline + FLAIR_pseudo_followup,0.9729,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00086,glioma,manual_baseline + FLAIR_pseudo_followup,0.9283,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00088,glioma,manual_baseline + FLAIR_pseudo_followup,1.0970,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00093,glioma,manual_baseline + FLAIR_pseudo_followup,1.0710,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00122,glioma,manual_baseline + FLAIR_pseudo_followup,0.9258,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00128,glioma,manual_baseline + FLAIR_pseudo_followup,0.8207,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00129,glioma,manual_baseline + FLAIR_pseudo_followup,0.6884,modest_response,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00130,glioma,manual_baseline + FLAIR_pseudo_followup,0.8038,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00133,glioma,manual_baseline + FLAIR_pseudo_followup,1.4147,modest_progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00134,glioma,manual_baseline + FLAIR_pseudo_followup,0.8071,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00140,glioma,manual_baseline + FLAIR_pseudo_followup,0.8151,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00141,glioma,manual_baseline + FLAIR_pseudo_followup,0.9065,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00145,glioma,manual_baseline + FLAIR_pseudo_followup,1.0025,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00148,glioma,manual_baseline + FLAIR_pseudo_followup,1.0135,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00150,glioma,manual_baseline + FLAIR_pseudo_followup,1.7931,progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00160,glioma,manual_baseline + FLAIR_pseudo_followup,1.1751,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00183,glioma,manual_baseline + FLAIR_pseudo_followup,0.8819,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00197,glioma,manual_baseline + FLAIR_pseudo_followup,0.9428,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00219,glioma,manual_baseline + FLAIR_pseudo_followup,0.8948,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00267,glioma,manual_baseline + FLAIR_pseudo_followup,0.8126,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00280,glioma,manual_baseline + FLAIR_pseudo_followup,0.8120,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00285,glioma,manual_baseline + FLAIR_pseudo_followup,1.2767,modest_progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00295,glioma,manual_baseline + FLAIR_pseudo_followup,1.0105,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00301,glioma,manual_baseline + FLAIR_pseudo_followup,0.9589,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00302,glioma,manual_baseline + FLAIR_pseudo_followup,1.0385,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00307,glioma,manual_baseline + FLAIR_pseudo_followup,2.2340,progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00312,glioma,manual_baseline + FLAIR_pseudo_followup,0.9779,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00314,glioma,manual_baseline + FLAIR_pseudo_followup,0.8353,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00320,glioma,manual_baseline + FLAIR_pseudo_followup,1.3347,modest_progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00332,glioma,manual_baseline + FLAIR_pseudo_followup,1.1879,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00344,glioma,manual_baseline + FLAIR_pseudo_followup,0.6961,modest_response,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00352,glioma,manual_baseline + FLAIR_pseudo_followup,1.2468,modest_progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00353,glioma,manual_baseline + FLAIR_pseudo_followup,0.8172,stable,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00354,glioma,manual_baseline + FLAIR_pseudo_followup,1.5549,progression,pseudo_label_sensitivity,tier_3_sensitivity
+UPENN-GBM,UPENN-GBM-00355,glioma,manual_baseline + FLAIR_pseudo_followup,1.0109,stable,pseudo_label_sensitivity,tier_3_sensitivity
+Yale-Brain-Mets,YG_01M98EKKAR50,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_021XTGZ9QY91,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_04YGLO8ATWRL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_05MQ79QMQ47J,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0672Z3TDI7TX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_067CZQ4XF301,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_06JD7DXMWM1Z,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_08FFD4BL4BZN,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_08G3HT3A02VT,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_08GS35K1DP6I,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_091GPBK5TXGU,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0B4NV6E3KEZQ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0CU8HPX0ZAEL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0EABW4RYOCNY,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0FO5G1M2C3Y3,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0J51IOEKFWN6,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0JCOFA4MZFB4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0JDCLTWTO6Z9,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0JNDPYDF1AOJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0JNSAVNNKN3X,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0K9HODJ9O0XJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0KEDXC8XKCKQ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0KTGI1Y5VVG4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0L8F6DK4OHSS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0LCE6TOVHK67,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0N499PCZDOI8,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0NJFMSX6HJJ5,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0PCR5HGV5JMS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0Q2P99ZMH54W,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0QKWE8CM2NMZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0R2XIHVCPIPJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0VNVGMWSQSC0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0VXLV8MA5Y86,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0Y74OO0HCJZA,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_0ZEB4PY0SACS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_10NEU2B2AU1G,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1122YUVTJR4I,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_11AEPAC2GLM8,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_14VQNND2SXVU,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_15G14BDCV5CM,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_15SW3C6O13AD,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_17XJPJXFEBDI,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1DUP8834BWSF,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1DV5TLUZJX7L,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1EKRD2LRLMCZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1G1CWRJ7813T,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1G35JH5OSTCP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1GV8T20UHPLO,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1GVBTE7H79DA,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1H3DMSJLPMAP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1HLO67MPZTJ9,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1HNJVORKJHMC,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1HPDQAIN16XP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1ILEWG577LBB,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1J6AIYRI7RAL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1LBJD8AG81LN,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1LOFNSEV064R,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1LR62RFR32N2,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1LY4MHI9S6UV,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1LYOW0QK90GP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1M81XJO2C1DA,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1NBQURVOLI6A,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1NMXJQTAQYW0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1NTBZU4VQQMX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1QGTIM7UD8OZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1RGGRLQQ0RJH,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1S1QWNDO1Y50,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1SHC5E262EIK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1TA1BGB2ZW2M,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1UUGKXJ8MBSY,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1VEZF5NX7TCR,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1WSPZQ7C36A1,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1XINB74FQ0RP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1YRIQG14G6C1,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_1ZW8QBKU7XI4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_20RFWI8EBQDD,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_211LVREGU9PY,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_21JLHNP9O1XA,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_21Z9FL74JD9I,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_22HZKAWGKBK1,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_22N5LSL87PQL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_22ZN60UIAKR7,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_23M5MI87O7C0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_24O1E306UIMP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_25H3RBI2EWII,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_25T17KQRIYTG,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_28MH3F79YKC3,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2AN4X57Z9MYM,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2APNJQJW9O5Z,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2AYR5TVNJSOE,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2BTTAMTC8CV0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2DSZCML19C1B,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2GDABOAHRII0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2GFKNRMBXPK0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2HPMFTL3ZO0K,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2HT0GMPDGPRY,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2HXWZ4ENFK2A,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2JDLG8YVQZOV,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2JKYOFLC5W1F,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2LEC0G5PJYWI,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2LJSNXSFIUFO,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2MHW2LATHB47,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2MP7PMPINBC6,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2N3527XDUIB2,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2OME3LVQLMJ4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2P6CYORXA7HE,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2QBUAP96IP1O,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2QP8RDIZCKHK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2TUB1WEZ3M6G,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2V63QPTS0BID,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2W93PFTOB5FQ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2XJ5E15EJJ87,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2XQ7U27JONU2,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2Y6EF2NHHNMC,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_2YUG8M2YRFD1,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_30B3EV2VMY4I,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_31193ELO6EM0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_318J6XB1N0QL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_31NUWBJ5R98Y,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_31QQSUJFPF77,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_34KJXUOZXWVF,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_34OC4F3B9ZX2,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_34XAANH8IAAS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_351SN71EDRPD,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_352H0VFLCBHZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_35A3HP23TSH4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_37PXRCQ2J3UK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_37QC4STR1IEB,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3B78R0CWSPHN,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3B8PQ71AOONQ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3CFDCTI16AEX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3D1HTUQCADA2,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3E0FNV9S2KD0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3EKJ34OIKKXJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3FE7VGYRVQE4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3FS0WFEZIIIT,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3HN097IMNTNS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3HOA3GGTGA5C,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3I6CQJCTAUAS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3IH00LYILX5I,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3INGEX8QFYPL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3IZJ54MG7EK0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3J3CS5LW9FCK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3J3Y89WP96C0,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3JB5TZPBLWLX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3KLXWFXG4QZE,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3M3RD0RD9CAB,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3MWMCPY1HYDE,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3NO801O55QGI,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3NWO22L983SO,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3P2DVWEPS20P,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3P8GW3LSB2HK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3S5CMWGW4UAE,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3SBV9GLFGVGM,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3T7XMQ1QJADM,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3TC5KUFAUHCC,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3TL460JNYCNK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3TZ02EK1ZL0W,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3UXO820Y90R4,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3V052H21R9WO,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3VRAX1P9ABGX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_3Z5P90UGP6RP,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_40Q4JF43YGQZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_41B6OFKQVCOL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_41F6RHJ2Z2CL,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_42KZ6K3WMFUZ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_44VI2121BOWT,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_46WPRPUDY2XK,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_47AGM9PGVBQN,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_47UWBQON503Q,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_493LRAH1V9XH,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4952AP9I5M7F,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_498TPV3ZQYHB,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4A6GBYAFDGLH,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4BWK6OVZ2VWS,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4CS586C5L2GX,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4DDU05VBMV2A,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4DI97R1AG5KA,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4DOG97UXU57J,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4FWHY1BHBX60,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4G2PRLW3R8N8,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4GY8O6HFEONF,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4HCEND8UAIRF,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4KTUCBKV1ZCV,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4LH8PG2REEFI,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4LIWMY9ACPLD,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4LT8OBUU8HCC,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4MBE4OS4QS11,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4NFZGNWMYF4M,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4RDNB3QXW381,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4ROTT8F1HC4L,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4S8RDH9U9GPJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4SEXQDIN19U7,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4T5BPNBJS1ZN,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4TMDPOTHTQOG,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4U8SSOTPZQ6X,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4UXZ4XIVJ5CQ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4VNB5DIV6MKJ,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4W4H0GWWWWN1,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit
+Yale-Brain-Mets,YG_4Y0TH8T0ERLU,brain_metastasis,NONE,,unlabelled,imaging_only_deployment_audit,tier_4_audit

@@ -1,0 +1,39 @@
+# Build / runtime
+__pycache__/
+*.pyc
+*.pyo
+*.so
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Heavy training artifacts (regeneratable)
+*.npz
+*.pth
+*.ckpt
+nnUNet_preprocessed/
+nnUNet_raw/
+nnUNet_results/
+
+# Local data (DUA-restricted; do not commit)
+06_data/
+Datasets/
+
+# Logs
+*.log
+*.err.log
+*.out.log
+
+# Editor swaps
+*.swp
+*.bak
+*~

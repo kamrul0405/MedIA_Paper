@@ -1,0 +1,169 @@
+{
+  "version": "v77_ucsf_raw_mri_baseline",
+  "status": "EMPIRICAL_RAW_MRI_STRESS_TEST",
+  "date": "2026-05-05",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "n_cases": 296,
+  "n_stable": 240,
+  "pi_stable": 0.8108108108108109,
+  "master_index_aligned": true,
+  "crop_shape_DHW": [
+    16,
+    48,
+    48
+  ],
+  "folds": 3,
+  "epochs": 28,
+  "batch_size": 10,
+  "case_limit": null,
+  "variants": {
+    "heat_prior_no_training": {
+      "folds": [
+        {
+          "brier_mean": 0.1094562973112169,
+          "brier_sd": 0.06399415601917834,
+          "dice_mean": 0.8419613998538806,
+          "auroc_mean": 0.929246718400255,
+          "ece_mean": 0.10494545671687934
+        },
+        {
+          "brier_mean": 0.1077994688442259,
+          "brier_sd": 0.06382026767666424,
+          "dice_mean": 0.8605658201792258,
+          "auroc_mean": 0.9384096163664997,
+          "ece_mean": 0.10775032677596925
+        },
+        {
+          "brier_mean": 0.10656337149213163,
+          "brier_sd": 0.06582284355423218,
+          "dice_mean": 0.8395109569722071,
+          "auroc_mean": 0.9334668169623476,
+          "ece_mean": 0.10861263909422575
+        }
+      ],
+      "brier_mean": 0.10793971254919148,
+      "ece_mean": 0.10710280752902479,
+      "auroc_mean": 0.933707717243034
+    },
+    "raw4": {
+      "folds": [
+        {
+          "brier_mean": 0.13422576074648385,
+          "brier_sd": 0.06859133857568546,
+          "dice_mean": 0.7969822270707523,
+          "auroc_mean": 0.8961871787045157,
+          "ece_mean": 0.11689323515088933
+        },
+        {
+          "brier_mean": 0.15003778119430397,
+          "brier_sd": 0.07197731157575897,
+          "dice_mean": 0.7749823758505724,
+          "auroc_mean": 0.8828824004341018,
+          "ece_mean": 0.12918338683349673
+        },
+        {
+          "brier_mean": 0.14752447164180327,
+          "brier_sd": 0.08393451857180449,
+          "dice_mean": 0.7723756215876495,
+          "auroc_mean": 0.8896779021191555,
+          "ece_mean": 0.13019299059785133
+        }
+      ],
+      "brier_mean": 0.1439293378608637,
+      "brier_sd_across_folds": 0.008496984043630426,
+      "ece_mean": 0.12542320419407912,
+      "auroc_mean": 0.889582493752591,
+      "dice_mean": 0.7814467415029914
+    },
+    "raw4_mask": {
+      "folds": [
+        {
+          "brier_mean": 0.09992609164592894,
+          "brier_sd": 0.07298979329671876,
+          "dice_mean": 0.8631611140232052,
+          "auroc_mean": 0.9317546971132139,
+          "ece_mean": 0.08709400248911182
+        },
+        {
+          "brier_mean": 0.0971038659865206,
+          "brier_sd": 0.07253116305680096,
+          "dice_mean": 0.8764893463085834,
+          "auroc_mean": 0.9430104428734474,
+          "ece_mean": 0.08857145827542559
+        },
+        {
+          "brier_mean": 0.09684785489677167,
+          "brier_sd": 0.07348518954031909,
+          "dice_mean": 0.8590319613614905,
+          "auroc_mean": 0.9388810986320852,
+          "ece_mean": 0.08800511308868361
+        }
+      ],
+      "brier_mean": 0.09795927084307372,
+      "brier_sd_across_folds": 0.0017081198647713835,
+      "ece_mean": 0.087890191284407,
+      "auroc_mean": 0.9378820795395821,
+      "dice_mean": 0.8662274738977597
+    },
+    "raw4_mask_heat_sdf": {
+      "folds": [
+        {
+          "brier_mean": 0.09980163080711858,
+          "brier_sd": 0.07245957511715428,
+          "dice_mean": 0.8621594688284847,
+          "auroc_mean": 0.9327551287623972,
+          "ece_mean": 0.08308077370881863
+        },
+        {
+          "brier_mean": 0.09650959652105365,
+          "brier_sd": 0.07444939413483577,
+          "dice_mean": 0.8788897179699292,
+          "auroc_mean": 0.9438743587772993,
+          "ece_mean": 0.0869514564147783
+        },
+        {
+          "brier_mean": 0.09726278236782064,
+          "brier_sd": 0.07606721964256437,
+          "dice_mean": 0.8580855896289347,
+          "auroc_mean": 0.9400516881559186,
+          "ece_mean": 0.08969467599001947
+        }
+      ],
+      "brier_mean": 0.09785800323199763,
+      "brier_sd_across_folds": 0.0017248444402381514,
+      "ece_mean": 0.08657563537120545,
+      "auroc_mean": 0.9388937252318716,
+      "dice_mean": 0.8663782588091161
+    }
+  },
+  "best_raw_model": "raw4_mask_heat_sdf",
+  "heat_brier": 0.10793971254919148,
+  "best_raw_brier": 0.09785800323199763,
+  "delta_raw_minus_heat_brier": -0.010081709317193849,
+  "paired_bootstrap_delta_raw_minus_heat": {
+    "raw4": {
+      "mean": 0.035972829870376234,
+      "ci95_lo": 0.029658875581682533,
+      "ci95_hi": 0.04287094304092681,
+      "p_delta_lt_0": 0.0,
+      "n": 296
+    },
+    "raw4_mask": {
+      "mean": -0.009981336723383818,
+      "ci95_lo": -0.012312078476502761,
+      "ci95_hi": -0.007529881256129093,
+      "p_delta_lt_0": 1.0,
+      "n": 296
+    },
+    "raw4_mask_heat_sdf": {
+      "mean": -0.010084348230471683,
+      "ci95_lo": -0.01235251806407374,
+      "ci95_hi": -0.007738064297528411,
+      "p_delta_lt_0": 1.0,
+      "n": 296
+    }
+  },
+  "interpretation": "Negative delta means the best raw-MRI model beat the heat prior on internal UCSF CV; positive delta means heat remained stronger despite raw MRI access. This is internal cross-validation, not leave-cohort-out external raw-image nnU-Net evidence.",
+  "runtime_s": 244.42
+}

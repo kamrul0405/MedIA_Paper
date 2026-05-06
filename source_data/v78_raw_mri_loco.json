@@ -1,0 +1,447 @@
+{
+  "version": "v78_raw_mri_loco",
+  "status": "RAW_MRI_EXTERNAL_TRANSPORTABILITY_STRESS_TEST",
+  "date": "2026-05-05",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "crop_shape_DHW": [
+    16,
+    48,
+    48
+  ],
+  "epochs": 24,
+  "batch_size": 10,
+  "limit_per_cohort": null,
+  "variants": [
+    "mask_heat_sdf",
+    "raw4",
+    "raw4_mask",
+    "raw4_mask_heat_sdf"
+  ],
+  "cohort_summary": {
+    "MU-Glioma-Post": {
+      "n": 151,
+      "pi_stable": 0.3443708609271523,
+      "n_stable": 52,
+      "n_active": 99
+    },
+    "RHUH-GBM": {
+      "n": 38,
+      "pi_stable": 0.2894736842105263,
+      "n_stable": 11,
+      "n_active": 27
+    },
+    "UCSD-PTGBM": {
+      "n": 37,
+      "pi_stable": 0.24324324324324326,
+      "n_stable": 9,
+      "n_active": 28
+    },
+    "UCSF-POSTOP": {
+      "n": 296,
+      "pi_stable": 0.8108108108108109,
+      "n_stable": 240,
+      "n_active": 56
+    }
+  },
+  "loco_results": {
+    "UCSF-POSTOP": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "UCSD-PTGBM"
+      ],
+      "n_train": 226,
+      "n_test": 296,
+      "pi_stable_test": 0.8108108108108109,
+      "metrics": {
+        "heat_prior_no_training": {
+          "brier_mean": 0.10794436235005993,
+          "brier_sd": 0.0643394946744495,
+          "dice_mean": 0.8473725289410602,
+          "auroc_mean": 0.9337093504652761,
+          "ece_mean": 0.1070977067467099,
+          "brier_stable": 0.08849995796723913,
+          "brier_active": 0.1912775239907205,
+          "n_stable": 240,
+          "n_active": 56
+        },
+        "mask_heat_sdf": {
+          "brier_mean": 0.14122149526972222,
+          "brier_sd": 0.034435112844332774,
+          "dice_mean": 0.8493396416575072,
+          "auroc_mean": 0.9277648299550826,
+          "ece_mean": 0.2110792926538386,
+          "brier_stable": 0.13161762794479728,
+          "brier_active": 0.18238092666225775,
+          "n_stable": 240,
+          "n_active": 56
+        },
+        "raw4": {
+          "brier_mean": 0.2556404493296066,
+          "brier_sd": 0.0957147183461238,
+          "dice_mean": 0.3943266273624902,
+          "auroc_mean": 0.7721556900879794,
+          "ece_mean": 0.260659838482216,
+          "brier_stable": 0.2588790715051194,
+          "brier_active": 0.24176064000598022,
+          "n_stable": 240,
+          "n_active": 56
+        },
+        "raw4_mask": {
+          "brier_mean": 0.14512832631432526,
+          "brier_sd": 0.046575919878438926,
+          "dice_mean": 0.80136570651458,
+          "auroc_mean": 0.9143055587130292,
+          "ece_mean": 0.19263454481572923,
+          "brier_stable": 0.13365213874106605,
+          "brier_active": 0.194311987342579,
+          "n_stable": 240,
+          "n_active": 56
+        },
+        "raw4_mask_heat_sdf": {
+          "brier_mean": 0.14406874853916266,
+          "brier_sd": 0.04295420661461269,
+          "dice_mean": 0.8033091832699044,
+          "auroc_mean": 0.9110589216132925,
+          "ece_mean": 0.1769641288262284,
+          "brier_stable": 0.13278457578271627,
+          "brier_active": 0.19242948892393283,
+          "n_stable": 240,
+          "n_active": 56
+        }
+      },
+      "paired_delta_vs_heat": {
+        "mask_heat_sdf": {
+          "mean": 0.03327713292595502,
+          "ci95_lo": 0.029106441548887037,
+          "ci95_hi": 0.03737485523750955,
+          "p_delta_lt_0": 0.0,
+          "n": 296
+        },
+        "raw4": {
+          "mean": 0.14769608718720642,
+          "ci95_lo": 0.1347665426384255,
+          "ci95_hi": 0.1607476458626774,
+          "p_delta_lt_0": 0.0,
+          "n": 296
+        },
+        "raw4_mask": {
+          "mean": 0.037183963945387186,
+          "ci95_lo": 0.03318778112423732,
+          "ci95_hi": 0.04109555385736245,
+          "p_delta_lt_0": 0.0,
+          "n": 296
+        },
+        "raw4_mask_heat_sdf": {
+          "mean": 0.036124386182810005,
+          "ci95_lo": 0.03212884326050108,
+          "ci95_hi": 0.040090976988682775,
+          "p_delta_lt_0": 0.0,
+          "n": 296
+        }
+      },
+      "best_raw_variant": "mask_heat_sdf",
+      "winner_by_brier": "heat_prior_no_training"
+    },
+    "MU-Glioma-Post": {
+      "train_cohorts": [
+        "RHUH-GBM",
+        "UCSD-PTGBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 371,
+      "n_test": 151,
+      "pi_stable_test": 0.3443708609271523,
+      "metrics": {
+        "heat_prior_no_training": {
+          "brier_mean": 0.2790611436874266,
+          "brier_sd": 0.1522981025852488,
+          "dice_mean": 0.6458798286434875,
+          "auroc_mean": 0.7515506158940038,
+          "ece_mean": 0.26740256553539415,
+          "brier_stable": 0.1820213238063913,
+          "brier_active": 0.3300315541299907,
+          "n_stable": 52,
+          "n_active": 99
+        },
+        "mask_heat_sdf": {
+          "brier_mean": 0.2745698071670848,
+          "brier_sd": 0.10883488941598123,
+          "dice_mean": 0.6175000959539622,
+          "auroc_mean": 0.716313718266227,
+          "ece_mean": 0.27287977424068377,
+          "brier_stable": 0.21295130224182054,
+          "brier_active": 0.30693508248136503,
+          "n_stable": 52,
+          "n_active": 99
+        },
+        "raw4": {
+          "brier_mean": 0.3074985948076706,
+          "brier_sd": 0.10491154455094405,
+          "dice_mean": 0.49356045023895456,
+          "auroc_mean": 0.6989861675480987,
+          "ece_mean": 0.31733595692511474,
+          "brier_stable": 0.3013486833526538,
+          "brier_active": 0.3107288513294976,
+          "n_stable": 52,
+          "n_active": 99
+        },
+        "raw4_mask": {
+          "brier_mean": 0.2742202646586279,
+          "brier_sd": 0.12090417833901401,
+          "dice_mean": 0.622182940919231,
+          "auroc_mean": 0.7088171231548533,
+          "ece_mean": 0.2735234343987289,
+          "brier_stable": 0.19852232116346175,
+          "brier_active": 0.3139808006358869,
+          "n_stable": 52,
+          "n_active": 99
+        },
+        "raw4_mask_heat_sdf": {
+          "brier_mean": 0.2900016324606952,
+          "brier_sd": 0.1399520651445068,
+          "dice_mean": 0.6340099946057168,
+          "auroc_mean": 0.7121716015665072,
+          "ece_mean": 0.2867928420533747,
+          "brier_stable": 0.19832841357072958,
+          "brier_active": 0.33815322218067717,
+          "n_stable": 52,
+          "n_active": 99
+        }
+      },
+      "paired_delta_vs_heat": {
+        "mask_heat_sdf": {
+          "mean": -0.004491336446329458,
+          "ci95_lo": -0.019312290094842182,
+          "ci95_hi": 0.009334412767298942,
+          "p_delta_lt_0": 0.7278,
+          "n": 151
+        },
+        "raw4": {
+          "mean": 0.028437450848865193,
+          "ci95_lo": 0.0020381194508529658,
+          "ci95_hi": 0.05460602341047086,
+          "p_delta_lt_0": 0.0176,
+          "n": 151
+        },
+        "raw4_mask": {
+          "mean": -0.004840879028798728,
+          "ci95_lo": -0.01467605572724283,
+          "ci95_hi": 0.0041711150249157895,
+          "p_delta_lt_0": 0.8414,
+          "n": 151
+        },
+        "raw4_mask_heat_sdf": {
+          "mean": 0.01094048877326858,
+          "ci95_lo": 0.005281101066668499,
+          "ci95_hi": 0.01639914464711254,
+          "p_delta_lt_0": 0.0,
+          "n": 151
+        }
+      },
+      "best_raw_variant": "raw4_mask",
+      "winner_by_brier": "raw4_mask"
+    },
+    "RHUH-GBM": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "UCSD-PTGBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 484,
+      "n_test": 38,
+      "pi_stable_test": 0.2894736842105263,
+      "metrics": {
+        "heat_prior_no_training": {
+          "brier_mean": 0.5037207326998836,
+          "brier_sd": 0.2604435370747789,
+          "dice_mean": 0.43242795517696564,
+          "auroc_mean": 0.6418755977459715,
+          "ece_mean": 0.3999447784084612,
+          "brier_stable": 0.3217700347304344,
+          "brier_active": 0.5778487948355852,
+          "n_stable": 11,
+          "n_active": 27
+        },
+        "mask_heat_sdf": {
+          "brier_mean": 0.3923020602056855,
+          "brier_sd": 0.16796233472160738,
+          "dice_mean": 0.43365751767201033,
+          "auroc_mean": 0.6354741510457749,
+          "ece_mean": 0.4330997504587514,
+          "brier_stable": 0.2605939900333231,
+          "brier_active": 0.4459609036092405,
+          "n_stable": 11,
+          "n_active": 27
+        },
+        "raw4": {
+          "brier_mean": 0.4285284789573205,
+          "brier_sd": 0.2031907360455107,
+          "dice_mean": 0.4459488084398857,
+          "auroc_mean": 0.5829045374235432,
+          "ece_mean": 0.4663907849801417,
+          "brier_stable": 0.282491344619881,
+          "brier_active": 0.488025089242944,
+          "n_stable": 11,
+          "n_active": 27
+        },
+        "raw4_mask": {
+          "brier_mean": 0.3917937733625111,
+          "brier_sd": 0.15577816906035916,
+          "dice_mean": 0.4343642190184436,
+          "auroc_mean": 0.6335204778252251,
+          "ece_mean": 0.43133844244831876,
+          "brier_stable": 0.27492038770155475,
+          "brier_active": 0.4394088564095674,
+          "n_stable": 11,
+          "n_active": 27
+        },
+        "raw4_mask_heat_sdf": {
+          "brier_mean": 0.3942266841860194,
+          "brier_sd": 0.16501725801325084,
+          "dice_mean": 0.4351233784977662,
+          "auroc_mean": 0.6248594406592279,
+          "ece_mean": 0.4342803440008068,
+          "brier_stable": 0.2710810147903182,
+          "brier_active": 0.4443971420879717,
+          "n_stable": 11,
+          "n_active": 27
+        }
+      },
+      "paired_delta_vs_heat": {
+        "mask_heat_sdf": {
+          "mean": -0.11141867249419815,
+          "ci95_lo": -0.14469391511459098,
+          "ci95_hi": -0.07900038903677152,
+          "p_delta_lt_0": 1.0,
+          "n": 38
+        },
+        "raw4": {
+          "mean": -0.07519225364452914,
+          "ci95_lo": -0.12277320606732055,
+          "ci95_hi": -0.02780564959210005,
+          "p_delta_lt_0": 0.9994,
+          "n": 38
+        },
+        "raw4_mask": {
+          "mean": -0.11192695933737253,
+          "ci95_lo": -0.1559879562180293,
+          "ci95_hi": -0.0686228650426002,
+          "p_delta_lt_0": 1.0,
+          "n": 38
+        },
+        "raw4_mask_heat_sdf": {
+          "mean": -0.10949404851386421,
+          "ci95_lo": -0.14690757660489331,
+          "ci95_hi": -0.0733369535913593,
+          "p_delta_lt_0": 1.0,
+          "n": 38
+        }
+      },
+      "best_raw_variant": "raw4_mask",
+      "winner_by_brier": "raw4_mask"
+    },
+    "UCSD-PTGBM": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 485,
+      "n_test": 37,
+      "pi_stable_test": 0.24324324324324326,
+      "metrics": {
+        "heat_prior_no_training": {
+          "brier_mean": 0.16542996143972552,
+          "brier_sd": 0.12052409863622655,
+          "dice_mean": 0.40202150029569317,
+          "auroc_mean": 0.5912872655404997,
+          "ece_mean": 0.18746698445092427,
+          "brier_stable": 0.14113993611600664,
+          "brier_active": 0.1732374695794923,
+          "n_stable": 9,
+          "n_active": 28
+        },
+        "mask_heat_sdf": {
+          "brier_mean": 0.2022587752246575,
+          "brier_sd": 0.14747213490829583,
+          "dice_mean": 0.4087123157596559,
+          "auroc_mean": 0.5874650241266691,
+          "ece_mean": 0.22358322587421223,
+          "brier_stable": 0.16273424189744723,
+          "brier_active": 0.21496308950840362,
+          "n_stable": 9,
+          "n_active": 28
+        },
+        "raw4": {
+          "brier_mean": 0.35830013688049606,
+          "brier_sd": 0.16612160204030152,
+          "dice_mean": 0.17343287924880293,
+          "auroc_mean": 0.5166875704523471,
+          "ece_mean": 0.4562911865669038,
+          "brier_stable": 0.2665775837376714,
+          "brier_active": 0.38778238610497545,
+          "n_stable": 9,
+          "n_active": 28
+        },
+        "raw4_mask": {
+          "brier_mean": 0.20260153619007748,
+          "brier_sd": 0.1284228075953179,
+          "dice_mean": 0.4140132678349634,
+          "auroc_mean": 0.6065988148566244,
+          "ece_mean": 0.24617191761491217,
+          "brier_stable": 0.1609840454604839,
+          "brier_active": 0.21597858678173257,
+          "n_stable": 9,
+          "n_active": 28
+        },
+        "raw4_mask_heat_sdf": {
+          "brier_mean": 0.20894849792317916,
+          "brier_sd": 0.12803745654935686,
+          "dice_mean": 0.4158533162024208,
+          "auroc_mean": 0.5936274168377744,
+          "ece_mean": 0.2570803419191199,
+          "brier_stable": 0.16874912685792273,
+          "brier_active": 0.22186972433701158,
+          "n_stable": 9,
+          "n_active": 28
+        }
+      },
+      "paired_delta_vs_heat": {
+        "mask_heat_sdf": {
+          "mean": 0.03682881383527372,
+          "ci95_lo": 0.0246704208541888,
+          "ci95_hi": 0.048438144771923375,
+          "p_delta_lt_0": 0.0,
+          "n": 37
+        },
+        "raw4": {
+          "mean": 0.19287017501286557,
+          "ci95_lo": 0.14973535214022204,
+          "ci95_hi": 0.23503493478874096,
+          "p_delta_lt_0": 0.0,
+          "n": 37
+        },
+        "raw4_mask": {
+          "mean": 0.037171574846315954,
+          "ci95_lo": 0.01796976817776512,
+          "ci95_hi": 0.05611086264030448,
+          "p_delta_lt_0": 0.0004,
+          "n": 37
+        },
+        "raw4_mask_heat_sdf": {
+          "mean": 0.04351853649761226,
+          "ci95_lo": 0.024883626015051393,
+          "ci95_hi": 0.06168649006954306,
+          "p_delta_lt_0": 0.0,
+          "n": 37
+        }
+      },
+      "best_raw_variant": "mask_heat_sdf",
+      "winner_by_brier": "heat_prior_no_training"
+    }
+  },
+  "interpretation": "This tests whether raw MRI plus masks erase the heat-prior ranking reversal under external leave-one-cohort-out transfer. Negative paired deltas mean the trained model beat heat on held-out Brier; positive deltas mean heat remained stronger.",
+  "runtime_s": 1482.62
+}

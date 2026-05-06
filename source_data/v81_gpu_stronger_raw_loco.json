@@ -1,0 +1,803 @@
+{
+  "version": "v81_gpu_stronger_raw_loco",
+  "status": "STRONGER_RESUNET_CALIBRATED_TTA_RAW_MRI_LOCO_STRESS_TEST",
+  "date": "2026-05-05",
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "cache": "C:\\Users\\kamru\\Downloads\\Nature_project\\05_results\\v78_raw_mri_loco_cache.npz",
+  "crop_shape_DHW": [
+    16,
+    48,
+    48
+  ],
+  "architecture": "Residual 3D U-Net with GroupNorm, dropout, source-validation early stopping, source-only affine calibration and H/W flip TTA",
+  "epochs_requested": 18,
+  "batch_size": 8,
+  "base_channels": 12,
+  "dropout": 0.08,
+  "seeds": [
+    8101,
+    8102
+  ],
+  "variants": [
+    "raw4_mask",
+    "raw4_mask_heat_sdf"
+  ],
+  "cohort_summary": {
+    "MU-Glioma-Post": {
+      "n": 151,
+      "pi_stable": 0.3443708609271523,
+      "n_stable": 52,
+      "n_active": 99
+    },
+    "RHUH-GBM": {
+      "n": 38,
+      "pi_stable": 0.2894736842105263,
+      "n_stable": 11,
+      "n_active": 27
+    },
+    "UCSD-PTGBM": {
+      "n": 37,
+      "pi_stable": 0.24324324324324326,
+      "n_stable": 9,
+      "n_active": 28
+    },
+    "UCSF-POSTOP": {
+      "n": 296,
+      "pi_stable": 0.8108108108108109,
+      "n_stable": 240,
+      "n_active": 56
+    }
+  },
+  "loco_results": {
+    "UCSF-POSTOP": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "UCSD-PTGBM"
+      ],
+      "n_train": 226,
+      "n_test": 296,
+      "pi_stable_test": 0.8108108108108109,
+      "heat_prior_no_training": {
+        "brier_mean": 0.10794436235005993,
+        "brier_sd": 0.0643394946744495,
+        "dice_mean": 0.8525206961005172,
+        "auroc_mean": 0.9337093504652761,
+        "ece_mean": 0.1072649336104057,
+        "brier_stable": 0.08849995796723913,
+        "brier_active": 0.1912775239907205,
+        "n_stable": 240,
+        "n_active": 56
+      },
+      "variants": {
+        "raw4_mask": {
+          "8101": {
+            "n_source_train_after_split": 185,
+            "n_source_val": 41,
+            "calibration": {
+              "scale": 0.5976499915122986,
+              "bias": -0.08429928869009018,
+              "val_bce": 0.6385882496833801,
+              "best_val_loss": 0.5688183605670929,
+              "best_epoch": 12
+            },
+            "metrics": {
+              "brier_mean": 0.16581155382398818,
+              "brier_sd": 0.026790599935536844,
+              "dice_mean": 0.8207427975774314,
+              "auroc_mean": 0.9086679979455135,
+              "ece_mean": 0.23413701763337383,
+              "brier_stable": 0.1602226915769279,
+              "brier_active": 0.18976382059710367,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.05786719156831906,
+              "ci95_lo": 0.052447458360394515,
+              "ci95_hi": 0.06302886996197991,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 185,
+            "n_source_val": 41,
+            "calibration": {
+              "scale": 0.7028461694717407,
+              "bias": 0.19289813935756683,
+              "val_bce": 0.5871521830558777,
+              "best_val_loss": 0.5442831814289093,
+              "best_epoch": 15
+            },
+            "metrics": {
+              "brier_mean": 0.15394562893119212,
+              "brier_sd": 0.029982932811455597,
+              "dice_mean": 0.8181226898386221,
+              "auroc_mean": 0.9126145383822917,
+              "ece_mean": 0.2174012331431967,
+              "brier_stable": 0.14728589461495478,
+              "brier_active": 0.18248734742935216,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.046001266650352125,
+              "ci95_lo": 0.040788125880440146,
+              "ci95_hi": 0.050669848029753446,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.1585390481946839,
+              "brier_sd": 0.027633991935560147,
+              "dice_mean": 0.8231044743960414,
+              "auroc_mean": 0.9140876265423827,
+              "ece_mean": 0.22840055410234025,
+              "brier_stable": 0.15250343577936293,
+              "brier_active": 0.18440595854605948,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.050594685888673004,
+              "ci95_lo": 0.045295216886616134,
+              "ci95_hi": 0.05553681173871548,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          }
+        },
+        "raw4_mask_heat_sdf": {
+          "8101": {
+            "n_source_train_after_split": 185,
+            "n_source_val": 41,
+            "calibration": {
+              "scale": 0.6108834743499756,
+              "bias": -0.08784493058919907,
+              "val_bce": 0.647776186466217,
+              "best_val_loss": 0.5713439385096232,
+              "best_epoch": 8
+            },
+            "metrics": {
+              "brier_mean": 0.16588262372927084,
+              "brier_sd": 0.02420812008181693,
+              "dice_mean": 0.8310758888972237,
+              "auroc_mean": 0.9234448356405321,
+              "ece_mean": 0.24774474587057096,
+              "brier_stable": 0.16116819304103652,
+              "brier_active": 0.18608732667884656,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.05793826147360173,
+              "ci95_lo": 0.05204862336206527,
+              "ci95_hi": 0.06329369000442377,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 185,
+            "n_source_val": 41,
+            "calibration": {
+              "scale": 0.7318700551986694,
+              "bias": 0.05477221682667732,
+              "val_bce": 0.606925368309021,
+              "best_val_loss": 0.5473884642124176,
+              "best_epoch": 14
+            },
+            "metrics": {
+              "brier_mean": 0.15263581218046918,
+              "brier_sd": 0.030441759984719083,
+              "dice_mean": 0.8229510430713003,
+              "auroc_mean": 0.9082397137789321,
+              "ece_mean": 0.19881503781029197,
+              "brier_stable": 0.1449951513670385,
+              "brier_active": 0.18538150138088635,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.044691449899629164,
+              "ci95_lo": 0.039609131593622164,
+              "ci95_hi": 0.04932882035107075,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.1573599066484619,
+              "brier_sd": 0.026486414032322304,
+              "dice_mean": 0.8336794553013283,
+              "auroc_mean": 0.9188204745291779,
+              "ece_mean": 0.22495526792851148,
+              "brier_stable": 0.15126978512853384,
+              "brier_active": 0.1834604274481535,
+              "n_stable": 240,
+              "n_active": 56
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.049415544367621876,
+              "ci95_lo": 0.04409617834560876,
+              "ci95_hi": 0.054379173561716704,
+              "p_delta_lt_0": 0.0,
+              "n": 296
+            }
+          }
+        }
+      },
+      "winner_by_brier": "heat_prior_no_training",
+      "best_brier": 0.10794436235005993
+    },
+    "MU-Glioma-Post": {
+      "train_cohorts": [
+        "RHUH-GBM",
+        "UCSD-PTGBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 371,
+      "n_test": 151,
+      "pi_stable_test": 0.3443708609271523,
+      "heat_prior_no_training": {
+        "brier_mean": 0.2790611436874266,
+        "brier_sd": 0.1522981025852488,
+        "dice_mean": 0.6671498414636858,
+        "auroc_mean": 0.7515506158940038,
+        "ece_mean": 0.27771019747755094,
+        "brier_stable": 0.1820213238063913,
+        "brier_active": 0.3300315541299907,
+        "n_stable": 52,
+        "n_active": 99
+      },
+      "variants": {
+        "raw4_mask": {
+          "8101": {
+            "n_source_train_after_split": 304,
+            "n_source_val": 67,
+            "calibration": {
+              "scale": 0.6892088651657104,
+              "bias": -0.19536368548870087,
+              "val_bce": 0.401841402053833,
+              "best_val_loss": 0.32340288493368363,
+              "best_epoch": 14
+            },
+            "metrics": {
+              "brier_mean": 0.25995617488164774,
+              "brier_sd": 0.10616934632949675,
+              "dice_mean": 0.6645367733599996,
+              "auroc_mean": 0.7334332087797931,
+              "ece_mean": 0.25974908285401194,
+              "brier_stable": 0.19254328912267318,
+              "brier_active": 0.2953649633611091,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.0191049687811081,
+              "ci95_lo": -0.03064456908710745,
+              "ci95_hi": -0.007911817821988599,
+              "p_delta_lt_0": 0.99975,
+              "n": 151
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 304,
+            "n_source_val": 67,
+            "calibration": {
+              "scale": 0.7504568696022034,
+              "bias": -0.3477233648300171,
+              "val_bce": 0.3897024989128113,
+              "best_val_loss": 0.2961711585521698,
+              "best_epoch": 17
+            },
+            "metrics": {
+              "brier_mean": 0.25803204028811677,
+              "brier_sd": 0.10313080934467099,
+              "dice_mean": 0.6631008182187661,
+              "auroc_mean": 0.7314280271065827,
+              "ece_mean": 0.2589672168686424,
+              "brier_stable": 0.18987873526146778,
+              "brier_active": 0.29382973585766975,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.021029103423980688,
+              "ci95_lo": -0.032825412787497045,
+              "ci95_hi": -0.00984939827602233,
+              "p_delta_lt_0": 0.99975,
+              "n": 151
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.25805878269159244,
+              "brier_sd": 0.1040852128290518,
+              "dice_mean": 0.6647362939224335,
+              "auroc_mean": 0.7346441961669556,
+              "ece_mean": 0.25882390469524197,
+              "brier_stable": 0.18982839527038428,
+              "brier_active": 0.29389696598354015,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.021002361020505032,
+              "ci95_lo": -0.03245348847958426,
+              "ci95_hi": -0.010006387423205846,
+              "p_delta_lt_0": 1.0,
+              "n": 151
+            }
+          }
+        },
+        "raw4_mask_heat_sdf": {
+          "8101": {
+            "n_source_train_after_split": 304,
+            "n_source_val": 67,
+            "calibration": {
+              "scale": 0.701225996017456,
+              "bias": -0.222507044672966,
+              "val_bce": 0.40867435932159424,
+              "best_val_loss": 0.3265116446548038,
+              "best_epoch": 18
+            },
+            "metrics": {
+              "brier_mean": 0.25758701138543766,
+              "brier_sd": 0.09899130133312826,
+              "dice_mean": 0.6532302851950816,
+              "auroc_mean": 0.7357576938255999,
+              "ece_mean": 0.26091772199765245,
+              "brier_stable": 0.20212194208915418,
+              "brier_active": 0.2867201790966169,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.021474132277318182,
+              "ci95_lo": -0.03585354672831218,
+              "ci95_hi": -0.007650440349089389,
+              "p_delta_lt_0": 0.99925,
+              "n": 151
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 304,
+            "n_source_val": 67,
+            "calibration": {
+              "scale": 0.7587325572967529,
+              "bias": -0.37883099913597107,
+              "val_bce": 0.384981632232666,
+              "best_val_loss": 0.29571835862265694,
+              "best_epoch": 16
+            },
+            "metrics": {
+              "brier_mean": 0.2599820077715331,
+              "brier_sd": 0.09936556806919679,
+              "dice_mean": 0.6506479078185265,
+              "auroc_mean": 0.7377738908546388,
+              "ece_mean": 0.26237794288788185,
+              "brier_stable": 0.20448198885871813,
+              "brier_active": 0.289133532857052,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.019079136039247577,
+              "ci95_lo": -0.03427111833843569,
+              "ci95_hi": -0.004873903305423971,
+              "p_delta_lt_0": 0.9955,
+              "n": 151
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.2579786959073401,
+              "brier_sd": 0.0987353335084898,
+              "dice_mean": 0.6532260122327275,
+              "auroc_mean": 0.7379597769215652,
+              "ece_mean": 0.2611274924055626,
+              "brier_stable": 0.20228627710961378,
+              "brier_active": 0.2872312795182671,
+              "n_stable": 52,
+              "n_active": 99
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.02108244765673252,
+              "ci95_lo": -0.035615764136444655,
+              "ci95_hi": -0.006988258703013522,
+              "p_delta_lt_0": 0.999,
+              "n": 151
+            }
+          }
+        }
+      },
+      "winner_by_brier": "raw4_mask_heat_sdf_resunet_cal_tta_seed_mean",
+      "best_brier": 0.2579786959073401
+    },
+    "RHUH-GBM": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "UCSD-PTGBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 484,
+      "n_test": 38,
+      "pi_stable_test": 0.2894736842105263,
+      "heat_prior_no_training": {
+        "brier_mean": 0.5037207326998836,
+        "brier_sd": 0.2604435370747789,
+        "dice_mean": 0.4385553090289907,
+        "auroc_mean": 0.6418755977459715,
+        "ece_mean": 0.5162592903243395,
+        "brier_stable": 0.3217700347304344,
+        "brier_active": 0.5778487948355852,
+        "n_stable": 11,
+        "n_active": 27
+      },
+      "variants": {
+        "raw4_mask": {
+          "8101": {
+            "n_source_train_after_split": 397,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7511674165725708,
+              "bias": -0.10288553684949875,
+              "val_bce": 0.4290677011013031,
+              "best_val_loss": 0.3549411581321196,
+              "best_epoch": 18
+            },
+            "metrics": {
+              "brier_mean": 0.342171473330573,
+              "brier_sd": 0.1203813525065351,
+              "dice_mean": 0.4405555454224552,
+              "auroc_mean": 0.636497951881217,
+              "ece_mean": 0.38938199077118957,
+              "brier_stable": 0.25021518631414935,
+              "brier_active": 0.37963514581874563,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.16154925936931058,
+              "ci95_lo": -0.21355440979333298,
+              "ci95_hi": -0.11034344717566119,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 397,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7207420468330383,
+              "bias": 0.0016653791535645723,
+              "val_bce": 0.45342862606048584,
+              "best_val_loss": 0.34256818890571594,
+              "best_epoch": 18
+            },
+            "metrics": {
+              "brier_mean": 0.3820804984946,
+              "brier_sd": 0.16005526460491928,
+              "dice_mean": 0.4417584714589062,
+              "auroc_mean": 0.643823120963706,
+              "ece_mean": 0.4274567161470601,
+              "brier_stable": 0.2709095762534575,
+              "brier_active": 0.4273723557039543,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.12164023420528362,
+              "ci95_lo": -0.16218030974759085,
+              "ci95_hi": -0.0839662958328661,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.3604027944567956,
+              "brier_sd": 0.13889914178987045,
+              "dice_mean": 0.44087633290425776,
+              "auroc_mean": 0.6408059649746963,
+              "ece_mean": 0.40830190492323964,
+              "brier_stable": 0.25901297615333035,
+              "brier_active": 0.40170975746931853,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.14331793824308797,
+              "ci95_lo": -0.18931760573759676,
+              "ci95_hi": -0.09845540279424504,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          }
+        },
+        "raw4_mask_heat_sdf": {
+          "8101": {
+            "n_source_train_after_split": 397,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7735032439231873,
+              "bias": -0.16334787011146545,
+              "val_bce": 0.43234044313430786,
+              "best_val_loss": 0.3556778525764292,
+              "best_epoch": 16
+            },
+            "metrics": {
+              "brier_mean": 0.3339859706006552,
+              "brier_sd": 0.11801915504397359,
+              "dice_mean": 0.4423566220076848,
+              "auroc_mean": 0.6385220614794083,
+              "ece_mean": 0.38662437518978865,
+              "brier_stable": 0.24502281167290427,
+              "brier_active": 0.37023022053418336,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.16973476209922841,
+              "ci95_lo": -0.22127614310501437,
+              "ci95_hi": -0.11845763828115242,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 397,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7223004698753357,
+              "bias": -0.05195217207074165,
+              "val_bce": 0.46733832359313965,
+              "best_val_loss": 0.34720542620528827,
+              "best_epoch": 16
+            },
+            "metrics": {
+              "brier_mean": 0.33389696557270854,
+              "brier_sd": 0.12114855531378639,
+              "dice_mean": 0.44119371956913594,
+              "auroc_mean": 0.6397274590600139,
+              "ece_mean": 0.38859075431660023,
+              "brier_stable": 0.2476268789984963,
+              "brier_active": 0.36904403788072093,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.1698237671271751,
+              "ci95_lo": -0.22584565331865297,
+              "ci95_hi": -0.1170254952127212,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.33306572507870824,
+              "brier_sd": 0.11911832834468339,
+              "dice_mean": 0.4420879321079469,
+              "auroc_mean": 0.6404741415386312,
+              "ece_mean": 0.3874722004759636,
+              "brier_stable": 0.24548962170427496,
+              "brier_active": 0.3687448783053292,
+              "n_stable": 11,
+              "n_active": 27
+            },
+            "paired_delta_vs_heat": {
+              "mean": -0.17065500762117536,
+              "ci95_lo": -0.22156021288154942,
+              "ci95_hi": -0.11939051699285444,
+              "p_delta_lt_0": 1.0,
+              "n": 38
+            }
+          }
+        }
+      },
+      "winner_by_brier": "raw4_mask_heat_sdf_resunet_cal_tta_seed_mean",
+      "best_brier": 0.33306572507870824
+    },
+    "UCSD-PTGBM": {
+      "train_cohorts": [
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "UCSF-POSTOP"
+      ],
+      "n_train": 485,
+      "n_test": 37,
+      "pi_stable_test": 0.24324324324324326,
+      "heat_prior_no_training": {
+        "brier_mean": 0.16542996143972552,
+        "brier_sd": 0.12052409863622655,
+        "dice_mean": 0.4138602625475025,
+        "auroc_mean": 0.5912872655404997,
+        "ece_mean": 0.18753378031808426,
+        "brier_stable": 0.14113993611600664,
+        "brier_active": 0.1732374695794923,
+        "n_stable": 9,
+        "n_active": 28
+      },
+      "variants": {
+        "raw4_mask": {
+          "8101": {
+            "n_source_train_after_split": 398,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7479189038276672,
+              "bias": -0.07066771388053894,
+              "val_bce": 0.47875848412513733,
+              "best_val_loss": 0.3579999032345685,
+              "best_epoch": 16
+            },
+            "metrics": {
+              "brier_mean": 0.21650910765487966,
+              "brier_sd": 0.1432717334373323,
+              "dice_mean": 0.42971640585714416,
+              "auroc_mean": 0.599307317272181,
+              "ece_mean": 0.24104236318308941,
+              "brier_stable": 0.20454598848462208,
+              "brier_active": 0.2203543959596053,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.051079146215154136,
+              "ci95_lo": 0.03604805618161737,
+              "ci95_hi": 0.0670080190147289,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 398,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.6976789832115173,
+              "bias": 0.024373706430196762,
+              "val_bce": 0.4867686331272125,
+              "best_val_loss": 0.34657901390032336,
+              "best_epoch": 15
+            },
+            "metrics": {
+              "brier_mean": 0.2230929663889362,
+              "brier_sd": 0.1460134227689975,
+              "dice_mean": 0.43268859353364075,
+              "auroc_mean": 0.602272194385998,
+              "ece_mean": 0.26122294979667,
+              "brier_stable": 0.20989138995193773,
+              "brier_active": 0.22733633024368569,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.057663005351944754,
+              "ci95_lo": 0.03987447455103786,
+              "ci95_hi": 0.07735285795587933,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.21853454168760092,
+              "brier_sd": 0.1442823457962707,
+              "dice_mean": 0.43073221276183143,
+              "auroc_mean": 0.6009805631373206,
+              "ece_mean": 0.24962544187089777,
+              "brier_stable": 0.20565108568148893,
+              "brier_active": 0.22267565254670835,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.053104580247875406,
+              "ci95_lo": 0.03718705562578917,
+              "ci95_hi": 0.07076574738398572,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          }
+        },
+        "raw4_mask_heat_sdf": {
+          "8101": {
+            "n_source_train_after_split": 398,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7439018487930298,
+              "bias": -0.09549108147621155,
+              "val_bce": 0.4777165651321411,
+              "best_val_loss": 0.3518139828335155,
+              "best_epoch": 18
+            },
+            "metrics": {
+              "brier_mean": 0.22662688378949422,
+              "brier_sd": 0.12083955690362422,
+              "dice_mean": 0.192153258466437,
+              "auroc_mean": 0.6119562906668097,
+              "ece_mean": 0.27502842721936166,
+              "brier_stable": 0.19127602807970512,
+              "brier_active": 0.2379896588390693,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.061196922349768715,
+              "ci95_lo": 0.045048701372375155,
+              "ci95_hi": 0.08119902417088884,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          },
+          "8102": {
+            "n_source_train_after_split": 398,
+            "n_source_val": 87,
+            "calibration": {
+              "scale": 0.7355297207832336,
+              "bias": 0.10196924209594727,
+              "val_bce": 0.4844881296157837,
+              "best_val_loss": 0.3433831997893073,
+              "best_epoch": 18
+            },
+            "metrics": {
+              "brier_mean": 0.2472623813019537,
+              "brier_sd": 0.15043234033141792,
+              "dice_mean": 0.38685081051112336,
+              "auroc_mean": 0.5995552070587139,
+              "ece_mean": 0.28560563994782856,
+              "brier_stable": 0.19488107313453737,
+              "brier_active": 0.26409923035576605,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.08183241986222817,
+              "ci95_lo": 0.055688675417096004,
+              "ci95_hi": 0.1125600402165563,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          },
+          "seed_mean_ensemble": {
+            "metrics": {
+              "brier_mean": 0.23386962173783496,
+              "brier_sd": 0.13560083973360124,
+              "dice_mean": 0.384936191242714,
+              "auroc_mean": 0.6065977343946808,
+              "ece_mean": 0.2794821540998076,
+              "brier_stable": 0.18948907208525473,
+              "brier_active": 0.24813479841187863,
+              "n_stable": 9,
+              "n_active": 28
+            },
+            "paired_delta_vs_heat": {
+              "mean": 0.06843966029810945,
+              "ci95_lo": 0.04779613694456104,
+              "ci95_hi": 0.091935969509241,
+              "p_delta_lt_0": 0.0,
+              "n": 37
+            }
+          }
+        }
+      },
+      "winner_by_brier": "heat_prior_no_training",
+      "best_brier": 0.16542996143972552
+    }
+  },
+  "winners_by_brier": {
+    "UCSF-POSTOP": "heat_prior_no_training",
+    "MU-Glioma-Post": "raw4_mask_heat_sdf_resunet_cal_tta_seed_mean",
+    "RHUH-GBM": "raw4_mask_heat_sdf_resunet_cal_tta_seed_mean",
+    "UCSD-PTGBM": "heat_prior_no_training"
+  },
+  "source_data_csv": "C:\\Users\\kamru\\Downloads\\Nature_project\\05_results\\v81_nmi_stronger_raw_loco_source_data.csv",
+  "interpretation": "This is an adversarial stronger-baseline check. Negative paired deltas mean the calibrated residual raw-MRI model beat the heat prior on held-out Brier. Positive deltas mean the heat prior remained better. Model selection and calibration used only source cohorts.",
+  "runtime_s": 684.82
+}

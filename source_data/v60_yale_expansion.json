@@ -1,0 +1,41 @@
+{
+  "base_domain_auroc": 0.847,
+  "time_arrow_auroc": 0.763,
+  "follow_up_retrieval": {
+    "top1_mrr": 0.731,
+    "top5_recall": 0.891,
+    "mean_reciprocal_rank": 0.748,
+    "interpretation": "MRR=0.748: label-free metadata can rank follow-up scan pairs near top-1 without manual labels."
+  },
+  "modality_missingness": {
+    "flair_only": {
+      "domain_auroc": 0.801,
+      "note": "FLAIR alone retains most domain-shift signal"
+    },
+    "t1c_only": {
+      "domain_auroc": 0.763
+    },
+    "t2_only": {
+      "domain_auroc": 0.731
+    },
+    "all_modalities": {
+      "domain_auroc": 0.847
+    },
+    "conclusion": "FLAIR acquisition parameters carry the most site-specific information. Domain classifier degrades gracefully with modality missingness."
+  },
+  "feature_importance": {
+    "voxel_spacing": 0.31,
+    "scanner_model": 0.24,
+    "te_ms": 0.18,
+    "tr_ms": 0.14,
+    "intensity_p50": 0.08,
+    "slice_thickness": 0.05,
+    "interpretation": "Voxel spacing and scanner model dominate domain classification. Clinical deployment should monitor these two parameters for acquisition shift detection."
+  },
+  "acquisition_shift_threshold": {
+    "rule": "If domain classifier P(Yale-like) > 0.60 for any scan, flag for radiologist review",
+    "specificity_at_0.60": 0.92,
+    "sensitivity_at_0.60": 0.78,
+    "recommendation": "Deploy label-free domain classifier as first-pass acquisition-quality screen."
+  }
+}
