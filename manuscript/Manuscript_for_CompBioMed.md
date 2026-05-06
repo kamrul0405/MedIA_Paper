@@ -39,7 +39,7 @@ Benchmark rankings in longitudinal post-treatment brain-tumour MRI depend system
 
 ## Keywords
 
-benchmark transportability; longitudinal MRI; brain tumour; structural prior; transformer baseline; conformal coverage; reproducible benchmark
+benchmark transportability; longitudinal MRI; brain tumour; structural prior; transformer baseline; conformal coverage
 
 ---
 
