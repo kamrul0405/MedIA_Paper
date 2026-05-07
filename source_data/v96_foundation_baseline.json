@@ -1,0 +1,41 @@
+{
+  "version": "v96",
+  "experiment": "Foundation-model embedding baseline (MONAI ResNet50; 5-channel raw + mask; logistic-regression head)",
+  "timestamp": "2026-05-07T15:37:03",
+  "model": "MONAI ResNet50 (random init; 3D)",
+  "n_params_M": 46.51,
+  "results": [
+    {
+      "held_out": "UCSF-POSTOP",
+      "n_test": 296,
+      "foundation_resnet50_brier_mean": 0.4219064823449067,
+      "foundation_resnet50_brier_sd": 0.1904818016274596,
+      "heat_brier_mean": 0.0843849817237414,
+      "delta_foundation_minus_heat": 0.33752150062116526
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "n_test": 151,
+      "foundation_resnet50_brier_mean": 0.373200097208339,
+      "foundation_resnet50_brier_sd": 0.19213690401291109,
+      "heat_brier_mean": 0.25984641468608816,
+      "delta_foundation_minus_heat": 0.11335368252225086
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "n_test": 38,
+      "foundation_resnet50_brier_mean": 0.27929502194924566,
+      "foundation_resnet50_brier_sd": 0.1802773445565614,
+      "heat_brier_mean": 0.48312593663209363,
+      "delta_foundation_minus_heat": -0.20383091468284797
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "n_test": 37,
+      "foundation_resnet50_brier_mean": 0.3180542596453177,
+      "foundation_resnet50_brier_sd": 0.2687634388446207,
+      "heat_brier_mean": 0.08745592594724812,
+      "delta_foundation_minus_heat": 0.2305983336980696
+    }
+  ]
+}

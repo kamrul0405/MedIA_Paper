@@ -1,0 +1,29 @@
+{
+  "version": "v94",
+  "experiment": "LUMIERE 3D cold-holdout LOCO",
+  "timestamp": "2026-05-07T14:37:02",
+  "device": "cuda",
+  "epochs": 22,
+  "seed": 9401,
+  "train_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM"
+  ],
+  "train_n": 487,
+  "test_cohort": "LUMIERE",
+  "test_n": 22,
+  "cohort_sizes": {
+    "UCSF-POSTOP": 297,
+    "MU-Glioma-Post": 151,
+    "RHUH-GBM": 39,
+    "LUMIERE": 22
+  },
+  "unetr_brier_mean": 0.2303186986934055,
+  "unetr_brier_sd": 0.08702032374516448,
+  "heat_brier_mean": 0.22987504303455353,
+  "heat_brier_sd": 0.16156789650942985,
+  "mask_brier_mean": 0.29279059832069004,
+  "delta_unetr_minus_heat": 0.00044365565885196023,
+  "unetr_beats_heat": false
+}
