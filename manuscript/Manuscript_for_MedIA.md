@@ -339,6 +339,19 @@ To address the previous reviewer concern that no foundation-model baseline was i
 
 The foundation-model baseline preserves the regime-dependent pattern in 4/4 cohorts: heat wins on the surveillance-dominant UCSF and the UCSD-PTGBM counterexample; the foundation model wins on the active-change RHUH-GBM. This adds **a seventh distinct architecture family** to the architecture-invariance evidence (§3.4), now spanning: heat (closed-form) → lightweight U-Net → residual U-Net + TTA → UNETR transformer → SwinUNETR transformer → nnU-Net → foundation-model embedding + LR.
 
+### 3.12.2 Full-volume sub-canonical 3D U-Net at 64×96×96 (UCSF in-distribution)
+
+To address compute-feasible full-volume scale extrapolation, we trained a 3D BasicUNet (5.7 M parameters) at zoom-up-sampled 64×96×96 voxel grids — 4× linear scale of the 16×48×48 cropcache and 3.4× volume scale (`scripts/v97b_full_volume_subset.py`; `source_data/v97b_full_volume_subset.json`). This is not full canonical 192×192×128 nnU-Net (which exhausted memory at the full 522-cohort scale; see §4.4 limitation 1) but is substantively closer to canonical full-resolution than the cropcache. Training was on a random N = 60 UCSF subset for 30 epochs; held-out N = 20 patients from the same UCSF cohort (in-distribution evaluation, *not* LOCO).
+
+**Result.** At full-volume scale and with in-distribution training, the learned U-Net narrowly outperforms the heat baseline:
+
+| Method | UCSF in-distribution Brier (N = 20 held-out) |
+|---|---|
+| Heat-kernel baseline (full-volume; σ scaled to 10 voxels) | 0.0834 ± 0.036 |
+| Full-volume 3D BasicUNet (in-distribution training) | **0.0697 ± 0.047** |
+
+The Δ = −0.0136 advantage for the learned model on in-distribution UCSF is consistent with the per-stratum source-cohort Brier values used to derive π* (L_hs = 0.041, L_ms = 0.140; §2.5): a learned model trained on UCSF should outperform the heat prior on UCSF *in-distribution* in the surveillance regime where π = 0.81, because the learned model can fit UCSF-specific surveillance patterns whereas the heat prior is cohort-agnostic. **This in-distribution result does not contradict the LOCO finding** that the heat prior beats out-of-cohort learned-model transfer on the same UCSF data: the v97b U-Net is evaluated on the same distribution it was trained on, while §3.2's learned-model evaluation is across-cohort transfer. The ranking-instability claim of this paper is specifically about *transfer* under composition shift, not about within-cohort fitting. Future work: replicate the v97b experiment under proper LOCO at 64×96×96 (training on the three non-UCSF cohorts; evaluating on UCSF). The current experiment is bounded by the 8.5 GB VRAM budget and serves as a memory-feasible scale extension of the existing cropcache cross-cohort evidence.
+
 ### 3.13 LUMIERE 3D cold-holdout (IDH-stratified glioma; π = 0.45 inside uncertain regime)
 
 We tested the closed-form crossover's "decisive vs uninformative" boundary (§3.1) directly by training UNETR on the three non-LUMIERE cohorts (UCSF + MU + RHUH; N = 487 patient-level evaluations from `cache_3d/`) and externally evaluating on LUMIERE as a cold-holdout. LUMIERE is glioma IDH-stratified (biologically distinct from IDH-wildtype GBM) and has π_stable = 0.45 — *inside* the conformal half-width [0.32, 0.54] established in §3.9. The closed-form prediction is therefore: UNETR and heat should be approximately tied (no decisive winner) on this cohort.

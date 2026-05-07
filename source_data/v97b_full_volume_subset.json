@@ -1,0 +1,23 @@
+{
+  "version": "v97b",
+  "experiment": "Full-volume sub-canonical 3D U-Net at (64, 96, 96) on UCSF (N=80 subset)",
+  "timestamp": "2026-05-07T16:34:06",
+  "device": "cuda",
+  "target_shape": [
+    64,
+    96,
+    96
+  ],
+  "epochs": 30,
+  "seed": 9702,
+  "n_train": 60,
+  "n_test": 20,
+  "n_subset_total": 80,
+  "n_params_M": 5.7,
+  "full_volume_unet_brier_mean": 0.0697366046719253,
+  "full_volume_unet_brier_sd": 0.047249564902860974,
+  "heat_brier_mean_full_volume": 0.08336566872894764,
+  "heat_brier_sd_full_volume": 0.03641615710004366,
+  "delta_unet_minus_heat": -0.013629064057022341,
+  "unet_beats_heat": true
+}
