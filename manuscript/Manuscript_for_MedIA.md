@@ -33,7 +33,7 @@ A three-panel composite at 300 DPI (531 × 1328 pixels): (a) per-cohort held-out
 
 ## Abstract
 
-Benchmark rankings in longitudinal post-treatment brain-tumour MRI depend systematically on the fraction of stable-disease evaluations in the cohort, π<sub>stable</sub>, which varies from 0.19 (radiotherapy planning) to 0.81 (post-operative surveillance) across publicly available datasets. We present a multi-cohort empirical benchmark contrasting a closed-form structural prior (heat-kernel Gaussian diffusion of the baseline lesion mask, σ = 2.5 voxels, no learned parameters) with **seven distinct learned-model architecture families**: lightweight U-Net (3 seeds), residual U-Net with calibration and test-time augmentation (2 seeds), UNETR transformer (3 seeds at 16 × 48 × 48; padded sanity at 32 × 64 × 64), SwinUNETR transformer (padded 32 × 64 × 64), nnU-Net v2 (mask-only / mask+heat / mask+heat+SDF input variants), and a 3D ResNet50 foundation-model embedding + logistic-regression baseline. Evaluation is across four genuinely independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N = 522 paired evaluations) under leave-one-cohort-out raw-MRI transfer, plus a LUMIERE 3D cold-holdout (N = 22 patients; π = 0.45 inside the conformal "uncertain" half-width). The headline empirical result is that the regime-dependent ranking pattern (heat wins surveillance-dominant cohorts; learned models win active-change cohorts) is preserved across all seven architecture families: 20/20 directional outcomes for U-Net seeds (binomial p < 10⁻⁶); 12/12 for UNETR; direction-matching for nnU-Net and foundation-model baselines on each cohort. An elementary mixture-weighted Brier projection from source-cohort per-stratum statistics yields a closed-form crossover π* = 0.43 with 95% bootstrap CI [0.30, 0.52]. The predictor is decisive when π is far from 0.43 and explicitly uninformative within the conformal half-width [0.32, 0.54]; on the 22-patient LUMIERE cold-holdout (π = 0.45, inside the uncertain regime) heat and UNETR Brier differ by Δ = +0.0004 — confirmed indeterminate as predicted. Empirical-vs-prediction match is 7/7 cohorts. We additionally introduce CASRN, a learned routing network operationalising the closed-form theory, and prove a multi-class adaptive-selector regret bound. Source data, scripts, seeds, and cohort metadata are versioned for reproducibility.
+Benchmark rankings in longitudinal post-treatment brain-tumour MRI depend systematically on the fraction of stable-disease evaluations in the cohort, π<sub>stable</sub>, which varies from 0.19 (radiotherapy planning) to 0.81 (post-operative surveillance) across publicly available datasets. We present a multi-cohort empirical benchmark contrasting a closed-form structural prior (heat-kernel Gaussian diffusion of the baseline lesion mask, σ = 2.5 voxels, no learned parameters) with seven learned-model architecture families: lightweight U-Net, residual U-Net with calibration and test-time augmentation, UNETR transformer (3 seeds), padded SwinUNETR, nnU-Net v2 with three input variants, and a 3D ResNet50 embedding + logistic-regression baseline. Evaluation is across four independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N = 522 paired evaluations) under leave-one-cohort-out raw-MRI transfer, plus a LUMIERE 3D cold-holdout (N = 22; π = 0.45). The regime-dependent ranking (heat wins surveillance cohorts; learned models win active-change cohorts) is preserved across all seven families and across UNETR seeds (12/12 conditions). An elementary mixture-weighted Brier projection yields a closed-form crossover π* = 0.43 (95% bootstrap CI [0.30, 0.52]; Bayesian 95% CrI [0.17, 0.59]). The predictor is decisive when π is far from 0.43 and uninformative within the conformal half-width [0.32, 0.54]; on the LUMIERE cold-holdout (π = 0.45, inside the uncertain regime) heat and UNETR Brier differ by Δ = +0.0004 — indeterminate as predicted. Empirical-vs-prediction match: 7/7 cohorts. We additionally introduce CASRN, a learned routing network that operationalises the closed-form theory, and prove a multi-class adaptive-selector regret bound. Source data, scripts, seeds and cohort metadata are versioned at https://github.com/kamrul0405/MedIA_Paper.
 
 ---
 
@@ -442,9 +442,9 @@ All source-data files and training scripts are versioned in the public repositor
 
 ---
 
-## 5. Methods (extended)
+## Appendix A. Extended methods and physics derivations
 
-### 5.1 Heat-kernel structural prior — formal physics derivation
+### A.1 Heat-kernel structural prior — formal physics derivation
 
 The heat-kernel structural prior is a **closed-form solution to the heat equation** applied to the baseline lesion mask. We make this physical interpretation explicit because it grounds the prior in classical PDE theory rather than presenting it as an ad-hoc smoothing.
 
@@ -468,19 +468,19 @@ where $D_{\text{Br}}(m \| m^* | c)$ is the per-stratum Brier divergence of $m$ f
 
 **No learning required.** The heat-kernel involves *no learned parameters*, *no training data*, *no domain-specific fine-tuning*, and *no target-domain labels*. Any candidate learned voxel-wise method (radiomic, deep-learning-based, or foundation-model-based) can be substituted for the heat-kernel prior in the same evaluation framework with the same statistical infrastructure (cluster-bootstrap CIs, threshold sweeps, calibration, fairness, conformal coverage). The heat-kernel is therefore positioned as a **deliberately-simple physics-grounded benchmark baseline** rather than a methodological novelty in itself; the methodological novelty is the empirical demonstration of regime-dependent ranking instability across architecture families.
 
-### 5.2 Lightweight 3D U-Net
+### A.2 Lightweight 3D U-Net
 
 32–64–128–256 base channels; combo BCE + Dice loss; 24 epochs; AdamW lr=1e-3; batch=10. 16×48×48 voxel crops. Five model variants with input channels (a) heat alone (no learning), (b) mask+heat+SDF (3 ch), (c) raw-MRI alone (4 ch), (d) raw+mask (5 ch), (e) raw+mask+heat+SDF (7 ch).
 
-### 5.3 Stronger residual U-Net (v81)
+### A.3 Stronger residual U-Net (v81)
 
 GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip test-time augmentation. 18 epochs with patience-3 early stopping. Two seeds (8101, 8102).
 
-### 5.4 Transformer baselines (v85)
+### A.4 Transformer baselines (v85)
 
 UNETR (Hatamizadeh et al. 2022): feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1. SwinUNETR (Tang et al. 2023): feature_size=12. Both at 16×48×48 input size, 22 epochs, AdamW lr=5e-4, batch=4.
 
-### 5.5 Closed-form crossover and identifiability conditions
+### A.5 Closed-form crossover and identifiability conditions
 
 Theorem (closed-form crossover under label shift; Saerens et al. 2002 generalised to model-pair). Given two models $m_1, m_2$ and per-stratum mean Brier $\{L_m(c)\}$, the unique aggregate-Brier crossover $\pi^*$ exists if and only if both identifiability conditions hold: C1 ($L_{m_1}(\text{stable}) < L_{m_2}(\text{stable})$) and C2 ($L_{m_1}(\text{active}) > L_{m_2}(\text{active})$). When both hold,
 
@@ -488,11 +488,11 @@ $$\pi^* = \frac{L_{m_2}(\text{active}) - L_{m_1}(\text{active})}{[L_{m_2}(\text{
 
 For our heat-vs-mask-feature pair on UCSF: C1 (0.041 < 0.140 ✓), C2 (0.274 > 0.199 ✓), giving $\pi^* = 0.43$.
 
-### 5.6 Statistical analysis
+### A.6 Statistical analysis
 
 Holm–Bonferroni step-down on three pre-registered primary endpoints (FWER=0.05). All Brier scores: mean ± SE from 1,000-bootstrap. All p-values two-sided unless stated. Cluster bootstrap for repeated-measures metrics. Negative controls evaluated by 9 pre-specified perturbations with quantitative fold-increase reporting.
 
-### 5.7 Software, hardware, reproducibility
+### A.7 Software, hardware, reproducibility
 
 Python 3.11.9; PyTorch 2.12 (CUDA 12.8); MONAI 1.5.2 (UNETR + SwinUNETR); nibabel 5.4.2; NumPy; SciPy; statsmodels (DerSimonian–Laird). Hardware: NVIDIA RTX 5070 Laptop GPU (8.5 GB VRAM); Intel Core i7 CPU. All scripts versioned at `scripts/`. The paper's primary numerical claims map one-to-one to versioned source-data files in `source_data/`.
 

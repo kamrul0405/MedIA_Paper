@@ -75,7 +75,7 @@ NVIDIA RTX 5070 Laptop GPU (8.5 GB VRAM), CUDA 12.8. Python 3.11.9; PyTorch 2.12
 
 ## Companion repository
 
-`RTO_paper` — companion submission to *Radiotherapy and Oncology* (Green Journal, Elsevier; brain-metastasis SRS dose-prior boundary physics on PROTEAS RTDOSE/RTPLAN).
+`MedicalPhysics_Paper` (formerly `RTO_paper`) — companion submission to *Medical Physics* (AAPM / Wiley; physics-grounded structural priors with BED-aware spatially-varying kernel and α/β sensitivity sweep on PROTEAS RTDOSE/RTPLAN).
 
 ## Licence
 
