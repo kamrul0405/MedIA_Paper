@@ -1,0 +1,221 @@
+{
+  "audit_version": "v92",
+  "created_at_local": "2026-05-07 13:41:30",
+  "local_multisite_denominator": {
+    "datasets_indexed": 8,
+    "patients_or_subject_folders_total": 2875,
+    "patient_timepoints_or_pairs_total": 10679,
+    "nifti_files_total": 76680,
+    "mask_like_files_total": 25180,
+    "strict_rtdose_files_total": 47,
+    "strong_glioma_full_volume_candidate_patients": 677,
+    "strong_glioma_full_volume_candidate_timepoints": 1496,
+    "longitudinal_patients_or_subject_folders": 2875
+  },
+  "physics_geometry_summary": {
+    "heat_kernel_sigma_mm": 2.5,
+    "median_positive_fraction_range": [
+      0.00416696,
+      0.00855869
+    ],
+    "median_bbox_fraction_range": [
+      0.02258366,
+      0.03773589
+    ],
+    "sigma_over_equivalent_radius_range": [
+      0.095,
+      0.1045
+    ],
+    "interpretation": "The heat prior is a local parabolic-PDE smoothing operator over a highly sparse lesion support, not a learned global image classifier."
+  },
+  "dose_physics_summary": {
+    "proteas_patient_zips": 45,
+    "patients_with_rtdose": 44,
+    "rtdose_files_parsed": 47,
+    "dose_units": {
+      "GY": 47
+    },
+    "dose_types": {
+      "PHYSICAL": 47
+    },
+    "max_dose_min_median_max_Gy": [
+      22.389288,
+      25.893911,
+      40.076488
+    ],
+    "dicom_modality_file_counts": {
+      "RD": 47,
+      "RP": 48,
+      "RS": 47,
+      "RI": 541,
+      "CT": 17431,
+      "MR": 44010
+    }
+  },
+  "novelty_positioning_against_qsonet": {
+    "qsonet_axis": "architecture-level diffusion-MRI physics constraint on a 56-patient multi-shell cohort",
+    "v92_media_axis": "system-level, multi-site endpoint-regime transport law for ranking instability across structural-prior, CNN, residual, transformer and nnU-Net controls",
+    "v92_pro_axis": "dose-physics conditional-use boundary using RTDOSE/RTPLAN-compatible evidence rather than proxy geometric claims",
+    "safe_claim": "This is broader and more clinically guarded than QSO-Net, but not a claim of deployment readiness."
+  },
+  "dataset_rows": [
+    {
+      "dataset": "UCSF Post-op Glioma",
+      "patients_or_subject_folders": 298,
+      "patient_timepoints_or_pairs": 596,
+      "nifti_count": 4768,
+      "mask_like_count": 1192,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "strong",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "MedIA/NMI external post-operative glioma segmentation robustness",
+      "caveats": "Longitudinal structure detected; split by patient to avoid leakage.; Large ZIP inventory only; extraction/conversion required before voxel-level experiments."
+    },
+    {
+      "dataset": "MU Glioma Post",
+      "patients_or_subject_folders": 203,
+      "patient_timepoints_or_pairs": 596,
+      "nifti_count": 2978,
+      "mask_like_count": 594,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "strong",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "MedIA/NMI longitudinal full-volume segmentation pilot",
+      "caveats": "Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "RHUH GBM",
+      "patients_or_subject_folders": 40,
+      "patient_timepoints_or_pairs": 120,
+      "nifti_count": 720,
+      "mask_like_count": 120,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "strong",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "MedIA/NMI longitudinal endpoint-composition and full-volume audit",
+      "caveats": "Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "UCSD PTGBM",
+      "patients_or_subject_folders": 136,
+      "patient_timepoints_or_pairs": 184,
+      "nifti_count": 4047,
+      "mask_like_count": 736,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "strong",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "MedIA/NMI multimodal full-volume and ablation stress testing",
+      "caveats": "Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "UPENN GBM NIfTI",
+      "patients_or_subject_folders": 630,
+      "patient_timepoints_or_pairs": 671,
+      "nifti_count": 10646,
+      "mask_like_count": 758,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "moderate",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "MedIA/NMI pseudo-label sensitivity only; not primary external validation",
+      "caveats": "Mask inventory appears dominated by automated/pseudo labels.; Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "Yale Brain Mets Longitudinal",
+      "patients_or_subject_folders": 1430,
+      "patient_timepoints_or_pairs": 7509,
+      "nifti_count": 33811,
+      "mask_like_count": 0,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "limited",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "domain-shift imaging audit; no lesion labels found in local metadata",
+      "caveats": "No local mask-like files found.; Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "LUMIERE",
+      "patients_or_subject_folders": 93,
+      "patient_timepoints_or_pairs": 589,
+      "nifti_count": 18660,
+      "mask_like_count": 21564,
+      "rtdose_count": 0,
+      "medIA_NMI_strength": "moderate",
+      "PRO_NBE_strength": "not useful",
+      "safe_use": "cold-holdout discovery or metadata-only audit pending label confirmation",
+      "caveats": "Mask inventory appears dominated by automated/pseudo labels.; Longitudinal structure detected; split by patient to avoid leakage."
+    },
+    {
+      "dataset": "PROTEAS Brain Mets RT",
+      "patients_or_subject_folders": 45,
+      "patient_timepoints_or_pairs": 414,
+      "nifti_count": 1050,
+      "mask_like_count": 216,
+      "rtdose_count": 47,
+      "medIA_NMI_strength": "moderate",
+      "PRO_NBE_strength": "strong",
+      "safe_use": "PRO/NBE independent SRS RTDOSE stress test and fractionation audit",
+      "caveats": "Brain-metastasis cohort; useful stress test, not a same-disease glioma validation set.; Longitudinal structure detected; split by patient to avoid leakage.; Large ZIP inventory only; extraction/conversion required before voxel-level experiments."
+    }
+  ],
+  "geometry_rows": [
+    {
+      "dataset": "MU Glioma Post",
+      "label_status": "manual/expert-like local segmentation files",
+      "patients": 203,
+      "patient_timepoints": 594,
+      "loaded_masks": 594,
+      "median_voxels_million": 8.928,
+      "median_positive_fraction": 0.00682336,
+      "median_bbox_fraction": 0.03773589,
+      "median_positive_volume_mm3_assuming_1mm3": 60919.0,
+      "equivalent_radius_mm_assuming_1mm3": 24.41,
+      "sigma_over_equivalent_radius": 0.1024,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "safe_interpretation": "strong external full-volume glioma feasibility evidence"
+    },
+    {
+      "dataset": "RHUH GBM",
+      "label_status": "manual/expert-like local segmentation files",
+      "patients": 40,
+      "patient_timepoints": 119,
+      "loaded_masks": 119,
+      "median_voxels_million": 8.928,
+      "median_positive_fraction": 0.0064179,
+      "median_bbox_fraction": 0.03238911,
+      "median_positive_volume_mm3_assuming_1mm3": 57299.0,
+      "equivalent_radius_mm_assuming_1mm3": 23.92,
+      "sigma_over_equivalent_radius": 0.1045,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "safe_interpretation": "strong longitudinal full-volume glioma feasibility evidence"
+    },
+    {
+      "dataset": "UCSD PTGBM BraTS mask",
+      "label_status": "BraTS-style tumour segmentation files",
+      "patients": 136,
+      "patient_timepoints": 184,
+      "loaded_masks": 184,
+      "median_voxels_million": 16.7772,
+      "median_positive_fraction": 0.00416696,
+      "median_bbox_fraction": 0.02258366,
+      "median_positive_volume_mm3_assuming_1mm3": 69909.9,
+      "equivalent_radius_mm_assuming_1mm3": 25.56,
+      "sigma_over_equivalent_radius": 0.0978,
+      "median_four_channel_float32_volume_gb": 0.25,
+      "safe_interpretation": "strong multimodal full-volume glioma feasibility evidence"
+    },
+    {
+      "dataset": "UPENN GBM automated masks",
+      "label_status": "automated/pseudo labels",
+      "patients": 611,
+      "patient_timepoints": 611,
+      "loaded_masks": 758,
+      "median_voxels_million": 8.928,
+      "median_positive_fraction": 0.00855869,
+      "median_bbox_fraction": 0.03288306,
+      "median_positive_volume_mm3_assuming_1mm3": 76412.0,
+      "equivalent_radius_mm_assuming_1mm3": 26.32,
+      "sigma_over_equivalent_radius": 0.095,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "safe_interpretation": "sensitivity analysis only; not primary validation"
+    }
+  ]
+}

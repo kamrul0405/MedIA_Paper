@@ -1,0 +1,30 @@
+{
+  "version": "v90",
+  "timestamp": "2026-05-07T12:01:38",
+  "device": "cuda",
+  "cuda_name": "NVIDIA GeForce RTX 5070 Laptop GPU",
+  "torch": "2.12.0.dev20260408+cu128",
+  "cache": "C:\\Users\\kamru\\Downloads\\Nature_project\\05_results\\v78_raw_mri_loco_cache.npz",
+  "rows": [
+    {
+      "cohort": "UCSF-POSTOP",
+      "n": 296,
+      "gpu_heat_brier": 0.084385
+    },
+    {
+      "cohort": "MU-Glioma-Post",
+      "n": 151,
+      "gpu_heat_brier": 0.259846
+    },
+    {
+      "cohort": "RHUH-GBM",
+      "n": 38,
+      "gpu_heat_brier": 0.483126
+    },
+    {
+      "cohort": "UCSD-PTGBM",
+      "n": 37,
+      "gpu_heat_brier": 0.087456
+    }
+  ]
+}

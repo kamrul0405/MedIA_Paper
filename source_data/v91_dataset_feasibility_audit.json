@@ -1,0 +1,1372 @@
+{
+  "audit_version": "v91",
+  "created_at_local": "2026-05-07 13:38:05",
+  "downloads_datasets_root": "C:\\Users\\kamru\\Downloads\\Datasets",
+  "datasets": [
+    {
+      "name": "UCSF Post-op Glioma",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\UCSF_POSTOP_GLIOMA_DATASET_FINAL_v1.0.zip",
+      "evidence_tier": "expert-label external candidate",
+      "primary_use": "MedIA/NMI external post-operative glioma segmentation robustness",
+      "scan": {
+        "exists": true,
+        "container": "zip",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\UCSF_POSTOP_GLIOMA_DATASET_FINAL_v1.0.zip",
+        "size_gb": 27.696,
+        "zip_uncompressed_gb": 28.107,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 4769,
+        "nifti_count": 4768,
+        "mask_like_count": 1192,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 1,
+        "modality_named_count": 4172,
+        "estimated_patient_count": 298,
+        "estimated_patient_timepoint_count": 596,
+        "extension_counts": {
+          "nifti": 4768,
+          "xlsx": 1
+        },
+        "examples": {
+          "mask": [
+            "100001/100001_flair_subtraction_seg.nii.gz",
+            "100001/100001_t1ce_subtraction_seg.nii.gz",
+            "100001/100001_time1_seg.nii.gz",
+            "100001/100001_time2_seg.nii.gz",
+            "100002/100002_flair_subtraction_seg.nii.gz",
+            "100002/100002_t1ce_subtraction_seg.nii.gz",
+            "100002/100002_time1_seg.nii.gz",
+            "100002/100002_time2_seg.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "100001/100001_flair_subtraction.nii.gz",
+            "100001/100001_flair_subtraction_seg.nii.gz",
+            "100001/100001_t1ce_subtraction.nii.gz",
+            "100001/100001_t1ce_subtraction_seg.nii.gz",
+            "100001/100001_time1_flair.nii.gz"
+          ],
+          "metadata": [
+            "UCSF_PostopGlioma_Table S1 R1 V5.0_UNBLINDED_FINAL.xlsx"
+          ]
+        },
+        "scan_seconds": 0.23
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "strong",
+        "medIA_NMI_next_experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Longitudinal structure detected; split by patient to avoid leakage.",
+          "Large ZIP inventory only; extraction/conversion required before voxel-level experiments."
+        ]
+      }
+    },
+    {
+      "name": "MU Glioma Post",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - MU-Glioma-Post",
+      "evidence_tier": "expert-label external candidate",
+      "primary_use": "MedIA/NMI longitudinal full-volume segmentation pilot",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - MU-Glioma-Post",
+        "size_gb": 11.073,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 2978,
+        "nifti_count": 2978,
+        "mask_like_count": 594,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 0,
+        "modality_named_count": 2384,
+        "estimated_patient_count": 203,
+        "estimated_patient_timepoint_count": 596,
+        "extension_counts": {
+          "nifti": 2978
+        },
+        "examples": {
+          "mask": [
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_2/PatientID_0003_Timepoint_2_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_5/PatientID_0003_Timepoint_5_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0004/Timepoint_1/PatientID_0004_Timepoint_1_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0005/Timepoint_3/PatientID_0005_Timepoint_3_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0005/Timepoint_4/PatientID_0005_Timepoint_4_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0006/Timepoint_2/PatientID_0006_Timepoint_2_tumorMask.nii.gz",
+            "MU-Glioma-Post/PatientID_0006/Timepoint_4/PatientID_0006_Timepoint_4_tumorMask.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_brain_t1c.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_brain_t1n.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_brain_t2f.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_brain_t2w.nii.gz",
+            "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_tumorMask.nii.gz"
+          ],
+          "metadata": []
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 8,
+          "median_volume_voxels_million": 8.928,
+          "median_four_channel_float32_volume_gb": 0.133,
+          "median_mask_nonzero_fraction": 0.012616,
+          "samples": [
+            {
+              "path": "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 84540,
+              "nonzero_fraction": 0.009469,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0003/Timepoint_2/PatientID_0003_Timepoint_2_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 85818,
+              "nonzero_fraction": 0.009612,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0003/Timepoint_5/PatientID_0003_Timepoint_5_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 193095,
+              "nonzero_fraction": 0.021628,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0004/Timepoint_1/PatientID_0004_Timepoint_1_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 59704,
+              "nonzero_fraction": 0.006687,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0005/Timepoint_3/PatientID_0005_Timepoint_3_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 139453,
+              "nonzero_fraction": 0.01562,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0005/Timepoint_4/PatientID_0005_Timepoint_4_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 140311,
+              "nonzero_fraction": 0.015716,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0006/Timepoint_2/PatientID_0006_Timepoint_2_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 165771,
+              "nonzero_fraction": 0.018568,
+              "unique_values_preview": [
+                0.0,
+                2.0,
+                3.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "MU-Glioma-Post/PatientID_0006/Timepoint_4/PatientID_0006_Timepoint_4_tumorMask.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 83049,
+              "nonzero_fraction": 0.009302,
+              "unique_values_preview": [
+                0.0,
+                2.0,
+                3.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            }
+          ]
+        },
+        "scan_seconds": 4.04
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "strong",
+        "medIA_NMI_next_experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "RHUH GBM",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - RHUH-GBM-nii-v1",
+      "evidence_tier": "expert-label longitudinal candidate",
+      "primary_use": "MedIA/NMI longitudinal endpoint-composition and full-volume audit",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - RHUH-GBM-nii-v1",
+        "size_gb": 2.885,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 721,
+        "nifti_count": 720,
+        "mask_like_count": 120,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 0,
+        "modality_named_count": 600,
+        "estimated_patient_count": 40,
+        "estimated_patient_timepoint_count": 120,
+        "extension_counts": {
+          "nifti": 720,
+          "sums": 1
+        },
+        "examples": {
+          "mask": [
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/1/RHUH-0001_1_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/2/RHUH-0001_2_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0002/0/RHUH-0002_0_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0002/1/RHUH-0002_1_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0002/2/RHUH-0002_2_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0003/0/RHUH-0003_0_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0003/1/RHUH-0003_1_segmentations.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_adc.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_flair.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_segmentations.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_t1.nii.gz",
+            "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_t1ce.nii.gz"
+          ],
+          "metadata": []
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 8,
+          "median_volume_voxels_million": 8.928,
+          "median_four_channel_float32_volume_gb": 0.133,
+          "median_mask_nonzero_fraction": 0.003014,
+          "samples": [
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 139502,
+              "nonzero_fraction": 0.015625,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0001/1/RHUH-0001_1_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 25167,
+              "nonzero_fraction": 0.002819,
+              "unique_values_preview": [
+                0.0,
+                2.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0001/2/RHUH-0001_2_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 190369,
+              "nonzero_fraction": 0.021323,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0002/0/RHUH-0002_0_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 28656,
+              "nonzero_fraction": 0.00321,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0002/1/RHUH-0002_1_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 6641,
+              "nonzero_fraction": 0.000744,
+              "unique_values_preview": [
+                0.0,
+                2.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0002/2/RHUH-0002_2_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 10491,
+              "nonzero_fraction": 0.001175,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0003/0/RHUH-0003_0_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 41431,
+              "nonzero_fraction": 0.004641,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "RHUH-GBM_nii_v1/RHUH-0003/1/RHUH-0003_1_segmentations.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 1047,
+              "nonzero_fraction": 0.000117,
+              "unique_values_preview": [
+                0.0,
+                2.0
+              ],
+              "unique_values_truncated": false
+            }
+          ]
+        },
+        "scan_seconds": 1.93
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "strong",
+        "medIA_NMI_next_experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "UCSD PTGBM",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UCSD-PTGBM-v1",
+      "evidence_tier": "expert-label multimodal candidate",
+      "primary_use": "MedIA/NMI multimodal full-volume and ablation stress testing",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UCSD-PTGBM-v1",
+        "size_gb": 33.139,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 4047,
+        "nifti_count": 4047,
+        "mask_like_count": 736,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 0,
+        "modality_named_count": 2946,
+        "estimated_patient_count": 136,
+        "estimated_patient_timepoint_count": 184,
+        "extension_counts": {
+          "nifti": 4047
+        },
+        "examples": {
+          "mask": [
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_BraTS_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_enhancing_cellular_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_non_enhancing_cellular_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_total_cellular_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_BraTS_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_enhancing_cellular_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_non_enhancing_cellular_tumor_seg.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_total_cellular_tumor_seg.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_ADC_4000.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_ADC_vendor.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_ASL.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_ASL_CBF.nii.gz",
+            "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_BraTS_tumor_seg.nii.gz"
+          ],
+          "metadata": []
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 8,
+          "median_volume_voxels_million": 16.777,
+          "median_four_channel_float32_volume_gb": 0.25,
+          "median_mask_nonzero_fraction": 5.7e-05,
+          "samples": [
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_BraTS_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 111914,
+              "nonzero_fraction": 0.006671,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                3.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_enhancing_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 0,
+              "nonzero_fraction": 0.0,
+              "unique_values_preview": [
+                0.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_non_enhancing_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 0,
+              "nonzero_fraction": 0.0,
+              "unique_values_preview": [
+                0.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_total_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 0,
+              "nonzero_fraction": 0.0,
+              "unique_values_preview": [
+                0.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_BraTS_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 6587,
+              "nonzero_fraction": 0.000393,
+              "unique_values_preview": [
+                0.0,
+                2.0,
+                3.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_enhancing_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 1620,
+              "nonzero_fraction": 9.7e-05,
+              "unique_values_preview": [
+                0.0,
+                1.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_non_enhancing_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 289,
+              "nonzero_fraction": 1.7e-05,
+              "unique_values_preview": [
+                0.0,
+                1.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_total_cellular_tumor_seg.nii.gz",
+              "shape": [
+                256,
+                256,
+                256
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 16.777,
+              "nonzero_voxels": 1909,
+              "nonzero_fraction": 0.000114,
+              "unique_values_preview": [
+                0.0,
+                1.0
+              ],
+              "unique_values_truncated": false
+            }
+          ]
+        },
+        "scan_seconds": 12.31
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "strong",
+        "medIA_NMI_next_experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "UPENN GBM NIfTI",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UPENN-GBM-NIfTI",
+      "evidence_tier": "automated-label sensitivity candidate",
+      "primary_use": "MedIA/NMI pseudo-label sensitivity only; not primary external validation",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UPENN-GBM-NIfTI",
+        "size_gb": 69.241,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 10647,
+        "nifti_count": 10646,
+        "mask_like_count": 758,
+        "pseudo_label_like_count": 611,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 0,
+        "modality_named_count": 7520,
+        "estimated_patient_count": 630,
+        "estimated_patient_timepoint_count": 671,
+        "extension_counts": {
+          "nifti": 10646,
+          "sums": 1
+        },
+        "examples": {
+          "mask": [
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00001_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00002_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00003_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00004_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00005_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00006_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00007_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00008_11_automated_approx_segm.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00001_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00002_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00003_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00004_11_automated_approx_segm.nii.gz",
+            "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00005_11_automated_approx_segm.nii.gz"
+          ],
+          "metadata": []
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 8,
+          "median_volume_voxels_million": 8.928,
+          "median_four_channel_float32_volume_gb": 0.133,
+          "median_mask_nonzero_fraction": 0.007677,
+          "samples": [
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00001_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 23160,
+              "nonzero_fraction": 0.002594,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00002_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 200670,
+              "nonzero_fraction": 0.022476,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00003_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 67650,
+              "nonzero_fraction": 0.007577,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00004_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 56097,
+              "nonzero_fraction": 0.006283,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00005_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 89027,
+              "nonzero_fraction": 0.009972,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00006_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 69422,
+              "nonzero_fraction": 0.007776,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00007_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 113145,
+              "nonzero_fraction": 0.012673,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            },
+            {
+              "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00008_11_automated_approx_segm.nii.gz",
+              "shape": [
+                240,
+                240,
+                155
+              ],
+              "zooms": [
+                1.0,
+                1.0,
+                1.0
+              ],
+              "voxels_million": 8.928,
+              "nonzero_voxels": 29802,
+              "nonzero_fraction": 0.003338,
+              "unique_values_preview": [
+                0.0,
+                1.0,
+                2.0,
+                4.0
+              ],
+              "unique_values_truncated": false
+            }
+          ]
+        },
+        "scan_seconds": 6.93
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "moderate",
+        "medIA_NMI_next_experiment": "Run pseudo-label sensitivity/domain-shift audit only; keep out of headline validation claims.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Mask inventory appears dominated by automated/pseudo labels.",
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "Yale Brain Mets Longitudinal",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - Yale-Brain-Mets-Longitudinal",
+      "evidence_tier": "imaging-only audit candidate",
+      "primary_use": "domain-shift imaging audit; no lesion labels found in local metadata",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - Yale-Brain-Mets-Longitudinal",
+        "size_gb": 42.552,
+        "nested_zip_count": 0,
+        "nested_zip_file_count": 0,
+        "file_count": 33811,
+        "nifti_count": 33811,
+        "mask_like_count": 0,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 0,
+        "modality_named_count": 16905,
+        "estimated_patient_count": 1430,
+        "estimated_patient_timepoint_count": 7509,
+        "extension_counts": {
+          "nifti": 33811
+        },
+        "examples": {
+          "mask": [],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "Yale-Brain-Mets-Longitudinal/YG_01M98EKKAR50/2016-11-13/YG_01M98EKKAR50_2016-11-13_10-16-23_FLAIR.nii.gz",
+            "Yale-Brain-Mets-Longitudinal/YG_01M98EKKAR50/2016-11-13/YG_01M98EKKAR50_2016-11-13_10-16-23_POST.nii.gz",
+            "Yale-Brain-Mets-Longitudinal/YG_01M98EKKAR50/2016-11-13/YG_01M98EKKAR50_2016-11-13_10-16-23_PRE.nii.gz",
+            "Yale-Brain-Mets-Longitudinal/YG_01M98EKKAR50/2016-11-13/YG_01M98EKKAR50_2016-11-13_10-16-23_T2.nii.gz",
+            "Yale-Brain-Mets-Longitudinal/YG_01M98EKKAR50/2016-11-27/YG_01M98EKKAR50_2016-11-27_10-38-46_POST.nii.gz"
+          ],
+          "metadata": []
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 0,
+          "median_volume_voxels_million": null,
+          "median_four_channel_float32_volume_gb": null,
+          "median_mask_nonzero_fraction": null,
+          "samples": []
+        },
+        "scan_seconds": 19.45
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "limited",
+        "medIA_NMI_next_experiment": "Use for imaging-only domain-shift and acquisition-heterogeneity audit; cannot compute Dice/lesion coverage without labels.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "No local mask-like files found.",
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "LUMIERE",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\LUMIERE-metadata",
+      "evidence_tier": "metadata/imaging candidate",
+      "primary_use": "cold-holdout discovery or metadata-only audit pending label confirmation",
+      "scan": {
+        "exists": true,
+        "container": "directory",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\LUMIERE-metadata",
+        "size_gb": 30.33,
+        "nested_zip_count": 1,
+        "nested_zip_file_count": 24051,
+        "file_count": 24057,
+        "nifti_count": 18660,
+        "mask_like_count": 21564,
+        "pseudo_label_like_count": 21564,
+        "dose_like_count": 0,
+        "rt_plan_like_count": 0,
+        "metadata_count": 603,
+        "modality_named_count": 21655,
+        "estimated_patient_count": 93,
+        "estimated_patient_timepoint_count": 589,
+        "extension_counts": {
+          "csv": 4,
+          "json": 599,
+          "mat": 2396,
+          "nifti": 18660,
+          "pdf": 1,
+          "tfm": 2396,
+          "zip": 1
+        },
+        "examples": {
+          "mask": [
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_T1_origspace.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_CT1_origspace.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_FLAIR_origspace.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_T2_origspace.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/registered/T1_r2s_bet_reg.mat",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/registered/T1_r2s_bet.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/registered/CT1_r2s_bet.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/registered/CT1_r2s_bet_reg.nii.gz"
+          ],
+          "dose": [],
+          "rt_plan": [],
+          "nifti": [
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/FLAIR.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/CT1.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/T1.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_T1_origspace.nii.gz",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/HD-GLIO-AUTO-segmentation/native/segmentation_CT1_origspace.nii.gz"
+          ],
+          "metadata": [
+            "LUMIERE-datacompleteness.csv",
+            "LUMIERE-Demographics_Pathology.csv",
+            "LUMIERE-ExpertRating-v202211.csv",
+            "LUMIERE-MRinfo.csv",
+            "LUMIERE-Imaging-v202211.zip!/Imaging/Patient-064/week-002/DeepBraTumIA-segmentation/atlas/segmentation/measured_volumes_in_mm3.json"
+          ]
+        },
+        "shape_audit": {
+          "available": true,
+          "sample_count": 0,
+          "median_volume_voxels_million": null,
+          "median_four_channel_float32_volume_gb": null,
+          "median_mask_nonzero_fraction": null,
+          "samples": []
+        },
+        "scan_seconds": 3.96
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "moderate",
+        "medIA_NMI_next_experiment": "Run pseudo-label sensitivity/domain-shift audit only; keep out of headline validation claims.",
+        "PRO_NBE_strength": "not useful",
+        "PRO_NBE_next_experiment": "No immediate PRO/NBE RTDOSE experiment supported by local file inventory.",
+        "reviewer_relevant_caveats": [
+          "Mask inventory appears dominated by automated/pseudo labels.",
+          "Longitudinal structure detected; split by patient to avoid leakage."
+        ]
+      }
+    },
+    {
+      "name": "PROTEAS Brain Mets RT",
+      "configured_path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - PROTEAS-brain-mets-zenodo-17253793.zip",
+      "evidence_tier": "radiotherapy dose external candidate",
+      "primary_use": "PRO/NBE independent SRS RTDOSE stress test and fractionation audit",
+      "scan": {
+        "exists": true,
+        "container": "zip",
+        "path": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - PROTEAS-brain-mets-zenodo-17253793.zip",
+        "size_gb": 14.03,
+        "zip_uncompressed_gb": 14.03,
+        "nested_zip_count": 45,
+        "nested_zip_file_count": 64988,
+        "file_count": 65035,
+        "nifti_count": 1050,
+        "mask_like_count": 216,
+        "pseudo_label_like_count": 0,
+        "dose_like_count": 47,
+        "rt_plan_like_count": 18159,
+        "metadata_count": 2,
+        "modality_named_count": 45558,
+        "estimated_patient_count": 45,
+        "estimated_patient_timepoint_count": 414,
+        "extension_counts": {
+          "dicom": 63904,
+          "nifti": 1050,
+          "no_extension": 34,
+          "xlsx": 2,
+          "zip": 45
+        },
+        "examples": {
+          "mask": [
+            "P11.zip!/P11/P11_brain_mask.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu1.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu3.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_baseline.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu2.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu4.nii.gz",
+            "P14.zip!/P14/P14_brain_mask.nii.gz",
+            "P14.zip!/P14/tumor_segmentation/P14_tumor_mask_baseline.nii.gz"
+          ],
+          "dose": [
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/RD.1.2.246.352.221.56184327160070466625935149919162986421.dcm",
+            "P14.zip!/P14/DICOM/RTP_2019-11-15/RD.1.2.246.352.221.49405898121609302343399238820096487329.dcm",
+            "P09.zip!/P09/DICOM/RTP_2022-01-13/RD.1.2.246.352.221.479426025805017596113671436485834913461.dcm",
+            "P20b.zip!/P20b/DICOM/RTP_2020-10-07/RD.1.2.246.352.221.50290710625469006966096111359191838366.dcm",
+            "P12.zip!/P12/DICOM/RTP_2021-03-26/RD.1.2.246.352.221.563369049980202091714799076180173767302.dcm",
+            "P07a.zip!/P07a/DICOM/RTP_2021-10-13/RD.1.2.246.352.221.50775953472424076598271601054234690229.dcm",
+            "P04a.zip!/P04a/DICOM/RTP_2020-03-20/RD.1.2.246.352.221.491493098326933640611130304873528591784.dcm",
+            "P05.zip!/P05/DICOM/RTP_2021-12-10/RD.1.2.246.352.221.47952245028058114923777573139847642280.dcm"
+          ],
+          "rt_plan": [
+            "P11.zip!/P11/P11_RTP.nii.gz",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.55043430032216576428675791878271725238.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.50824020085080212219147823219613912215.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.539705724396692721085754134551412864.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.57387458420216979543998788993398224318.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.488123247553397749413301104152084975542.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.53912363814596022278000718658480075914.dcm",
+            "P11.zip!/P11/DICOM/RTP_2021-11-17/CT.1.2.246.352.221.57100945390202984756495249873393681086.dcm"
+          ],
+          "nifti": [
+            "P11.zip!/P11/P11_CT.nii.gz",
+            "P11.zip!/P11/P11_brain_mask.nii.gz",
+            "P11.zip!/P11/P11_RTP.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu1.nii.gz",
+            "P11.zip!/P11/tumor_segmentation/P11_tumor_mask_fu3.nii.gz"
+          ],
+          "metadata": [
+            "PROTEAS-Clinical_and_demographic_data.xlsx",
+            "PROTEAS-MRI_radiomics_data.xlsx"
+          ]
+        },
+        "scan_seconds": 33.45
+      },
+      "recommendation": {
+        "medIA_NMI_strength": "moderate",
+        "medIA_NMI_next_experiment": "Use as cross-disease radiotherapy imaging stress test; do not present as primary glioma external validation.",
+        "PRO_NBE_strength": "strong",
+        "PRO_NBE_next_experiment": "Run independent RTDOSE parser, prescription/fractionation strata, and BED/EQD2 sensitivity checks.",
+        "reviewer_relevant_caveats": [
+          "Brain-metastasis cohort; useful stress test, not a same-disease glioma validation set.",
+          "Longitudinal structure detected; split by patient to avoid leakage.",
+          "Large ZIP inventory only; extraction/conversion required before voxel-level experiments."
+        ]
+      }
+    }
+  ],
+  "high_value_experiment_queue": [
+    {
+      "priority": "P0",
+      "paper": "MedIA/NMI",
+      "dataset": "UCSF Post-op Glioma",
+      "experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+      "why_it_matters": "Directly addresses reviewer concern that cropped-cache MONAI/nnU-Net evidence is not enough for anatomical full-volume generalisation.",
+      "local_prerequisites": "NIfTI files and mask-like labels present locally.",
+      "estimated_size_gb": 27.696
+    },
+    {
+      "priority": "P0",
+      "paper": "MedIA/NMI",
+      "dataset": "MU Glioma Post",
+      "experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+      "why_it_matters": "Directly addresses reviewer concern that cropped-cache MONAI/nnU-Net evidence is not enough for anatomical full-volume generalisation.",
+      "local_prerequisites": "NIfTI files and mask-like labels present locally.",
+      "estimated_size_gb": 11.073
+    },
+    {
+      "priority": "P0",
+      "paper": "MedIA/NMI",
+      "dataset": "RHUH GBM",
+      "experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+      "why_it_matters": "Directly addresses reviewer concern that cropped-cache MONAI/nnU-Net evidence is not enough for anatomical full-volume generalisation.",
+      "local_prerequisites": "NIfTI files and mask-like labels present locally.",
+      "estimated_size_gb": 2.885
+    },
+    {
+      "priority": "P0",
+      "paper": "MedIA/NMI",
+      "dataset": "UCSD PTGBM",
+      "experiment": "Run full-volume external segmentation/domain-shift audit with patient-level split and endpoint-composition sensitivity.",
+      "why_it_matters": "Directly addresses reviewer concern that cropped-cache MONAI/nnU-Net evidence is not enough for anatomical full-volume generalisation.",
+      "local_prerequisites": "NIfTI files and mask-like labels present locally.",
+      "estimated_size_gb": 33.139
+    },
+    {
+      "priority": "P1",
+      "paper": "MedIA/NMI",
+      "dataset": "UPENN GBM NIfTI",
+      "experiment": "Run pseudo-label sensitivity/domain-shift audit only; keep out of headline validation claims.",
+      "why_it_matters": "Useful sensitivity analysis, but should be explicitly labelled pseudo-label evidence.",
+      "local_prerequisites": "NIfTI files and automated/pseudo masks present locally.",
+      "estimated_size_gb": 69.241
+    },
+    {
+      "priority": "P1",
+      "paper": "MedIA/NMI",
+      "dataset": "LUMIERE",
+      "experiment": "Run pseudo-label sensitivity/domain-shift audit only; keep out of headline validation claims.",
+      "why_it_matters": "Useful sensitivity analysis, but should be explicitly labelled pseudo-label evidence.",
+      "local_prerequisites": "NIfTI files and automated/pseudo masks present locally.",
+      "estimated_size_gb": 30.33
+    },
+    {
+      "priority": "P1",
+      "paper": "MedIA/NMI",
+      "dataset": "PROTEAS Brain Mets RT",
+      "experiment": "Use as cross-disease radiotherapy imaging stress test; do not present as primary glioma external validation.",
+      "why_it_matters": "Useful sensitivity analysis, but should be explicitly labelled pseudo-label evidence.",
+      "local_prerequisites": "NIfTI files and automated/pseudo masks present locally.",
+      "estimated_size_gb": 14.03
+    },
+    {
+      "priority": "P0",
+      "paper": "PRO/NBE",
+      "dataset": "PROTEAS Brain Mets RT",
+      "experiment": "Run independent RTDOSE parser, prescription/fractionation strata, and BED/EQD2 sensitivity checks.",
+      "why_it_matters": "An independent RTDOSE-backed audit is the cleanest way to reduce the practical-radiation-oncology reviewer concern that the current evidence is single-cohort or proxy-heavy.",
+      "local_prerequisites": "Dose-like radiotherapy files present locally; extract/parse before statistical claims.",
+      "estimated_size_gb": 14.03
+    },
+    {
+      "priority": "P0",
+      "paper": "Both",
+      "dataset": "all candidates",
+      "experiment": "Claim-status ledger refresh after every additional experiment.",
+      "why_it_matters": "Prevents empirical, simulated, pseudo-label, and future-work claims from bleeding into one another.",
+      "local_prerequisites": "Use existing source-data ledger plus v91 audit outputs.",
+      "estimated_size_gb": null
+    }
+  ]
+}

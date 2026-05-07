@@ -2,11 +2,11 @@
 
 **Manuscript:** *Structural priors versus learned models in longitudinal post-treatment brain-tumour MRI: a multi-cohort empirical benchmark with seed and architecture robustness*
 
-**Target journal:** *Computers in Biology and Medicine* (Elsevier; ISSN 0010-4825) — Original Research Article
-**Status:** Submission-ready (formatted per Elsevier *Computers in Biology and Medicine* Guide for Authors)
+**Target journal:** *Medical Image Analysis* (Elsevier; Q1 medical imaging) -- Original Research Article
+**Status:** v87 Q1 submission candidate after claim-audit cleanup
 **Open-access fee:** **None required.** This is a hybrid Elsevier journal; submission on the standard subscription path requires no article-processing charge.
 
-> **Note on repository name.** This repository was originally created targeting *Medical Image Analysis* (Elsevier) and retains the `MedIA_Paper` name for URL stability and commit-history continuity. The current submission target is *Computers in Biology and Medicine* (Elsevier). The Medical Image Analysis version of the manuscript is preserved at `manuscript/Manuscript_v85_for_MedIA.md` for archival reference.
+> **Note on repository name.** This repository was originally created targeting *Medical Image Analysis* (Elsevier) and retains the `MedIA_Paper` name for URL stability and commit-history continuity. The current submission target is *Medical Image Analysis* (Elsevier). The Medical Image Analysis version of the manuscript is preserved at `manuscript/Manuscript_v85_for_MedIA.md` for archival reference.
 
 ---
 

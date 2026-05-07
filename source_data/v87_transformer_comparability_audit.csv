@@ -1,0 +1,21 @@
+held_out,model,seed,image_size,model_brier,heat_brier_comparable,delta_model_minus_heat,model_beats_heat,comparison_note
+UCSF-POSTOP,unetr,8501,16x48x48,0.15498417520241156,0.0843849829759927,0.07059919222641886,False,native inner-grid comparison
+MU-Glioma-Post,unetr,8501,16x48x48,0.2572410779678269,0.2598464491265203,-0.0026053711586933592,True,native inner-grid comparison
+RHUH-GBM,unetr,8501,16x48x48,0.31422014436439466,0.4831262005395011,-0.16890605617510646,True,native inner-grid comparison
+UCSD-PTGBM,unetr,8501,16x48x48,0.15802037957552317,0.0874559297729787,0.07056444980254448,False,native inner-grid comparison
+UCSF-POSTOP,unetr,8502,16x48x48,0.13388450069957086,0.0843849829759927,0.04949951772357816,False,native inner-grid comparison
+MU-Glioma-Post,unetr,8502,16x48x48,0.24354653452701916,0.2598464491265203,-0.016299914599501114,True,native inner-grid comparison
+RHUH-GBM,unetr,8502,16x48x48,0.298688568174839,0.4831262005395011,-0.1844376323646621,True,native inner-grid comparison
+UCSD-PTGBM,unetr,8502,16x48x48,0.15557008156099836,0.0874559297729787,0.06811415178801966,False,native inner-grid comparison
+UCSF-POSTOP,unetr,8503,16x48x48,0.14427308545674425,0.0843849829759927,0.05988810248075155,False,native inner-grid comparison
+MU-Glioma-Post,unetr,8503,16x48x48,0.24685958647076658,0.2598464491265203,-0.01298686265575369,True,native inner-grid comparison
+RHUH-GBM,unetr,8503,16x48x48,0.2996803933852597,0.4831262005395011,-0.1834458071542414,True,native inner-grid comparison
+UCSD-PTGBM,unetr,8503,16x48x48,0.14187974664005074,0.0874559297729787,0.05442381686707204,False,native inner-grid comparison
+UCSF-POSTOP,swinunetr,8501,32x64x64,0.043233924016759205,0.023733276461997948,0.019500647554761257,False,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+MU-Glioma-Post,swinunetr,8501,32x64x64,0.06494576481806226,0.07308181381683383,-0.008136048998771572,True,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+RHUH-GBM,swinunetr,8501,32x64x64,0.08877065807188812,0.1358792439017347,-0.047108585829846575,True,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+UCSD-PTGBM,swinunetr,8501,32x64x64,0.026298542305625772,0.024596980248650258,0.0017015620569755148,False,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+UCSF-POSTOP,unetr,8501,32x64x64,0.03866458544900918,0.023733276461997948,0.01493130898701123,False,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+MU-Glioma-Post,unetr,8501,32x64x64,0.0698814263061577,0.07308181381683383,-0.0032003875106761254,True,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+RHUH-GBM,unetr,8501,32x64x64,0.08185412509268836,0.1358792439017347,-0.05402511880904634,True,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125
+UCSD-PTGBM,unetr,8501,32x64x64,0.03710941195085242,0.024596980248650258,0.012512431702202162,False,padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125

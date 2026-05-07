@@ -1,0 +1,2948 @@
+{
+  "audit_version": "v91",
+  "created_at_local": "2026-05-07 12:34:52",
+  "available_gpu_note": "nvidia-smi detected an RTX 5070 Laptop GPU with 8 GB VRAM in the active workstation.",
+  "datasets": [
+    {
+      "name": "MU Glioma Post",
+      "root": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - MU-Glioma-Post",
+      "exists": true,
+      "label_status": "manual/expert-like local segmentation files",
+      "primary_claim_use": "strong external full-volume glioma feasibility evidence",
+      "mask_regex": "(seg|segment|mask|label).*\\.nii(\\.gz)?$",
+      "mask_count": 594,
+      "loaded_count": 594,
+      "failure_count": 0,
+      "estimated_patient_count": 203,
+      "estimated_patient_timepoint_count": 594,
+      "median_voxels_million": 8.928,
+      "p10_voxels_million": 8.928,
+      "p90_voxels_million": 8.928,
+      "median_nonzero_fraction": 0.00682336,
+      "p10_nonzero_fraction": 0.00178154,
+      "p90_nonzero_fraction": 0.02058038,
+      "median_bbox_fraction": 0.03773589,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "gpu_feasibility_interpretation": "full-volume inference feasible; training still requires patching/checkpointing on 8 GB VRAM",
+      "shape_counts_top10": [
+        [
+          "[240, 240, 155]",
+          594
+        ]
+      ],
+      "zoom_counts_top10": [
+        [
+          "[1.0, 1.0, 1.0]",
+          594
+        ]
+      ],
+      "label_values_seen_top20": [
+        [
+          "0.0",
+          594
+        ],
+        [
+          "2.0",
+          591
+        ],
+        [
+          "3.0",
+          546
+        ],
+        [
+          "4.0",
+          520
+        ],
+        [
+          "1.0",
+          315
+        ]
+      ],
+      "failures": [],
+      "sample_rows": [
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0003/Timepoint_1/PatientID_0003_Timepoint_1_tumorMask.nii.gz",
+          "patient": "PATIENTID_0003",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 84540,
+          "nonzero_fraction": 0.00946909,
+          "bbox_fraction": 0.03003943,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0003/Timepoint_2/PatientID_0003_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0003",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 85818,
+          "nonzero_fraction": 0.00961223,
+          "bbox_fraction": 0.03112399,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0003/Timepoint_5/PatientID_0003_Timepoint_5_tumorMask.nii.gz",
+          "patient": "PATIENTID_0003",
+          "timepoint": "5",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 193095,
+          "nonzero_fraction": 0.02162802,
+          "bbox_fraction": 0.06812903,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0004/Timepoint_1/PatientID_0004_Timepoint_1_tumorMask.nii.gz",
+          "patient": "PATIENTID_0004",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 59704,
+          "nonzero_fraction": 0.00668728,
+          "bbox_fraction": 0.01752554,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0005/Timepoint_3/PatientID_0005_Timepoint_3_tumorMask.nii.gz",
+          "patient": "PATIENTID_0005",
+          "timepoint": "3",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 139453,
+          "nonzero_fraction": 0.01561974,
+          "bbox_fraction": 0.09246774,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0005/Timepoint_4/PatientID_0005_Timepoint_4_tumorMask.nii.gz",
+          "patient": "PATIENTID_0005",
+          "timepoint": "4",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 140311,
+          "nonzero_fraction": 0.01571584,
+          "bbox_fraction": 0.0665,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0006/Timepoint_2/PatientID_0006_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0006",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 165771,
+          "nonzero_fraction": 0.01856754,
+          "bbox_fraction": 0.06218862,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0006/Timepoint_4/PatientID_0006_Timepoint_4_tumorMask.nii.gz",
+          "patient": "PATIENTID_0006",
+          "timepoint": "4",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 83049,
+          "nonzero_fraction": 0.00930208,
+          "bbox_fraction": 0.03891398,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0006/Timepoint_5/PatientID_0006_Timepoint_5_tumorMask.nii.gz",
+          "patient": "PATIENTID_0006",
+          "timepoint": "5",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 97693,
+          "nonzero_fraction": 0.01094232,
+          "bbox_fraction": 0.04145352,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0006/Timepoint_6/PatientID_0006_Timepoint_6_tumorMask.nii.gz",
+          "patient": "PATIENTID_0006",
+          "timepoint": "6",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 119250,
+          "nonzero_fraction": 0.01335685,
+          "bbox_fraction": 0.06996237,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0007/Timepoint_2/PatientID_0007_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0007",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 48582,
+          "nonzero_fraction": 0.00544153,
+          "bbox_fraction": 0.01756272,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0007/Timepoint_3/PatientID_0007_Timepoint_3_tumorMask.nii.gz",
+          "patient": "PATIENTID_0007",
+          "timepoint": "3",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 48109,
+          "nonzero_fraction": 0.00538855,
+          "bbox_fraction": 0.01813351,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0007/Timepoint_4/PatientID_0007_Timepoint_4_tumorMask.nii.gz",
+          "patient": "PATIENTID_0007",
+          "timepoint": "4",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 63926,
+          "nonzero_fraction": 0.00716017,
+          "bbox_fraction": 0.05488172,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0007/Timepoint_5/PatientID_0007_Timepoint_5_tumorMask.nii.gz",
+          "patient": "PATIENTID_0007",
+          "timepoint": "5",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 66995,
+          "nonzero_fraction": 0.00750392,
+          "bbox_fraction": 0.05921371,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0007/Timepoint_6/PatientID_0007_Timepoint_6_tumorMask.nii.gz",
+          "patient": "PATIENTID_0007",
+          "timepoint": "6",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 68044,
+          "nonzero_fraction": 0.00762142,
+          "bbox_fraction": 0.06766039,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0008/Timepoint_4/PatientID_0008_Timepoint_4_tumorMask.nii.gz",
+          "patient": "PATIENTID_0008",
+          "timepoint": "4",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 87128,
+          "nonzero_fraction": 0.00975896,
+          "bbox_fraction": 0.02800202,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0008/Timepoint_6/PatientID_0008_Timepoint_6_tumorMask.nii.gz",
+          "patient": "PATIENTID_0008",
+          "timepoint": "6",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 31276,
+          "nonzero_fraction": 0.00350314,
+          "bbox_fraction": 0.0090065,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0009/Timepoint_2/PatientID_0009_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0009",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 165241,
+          "nonzero_fraction": 0.01850818,
+          "bbox_fraction": 0.07529234,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0010/Timepoint_1/PatientID_0010_Timepoint_1_tumorMask.nii.gz",
+          "patient": "PATIENTID_0010",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 166963,
+          "nonzero_fraction": 0.01870105,
+          "bbox_fraction": 0.06218862,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0010/Timepoint_4/PatientID_0010_Timepoint_4_tumorMask.nii.gz",
+          "patient": "PATIENTID_0010",
+          "timepoint": "4",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 97234,
+          "nonzero_fraction": 0.01089091,
+          "bbox_fraction": 0.04145352,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0010/Timepoint_5/PatientID_0010_Timepoint_5_tumorMask.nii.gz",
+          "patient": "PATIENTID_0010",
+          "timepoint": "5",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 120602,
+          "nonzero_fraction": 0.01350829,
+          "bbox_fraction": 0.07399866,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0011/Timepoint_1/PatientID_0011_Timepoint_1_tumorMask.nii.gz",
+          "patient": "PATIENTID_0011",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 231467,
+          "nonzero_fraction": 0.02592596,
+          "bbox_fraction": 0.08101042,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0011/Timepoint_2/PatientID_0011_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0011",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 248423,
+          "nonzero_fraction": 0.02782516,
+          "bbox_fraction": 0.09795609,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0012/Timepoint_2/PatientID_0012_Timepoint_2_tumorMask.nii.gz",
+          "patient": "PATIENTID_0012",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 257791,
+          "nonzero_fraction": 0.02887444,
+          "bbox_fraction": 0.09557034,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "MU Glioma Post",
+          "path": "MU-Glioma-Post/PatientID_0012/Timepoint_3/PatientID_0012_Timepoint_3_tumorMask.nii.gz",
+          "patient": "PATIENTID_0012",
+          "timepoint": "3",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 241356,
+          "nonzero_fraction": 0.0270336,
+          "bbox_fraction": 0.13712903,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        }
+      ],
+      "scan_seconds": 146.03
+    },
+    {
+      "name": "RHUH GBM",
+      "root": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - RHUH-GBM-nii-v1",
+      "exists": true,
+      "label_status": "manual/expert-like local segmentation files",
+      "primary_claim_use": "strong longitudinal full-volume glioma feasibility evidence",
+      "mask_regex": "_segmentations\\.nii\\.gz$",
+      "mask_count": 119,
+      "loaded_count": 119,
+      "failure_count": 0,
+      "estimated_patient_count": 40,
+      "estimated_patient_timepoint_count": 119,
+      "median_voxels_million": 8.928,
+      "p10_voxels_million": 8.928,
+      "p90_voxels_million": 8.928,
+      "median_nonzero_fraction": 0.0064179,
+      "p10_nonzero_fraction": 0.00121727,
+      "p90_nonzero_fraction": 0.0194239,
+      "median_bbox_fraction": 0.03238911,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "gpu_feasibility_interpretation": "full-volume inference feasible; training still requires patching/checkpointing on 8 GB VRAM",
+      "shape_counts_top10": [
+        [
+          "[240, 240, 155]",
+          118
+        ],
+        [
+          "[230, 230, 138]",
+          1
+        ]
+      ],
+      "zoom_counts_top10": [
+        [
+          "[1.0, 1.0, 1.0]",
+          119
+        ]
+      ],
+      "label_values_seen_top20": [
+        [
+          "0.0",
+          119
+        ],
+        [
+          "2.0",
+          119
+        ],
+        [
+          "3.0",
+          92
+        ],
+        [
+          "1.0",
+          75
+        ]
+      ],
+      "failures": [],
+      "sample_rows": [
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0001/0/RHUH-0001_0_segmentations.nii.gz",
+          "patient": "RHUH-0001",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 139502,
+          "nonzero_fraction": 0.01562522,
+          "bbox_fraction": 0.04116129,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0001/1/RHUH-0001_1_segmentations.nii.gz",
+          "patient": "RHUH-0001",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 25167,
+          "nonzero_fraction": 0.00281888,
+          "bbox_fraction": 0.01827957,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0001/2/RHUH-0001_2_segmentations.nii.gz",
+          "patient": "RHUH-0001",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 190369,
+          "nonzero_fraction": 0.02132269,
+          "bbox_fraction": 0.07733333,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0002/0/RHUH-0002_0_segmentations.nii.gz",
+          "patient": "RHUH-0002",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 28656,
+          "nonzero_fraction": 0.00320968,
+          "bbox_fraction": 0.0092369,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0002/1/RHUH-0002_1_segmentations.nii.gz",
+          "patient": "RHUH-0002",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 6641,
+          "nonzero_fraction": 0.00074384,
+          "bbox_fraction": 0.00310484,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0002/2/RHUH-0002_2_segmentations.nii.gz",
+          "patient": "RHUH-0002",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 10491,
+          "nonzero_fraction": 0.00117507,
+          "bbox_fraction": 0.01280746,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0003/0/RHUH-0003_0_segmentations.nii.gz",
+          "patient": "RHUH-0003",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 41431,
+          "nonzero_fraction": 0.00464057,
+          "bbox_fraction": 0.01599238,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0003/1/RHUH-0003_1_segmentations.nii.gz",
+          "patient": "RHUH-0003",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 1047,
+          "nonzero_fraction": 0.00011727,
+          "bbox_fraction": 0.00067025,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0003/2/RHUH-0003_2_segmentations.nii.gz",
+          "patient": "RHUH-0003",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 37369,
+          "nonzero_fraction": 0.0041856,
+          "bbox_fraction": 0.02055197,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0004/0/RHUH-0004_0_segmentations.nii.gz",
+          "patient": "RHUH-0004",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 118410,
+          "nonzero_fraction": 0.01326277,
+          "bbox_fraction": 0.039375,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0004/1/RHUH-0004_1_segmentations.nii.gz",
+          "patient": "RHUH-0004",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 45382,
+          "nonzero_fraction": 0.00508311,
+          "bbox_fraction": 0.03238911,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0004/2/RHUH-0004_2_segmentations.nii.gz",
+          "patient": "RHUH-0004",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 217671,
+          "nonzero_fraction": 0.02438071,
+          "bbox_fraction": 0.09051075,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0005/0/RHUH-0005_0_segmentations.nii.gz",
+          "patient": "RHUH-0005",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 67582,
+          "nonzero_fraction": 0.00756967,
+          "bbox_fraction": 0.01919758,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0005/1/RHUH-0005_1_segmentations.nii.gz",
+          "patient": "RHUH-0005",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 29525,
+          "nonzero_fraction": 0.00330701,
+          "bbox_fraction": 0.01409498,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0005/2/RHUH-0005_2_segmentations.nii.gz",
+          "patient": "RHUH-0005",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 80799,
+          "nonzero_fraction": 0.00905007,
+          "bbox_fraction": 0.03697917,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0006/0/RHUH-0006_0_segmentations.nii.gz",
+          "patient": "RHUH-0006",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 178708,
+          "nonzero_fraction": 0.02001658,
+          "bbox_fraction": 0.06503696,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0006/1/RHUH-0006_1_segmentations.nii.gz",
+          "patient": "RHUH-0006",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 42157,
+          "nonzero_fraction": 0.00472189,
+          "bbox_fraction": 0.02494624,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0006/2/RHUH-0006_2_segmentations.nii.gz",
+          "patient": "RHUH-0006",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 31815,
+          "nonzero_fraction": 0.00356351,
+          "bbox_fraction": 0.06107527,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0007/0/RHUH-0007_0_segmentations.nii.gz",
+          "patient": "RHUH-0007",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 110975,
+          "nonzero_fraction": 0.01243,
+          "bbox_fraction": 0.03541196,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0007/1/RHUH-0007_1_segmentations.nii.gz",
+          "patient": "RHUH-0007",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 19065,
+          "nonzero_fraction": 0.00213542,
+          "bbox_fraction": 0.02469534,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0007/2/RHUH-0007_2_segmentations.nii.gz",
+          "patient": "RHUH-0007",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 57299,
+          "nonzero_fraction": 0.0064179,
+          "bbox_fraction": 0.01572581,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0008/0/RHUH-0008_0_segmentations.nii.gz",
+          "patient": "RHUH-0008",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 99480,
+          "nonzero_fraction": 0.01114247,
+          "bbox_fraction": 0.03592742,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0008/1/RHUH-0008_1_segmentations.nii.gz",
+          "patient": "RHUH-0008",
+          "timepoint": "1",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 27929,
+          "nonzero_fraction": 0.00312825,
+          "bbox_fraction": 0.01728674,
+          "unique_values_preview": [
+            0.0,
+            2.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0008/2/RHUH-0008_2_segmentations.nii.gz",
+          "patient": "RHUH-0008",
+          "timepoint": "2",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 93366,
+          "nonzero_fraction": 0.01045766,
+          "bbox_fraction": 0.07122581,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "RHUH GBM",
+          "path": "RHUH-GBM_nii_v1/RHUH-0009/0/RHUH-0009_0_segmentations.nii.gz",
+          "patient": "RHUH-0009",
+          "timepoint": "0",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 188899,
+          "nonzero_fraction": 0.02115804,
+          "bbox_fraction": 0.05809084,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        }
+      ],
+      "scan_seconds": 29.22
+    },
+    {
+      "name": "UCSD PTGBM BraTS mask",
+      "root": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UCSD-PTGBM-v1",
+      "exists": true,
+      "label_status": "BraTS-style tumour segmentation files",
+      "primary_claim_use": "strong multimodal full-volume glioma feasibility evidence",
+      "mask_regex": "BraTS_tumou?r_seg.*\\.nii\\.gz$",
+      "mask_count": 184,
+      "loaded_count": 184,
+      "failure_count": 0,
+      "estimated_patient_count": 136,
+      "estimated_patient_timepoint_count": 184,
+      "median_voxels_million": 16.7772,
+      "p10_voxels_million": 16.7772,
+      "p90_voxels_million": 16.7772,
+      "median_nonzero_fraction": 0.00416696,
+      "p10_nonzero_fraction": 0.00109562,
+      "p90_nonzero_fraction": 0.01004339,
+      "median_bbox_fraction": 0.02258366,
+      "median_four_channel_float32_volume_gb": 0.25,
+      "gpu_feasibility_interpretation": "full-volume inference feasible; training still requires patching/checkpointing on 8 GB VRAM",
+      "shape_counts_top10": [
+        [
+          "[256, 256, 256]",
+          184
+        ]
+      ],
+      "zoom_counts_top10": [
+        [
+          "[1.0, 1.0, 1.0]",
+          184
+        ]
+      ],
+      "label_values_seen_top20": [
+        [
+          "0.0",
+          184
+        ],
+        [
+          "2.0",
+          184
+        ],
+        [
+          "3.0",
+          179
+        ],
+        [
+          "4.0",
+          143
+        ],
+        [
+          "1.0",
+          127
+        ]
+      ],
+      "failures": [],
+      "sample_rows": [
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0002_01/UCSD-PTGBM-0002_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0002",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 111914,
+          "nonzero_fraction": 0.00667059,
+          "bbox_fraction": 0.02196169,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0005_01/UCSD-PTGBM-0005_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0005",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 6587,
+          "nonzero_fraction": 0.00039262,
+          "bbox_fraction": 0.00175953,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0005_02/UCSD-PTGBM-0005_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0005",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 18274,
+          "nonzero_fraction": 0.00108922,
+          "bbox_fraction": 0.01218021,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0006_01/UCSD-PTGBM-0006_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0006",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 92360,
+          "nonzero_fraction": 0.00550508,
+          "bbox_fraction": 0.01880264,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0007_01/UCSD-PTGBM-0007_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0007",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 58013,
+          "nonzero_fraction": 0.00345784,
+          "bbox_fraction": 0.0130434,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0007_02/UCSD-PTGBM-0007_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0007",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 61113,
+          "nonzero_fraction": 0.00364262,
+          "bbox_fraction": 0.01340199,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0008_01/UCSD-PTGBM-0008_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0008",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 69276,
+          "nonzero_fraction": 0.00412917,
+          "bbox_fraction": 0.0153482,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0008_02/UCSD-PTGBM-0008_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0008",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 22183,
+          "nonzero_fraction": 0.00132221,
+          "bbox_fraction": 0.00547409,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0008_03/UCSD-PTGBM-0008_03_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0008",
+          "timepoint": "03",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 110779,
+          "nonzero_fraction": 0.00660294,
+          "bbox_fraction": 0.02104998,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0009_01/UCSD-PTGBM-0009_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0009",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 82653,
+          "nonzero_fraction": 0.0049265,
+          "bbox_fraction": 0.02508831,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0010_01/UCSD-PTGBM-0010_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0010",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 17882,
+          "nonzero_fraction": 0.00106585,
+          "bbox_fraction": 0.01875043,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0011_01/UCSD-PTGBM-0011_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0011",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 67193,
+          "nonzero_fraction": 0.00400501,
+          "bbox_fraction": 0.03461838,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0012_01/UCSD-PTGBM-0012_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0012",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 93484,
+          "nonzero_fraction": 0.00557208,
+          "bbox_fraction": 0.02981424,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0016_01/UCSD-PTGBM-0016_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0016",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 187760,
+          "nonzero_fraction": 0.01119137,
+          "bbox_fraction": 0.06374717,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0017_01/UCSD-PTGBM-0017_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0017",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 162404,
+          "nonzero_fraction": 0.00968003,
+          "bbox_fraction": 0.03735352,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0017_02/UCSD-PTGBM-0017_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0017",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 71367,
+          "nonzero_fraction": 0.0042538,
+          "bbox_fraction": 0.02898717,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0018_01/UCSD-PTGBM-0018_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0018",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 235649,
+          "nonzero_fraction": 0.01404577,
+          "bbox_fraction": 0.05510169,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0018_02/UCSD-PTGBM-0018_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0018",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 321879,
+          "nonzero_fraction": 0.01918548,
+          "bbox_fraction": 0.07555723,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0019_01/UCSD-PTGBM-0019_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0019",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 139901,
+          "nonzero_fraction": 0.00833875,
+          "bbox_fraction": 0.03591228,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0019_02/UCSD-PTGBM-0019_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0019",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 42660,
+          "nonzero_fraction": 0.00254273,
+          "bbox_fraction": 0.02091801,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0020_01/UCSD-PTGBM-0020_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0020",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 82999,
+          "nonzero_fraction": 0.00494713,
+          "bbox_fraction": 0.04403746,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0021_01/UCSD-PTGBM-0021_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0021",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 23714,
+          "nonzero_fraction": 0.00141346,
+          "bbox_fraction": 0.00538158,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0022_01/UCSD-PTGBM-0022_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0022",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 29182,
+          "nonzero_fraction": 0.00173938,
+          "bbox_fraction": 0.00481844,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0022_02/UCSD-PTGBM-0022_02_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0022",
+          "timepoint": "02",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 29229,
+          "nonzero_fraction": 0.00174218,
+          "bbox_fraction": 0.05225801,
+          "unique_values_preview": [
+            0.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UCSD PTGBM BraTS mask",
+          "path": "UCSD-PTGBM/UCSD-PTGBM-0023_01/UCSD-PTGBM-0023_01_BraTS_tumor_seg.nii.gz",
+          "patient": "UCSD-PTGBM-0023",
+          "timepoint": "01",
+          "shape": [
+            256,
+            256,
+            256
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 16.7772,
+          "nonzero_voxels": 266089,
+          "nonzero_fraction": 0.01586014,
+          "bbox_fraction": 0.05371124,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            3.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        }
+      ],
+      "scan_seconds": 390.9
+    },
+    {
+      "name": "UPENN GBM automated masks",
+      "root": "C:\\Users\\kamru\\Downloads\\Datasets\\PKG - UPENN-GBM-NIfTI",
+      "exists": true,
+      "label_status": "automated/pseudo labels",
+      "primary_claim_use": "sensitivity analysis only; not primary validation",
+      "mask_regex": "(auto|automated|segm).*\\.nii\\.gz$",
+      "mask_count": 758,
+      "loaded_count": 758,
+      "failure_count": 0,
+      "estimated_patient_count": 611,
+      "estimated_patient_timepoint_count": 611,
+      "median_voxels_million": 8.928,
+      "p10_voxels_million": 8.928,
+      "p90_voxels_million": 8.928,
+      "median_nonzero_fraction": 0.00855869,
+      "p10_nonzero_fraction": 0.00257547,
+      "p90_nonzero_fraction": 0.01748078,
+      "median_bbox_fraction": 0.03288306,
+      "median_four_channel_float32_volume_gb": 0.133,
+      "gpu_feasibility_interpretation": "full-volume inference feasible; training still requires patching/checkpointing on 8 GB VRAM",
+      "shape_counts_top10": [
+        [
+          "[240, 240, 155]",
+          758
+        ]
+      ],
+      "zoom_counts_top10": [
+        [
+          "[1.0, 1.0, 1.0]",
+          758
+        ]
+      ],
+      "label_values_seen_top20": [
+        [
+          "0.0",
+          758
+        ],
+        [
+          "2.0",
+          758
+        ],
+        [
+          "1.0",
+          754
+        ],
+        [
+          "4.0",
+          751
+        ]
+      ],
+      "failures": [],
+      "sample_rows": [
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00001_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00001",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 23160,
+          "nonzero_fraction": 0.00259409,
+          "bbox_fraction": 0.00947849,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00002_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00002",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 200670,
+          "nonzero_fraction": 0.02247648,
+          "bbox_fraction": 0.08034677,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00003_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00003",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 67650,
+          "nonzero_fraction": 0.00757728,
+          "bbox_fraction": 0.02306452,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00004_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00004",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 56097,
+          "nonzero_fraction": 0.00628327,
+          "bbox_fraction": 0.02572581,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00005_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00005",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 89027,
+          "nonzero_fraction": 0.00997166,
+          "bbox_fraction": 0.02818504,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00006_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00006",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 69422,
+          "nonzero_fraction": 0.00777576,
+          "bbox_fraction": 0.02528226,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00007_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00007",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 113145,
+          "nonzero_fraction": 0.01267305,
+          "bbox_fraction": 0.03505466,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00008_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00008",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 29802,
+          "nonzero_fraction": 0.00333804,
+          "bbox_fraction": 0.01453763,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00009_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00009",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 122223,
+          "nonzero_fraction": 0.01368985,
+          "bbox_fraction": 0.08437634,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00010_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00010",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 34647,
+          "nonzero_fraction": 0.00388071,
+          "bbox_fraction": 0.01988172,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00011_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00011",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 104046,
+          "nonzero_fraction": 0.0116539,
+          "bbox_fraction": 0.03193907,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00012_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00012",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 128414,
+          "nonzero_fraction": 0.01438329,
+          "bbox_fraction": 0.0511828,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00013_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00013",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 18245,
+          "nonzero_fraction": 0.00204357,
+          "bbox_fraction": 0.01407762,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00014_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00014",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 132203,
+          "nonzero_fraction": 0.01480768,
+          "bbox_fraction": 0.05267137,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00015_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00015",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 91103,
+          "nonzero_fraction": 0.01020419,
+          "bbox_fraction": 0.09345565,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00016_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00016",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 39448,
+          "nonzero_fraction": 0.00441846,
+          "bbox_fraction": 0.01619456,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00017_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00017",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 36551,
+          "nonzero_fraction": 0.00409397,
+          "bbox_fraction": 0.01513978,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00018_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00018",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 176273,
+          "nonzero_fraction": 0.01974384,
+          "bbox_fraction": 0.07173589,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00019_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00019",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 54233,
+          "nonzero_fraction": 0.00607448,
+          "bbox_fraction": 0.01573006,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00020_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00020",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 31627,
+          "nonzero_fraction": 0.00354245,
+          "bbox_fraction": 0.00875941,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00021_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00021",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 44651,
+          "nonzero_fraction": 0.00500123,
+          "bbox_fraction": 0.02304603,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00022_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00022",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 176801,
+          "nonzero_fraction": 0.01980298,
+          "bbox_fraction": 0.06919478,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00023_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00023",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 135333,
+          "nonzero_fraction": 0.01515827,
+          "bbox_fraction": 0.03929335,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00024_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00024",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 58327,
+          "nonzero_fraction": 0.00653304,
+          "bbox_fraction": 0.02692608,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        },
+        {
+          "dataset": "UPENN GBM automated masks",
+          "path": "UPENN-GBM/NIfTI-files/automated_segm/UPENN-GBM-00025_11_automated_approx_segm.nii.gz",
+          "patient": "UPENN-GBM-00025",
+          "timepoint": "11",
+          "shape": [
+            240,
+            240,
+            155
+          ],
+          "zooms": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "voxels_million": 8.928,
+          "nonzero_voxels": 35920,
+          "nonzero_fraction": 0.0040233,
+          "bbox_fraction": 0.00869355,
+          "unique_values_preview": [
+            0.0,
+            1.0,
+            2.0,
+            4.0
+          ],
+          "unique_values_truncated": false
+        }
+      ],
+      "scan_seconds": 141.83
+    }
+  ]
+}

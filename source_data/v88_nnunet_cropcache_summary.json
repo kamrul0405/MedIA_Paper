@@ -1,0 +1,41 @@
+{
+  "version": "v88",
+  "experiment": "nnU-Net v2 cropped-cache external validation",
+  "trainer": "nnUNetTrainerNoDA_50epochs",
+  "configuration": "3d_fullres on 48x48x1 cached NIfTI with no augmentation; cropped-cache replication, not anatomical full-volume nnU-Net",
+  "folds": [
+    0
+  ],
+  "datasets": {
+    "501": {
+      "variant": "mask_only",
+      "channels": [
+        "mask"
+      ]
+    },
+    "502": {
+      "variant": "mask_heat",
+      "channels": [
+        "mask",
+        "heat"
+      ]
+    },
+    "503": {
+      "variant": "mask_heat_sdf",
+      "channels": [
+        "mask",
+        "heat",
+        "sdf"
+      ]
+    }
+  },
+  "externals": [
+    "UCSF",
+    "UCSD",
+    "PROTEAS",
+    "UPENN"
+  ],
+  "metrics": "C:\\Users\\kamru\\Downloads\\Nature_project\\05_results\\v88_nnunet_cropcache\\v88_nnunet_cropcache_metrics_aligned.json",
+  "log": "C:\\Users\\kamru\\Downloads\\Nature_project\\08_outputs\\v88_nnunet_cropcache.log",
+  "elapsed_s": 6767.133367538452
+}

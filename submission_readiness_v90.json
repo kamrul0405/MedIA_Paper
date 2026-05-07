@@ -1,0 +1,299 @@
+{
+  "md": "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\manuscript\\Manuscript_v90_for_MedicalImageAnalysis.md",
+  "pdf": "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\manuscript\\Manuscript_v90_for_MedicalImageAnalysis.pdf",
+  "pdf_exists": true,
+  "pdf_size_mb": 7.65,
+  "pdf_pages": 30,
+  "word_counts": {
+    "abstract": 188,
+    "body_to_references": 6154,
+    "figure_captions": 484,
+    "submission_count": 6826,
+    "limit": null,
+    "within_limit": null
+  },
+  "highlights": [
+    {
+      "text": "522-MRI benchmark shows cohort-dependent ranking reversals",
+      "chars": 58
+    },
+    {
+      "text": "Heat prior and learned models exchange rank across endpoint regimes",
+      "chars": 67
+    },
+    {
+      "text": "Five U-Net/ResUNet seeds and three UNETR seeds preserve direction",
+      "chars": 65
+    },
+    {
+      "text": "UCSD is a declared counterexample to a one-variable pi* rule",
+      "chars": 60
+    },
+    {
+      "text": "nnU-Net v2 cropped-cache control tests the weak-baseline concern",
+      "chars": 64
+    }
+  ],
+  "highlight_count_ok": true,
+  "highlight_chars_ok": true,
+  "source_image_refs": 23,
+  "missing_source_images": [],
+  "source_data_refs": 2,
+  "missing_source_data": [],
+  "dpi_audit": [
+    {
+      "path": "figures/extended_data/NMI_ED10_negative_controls.png",
+      "size": [
+        3569,
+        1768
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED11_fairness.png",
+      "size": [
+        3570,
+        1491
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED12_horizon_stratification.png",
+      "size": [
+        3570,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED13_lumiere_sensitivity.png",
+      "size": [
+        3569,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED14_causal_disentanglement.png",
+      "size": [
+        3568,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED15_ablation_modality_audit.png",
+      "size": [
+        3570,
+        1478
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED16_prospective_model_family.png",
+      "size": [
+        3569,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED1_cohort_hierarchy.png",
+      "size": [
+        2970,
+        1763
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED2_pistar_bootstrap_sensitivity.png",
+      "size": [
+        3570,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED3_ece_calibration.png",
+      "size": [
+        4470,
+        1487
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED4_dro_iw_training.png",
+      "size": [
+        3570,
+        1482
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED5_instability_matrix.png",
+      "size": [
+        3014,
+        2059
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED6_oracle_gate.png",
+      "size": [
+        3570,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED7_counterfactual_resampling.png",
+      "size": [
+        2664,
+        1761
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED8_seed_reproducibility.png",
+      "size": [
+        3570,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/extended_data/NMI_ED9_yale_acquisition_shift.png",
+      "size": [
+        3564,
+        1485
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/NMI_Fig1_theory_mechanism_300dpi.tif",
+      "size": [
+        3090,
+        2190
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/NMI_Fig2_ranking_flip_300dpi.tif",
+      "size": [
+        2660,
+        1460
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/NMI_Fig4_pi_star_robustness_300dpi.tif",
+      "size": [
+        2362,
+        1160
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/V78_NMI_raw_loco_stress.png",
+      "size": [
+        3417,
+        1869
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/V78_NMI_raw_loco_stress.tif",
+      "size": [
+        3417,
+        1869
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/V87_MedIA_transformer_comparability.png",
+      "size": [
+        3300,
+        1260
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    },
+    {
+      "path": "figures/main/V88_MedIA_nnunet_negative_control.png",
+      "size": [
+        2430,
+        1044
+      ],
+      "dpi": [
+        300.0,
+        300.0
+      ]
+    }
+  ],
+  "duplicate_main_figure6_count": 1
+}

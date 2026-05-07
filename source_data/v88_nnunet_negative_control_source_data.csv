@@ -1,0 +1,5 @@
+cohort,n_subjects,event_fraction,heat_brier,best_nnunet_brier_variant,best_nnunet_brier,nnunet_minus_heat_brier,heat_auroc,best_nnunet_auroc_variant,best_nnunet_auroc,nnunet_minus_heat_auroc,heat_dice,best_nnunet_brier_dice
+UCSF,296,0.604926,0.079996,mask_only,0.213395,0.133399,0.948461,mask_only,0.834967,-0.113493,0.917491,0.797588
+UCSD,37,0.584671,0.158002,mask_heat,0.269426,0.111424,0.859521,mask_only,0.733802,-0.125719,0.837664,0.76221
+PROTEAS,80,0.242757,0.170416,mask_only,0.25444,0.084024,0.860858,mask_heat,0.781173,-0.079685,0.650365,0.565041
+UPENN,41,0.791974,0.198535,mask_only,0.304563,0.106028,0.635694,mask_only,0.63685,0.001155,0.855943,0.775112

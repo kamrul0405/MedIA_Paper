@@ -1,0 +1,349 @@
+{
+  "version": "v87",
+  "purpose": "Fix padded-transformer comparability and remove non-comparable inner-vs-padded deltas from manuscript claims.",
+  "inner_voxels": 36864,
+  "padded_voxels": 131072,
+  "padded_heat_scale": 0.28125,
+  "records": [
+    {
+      "held_out": "UCSF-POSTOP",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "16x48x48",
+      "model_brier": 0.15498417520241156,
+      "heat_brier_comparable": 0.0843849829759927,
+      "delta_model_minus_heat": 0.07059919222641886,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "16x48x48",
+      "model_brier": 0.2572410779678269,
+      "heat_brier_comparable": 0.2598464491265203,
+      "delta_model_minus_heat": -0.0026053711586933592,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "16x48x48",
+      "model_brier": 0.31422014436439466,
+      "heat_brier_comparable": 0.4831262005395011,
+      "delta_model_minus_heat": -0.16890605617510646,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "16x48x48",
+      "model_brier": 0.15802037957552317,
+      "heat_brier_comparable": 0.0874559297729787,
+      "delta_model_minus_heat": 0.07056444980254448,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSF-POSTOP",
+      "model": "unetr",
+      "seed": 8502,
+      "image_size": "16x48x48",
+      "model_brier": 0.13388450069957086,
+      "heat_brier_comparable": 0.0843849829759927,
+      "delta_model_minus_heat": 0.04949951772357816,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "model": "unetr",
+      "seed": 8502,
+      "image_size": "16x48x48",
+      "model_brier": 0.24354653452701916,
+      "heat_brier_comparable": 0.2598464491265203,
+      "delta_model_minus_heat": -0.016299914599501114,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "model": "unetr",
+      "seed": 8502,
+      "image_size": "16x48x48",
+      "model_brier": 0.298688568174839,
+      "heat_brier_comparable": 0.4831262005395011,
+      "delta_model_minus_heat": -0.1844376323646621,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "model": "unetr",
+      "seed": 8502,
+      "image_size": "16x48x48",
+      "model_brier": 0.15557008156099836,
+      "heat_brier_comparable": 0.0874559297729787,
+      "delta_model_minus_heat": 0.06811415178801966,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSF-POSTOP",
+      "model": "unetr",
+      "seed": 8503,
+      "image_size": "16x48x48",
+      "model_brier": 0.14427308545674425,
+      "heat_brier_comparable": 0.0843849829759927,
+      "delta_model_minus_heat": 0.05988810248075155,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "model": "unetr",
+      "seed": 8503,
+      "image_size": "16x48x48",
+      "model_brier": 0.24685958647076658,
+      "heat_brier_comparable": 0.2598464491265203,
+      "delta_model_minus_heat": -0.01298686265575369,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "model": "unetr",
+      "seed": 8503,
+      "image_size": "16x48x48",
+      "model_brier": 0.2996803933852597,
+      "heat_brier_comparable": 0.4831262005395011,
+      "delta_model_minus_heat": -0.1834458071542414,
+      "model_beats_heat": true,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "model": "unetr",
+      "seed": 8503,
+      "image_size": "16x48x48",
+      "model_brier": 0.14187974664005074,
+      "heat_brier_comparable": 0.0874559297729787,
+      "delta_model_minus_heat": 0.05442381686707204,
+      "model_beats_heat": false,
+      "comparison_note": "native inner-grid comparison"
+    },
+    {
+      "held_out": "UCSF-POSTOP",
+      "model": "swinunetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.043233924016759205,
+      "heat_brier_comparable": 0.023733276461997948,
+      "delta_model_minus_heat": 0.019500647554761257,
+      "model_beats_heat": false,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "model": "swinunetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.06494576481806226,
+      "heat_brier_comparable": 0.07308181381683383,
+      "delta_model_minus_heat": -0.008136048998771572,
+      "model_beats_heat": true,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "model": "swinunetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.08877065807188812,
+      "heat_brier_comparable": 0.1358792439017347,
+      "delta_model_minus_heat": -0.047108585829846575,
+      "model_beats_heat": true,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "model": "swinunetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.026298542305625772,
+      "heat_brier_comparable": 0.024596980248650258,
+      "delta_model_minus_heat": 0.0017015620569755148,
+      "model_beats_heat": false,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "UCSF-POSTOP",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.03866458544900918,
+      "heat_brier_comparable": 0.023733276461997948,
+      "delta_model_minus_heat": 0.01493130898701123,
+      "model_beats_heat": false,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.0698814263061577,
+      "heat_brier_comparable": 0.07308181381683383,
+      "delta_model_minus_heat": -0.0032003875106761254,
+      "model_beats_heat": true,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.08185412509268836,
+      "heat_brier_comparable": 0.1358792439017347,
+      "delta_model_minus_heat": -0.05402511880904634,
+      "model_beats_heat": true,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "model": "unetr",
+      "seed": 8501,
+      "image_size": "32x64x64",
+      "model_brier": 0.03710941195085242,
+      "heat_brier_comparable": 0.024596980248650258,
+      "delta_model_minus_heat": 0.012512431702202162,
+      "model_beats_heat": false,
+      "comparison_note": "padded-grid comparison; zero-padded heat baseline equals inner heat brier times 0.28125"
+    }
+  ],
+  "summaries": [
+    {
+      "model": "unetr",
+      "image_size": "16x48x48",
+      "held_out": "UCSF-POSTOP",
+      "n_seeds": 3,
+      "delta_mean_model_minus_heat": 0.059995604143582855,
+      "delta_sd": 0.010550248029647933,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "16x48x48",
+      "held_out": "MU-Glioma-Post",
+      "n_seeds": 3,
+      "delta_mean_model_minus_heat": -0.01063071613798272,
+      "delta_sd": 0.007144837284567499,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "16x48x48",
+      "held_out": "RHUH-GBM",
+      "n_seeds": 3,
+      "delta_mean_model_minus_heat": -0.17892983189800335,
+      "delta_sd": 0.008694997936699523,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "16x48x48",
+      "held_out": "UCSD-PTGBM",
+      "n_seeds": 3,
+      "delta_mean_model_minus_heat": 0.06436747281921205,
+      "delta_sd": 0.008698172817373388,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "32x64x64",
+      "held_out": "UCSF-POSTOP",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": 0.01493130898701123,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "32x64x64",
+      "held_out": "MU-Glioma-Post",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": -0.0032003875106761254,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "32x64x64",
+      "held_out": "RHUH-GBM",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": -0.05402511880904634,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "unetr",
+      "image_size": "32x64x64",
+      "held_out": "UCSD-PTGBM",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": 0.012512431702202162,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "swinunetr",
+      "image_size": "32x64x64",
+      "held_out": "UCSF-POSTOP",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": 0.019500647554761257,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "swinunetr",
+      "image_size": "32x64x64",
+      "held_out": "MU-Glioma-Post",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": -0.008136048998771572,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "swinunetr",
+      "image_size": "32x64x64",
+      "held_out": "RHUH-GBM",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": -0.047108585829846575,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    },
+    {
+      "model": "swinunetr",
+      "image_size": "32x64x64",
+      "held_out": "UCSD-PTGBM",
+      "n_seeds": 1,
+      "delta_mean_model_minus_heat": 0.0017015620569755148,
+      "delta_sd": 0.0,
+      "direction_matches_v81_regime": true
+    }
+  ],
+  "blocked_claims": [
+    "Use v86 delta_model_minus_heat for padded models without denominator correction.",
+    "Claim pi* alone predicts 7/7 cohort winners.",
+    "Claim full-resolution nnU-Net was empirically run."
+  ],
+  "allowed_claims": [
+    "UNETR 16x48x48 preserves the v81 four-cohort direction in 12/12 seed-cohort outcomes.",
+    "Padded 32x64x64 UNETR and SwinUNETR preserve the v81 direction when compared to a zero-padded heat baseline.",
+    "Endpoint composition is a first-order warning variable, not a sufficient causal rule."
+  ]
+}
