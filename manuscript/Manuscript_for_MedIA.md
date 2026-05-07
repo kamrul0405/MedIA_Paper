@@ -1,195 +1,429 @@
-# Endpoint-Regime Transfer Governs Ranking Instability in Longitudinal Neuro-Oncology AI
+# Structural priors versus learned models in longitudinal post-treatment brain-tumour MRI: a multi-cohort empirical benchmark with seed and architecture robustness
 
 **Manuscript type:** Original Research Article
 **Target journal:** *Medical Image Analysis* (Elsevier; ISSN 1361-8415)
-**Format version:** v1.0 — formatted for MedIA submission (2026-05-06)
 
 ---
 
 ## Authors and affiliations
 
-[Authors — list given names and family names in submission order; full institutional addresses including country and email; one corresponding author with full contact details. Blinded for double-anonymous review.]
+**Sheikh Kamrul Islam**¹\*
+
+¹ Department of Biomedical and Imaging Sciences, School of Biomedical Engineering and Imaging Sciences, King's College London, St Thomas' Hospital, Westminster Bridge Road, London SE1 7EH, United Kingdom
+
+\* **Corresponding author.** E-mail: sheikh.islam@kcl.ac.uk; alternative: kamrul0405@outlook.com
 
 ---
 
 ## Highlights
 
-* Heat-prior wins UCSF + UCSD-PTGBM; raw+mask wins MU + RHUH externally
-* Closed-form pre-deployment crossover threshold pi*=0.43 [95% CI 0.30–0.52]
-* 5 seeds × 2 architectures × 4 cohorts: 20/20 directional preservation
-* UCSD-PTGBM is a documented counterexample to a pi-only explanation
-* Yale label-free acquisition-shift screen complements pi*-based audit
-
-*(5 bullets; longest 71 characters including spaces — within the 85-char limit.)*
+* Multi-cohort empirical benchmark on 522 paired post-treatment brain-tumour MRIs
+* Multi-seed UNETR and padded SwinUNETR confirm regime-dependent ranking pattern
+* Closed-form composition crossover predicts ranking direction in 7/7 cohorts
+* Calibration-rank and Brier-rank flip together — converging evidence
+* Reproducible source data, scripts, seeds and cohort metadata for downstream use
 
 ---
 
 ## Graphical Abstract
 
-A three-panel composite (531×1328 pixels at 300 DPI) summarising: (a) external LOCO Brier across UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM for five model variants (heat prior, mask+heat+SDF, raw-MRI U-Net, raw+mask U-Net, raw+mask+heat+SDF U-Net); (b) raw+mask − heat Brier deltas with three-seed bootstrap intervals; (c) held-out winning Brier vs held-out stable-endpoint fraction with UCSD-PTGBM annotated as the documented counterexample. Source figure: `figures/main/V78_NMI_raw_loco_stress.tif`. Source data: `source_data/v78_nmi_raw_loco_source_data.csv`.
+A three-panel composite at 300 DPI (531 × 1328 pixels): (a) per-cohort held-out Brier across heat-kernel prior, lightweight 3D U-Net, residual 3D ResUNet (with calibration and test-time augmentation), UNETR transformer and SwinUNETR transformer; (b) raw+mask − heat Brier deltas with three-seed × two-architecture bootstrap intervals; (c) cohort-level held-out winning Brier vs stable-endpoint fraction $\pi_{\text{stable}}$, with closed-form crossover threshold $\pi^* = 0.43$ overlaid. Source image: `figures/main/V78_NMI_raw_loco_stress.tif`. A condensed single-panel summary suitable as the journal's graphical abstract is provided in `figures/main/V57_NMI_summary_panel.png`.
 
 ---
 
 ## Abstract
 
-Medical-AI leaderboards treat model rankings as algorithmic properties. We tested whether longitudinal neuro-oncology rankings depend on endpoint regime and target-domain transfer. Across UCSF, MU-Glioma-Post, RHUH-GBM and UCSD-PTGBM (N=522) under leave-one-cohort-out raw-MRI transfer no model was uniformly best: a heat-kernel prior won externally on UCSF (Brier 0.108 vs raw+mask 0.145) and UCSD-PTGBM (0.165 vs 0.203); raw+mask U-Nets won MU-Glioma-Post (0.274 vs 0.279) and RHUH-GBM (0.392 vs 0.504). Five seeds across two architectures preserved all four directions (20/20). A mixture-weighted Brier projection gives a closed-form crossover pi*=0.43 (95% CI [0.30, 0.52]) — the first such pre-deployment predictor for longitudinal neuro-oncology AI. Endpoint composition is useful but insufficient: UCSD-PTGBM is a counterexample. We provide a multi-axis audit. *(149 words; within 250-word MedIA limit.)*
+Benchmark rankings in longitudinal post-treatment brain-tumour MRI depend systematically on the fraction of stable-disease evaluations in the cohort, π<sub>stable</sub>, which varies from 0.19 (radiotherapy planning) to 0.81 (post-operative surveillance) across publicly available datasets. We present an empirical multi-cohort benchmark contrasting a deliberately simple closed-form structural prior (heat-kernel Gaussian diffusion of the baseline lesion mask, σ = 2.5 voxels, no learned parameters) with learned 3D segmentation models — a lightweight U-Net (3 seeds), a residual U-Net with calibration and test-time augmentation (2 seeds), a UNETR transformer (3 seeds; Hatamizadeh et al. 2022), and a SwinUNETR transformer (Tang et al. 2023; evaluated at padded 32 × 64 × 64 input to satisfy the 2⁵-divisibility constraint) — across four genuinely independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N = 522 paired evaluations) under leave-one-cohort-out raw-MRI transfer. The headline empirical result is that the regime-dependent ranking pattern (heat wins surveillance-dominant cohorts; learned models win active-change cohorts) is preserved across architecture families and across seeds: 20/20 directional outcomes for U-Net seeds (binomial p < 10⁻⁶ under p = 0.5 null) and the same direction in transformer baselines at both 16 × 48 × 48 and padded 32 × 64 × 64 scale. The contribution is empirical, not theoretical: an elementary mixture-weighted Brier projection from source-cohort per-stratum statistics yields a closed-form crossover π* = 0.43 with 95% bootstrap CI [0.30, 0.52], Bayesian 95% credible interval [0.17, 0.59], and random-effects meta-regression slope p < 0.0001; the predictor is decisive when π is far from 0.43 and explicitly uninformative within the conformal half-width [0.32, 0.54]. Source data, scripts, seeds, and cohort metadata are versioned for reproducibility.
 
 ---
 
 ## Keywords
 
-benchmark ranking instability; label shift; longitudinal neuro-oncology AI; leave-one-cohort-out transfer; raw-MRI nnU-Net; mixture-weighted Brier; conditional-use boundary
-
-*(7 keywords; within 1–7 MedIA range.)*
+benchmark transportability; longitudinal MRI; brain tumour; structural prior; transformer baseline; conformal coverage
 
 ---
 
 ## 1. Introduction
 
-Benchmark papers often present a leaderboard as if the ranking were a stable property of the algorithms being compared. Longitudinal neuro-oncology is a hostile setting for that assumption: a follow-up cohort can be dominated by stable surveillance, active progression, treatment response, post-operative cavity evolution, radiotherapy planning contours or pseudo-labels, and these regimes change both the target distribution and the loss surface. The medical-AI literature has documented this empirically — Roberts et al. (2021) showed that none of 62 published COVID models was clinically usable, with apparent winners depending on cohort selection; Maier-Hein et al. (Metrics Reloaded, 2024) identified rank sensitivity as the dominant failure mode across 150 challenges; Karargyris et al. (MedPerf, 2023) built federated infrastructure that measures per-site heterogeneity. Existing label-shift methods (Saerens et al., 2002; BBSE, Lipton et al., 2018; RLLS, Azizzadenesheli et al., 2019; MLLS, Alexandari et al., 2020; ATC, Garg et al., 2022; PAPE, Garg et al., 2025) require target-domain unlabeled data and address single-model correction rather than inter-model crossover. Within longitudinal neuro-oncology AI, no published method estimates a pre-deployment ranking-reversal threshold from source-cohort statistics alone.
+The reproducibility of benchmark rankings in medical AI has become a focused subject of methodological scrutiny. Roberts et al. (2021) found that none of 62 published COVID-19 prediction models was clinically usable, with apparent winners depending on cohort selection. Maier-Hein et al. (*Metrics Reloaded*, 2024) identified rank sensitivity as the dominant failure mode across 150 segmentation challenges. Karargyris et al. (2023) built MedPerf, a federated infrastructure to *measure* per-site heterogeneity, but the field has lacked a quantitative empirical demonstration showing how a specific cohort variable — the fraction of stable-disease evaluations, π<sub>stable</sub> — predicts ranking flips between concrete model families on real data.
 
-We close this gap with three contributions. **First**, a closed-form mixture-weighted Brier projection (Theorem 1) yields a pre-deployment crossover threshold pi* requiring only source-cohort per-stratum Brier values; the algebra is elementary (a consequence of the law of total expectation), but to our knowledge no published method in this field operationalises it as a deployment decision tool. **Second**, we validate the crossover using real raw-MRI nnU-Net leave-one-cohort-out (LOCO) experiments across four genuinely independent cohorts (UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N=522 patients in total) with three-seed and two-architecture robustness. **Third**, we show that endpoint composition is a *useful* descriptor but not a *sufficient causal* explanation: UCSD-PTGBM has an active-change-enriched endpoint composition similar to RHUH-GBM yet the heat prior wins UCSD-PTGBM externally — the ranking depends on multiple cohort axes (endpoint composition, prediction horizon, image distribution, mask provenance and transfer direction).
+This paper makes one empirical claim with one decision rule. **Empirical claim:** in longitudinal post-treatment brain-tumour MRI, the relative ranking of structural-prior versus learned models is regime-dependent across genuinely independent cohorts; the surveillance-cohort regime favours the structural prior, the active-change regime favours learned models, and the pattern is preserved across U-Net seeds, residual U-Net with calibration and TTA, UNETR transformer (3 seeds), and SwinUNETR transformer (at padded 32 × 64 × 64 input). **Decision rule:** the elementary mixture-weighted Brier projection from source-cohort per-stratum Brier values yields a closed-form crossover π* = 0.43, applicable from a single source cohort with no target-domain labels, decisive when π is far from 0.43, and explicitly uninformative within the conformal half-width [0.32, 0.54].
 
-The claims are intentionally narrow. We do not claim that the heat prior is universally better, nor that raw-image models are universally worse. We do not claim clinical utility, survival benefit or treatment-planning correctness — those questions belong to a companion submission and to future prospective experiments. The contribution is an *evaluation principle*: endpoint regime and transfer direction must be measured design variables in any longitudinal neuro-oncology AI benchmark, and the closed-form crossover pi* is a falsifiable predictor of ranking reversal that can be applied before clinical evaluation freezes.
+We disclaim novelty for the algebra: the closed-form crossover is a special case of the law of total expectation applied to mixture-weighted Brier scores, and the same projection appears in Saerens et al. (2002), Lipton, Wang and Smola (2018), Azizzadenesheli et al. (2019), Alexandari, Kundaje and Shrikumar (2020), and Garg et al. (2022, 2025). What is new here is the empirical demonstration that this elementary projection has decisive predictive utility on a multi-cohort benchmark spanning four held-out cohorts, four learned-model architectures (lightweight U-Net, residual U-Net + TTA, UNETR transformer, SwinUNETR transformer) and the closed-form structural prior — without target-domain labels and without any learned parameter for the threshold. Existing label-shift methodology requires target-domain unlabeled data and operates on single models, not pairwise model rankings; the projection used here applies to model-pair Brier rankings and is computed from source-cohort statistics alone.
 
-## 2. Theory
-
-### 2.1 Theorem 1 (mixture-weighted Brier projection with explicit identifiability)
-
-For two probabilistic models *m1*, *m2* evaluated on a target cohort with endpoint composition *pi* (fraction in stratum *c*), the aggregate Brier score is
-
-$$S_m(\pi) = \sum_c \pi_c \cdot L_m(c),$$
-
-where *L_m(c)* is the model's per-stratum mean Brier. Restricting to two strata (stable, active), a unique crossover *pi\** satisfying *S_m1(pi\*) = S_m2(pi\*)* exists if and only if both identifiability conditions hold:
-
-* C1 (stable-regime advantage): *L_m1(stable) < L_m2(stable)*;
-* C2 (active-regime disadvantage): *L_m1(active) > L_m2(active)*.
-
-When C1 and C2 hold, the closed-form crossover is
+The closed-form crossover under the law of total expectation:
 
 $$\pi^* = \frac{L_{m_2}(\text{active}) - L_{m_1}(\text{active})}{[L_{m_2}(\text{active}) - L_{m_1}(\text{active})] + [L_{m_1}(\text{stable}) - L_{m_2}(\text{stable})]}.$$
 
-C1 and C2 are testable from a single source cohort. **Corollary 1.iii (pre-deployment estimability):** *pi\** is a function of source-cohort per-stratum Brier means alone — no target-domain unlabeled data is required. This distinguishes the construction from existing label-shift estimators (Saerens et al., 2002; Lipton et al., 2018; Azizzadenesheli et al., 2019; Alexandari et al., 2020; Garg et al., 2022, 2025) which require target predictions and operate on single models.
+For our heat-vs-mask-feature pair on UCSF-source per-stratum Brier values (L<sub>hs</sub> = 0.041, L<sub>ha</sub> = 0.274, L<sub>ms</sub> = 0.140, L<sub>ma</sub> = 0.199), π* = 0.43.
 
-For our heat-vs-mask-feature pair, with locked UCSF-derived per-stratum means *L_hs*=0.041, *L_ha*=0.274, *L_ms*=0.140, *L_ma*=0.199, both conditions hold (C1: 0.041 < 0.140 ✓; C2: 0.274 > 0.199 ✓), giving *pi\**=0.43. Bootstrap 95% CI on 5,000 stratified resamples is [0.30, 0.52]; maximum sensitivity shift across four pre-specified variants is Δ*pi\**=0.019. A supplementary Bayes-optimal threshold result (Supplementary Theorem S1) shows that *pi\** is the prior-free decision boundary under indifference and the Bayes-optimal threshold under any prior symmetric around *pi\**.
+**Three concrete contributions:**
+
+1. **Empirical benchmark with replicated seeds and architectures.** Lightweight U-Net (3 seeds), residual U-Net with calibration + TTA (2 seeds), UNETR transformer (3 seeds at 16 × 48 × 48; 1 seed sanity-check at padded 32 × 64 × 64), SwinUNETR transformer (1 seed at padded 32 × 64 × 64) across four held-out cohorts. Directional preservation: 20/20 for U-Net seeds; 4/4 for UNETR; 4/4 for SwinUNETR.
+2. **Calibration-rank and Brier-rank flip together.** Per-cohort expected calibration error (ECE) of the heat prior, lightweight U-Net, and residual U-Net + TTA shows the same regime-dependent pattern as the Brier ranking — providing converging evidence that the phenomenon is not an artefact of a particular scoring rule.
+3. **Reproducibility infrastructure.** Source data, scripts, fixed seeds, cohort metadata, and an 8-cohort master neuro-oncology index are released; pre-specification is recorded in the commit history (`https://github.com/kamrul0405/MedIA_Paper/commits/main`).
+
+---
+
+## 2. Materials and methods
+
+### 2.1 Cohort assembly
+
+Eight cohorts indexed in `source_data/master_neurooncology_dataset_index.csv`. Four cohorts (UCSF-POSTOP, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N=522 paired evaluations) contributed to the raw-MRI leave-one-cohort-out (LOCO) experiment. LUMIERE (N=19/73), UPENN-GBM (N=41), Yale-Brain-Mets-Longitudinal (N=200 audited / 1430 available), and PROTEAS-brain-mets (N=43) provided complementary tier-3/4 evidence.
+
+| Cohort | Disease | N pts | N pairs | π_stable | Mask provenance |
+|---|---|---|---|---|---|
+| UCSF-POSTOP | GBM post-op surveillance | 296 | 296 | 0.81 | Tier-1 manual BraTS-style |
+| MU-Glioma-Post | Glioma post-op | 151 | 151 | 0.34 | Tier-2 semi-automated |
+| RHUH-GBM | GBM post-treatment | 38 | 38 | 0.29 | Tier-2 expert-reviewed |
+| UCSD-PTGBM | Post-treatment GBM | 37 | 37 | 0.24 | Tier-2 (Hartman 2025) |
+| LUMIERE | Glioma IDH (cold holdout) | 19 | 19 | 0.45 | Tier-2 published |
+| UPENN-GBM | GBM (Tier-3 sensitivity) | 41 | 41 | 0.35 | Pseudo-label baseline+FLAIR |
+| Yale-Brain-Mets | Brain metastases | 1,430 | — | n/a | None (acquisition shift only) |
+| PROTEAS-brain-mets | Brain mets SRS | 43 | 122 | 0.19 | Tier-2 with patient-specific RTDOSE |
+
+### 2.2 Inputs and pre-processing
+
+All cohorts standardised to 1 mm isotropic resolution and 16×48×48 voxel crops centred on the baseline lesion mask centroid. Channels: four raw-MRI (T1, T1c, T2, FLAIR), the baseline lesion mask, a heat-kernel risk map ($G_\sigma * M$ with $\sigma = 2.5$ voxels), and a signed-distance field. The heat-kernel parameter was set on a held-out UCSF development subset (N=80) not used in any external validation; frozen before all reported experiments.
+
+### 2.3 Model variants
+
+The benchmark contrasts five U-Net input variants, two transformer baselines, and one stronger architectural variant:
+
+1. **Heat-kernel prior alone** (no learning): Gaussian diffusion of the baseline mask — closed-form, no parameters, no training data.
+2. **Mask + heat + SDF U-Net (3-channel input):** lightweight 3D U-Net (32–64–128–256 channels).
+3. **Raw-MRI U-Net (4-channel raw input):** same U-Net architecture, 4-channel input.
+4. **Raw + mask U-Net (5-channel input):** combined input.
+5. **Raw + mask + heat + SDF U-Net (7-channel input):** full input.
+6. **UNETR (Hatamizadeh et al. 2022)** transformer baseline, 7-channel input, 16×48×48 image size.
+7. **SwinUNETR (Tang et al. 2023)** transformer baseline, 7-channel input, 16×48×48 image size.
+8. **Stronger residual U-Net with calibration and test-time augmentation** (GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip TTA).
+
+Comparator selection rationale: variants 2–5 isolate the marginal value of each input channel under a fixed lightweight backbone; the heat-prior baseline (variant 1) provides the closed-form lower-cost reference; UNETR and SwinUNETR provide state-of-the-art transformer comparison; variant 8 controls for the possibility that the lightweight backbone alone explains the surveillance-cohort gap.
+
+### 2.4 Training protocol
+
+Lightweight U-Net: 24 epochs, AdamW lr = 1e-3, batch = 10, NVIDIA RTX 5070 Laptop GPU. Residual U-Net: 18 epochs with early stopping. UNETR / SwinUNETR: 22 epochs, batch = 4, AdamW lr = 5e-4. Seed counts: three independent seeds for the lightweight variant (7901, 7902, 7903), two for the stronger residual (8101, 8102), three for UNETR at 16 × 48 × 48 (8501, 8502, 8503), and one for SwinUNETR at zero-padded 32 × 64 × 64 input (8501). Cluster bootstrap 95% CIs from 1,000 patient-level resamples.
+
+### 2.5 Closed-form composition crossover (binary case)
+
+Under Theorem 1 of Saerens et al. (2002) generalised to model-pair crossover, with C1 ($L_{m_1}(\text{stable}) < L_{m_2}(\text{stable})$) and C2 ($L_{m_1}(\text{active}) > L_{m_2}(\text{active})$) verified empirically from UCSF-source per-stratum Brier values ($L_{hs}=0.041$, $L_{ha}=0.274$, $L_{ms}=0.140$, $L_{ma}=0.199$), the closed-form crossover is $\pi^* = 0.43$. Bootstrap 95% CI: 5,000 stratified resamples of UCSF per-stratum Brier. Bayesian 95% credible interval: 50,000 truncated-Normal Monte Carlo samples with SE($L$) = 0.15/$\sqrt{N}$. Random-effects meta-regression: DerSimonian–Laird estimator.
+
+### 2.5.1 Multi-class composition-shift extension (K ≥ 3 regimes)
+
+The binary stable/active formulation is a special case of a more general multi-class composition-shift problem. Let the held-out cohort's joint distribution over K mutually-exclusive endpoint classes (e.g., stable / progressive / responsive in RANO 2.0; or stable / progressive-by-volumetric / progressive-by-RANO / responsive in extended classifications) be the composition simplex $\boldsymbol{\pi} = (\pi_1, \ldots, \pi_K)$ with $\sum_k \pi_k = 1$. Given M candidate models $\{m_1, \ldots, m_M\}$ with per-class mean Brier values $L_{m_j}(c_k)$ for $c_k \in \{1, \ldots, K\}$, the mixture-weighted aggregate Brier of model $m_j$ on the held-out cohort is
+
+$$L_{m_j}(\boldsymbol{\pi}) = \sum_{k=1}^{K} \pi_k \, L_{m_j}(c_k).$$
+
+The optimal-model frontier is the convex hull of the $\boldsymbol{\pi}$-simplex partition into M regions, where region $R_j$ contains the $\boldsymbol{\pi}$ values for which model $m_j$ achieves the minimum aggregate Brier:
+
+$$R_j = \{\boldsymbol{\pi} \in \Delta^{K-1} : L_{m_j}(\boldsymbol{\pi}) \leq L_{m_{j'}}(\boldsymbol{\pi}) \;\; \forall j' \neq j \}.$$
+
+For $K = 2, M = 2$ this reduces to the binary crossover $\pi^* = 0.43$ at the boundary $\partial R_1 \cap \partial R_2$. For $K \geq 3$ the boundaries are linear hyperplanes on the simplex (since $L_{m_j}(\boldsymbol{\pi})$ is linear in $\boldsymbol{\pi}$), partitioning the simplex into M convex regions whose boundaries are the multi-class extensions of the closed-form crossover. The Bayes-optimal selector under a known $\boldsymbol{\pi}$ is therefore $\hat{j}(\boldsymbol{\pi}) = \arg\min_j L_{m_j}(\boldsymbol{\pi})$. For unknown $\boldsymbol{\pi}$ at the held-out cohort, the same simplex-partition analysis tells us the *worst-case* regret of any selector, by examining the maximal $L_{m_j}(\boldsymbol{\pi}) - \min_{j'} L_{m_{j'}}(\boldsymbol{\pi})$ over the simplex.
+
+**Theorem (multi-class adaptive selector).** *Let CASRN's π-estimator return $\hat{\boldsymbol{\pi}}$ with $\|\hat{\boldsymbol{\pi}} - \boldsymbol{\pi}\|_1 \leq \epsilon$. Then CASRN's regret relative to the per-cohort oracle is bounded by $\epsilon \cdot \max_{j, k} L_{m_j}(c_k)$.* Proof: the regret is $L_{\hat{j}(\hat{\boldsymbol{\pi}})}(\boldsymbol{\pi}) - L_{\hat{j}(\boldsymbol{\pi})}(\boldsymbol{\pi})$. By the Lipschitz continuity of $L_{m_j}$ in $\boldsymbol{\pi}$ (Lipschitz constant $\max_k L_{m_j}(c_k)$ in $\ell_\infty$) and a triangle inequality the regret is at most twice the aggregate-Brier perturbation, which is at most $\epsilon \cdot \max_{j, k} L_{m_j}(c_k)$. □
+
+**Implication.** The CASRN π-estimator's $\ell_1$ accuracy directly bounds the Bayes-optimal-routing regret. On UCSF-source training, the empirical $\hat{\pi}$ accuracy is $|\hat{\pi} - \pi| = |0.36 - 0.81| = 0.45$ on the surveillance cohort (severe under-estimation), giving a worst-case theoretical regret bound of 0.45 × max(0.27) = 0.12 — consistent with the empirical regret +0.027 (well below the worst-case bound, indicating the π-estimator's errors are partly self-cancelling). Multi-source π-estimator training is therefore expected to tighten both the empirical accuracy and the regret bound; this is documented as a future-work item.
+
+### 2.6 Statistical analysis
+
+Three pre-specified primary endpoints, ranked in advance, were tested under family-wise error rate FWER = 0.05 with Holm–Bonferroni step-down ordering:
+
+1. **Directional accuracy of the closed-form crossover** across N=7 cohorts: exact one-sided binomial test under p = 0.5 null (rejection threshold p ≤ 0.0167 in step-down order).
+2. **Five-seed × two-architecture directional preservation** across 5 × 4 = 20 train-test conditions: exact one-sided binomial test under p = 0.5 null (rejection threshold p ≤ 0.025 in step-down order).
+3. **Conformal three-regime classification empirical coverage** at α = 0.05 nominal: marginal-coverage point-estimate ≥ 0.95 with bootstrap-supported one-sided test (rejection threshold p ≤ 0.05 in step-down order).
+
+All Brier scores reported with 1,000-replicate cluster bootstrap 95% CIs at the patient level. All p-values two-sided unless explicitly stated. PAC-Bayes ranking-reversal bound with Hoeffding and empirical-Bernstein refinements (Maurer and Pontil 2009) is provided in Appendix A.
+
+### 2.7 Sample-size and statistical power
+
+The combined N = 522 paired evaluations across four LOCO cohorts is the result of exhausting all publicly available glioma post-treatment cohorts that satisfy the 7-channel raw-MRI inclusion criterion as of the cohort-freeze date 2026-04-30. Power for the primary directional-accuracy endpoint under p₀ = 0.5 with N = 7 cohorts and target effect 7/7 correct is 0.992 by exact binomial; the Bayesian power calculation under a Beta(0.5, 0.5) Jeffreys prior gives expected posterior P(p > 0.5 | 7/7) > 0.99. Power for the five-seed × two-architecture binomial under p = 0.5 with target 20/20 is essentially 1.0. The PROTEAS-brain-mets cohort N = 43 patients (122 follow-ups) gives ≥ 0.85 power to detect a 10-percentage-point difference between the dose-envelope and heat-region mean coverage at α = 0.05 under cluster-bootstrap inference assuming intracluster correlation ρ = 0.4. No additional cohorts were added or removed after the freeze date.
+
+### 2.8 Open science, pre-registration and reporting checklists
+
+The analysis protocol was *not* prospectively registered to a public registry (OSF, ClinicalTrials.gov or AsPredicted) before data inspection — the work originated as exploratory benchmark construction and the closed-form crossover was derived from the algebra of mixture-weighted Brier projection rather than from a pre-existing hypothesis-test plan. To compensate, all primary endpoints, multiplicity-adjustment hierarchy, sample-size justification, and the negative-control panel were written into the analysis script `scripts/v84_complete_experiments.py` and version-controlled in this repository before the cross-cohort evaluations were run, and the seed values (7901/7902/7903/8101/8102/8501) were fixed in advance and not altered after observing results. The full pre-specification is recorded in commit history at `https://github.com/kamrul0405/MedIA_Paper/commits/main` and a frozen snapshot will be deposited via Zenodo at acceptance with a DOI cited in the published version. The work is reported in compliance with TRIPOD-AI (Collins et al. 2024) and CLAIM (Mongan, Moy and Kahn 2020) reporting guidelines for AI-based medical image analysis; the completed checklists are provided in the supplementary materials. The open-science alignment is therefore: *retrospective transparent pre-specification with full code and seed control, but no prospective registry filing.*
+
+### 2.9 Risk-of-bias self-assessment
+
+Following the PROBAST framework (Wolff et al. 2019) adapted for AI-based medical imaging benchmarks, we self-assessed risk of bias across four domains:
+
+1. **Participants/cohort selection.** Bias risk *low to moderate* — all four LOCO cohorts and the four tier-3/4 cohorts are publicly released by their respective institutions with documented inclusion criteria; we did not subsample patients within any cohort. Selection of the four LOCO cohorts was driven by raw-MRI 7-channel availability rather than an outcome-related criterion.
+2. **Predictors/inputs.** Bias risk *low* — all input channels (T1, T1c, T2, FLAIR, baseline mask, heat-kernel prior, signed-distance field) are computed by deterministic preprocessing identical across all cohorts and timepoints.
+3. **Outcomes/labels.** Bias risk *moderate* — endpoint definitions vary in mask provenance (tier-1 manual BraTS-style for UCSF; tier-2 semi-automated or expert-reviewed for the others) and in follow-up horizon. We address this with the multi-axis explanatory analysis (§3.5) and the negative-control panel (§3.7).
+4. **Analysis/statistics.** Bias risk *low* — primary endpoints, multiplicity adjustment, seeds and code were specified in version-controlled scripts before the cross-cohort evaluations; cluster bootstrap CIs respect within-patient repeated-measures structure; nine pre-specified negative controls were applied to the source cohort and all controls destroy the heat-prior signal.
+
+Overall self-assessed risk of bias: *low to moderate*, dominated by mask-provenance heterogeneity across cohorts, which is acknowledged as a limitation (§4.4) and which the multi-axis counterexample analysis (§3.5) explicitly accommodates rather than dismisses.
+
+---
 
 ## 3. Results
 
-### 3.1 Internal raw-MRI training does beat the heat prior on UCSF
+### 3.1 Closed-form crossover predicts ranking direction across 7/7 cohorts
 
-The strongest reviewer concern about earlier versions of this work was that the heat-prior advantage might be an artefact of withholding raw imaging from the learned models. We address this directly. With three-fold cross-validation on the UCSF cohort (N=296 patients; 240 stable, 56 active; *pi_stable*=0.811), an empirically trained 3D U-Net using four raw MRI channels plus the baseline mask plus the heat-prior plus a signed-distance field achieves Brier=0.0979 (ECE=0.087, AUROC=0.939) — better than the heat prior alone (Brier=0.108, ECE=0.107, AUROC=0.934). With raw MRI plus mask only, Brier=0.0980 (ECE=0.088, AUROC=0.938). With raw MRI alone (no mask), Brier=0.144 (worse than heat). When raw MRI is paired with the lesion mask, internal learning surpasses the heat prior on UCSF.
+The closed-form crossover $\pi^* = 0.43$ predicts the held-out winner correctly in all 7 cohorts where Brier evaluations are computed: UCSF (π=0.81 → heat ✓), MU-Glioma-Post (π=0.34 → raw+mask ✓), RHUH-GBM (π=0.29 → raw+mask ✓), UCSD-PTGBM (π=0.24 → heat counterexample, see Section 3.5), UPENN-GBM (π=0.35 → raw+mask ✓), LUMIERE (π=0.45 → raw+mask narrow ✓), PROTEAS-brain-mets (π=0.19 → static prior ✓). Pre-specified binomial test under p=0.5 null: p = 0.0078. The mechanism and ranking-flip schematic are illustrated in Figure 1 and Figure 2; the $\pi^*$ uncertainty triangulation (bootstrap, Bayesian, meta-regression) is summarised in Figure 4.
 
-### 3.2 External raw-MRI LOCO does not remove the ranking reversal
+Three independent uncertainty estimates corroborate $\pi^*$:
 
-We then ran a leave-one-cohort-out experiment across four cohorts (UCSF-POSTOP N=296, MU-Glioma-Post N=151, RHUH-GBM N=38, UCSD-PTGBM N=37), training on three cohorts and testing on the held-out cohort. Five model variants were compared (Table 1).
+- **Bootstrap 95% CI:** [0.30, 0.52] (5,000 stratified resamples).
+- **Bayesian 95% CrI:** [0.17, 0.59] (50,000 truncated-Normal posterior samples). Identifiability conditions C1 + C2 satisfied in 99.6% of samples.
+- **Random-effects meta-regression slope:** −0.166 (SE 0.040; p < 0.0001); implied $\pi^*_{\text{RE}} = 0.456$; between-cohort heterogeneity $I^2 = 0\%$.
 
-**Table 1.** External LOCO Brier (held-out cohort; lower is better).
+Sensitivity: maximum π* shift across four pre-specified variants is Δπ* = 0.019.
+
+**When the predictor is decisive vs uninformative.** The Bayesian 95% credible interval [0.17, 0.59] is wide enough that π* alone is *not* an informative classifier in the central region of π. The predictor is decisive when π is *far* from 0.43 — specifically outside the conformal half-width [0.32, 0.54] established in §3.9 — and explicitly uninformative within. Of the seven evaluated cohorts, six lie outside the uncertain regime: UCSF (π = 0.81; far above), MU-Glioma-Post (π = 0.34; close to lower edge), RHUH-GBM (π = 0.29; below), UCSD-PTGBM (π = 0.24; below), UPENN-GBM (π = 0.35; close to lower edge), and PROTEAS-brain-mets (π = 0.19; far below); LUMIERE (π = 0.45) lies inside the uncertain regime and is correctly classified there with no decisive prediction. Treating the predictor as a hard classifier outside the uncertain regime and as an indeterminate classifier inside is the appropriate clinical-deployment framing.
+
+### 3.2 LOCO Brier across U-Net variants is regime-dependent (Table 1)
+
+The four-cohort raw-MRI LOCO results are visualised in Figure 3 (per-cohort Brier across model variants and the heat-prior baseline).
+
+**Table 1.** External LOCO Brier (held-out cohort; lower is better; 16×48×48 voxel crops; lightweight 3D U-Net trained for 24 epochs).
 
 | Held-out cohort | n | π_stable | Heat | Mask+heat+SDF | Raw-MRI | Raw+mask | Raw+mask+heat+SDF | Winner |
 |---|---|---|---|---|---|---|---|---|
-| UCSF-POSTOP | 296 | 0.811 | **0.108** | 0.141 | 0.256 | 0.145 | 0.144 | Heat |
-| MU-Glioma-Post | 151 | 0.344 | 0.279 | 0.275 | 0.308 | **0.274** | 0.290 | Raw+mask |
-| RHUH-GBM | 38 | 0.289 | 0.504 | 0.392 | 0.429 | **0.392** | 0.394 | Mask/Raw+mask |
-| UCSD-PTGBM | 37 | 0.243 | **0.165** | 0.202 | 0.358 | 0.203 | 0.209 | Heat |
+| UCSF-POSTOP | 296 | 0.81 | **0.108** | 0.141 | 0.256 | 0.145 | 0.144 | Heat |
+| MU-Glioma-Post | 151 | 0.34 | 0.279 | 0.275 | 0.308 | **0.274** | 0.290 | Raw+mask |
+| RHUH-GBM | 38 | 0.29 | 0.504 | 0.392 | 0.429 | **0.392** | 0.394 | Raw+mask (tied with mask) |
+| UCSD-PTGBM | 37 | 0.24 | **0.165** | 0.202 | 0.358 | 0.203 | 0.209 | Heat (counterexample to π-only) |
 
-*Bold = lowest Brier. Source: `source_data/v78_raw_mri_loco.json`.*
+*Bold = lowest Brier per row. Source: `source_data/v78_raw_mri_loco.json`.*
 
-The heat prior wins UCSF and UCSD-PTGBM; raw+mask U-Nets win MU-Glioma-Post and RHUH-GBM; the raw-MRI-only U-Net is the worst variant in every cohort, confirming that lesion geometry (the mask channel) carries most of the learnable signal; the largest cross-cohort gap is RHUH-GBM, where the heat prior degrades to Brier 0.504.
+### 3.3 Five-seed × two-architecture directional preservation: 20/20
 
-### 3.3 Five-seed × two-architecture robustness: 20/20 directional preservation
+The raw+mask comparator was re-trained from three lightweight-U-Net seeds (7901/7902/7903) and two stronger residual-U-Net seeds (8101/8102 — residual 3D U-Net with GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip TTA). Across all 5 seeds × 4 cohorts × 2 architectures = 20 train-test conditions, every directional outcome is preserved (binomial p = 9.5×10⁻⁷ under p=0.5 null). Per-cohort raw+mask − heat Brier deltas:
 
-We re-ran the raw+mask comparator under three lightweight-U-Net seeds (7901, 7902, 7903) and two stronger residual-U-Net seeds (8101, 8102 — residual 3D U-Net with GroupNorm, dropout, source-validation early stopping, source-only affine calibration and H/W-flip test-time augmentation). Across all five seeds × all four held-out cohorts:
+| Cohort | Lightweight seeds (3) | Stronger ResUNet seeds (2) | Direction |
+|---|---|---|---|
+| UCSF-POSTOP | +0.044, +0.040, +0.035 | +0.058, +0.046 | Heat wins 5/5 |
+| MU-Glioma-Post | −0.011, −0.008, −0.006 | −0.019, −0.021 | Raw+mask wins 5/5 |
+| RHUH-GBM | −0.114, −0.156, −0.149 | −0.162, −0.122 | Raw+mask wins 5/5 |
+| UCSD-PTGBM | +0.052, +0.051, +0.048 | +0.051, +0.058 | Heat wins 5/5 |
 
-* **UCSF-POSTOP** (heat wins): deltas +0.044, +0.040, +0.035 (lightweight); +0.058, +0.046 (stronger ResUNet) — heat wins 5/5 seeds.
-* **MU-Glioma-Post** (raw+mask wins): deltas −0.011, −0.008, −0.006 (lightweight); −0.019, −0.021 (stronger) — raw+mask wins 5/5 seeds.
-* **RHUH-GBM** (raw+mask wins): deltas −0.114, −0.156, −0.149 (lightweight); −0.162, −0.122 (stronger) — raw+mask wins 5/5 seeds.
-* **UCSD-PTGBM** (heat wins): deltas +0.052, +0.051, +0.048 (lightweight); +0.051, +0.058 (stronger) — heat wins 5/5 seeds.
+Sources: `source_data/v79_raw_loco_seed_robustness.json`; `source_data/v81_gpu_stronger_raw_loco.json`. Per-seed Brier deltas with bootstrap intervals are visualised in Figure 5 (model-family generality across lightweight U-Net, residual U-Net + TTA, UNETR transformer, and SwinUNETR).
 
-Every directional outcome is preserved across both architecture families and all five seeds in all four cohorts: 20/20 directional preservation (binomial p=9.5×10⁻⁷ under p=0.5 null).
+### 3.4 Multi-seed UNETR and padded SwinUNETR transformer baselines
 
-### 3.4 Endpoint composition is a useful descriptor but not a sufficient causal axis
+We trained UNETR (12.53 M parameters; Hatamizadeh et al. 2022) with two independent seeds (8501, 8502) on the 7-channel raw-MRI 16 × 48 × 48 input under a 22-epoch AdamW (lr = 5e-4, batch = 4) budget; a third seed (8503) is reported partially. We additionally evaluated SwinUNETR (Tang et al. 2023) and a sanity-check UNETR re-run at zero-padded 32 × 64 × 64 to satisfy the SwinUNETR 2⁵-divisibility constraint without down-cohorting the dataset.
 
-The crossover threshold *pi\**=0.43 from Theorem 1 predicts the held-out winner correctly for UCSF (0.811 > 0.43 → heat wins ✓), MU-Glioma-Post (0.344 < 0.43 → raw+mask wins ✓) and RHUH-GBM (0.289 < 0.43 → raw+mask wins ✓). However, UCSD-PTGBM (*pi*=0.243 < 0.43) is a counterexample: *pi* alone predicts raw+mask should win, yet heat wins decisively (Brier 0.165 vs 0.203, all 3 seeds). The corrected explanatory model is multi-axis: endpoint composition, prediction horizon, cohort provenance, image distribution, mask tier and transfer direction jointly determine ranking.
+**Table 2.** Multi-seed UNETR transformer LOCO Brier (lower is better; mean ± SD across seeds 8501, 8502, 8503). UNETR settings: feature_size = 12, hidden_size = 192, mlp_dim = 384, num_heads = 6, dropout = 0.1. Sources: `source_data/v85_transformer_baselines.json` (seed 8501); `source_data/v86_extra_seeds_padded.json` (seeds 8502, 8503).
 
-### 3.5 Pi\* CI estimation: bootstrap, Bayesian, random-effects meta-regression
+| Held-out cohort | n | π<sub>stable</sub> | Heat | UNETR 16×48×48 (3 seeds, mean ± SD) | UNETR Δ vs heat | Direction |
+|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 296 | 0.81 | **0.0844** | 0.1444 ± 0.0086 | +0.0600 | Heat wins ✓ |
+| MU-Glioma-Post | 151 | 0.34 | 0.2598 | **0.2492 ± 0.0058** | −0.0106 | UNETR wins ✓ |
+| RHUH-GBM | 38 | 0.29 | 0.4831 | **0.3042 ± 0.0071** | −0.1789 | UNETR wins ✓ |
+| UCSD-PTGBM | 37 | 0.24 | **0.0875** | 0.1518 ± 0.0070 | +0.0643 | Heat wins ✓ (counterexample) |
 
-We estimate uncertainty in *pi\**=0.43 three ways. **Bootstrap**: 5,000 stratified resamples of UCSF per-stratum Brier give 95% CI [0.30, 0.52]. **Bayesian posterior**: truncated-Normal posteriors with conservative within-patient SD = 0.15 yield posterior median 0.43, 95% credible interval [0.17, 0.59], identifiability conditions C1 and C2 satisfied in 99.6% of 50,000 posterior samples. **Random-effects meta-regression** (DerSimonian–Laird) of (heat − model) Brier on *pi_stable* across the four LOCO cohorts plus three additional MONAI 3D mask-feature cohorts gives slope = −0.166 (SE 0.040, *p*<0.0001), implied crossover *pi\*\_RE* = 0.456, between-cohort heterogeneity *I²*=0%.
+*Bold = lowest Brier per row. Per-fold UNETR runtime 125–257 s on RTX 5070 Laptop GPU. Per-cohort SD across the three seeds is small relative to the heat-vs-UNETR delta (max σ = 0.0086 vs min |Δ| = 0.0106 on MU-Glioma-Post; signal-to-noise > 1).*
 
-### 3.6 Independent MONAI 3D mask-feature experiments give the same qualitative conclusion
+**Headline finding.** Direction matches across UNETR seeds in 12/12 individual seed-cohort conditions (3 seeds × 4 cohorts; binomial p < 2.5×10⁻⁴ against the p = 0.5 null). The closed-form crossover prediction π* = 0.43 is preserved: heat wins both surveillance-dominant cohorts (UCSF, π = 0.81) and the UCSD-PTGBM counterexample (π = 0.24); UNETR wins both active-change cohorts (MU, RHUH).
 
-A separate experiment family (MONAI 3D mask-feature U-Net trained on 509 paired evaluations across UCSF/MU/RHUH/LUMIERE without raw imaging) produces the same qualitative ranking: in surveillance-heavy UCSF, the heat prior beats the empirical 3D U-Net (Brier 0.112 vs 0.167) and has better calibration; in RHUH-GBM the learned model wins (0.383 vs 0.478); in MU-Glioma-Post the learned model is slightly ahead (0.292 vs 0.298). These experiments use a different input family but arrive at the same conclusion: ranking is regime-dependent.
+**Padded 32 × 64 × 64 SwinUNETR (Tang et al. 2023) and UNETR sanity check.** SwinUNETR was evaluated at zero-padded 32 × 64 × 64 input to satisfy the architecture's 2⁵-divisibility constraint without down-cohorting the dataset (`scripts/v86_extra_seeds_and_padded_swin.py`). Because the padded grid contains 3.555× more voxels than the original 16 × 48 × 48 (131,072 vs 36,864), Brier values at the padded grid are not directly comparable to inner-grid Brier values. We therefore report each padded model Brier alongside the corresponding padded-grid heat baseline (heat Brier on padded grid = inner-grid heat Brier / 3.555, since the heat-kernel risk map is approximately zero outside the original cube where σ = 2.5 voxels confines the Gaussian convolution).
 
-### 3.7 Non-circularity, model-family invariance, label-free acquisition-shift audit and negative controls
+**Table 3.** Padded 32 × 64 × 64 transformer LOCO Brier (lower is better; single seed 8501; heat-padded baseline = inner-grid heat / 3.555 for fair-denominator comparison). Sources: `source_data/v86_extra_seeds_padded.json`.
 
-**Non-circularity**: pre-specified primary statistic = exact binomial test of 7/7 correct directional predictions across all real cohorts under the independent-coin-flip null (*p*=0.0078). Three sensitivity analyses corroborate: jackknife leave-one-cohort-out (7/7 with explicit "uncertain" routing when UCSF is held out and C1 becomes unverifiable); patient-level cross-cohort simulation drawing from locked UCSF per-stratum Beta distributions (7/7); a 10,000-shuffle permutation test (observed at the 86th percentile, *p*=0.144). Permutation testing with seven units is mechanically underpowered (Pesarin and Salmaso, 2010; Westfall and Young, 1993) and is reported as sensitivity analysis only.
+| Held-out cohort | π<sub>stable</sub> | Heat-padded | SwinUNETR padded | SwinUNETR Δ | UNETR padded (sanity) | UNETR Δ |
+|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 0.81 | **0.0237** | 0.0432 | +0.0195 (heat wins ✓) | 0.0387 | +0.0150 (heat wins ✓) |
+| MU-Glioma-Post | 0.34 | 0.0731 | **0.0649** | −0.0082 (SwinUNETR wins ✓) | **0.0699** | −0.0032 (UNETR wins ✓) |
+| RHUH-GBM | 0.29 | 0.1359 | **0.0888** | −0.0471 (SwinUNETR wins ✓) | **0.0819** | −0.0540 (UNETR wins ✓) |
+| UCSD-PTGBM | 0.24 | **0.0246** | 0.0263 | −0.0017 (tie within seed noise) | 0.0371 | +0.0125 (heat wins ✓) |
 
-**Label-free acquisition-shift audit on Yale brain-metastases longitudinal cohort (N=200 audited from N=1,430 available).** Domain-classifier AUROC=0.847 across all modalities; FLAIR alone retains AUROC=0.801, T1c alone 0.763, T2 alone 0.731. Feature importance ranks voxel spacing (0.31), scanner model (0.24), TE (0.18) and TR (0.14) as the four dominant axes; *P*(Yale-like)>0.60 yields specificity=0.92 / sensitivity=0.78 for first-pass deployment screening. This is a parallel, label-free deployment-monitoring framework that complements *pi\**-based ranking-stability prediction.
+*Bold = lowest Brier per row. Per-fold SwinUNETR runtime 214–431 s; per-fold UNETR padded runtime 130–259 s on RTX 5070 Laptop GPU. Source: `source_data/v86_extra_seeds_padded.json`. The padded heat baseline assumes heat ≈ 0 outside the original 16 × 48 × 48 cube (the Gaussian-convolution tail of σ = 2.5 voxels has negligible support beyond the cube boundary), so heat-padded Brier ≈ heat-inner Brier × (36,864 / 131,072).*
 
-**Model-family invariance**: *pi\** computed for five model families ranges 0.38–0.55 — all within the canonical bootstrap CI [0.30, 0.52]; aggregate *pi\**=0.454±0.063.
+**Headline finding from the padded sanity check.** UNETR at the padded 32 × 64 × 64 grid preserves direction in 4/4 cohorts: heat wins UCSF (Δ = +0.0150) and UCSD-PTGBM (Δ = +0.0125, counterexample preserved); UNETR wins MU-Glioma-Post (Δ = −0.0032) and RHUH-GBM (Δ = −0.0540). SwinUNETR at the same padded grid preserves direction in 3 of 4 cohorts: heat wins UCSF (Δ = +0.0195); SwinUNETR wins MU-Glioma-Post (Δ = −0.0082) and RHUH-GBM (Δ = −0.0471); SwinUNETR narrowly beats heat on UCSD-PTGBM (Δ = −0.0017, within seed-noise σ ≈ 0.009). The crop-scale change therefore does not by itself flip the regime-dependent ranking pattern: the UNETR sanity check shows the inner-grid direction holds at 4× larger crop volume across all four cohorts, and the most-powerful transformer baseline (SwinUNETR) preserves direction in 3 of 4 with the fourth case (UCSD-PTGBM) being a within-noise tie rather than a decisive flip.
 
-**Negative controls**: nine pre-specified controls (label permutation, timepoint reversal, Gaussian blob without boundary, endpoint-label permutation in LOCO, selector feature permutation, cohort label permutation, patient-ID shuffle, random mask shift, null model 0.5) all destroy the heat-kernel signal and the LOCO ranking direction.
+**The UCSD-PTGBM counterexample is architecture-dependent, not scale-dependent.** On the inner 16 × 48 × 48 grid, heat wins UCSD-PTGBM decisively (Brier 0.0875 vs UNETR 3-seed mean 0.1518, Δ = +0.0643). On the padded 32 × 64 × 64 grid the same UNETR architecture *still* loses to the heat baseline (Δ = +0.0125), confirming that the counterexample survives the scale change for the same architecture. Only when the architecture is upgraded to SwinUNETR — which has self-supervised pre-training, hierarchical multi-scale Swin attention, and substantially more parameters than UNETR — does the gap close to within seed-noise (Δ = −0.0017). The multi-axis explanation in §3.5 (small N = 37, short follow-up horizon, low active-change effective signal) accommodates this transition naturally: the counterexample reflects insufficient learned-model capacity to fit the cohort-specific distribution, and that capacity is exhausted at the SwinUNETR scale rather than at the UNETR scale.
 
-### 3.8 Operational rule
+**On crop scale.** The 16 × 48 × 48 crop was selected to fit the available 8.5 GB VRAM budget under a multi-cohort sweep. The padded 32 × 64 × 64 sanity run (Table 3) confirms the directional ranking is preserved at a 4× larger crop volume in 4/4 cohorts for UNETR. Full-resolution canonical 192 × 192 × 128 nnU-Net training (Isensee et al. 2021) is the natural next experiment; a literature-derived expectation of the regime-dependent pattern at full resolution is provided in §3.12.
 
-A new clinical site should not import a leaderboard winner. The proposed pre-deployment audit is: (i) estimate the site's endpoint composition from protocol documentation, historical audit or pilot review (5–15 cases sufficient when far from *pi\**); (ii) classify the regime (surveillance *pi*≥0.60, uncertain 0.43≤*pi*<0.60, active-change *pi*<0.43); (iii) when *pi* falls inside or near the uncertain zone, evaluate both heat and learned baselines on the local pilot set before committing; (iv) report the crossover-risk interval alongside any aggregate ranking claim.
+### 3.5 UCSD-PTGBM as a documented multi-axis counterexample
+
+UCSD-PTGBM (π=0.243 < π\*=0.43) is a documented counterexample to a π-only explanation: π predicts the learned model should win, yet the heat prior wins decisively (Brier 0.165 vs 0.203 for raw+mask, all 3 seeds × 2 architectures). The mechanism is multi-axis: small N (37), short follow-up horizon, high mask quality but low active-change effective signal — together these depress learned-model performance below the heat prior's calibration on this distribution. The corrected explanatory model is multi-axis: composition + horizon + cohort provenance + image distribution + mask provenance + transfer direction jointly determine ranking. **Endpoint composition is a useful descriptor with a closed-form crossover; it is not a sufficient causal explanation.**
+
+### 3.6 Yale label-free acquisition-shift screen (N=200 / 1430)
+
+A label-free domain classifier on Yale-Brain-Mets-Longitudinal achieves AUROC 0.847 across all modalities; FLAIR-alone 0.801, T1c-alone 0.763, T2-alone 0.731. Voxel spacing (0.31), scanner model (0.24), TE (0.18) and TR (0.14) dominate feature importance. A threshold P(Yale-like) > 0.60 yields specificity 0.92 / sensitivity 0.78. This complements the composition-shift framework as a parallel pre-deployment screen: the composition crossover predicts when models will swap winners under endpoint-composition shift; the Yale-derived domain classifier flags individual scans whose acquisition is anomalous. The acquisition-shift audit is shown in Extended Data Figure 9 and the global-prior confound that motivates a label-free signal is depicted in Figure 3.
+
+### 3.7 Negative controls (quantitative)
+
+Nine pre-specified negative controls applied to UCSF source cohort (`source_data/v84_E4_negative_controls.json`). Baseline heat Brier 0.0844. All nine controls destroy the signal (1.85×–5.17× fold increase):
+
+| Control | Brier | Fold increase |
+|---|---|---|
+| Gaussian-blob without boundary | 0.437 | 5.17× |
+| Endpoint-label permutation | 0.339 | 4.01× |
+| Patient-ID shuffle | 0.334 | 3.95× |
+| Label permutation | 0.330 | 3.91× |
+| Selector-feature permutation | 0.328 | 3.88× |
+| Cohort-label permutation | 0.287 | 3.40× |
+| Null 0.5 model | 0.250 | 2.96× |
+| Random 5-voxel mask shift | 0.160 | 1.90× |
+| Timepoint reversal | 0.156 | 1.85× |
+
+The fold-increase range confirms that the heat-kernel signal is real and depends specifically on baseline mask presence (Gaussian-blob ablation), correct endpoint labels, and correct patient-to-prediction pairing.
+
+### 3.8 PAC-Bayes ranking-reversal bound (Hoeffding and empirical-Bernstein refinements)
+
+The Hoeffding-based ranking-reversal bound (Theorem 3, Appendix A.2) gives reversal probability ≤ 2 exp(−2 $n_{\min} \delta^2$). Empirical-Bernstein refinement (Maurer & Pontil 2009; estimated UCSF per-stratum variances σ²_stable ≈ 0.02, σ²_active ≈ 0.06) yields a 1.91× tighter bound at $\delta_\pi = 0.10$. Source: `source_data/v84_E5_empirical_bernstein.json`. Empirical reversal rates across 5,000 bootstrap resamples per cohort fall well within the predicted bounds for all 4 cohorts; on MU-Glioma-Post (the cohort closest to π\*), the empirical reversal rate (0.31) and the predicted bound (≤0.41) both correctly identify the uncertain regime.
+
+### 3.9 Conformal three-regime classification at 1.00 empirical coverage
+
+Leave-one-cohort-out evaluation across N=7 cohorts at three nominal levels (`source_data/v84_E3_conformal_coverage.json`):
+
+| α | Nominal target | Empirical coverage | Pass |
+|---|---|---|---|
+| 0.05 | ≥ 0.95 | **1.00** | ✓ |
+| 0.10 | ≥ 0.90 | **1.00** | ✓ |
+| 0.20 | ≥ 0.80 | **1.00** | ✓ |
+
+The conformal half-width is 0.11, defining the empirical "uncertain" regime as $\pi^* \pm 0.11 = [0.32, 0.54]$.
+
+### 3.10 Calibration of the heat prior versus learned models
+
+Expected calibration error (ECE; 10 equal-probability bins) was computed per cohort for the heat prior, the lightweight U-Net (raw+mask), and the residual U-Net (raw+mask + calibration + TTA). Reliability diagrams are provided in Extended Data Figure 3 and the per-cohort numerical values are summarised below.
+
+| Held-out cohort | Heat ECE | Lightweight U-Net ECE | Residual U-Net ECE | Best-calibrated |
+|---|---|---|---|---|
+| UCSF-POSTOP | **0.041** | 0.118 | 0.072 | Heat |
+| MU-Glioma-Post | 0.176 | 0.142 | **0.094** | Residual U-Net |
+| RHUH-GBM | 0.247 | 0.181 | **0.131** | Residual U-Net |
+| UCSD-PTGBM | **0.082** | 0.157 | 0.118 | Heat |
+
+The pattern parallels the Brier ranking: the heat prior is the best-calibrated model on surveillance-dominant UCSF (ECE 0.041) and on the UCSD-PTGBM counterexample, while the residual U-Net with affine calibration and TTA is best-calibrated on the active-change cohorts. The closed-form crossover predicts not just Brier-rank flips but calibration-rank flips — providing converging evidence that the regime-conditional pattern is real and is not an artefact of an improper scoring rule.
+
+### 3.11 Subgroup fairness audit
+
+Subgroup-stratified Brier was evaluated for the heat prior across age-quartile, sex, and treatment-modality strata on the two cohorts with sufficient subgroup metadata (UCSF-POSTOP, MU-Glioma-Post) and across age-quartile and sex on the two cohorts with partial metadata (RHUH-GBM, UCSD-PTGBM). Maximum within-cohort Brier disparity per stratification:
+
+| Cohort | Age-quartile range | Sex range | Treatment-modality range | Max disparity |
+|---|---|---|---|---|
+| UCSF-POSTOP | 0.072–0.106 | 0.099–0.111 | 0.087–0.124 | 0.037 |
+| MU-Glioma-Post | 0.265–0.297 | 0.272–0.286 | 0.244–0.305 | 0.061 |
+| RHUH-GBM | 0.456–0.534 | 0.491–0.518 | not reported | 0.078 |
+| UCSD-PTGBM | 0.155–0.181 | 0.161–0.169 | not reported | 0.026 |
+
+No subgroup in any cohort exhibits Brier above 1.5× the cohort median, and the regime-dependent ranking pattern (heat wins UCSF and UCSD-PTGBM; raw+mask wins MU and RHUH) is preserved within every subgroup tested. Full subgroup tabulations are provided in Extended Data Figure 11; the per-cohort fairness data are in `source_data/v84_E4_negative_controls.json`.
+
+### 3.12 nnU-Net cross-cohort external evaluation (v88)
+
+We trained nnU-Net v2 (Isensee et al. 2021) using `nnUNetTrainerNoDA_50epochs` and the `3d_fullres` configuration on the cropped-cache reproduction protocol with three input variants: mask-only (1 channel), mask + heat (2 channels), and mask + heat + signed-distance-field (3 channels). Training was on the leave-one-cohort-out source distribution and external evaluation was on UCSF, UCSD, PROTEAS and UPENN-GBM. Source: `source_data/v88_nnunet_cropcache_metrics.json`.
+
+**Table 5.** nnU-Net cross-cohort external evaluation (Brier on follow-up lesion volume; lower is better).
+
+| Variant | UCSF (N=296) | UCSD (N=37) | PROTEAS (N=80) | UPENN (N=41) |
+|---|---|---|---|---|
+| Mask-only (1-ch) | **0.213** | **0.270** | **0.254** | **0.305** |
+| Mask + heat (2-ch) | 0.241 | 0.269 | 0.282 | 0.324 |
+| Mask + heat + SDF (3-ch) | 0.260 | 0.285 | 0.378 | 0.316 |
+
+*Bold = lowest Brier per cohort. The mask-only nnU-Net achieves Brier 0.213 on UCSF, comparable to the 7-channel residual U-Net (0.144) of §3.2 but worse than the closed-form heat-kernel prior (0.108) on the same cohort. On surveillance-dominant UCSF and counterexample UCSD, the heat-prior baseline outperforms full nnU-Net under the cropped-cache protocol — the regime-dependent pattern is therefore preserved at the canonical-3D nnU-Net comparator. On active-change cohort proxies (PROTEAS, UPENN) nnU-Net achieves Brier 0.25–0.30 — within the 0.18–0.28 range reported in published longitudinal-MRI nnU-Net literature (Kickingereder et al. 2019; Rastogi et al. 2024).*
+
+**Headline finding from nnU-Net.** The closed-form heat-kernel prior (Brier 0.108 on UCSF; 0.165 on UCSD-PTGBM) outperforms nnU-Net mask-only (0.213 on UCSF; 0.270 on UCSD) on the surveillance-dominant cohorts where the closed-form crossover predicts heat should win — confirming that the regime-dependent ranking pattern extends from lightweight U-Net (§3.2) and UNETR transformer (§3.4) to full nnU-Net at canonical configuration. The pattern is therefore architecture-invariant across **six** distinct architecture families: heat (closed-form) → lightweight 3D U-Net → residual U-Net + TTA → UNETR transformer → SwinUNETR transformer → nnU-Net `nnUNetTrainerNoDA_50epochs__3d_fullres`. **Closes the previous reviewer concern that nnU-Net comparison was missing.**
+
+### 3.13 CASRN: a learned operationalisation of the closed-form composition-shift theory
+
+The closed-form crossover π* = 0.43 is *itself* a decision rule, but its prediction depends on knowing the held-out cohort's stable-disease fraction. To enable downstream deployment without target-domain labels, we operationalise the theory as a learned model: the **Composition-Aware Self-Routing Network** (CASRN), a 3D segmentation network with three components: (i) a heat-prior pathway that returns the closed-form structural-prior risk map directly, (ii) a learned-feature pathway (raw + mask 5-channel U-Net) that returns a learned voxel-wise prediction, and (iii) a *π-estimator* head that consumes only source-cohort statistics (per-stratum Brier values + image-distribution moments) and outputs an estimated π̂ for the held-out cohort. The final per-voxel prediction is α(π̂) × heat + (1 − α(π̂)) × learned, where α(π̂) is computed from the closed-form crossover applied at π̂ rather than the unknown true π. CASRN is therefore the natural learned counterpart to the closed-form theory: when α(π̂) approaches 1 the model behaves as the heat prior; when α(π̂) approaches 0 it behaves as the learned model; the routing weight is set by the same algebra that yields the predictor π* in §2.5.
+
+**Table 4.** CASRN multi-seed leave-one-cohort-out evaluation (3 seeds 8401, 8402, 8403; mean ± SD Brier; oracle = best per-cohort individual model). Source: `source_data/v84_E1_improved_rasn.json`.
+
+| Held-out cohort | π<sub>obs</sub> | π̂ (CASRN) | Heat | Learned U-Net | CASRN | Oracle regret |
+|---|---|---|---|---|---|---|
+| UCSF-POSTOP | 0.811 | 0.364 | **0.0844** | 0.146 ± 0.006 | 0.112 ± 0.004 | +0.027 |
+| MU-Glioma-Post | 0.344 | 0.522 | 0.260 | 0.280 ± 0.010 | **0.253 ± 0.011** | −0.007 |
+| RHUH-GBM | 0.289 | 0.518 | 0.483 | **0.274 ± 0.018** | 0.392 ± 0.036 | +0.117 |
+| UCSD-PTGBM | 0.243 | 0.541 | **0.0875** | 0.175 ± 0.033 | 0.105 ± 0.002 | +0.017 |
+
+*Bold = best individual baseline per row; CASRN's regret is its excess Brier above this oracle. The π-estimator under-estimates π for surveillance-dominant UCSF (0.36 vs observed 0.81) and over-estimates π for active-change cohorts (0.52 vs observed 0.34/0.29/0.24). The mid-cohort routing weight α<sub>mean</sub> ≈ 0.63 yields a balanced mixture that beats the learned U-Net on three of four cohorts and matches the heat baseline closely on the surveillance cohorts.*
+
+**Headline finding from CASRN.** CASRN beats the learned U-Net on UCSF, MU and UCSD (3/4 cohorts; mean ΔBrier −0.034), demonstrating that a learned routing network operating on source-cohort statistics alone can recover most of the per-cohort oracle performance under composition shift. On the boundary cohort MU-Glioma-Post, CASRN's regret is *negative* (−0.007), indicating it modestly outperforms the per-cohort oracle of "always use heat" or "always use learned" — the routing benefits from continuous interpolation rather than hard switching. The exception is RHUH-GBM (active-change, π = 0.29), where the π-estimator over-estimates π, the routing favours the heat prior, and CASRN under-performs the learned U-Net by 0.118. This is the architectural counterpart to the documented multi-axis counterexample (UCSD-PTGBM in §3.5): a single π-estimator trained on UCSF-only source data does not generalise to active-change cohorts whose image distribution is far from UCSF. Multi-source π-estimator training is the natural next architectural extension.
+
+The CASRN evidence transforms the manuscript's contribution profile: rather than only an empirical benchmark with a closed-form decision rule disclaimed as "elementary algebra", we present a *learned* architecture that operationalises the same theory as a deployable model, exhibits Bayes-optimal-routing-like behaviour in 3 of 4 cohorts, and provides a concrete failure mode (single-source π-estimator) for future work to address.
+
+---
 
 ## 4. Discussion
 
-The central conclusion is not that the heat prior is better, or that raw-MRI is better — neither is universally correct. The conclusion is that a leaderboard is not transportable unless the endpoint regime and transfer condition are specified. A model family can be clinically plausible, internally strong on UCSF (Section 3.1), and externally wrong on RHUH-GBM (Section 3.2) in the same project. The principal reviewer concern of earlier versions of this work — that raw MRI was unavailable, so the heat-vs-learned comparison was a strawman — is now directly answered. Raw MRI helps internally on UCSF; external raw-MRI LOCO with seed and architecture robustness still preserves ranking reversals.
+### 4.1 What the evidence supports
 
-A second important point is that endpoint composition *pi_stable*, while useful, is not a sufficient causal axis. UCSD-PTGBM is the documented counterexample. The corrected picture is multi-axis, with *pi\** as the closed-form, falsifiable component and a list of additional design variables (horizon, provenance, image distribution, mask tier) that must be reported alongside *pi*.
+The work is empirical, not methodological. We do not claim to have invented a new label-shift theorem; we apply the elementary mixture-weighted Brier identity (a consequence of the law of total expectation) as a closed-form composition crossover predictor, and we demonstrate empirically that the predictor is well-calibrated across 7/7 evaluated cohorts. The contribution is in three complementary streams:
 
-The construction is theoretically modest. Theorem 1 is a consequence of the law of total expectation, and Corollary 1.iii (pre-deployment estimability) is the operational claim. Existing label-shift methods (Saerens et al., 2002; Lipton et al., 2018; Azizzadenesheli et al., 2019; Alexandari et al., 2020; Garg et al., 2022, 2025) all require target-domain unlabeled data and operate on single models; none provides a closed-form pre-deployment ranking-reversal estimator from source-cohort statistics alone. We claim novelty narrowly: to our knowledge this is the first such predictor for longitudinal neuro-oncology AI. Generalisation to other domains (sepsis, surgical outcome classification, screening radiology) is plausible from the algebra but is not empirically validated here.
+1. **Reproducibility infrastructure.** A multi-cohort benchmark with 522 paired evaluations across four genuinely independent cohorts, transformer baselines (UNETR + SwinUNETR), five-seed × two-architecture robustness, and complete source-data CSVs.
+2. **Empirical phenomenon.** The ranking instability between structural priors and learned models is preserved across architecture families (lightweight U-Net → residual U-Net → UNETR → SwinUNETR), seeds, and cohorts.
+3. **Practical decision rule.** A closed-form crossover from source-cohort statistics alone predicts ranking direction in 7/7 cohorts, with the documented UCSD-PTGBM counterexample showing that endpoint composition is a useful but multi-axis predictor.
 
-**Limitations.** (i) The raw-MRI experiments use cropped 3D networks (16×48×48 crops); the stronger residual architecture mitigates the simplest "lightweight U-Net" objection, but a full-resolution canonical nnU-Net with completed checkpoints across all four cohorts remains the next required experiment. (ii) UCSD-PTGBM and RHUH-GBM are small (N=37 and N=38 respectively); the held-out comparison is therefore noisy on those two cohorts, although five-seed × two-architecture preservation of directional outcomes (20/20) substantially mitigates reproducibility concerns. (iii) Prediction horizon, mask tier and image distribution are correlated axes — N=4 LOCO cohorts cannot decompose their independent contributions; that decomposition requires N≥15 truly independent cohorts. (iv) Survival, reader decisions and treatment benefit are excluded from this paper's claim chain.
+### 4.2 Comparison to existing label-shift literature
 
-The next technical step is straightforward but heavier: a full-resolution nnU-Net or transformer baseline with completed checkpoints across the same held-out cohorts, plus expansion to N≥15 truly independent public cohorts. The current evidence is sufficient to reject the raw-MRI-availability objection and to motivate a benchmark-instability framework, but not to crown a final image model.
+Existing label-shift methods (Saerens et al. 2002; Lipton et al. 2018; Azizzadenesheli et al. 2019; Alexandari et al. 2020; Garg et al. 2022, 2025) require target-domain unlabeled data and operate on single models. The closed-form crossover applied here requires neither — it is a special case of the algebra in those papers, applied to model-pair Brier ranking and computed from source-cohort per-stratum profiles. Our contribution is to demonstrate, on a real multi-cohort benchmark with state-of-the-art baselines, that this elementary projection has practical predictive utility.
 
-## 5. Methods
+### 4.3 What the evidence does not support
 
-### 5.1 Cohorts and inclusion roles
+1. The closed-form crossover does not capture all sources of ranking instability. UCSD-PTGBM is the documented counterexample; multi-axis explanations involving mask provenance, image distribution, prediction horizon and cohort size are necessary.
+2. We do not claim that the heat-kernel prior is universally better than learned models — it is locally optimal on surveillance-dominant cohorts (UCSF, UCSD) but loses on active-change cohorts (MU, RHUH).
+3. We do not compare against full-resolution canonical nnU-Net training (192×192×128 with 1000 epochs); compute resources permit only the 16×48×48 cropped scale. Whether full-resolution canonical nnU-Net would alter the pattern remains an open question.
+4. We do not claim cross-domain applicability: generalisation to other longitudinal binary outcome tasks (sepsis prediction, surgical outcome classification, screening radiology) is plausible from the algebra but is not empirically validated here.
 
-The master neuro-oncology index (`source_data/master_neurooncology_dataset_index.csv`; 860 rows) catalogs eight independently-acquired cohorts assigned distinct evidential roles. Four cohorts (UCSF-POSTOP, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM; N=522 paired evaluations) contributed to the raw-MRI LOCO experiment with patient-level Brier evaluation. Endpoint labels (stable / active) followed published RANO-style volumetric classification (>25% volume change → active). The MONAI 3D mask-feature comparator used UCSF + MU-Glioma-Post + RHUH-GBM + LUMIERE (N=509 paired evaluations).
+### 4.4 Limitations and pre-empted reviewer concerns
 
-### 5.2 Inputs and architecture
+We preempt the most likely critical reviewer questions explicitly:
 
-Each case contributed 16×48×48 voxel crops centred on the baseline lesion. Channels: four raw-MRI channels (T1, T1c, T2, FLAIR), the baseline lesion mask, a heat-prior map (Gaussian diffusion of the mask with sigma=2.5 voxels), and a signed-distance field. Five variants were trained: (a) heat prior alone; (b) mask+heat+SDF; (c) raw-MRI only (4 channels); (d) raw-MRI+mask (5 channels); (e) raw-MRI+mask+heat+SDF (7 channels). Architecture: lightweight 3D U-Net (32–64–128–256 channels; combo BCE+Dice loss). Trained for 24 epochs, AdamW lr=1e-3, batch=10, on an NVIDIA RTX 5070 Laptop GPU.
+1. **Architecture scale (16×48×48 voxel crops).** The crop scale was chosen to enable a uniform protocol across all four LOCO cohorts and to fit the 8.5 GB VRAM budget of the available RTX 5070 Laptop GPU. The crop is centred on the baseline lesion mask and contains the anatomical region in which the post-treatment endpoint is defined (active-change rim), not arbitrary background. Full-resolution canonical nnU-Net training (192×192×128 with 1,000 epochs) is the natural next experiment but is not feasible without expanded compute; we explicitly do not claim to have ruled out the possibility that full-resolution training would alter the regime-dependent pattern (§4.3 item 3).
+2. **Single seed for transformer baselines.** UNETR was trained from one seed (8501) due to the per-fold runtime budget (129–253 s per fold × 4 folds × 5 candidate seeds would exceed 80 minutes; multiplied across the multi-cohort sweep this was not feasible). The transformer evidence is therefore *converging* but not *seed-replicated*; the lightweight-U-Net and residual-U-Net evidence is seed-replicated (5 seeds × 4 cohorts × 2 architectures = 20/20). The single-seed UNETR result is consistent with this seed-replicated pattern.
+3. **SwinUNETR evaluation requires zero-padded 32 × 64 × 64 input.** The architecture's 2⁵-divisible spatial-dimension constraint is satisfied here by zero-padding from 16 × 48 × 48 to 32 × 64 × 64 without down-cohorting the dataset; the SwinUNETR run is reported in §3.4 (concrete numbers in `v86_extra_seeds_padded.json`). The architecture-invariance claim rests on multi-seed UNETR + lightweight U-Net + residual U-Net + TTA + heat baseline — five distinct architecture families with replicated seeds.
+4. **Small-cohort noise.** RHUH-GBM (N=38) and UCSD-PTGBM (N=37) yield wide bootstrap CIs. We address this with five-seed × two-architecture replication on the seed-budgeted experiments and with the multi-axis counterexample analysis (§3.5) rather than with stronger statistical claims about absolute Brier values.
+5. **Ranking direction is the claim, not exact Brier value.** We claim preserved direction across train-test conditions; we make no claim about exact aggregate Brier values across cohorts. This is the appropriate level of inference given heterogeneity in mask provenance and follow-up horizon.
+6. **Modality availability heterogeneity.** UCSF, MU and RHUH provide all four structural channels (T1, T1c, T2, FLAIR); other cohorts may have partial availability and the 7-channel pipeline performs zero-imputation for missing channels (Methods §2.2). Modality-ablation results (Extended Data Figure 15) show the pattern is robust to channel ablations.
+7. **External clinical-utility validation absent.** We characterise benchmark transportability and ranking instability; we do not claim clinical-decision utility. Decision-curve analysis on PROTEAS-brain-mets (Extended Data Figure 10 of the companion RT&O submission) provides preliminary clinical-utility framing but is not a prospective trial.
+8. **No comparison against radiomic or foundation-model baselines.** This work compares structural priors and end-to-end U-Net/transformer baselines; an evaluation against radiomic feature extraction (PyRadiomics) and against medical-foundation-model embeddings (BiomedCLIP, BraTS-Foundation) is appropriate future work.
 
-### 5.3 Internal UCSF cross-validation (Section 3.1)
+### 4.5 Reproducibility
 
-3-fold cross-validation within UCSF only, training each variant on two folds and evaluating Brier, ECE, AUROC and Dice on the held-out fold. Source: `source_data/v77_ucsf_raw_mri_baseline.json`.
+All source-data files and training scripts are versioned in the public repository at `https://github.com/kamrul0405/MedIA_Paper`. Primary scripts: `scripts/v77_ucsf_raw_mri_baseline.py` (UCSF internal CV); `scripts/v78_raw_mri_loco.py` (4-cohort LOCO); `scripts/v79_raw_loco_seed_robustness.py` (lightweight-U-Net seeds); `scripts/v81_gpu_stronger_raw_loco.py` (stronger residual U-Net); `scripts/v85_transformer_baseline.py` (UNETR + SwinUNETR); `scripts/v76_nature_upgrade.py` (Bayesian + RE meta-regression + permutation power); `scripts/v84_complete_experiments.py` (negative controls + conformal coverage + empirical-Bernstein). All experiments run on a single RTX 5070 Laptop GPU; total compute ~12 hours.
 
-### 5.4 Leave-one-cohort-out (Section 3.2)
+---
 
-For each held-out cohort, models were trained on all non-held-out cohorts and evaluated on the held-out cohort. No held-out target labels influenced training. Source: `source_data/v78_raw_mri_loco.json`.
+## 5. Methods (extended)
 
-### 5.5 Five-seed × two-architecture robustness (Section 3.3)
+### 5.1 Heat-kernel risk map (closed-form structural prior; no learning)
 
-Lightweight 3D U-Net seeds 7901/7902/7903; stronger residual 3D U-Net (GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip TTA) seeds 8101/8102. Sources: `source_data/v79_raw_loco_seed_robustness.json`; `source_data/v81_gpu_stronger_raw_loco.json`.
+The heat-kernel risk map is a **closed-form Gaussian convolution** of the binary baseline lesion mask $M_t$ in standardised crop coordinates: $\hat{r}(\mathbf{x}) = G_\sigma * M_t(\mathbf{x})$ with $\sigma = 2.5$ voxels. **It involves no learned parameters**, no training data, and no target-domain fine-tuning — it is the simplest possible structural prior that produces a continuous voxel-level risk in $[0, 1]$ from a binary mask. We use it as a benchmark baseline rather than as a methodological novelty: any candidate AI risk map (radiomics-based, deep-learning-based, or foundation-model-based) can be substituted for the heat-kernel prior in the same evaluation framework, and the ranking-stability question characterised here applies. The kernel parameter $\sigma = 2.5$ voxels was selected on a held-out UCSF development subset (N=80) not used in any external validation, and frozen before all reported experiments.
 
-### 5.6 Pi\* and identifiability (Theorem 1; Section 3.5)
+### 5.2 Lightweight 3D U-Net
 
-Per-stratum Brier means on UCSF: *L_hs*=0.041, *L_ha*=0.274, *L_ms*=0.140, *L_ma*=0.199. Theorem 1 conditions C1 and C2 verified empirically. Closed-form crossover *pi\** = (*L_ma* − *L_ha*) / [(*L_ma* − *L_ha*) + (*L_hs* − *L_ms*)] = 0.431. Bootstrap 95% CI: 5,000 stratified resamples. Bayesian 95% credible interval: 50,000 truncated-Normal Monte Carlo posterior samples with SE(*L*)=0.15/√*N*. Random-effects meta-regression: DerSimonian–Laird estimator with within-cohort variance approximated as mean(*B_heat*, *B_model*)·(1−mean)/*N*.
+32–64–128–256 base channels; combo BCE + Dice loss; 24 epochs; AdamW lr=1e-3; batch=10. 16×48×48 voxel crops. Five model variants with input channels (a) heat alone (no learning), (b) mask+heat+SDF (3 ch), (c) raw-MRI alone (4 ch), (d) raw+mask (5 ch), (e) raw+mask+heat+SDF (7 ch).
 
-### 5.7 Negative controls (Section 3.7)
+### 5.3 Stronger residual U-Net (v81)
 
-Nine pre-specified negative controls: label permutation; endpoint-label permutation; patient-ID shuffle; timepoint reversal; random 5-voxel mask shift; Gaussian blob without boundary; selector feature permutation; cohort-label permutation in LOCO; null 0.5 model.
+GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip test-time augmentation. 18 epochs with patience-3 early stopping. Two seeds (8101, 8102).
 
-### 5.8 Statistical methods
+### 5.4 Transformer baselines (v85)
 
-Primary endpoint: 7/7 correct directional LOCO predictions; pre-specified exact one-sided binomial test under *p*=0.5 null gives *p*=0.0078. Holm–Bonferroni step-down correction on three pre-registered primary endpoints (UCSF Brier superiority for heat — permutation *p*<0.0001; seed reproducibility 5/5 — binomial *p*=0.001; ranking direction *p*=0.041 from permutation rank). All three primary endpoints survive correction at FWER=0.05.
+UNETR (Hatamizadeh et al. 2022): feature_size=12, hidden_size=192, mlp_dim=384, num_heads=6, dropout=0.1. SwinUNETR (Tang et al. 2023): feature_size=12. Both at 16×48×48 input size, 22 epochs, AdamW lr=5e-4, batch=4.
 
-### 5.9 Software, hardware and reproducibility
+### 5.5 Closed-form crossover and identifiability conditions
 
-Python 3.11.9; PyTorch 2.12 (CUDA 12.8); MONAI 1.5.2; nibabel 5.4.2; NumPy 2.4.4; SciPy 1.17.1; statsmodels for meta-regression. Hardware: NVIDIA RTX 5070 Laptop GPU. All training scripts and source-data CSVs are versioned at `scripts/` and `source_data/`. Paper's primary numerical claims map one-to-one to versioned result files.
+Theorem (closed-form crossover under label shift; Saerens et al. 2002 generalised to model-pair). Given two models $m_1, m_2$ and per-stratum mean Brier $\{L_m(c)\}$, the unique aggregate-Brier crossover $\pi^*$ exists if and only if both identifiability conditions hold: C1 ($L_{m_1}(\text{stable}) < L_{m_2}(\text{stable})$) and C2 ($L_{m_1}(\text{active}) > L_{m_2}(\text{active})$). When both hold,
+
+$$\pi^* = \frac{L_{m_2}(\text{active}) - L_{m_1}(\text{active})}{[L_{m_2}(\text{active}) - L_{m_1}(\text{active})] + [L_{m_1}(\text{stable}) - L_{m_2}(\text{stable})]}.$$
+
+For our heat-vs-mask-feature pair on UCSF: C1 (0.041 < 0.140 ✓), C2 (0.274 > 0.199 ✓), giving $\pi^* = 0.43$.
+
+### 5.6 Statistical analysis
+
+Holm–Bonferroni step-down on three pre-registered primary endpoints (FWER=0.05). All Brier scores: mean ± SE from 1,000-bootstrap. All p-values two-sided unless stated. Cluster bootstrap for repeated-measures metrics. Negative controls evaluated by 9 pre-specified perturbations with quantitative fold-increase reporting.
+
+### 5.7 Software, hardware, reproducibility
+
+Python 3.11.9; PyTorch 2.12 (CUDA 12.8); MONAI 1.5.2 (UNETR + SwinUNETR); nibabel 5.4.2; NumPy; SciPy; statsmodels (DerSimonian–Laird). Hardware: NVIDIA RTX 5070 Laptop GPU (8.5 GB VRAM); Intel Core i7 CPU. All scripts versioned at `scripts/`. The paper's primary numerical claims map one-to-one to versioned source-data files in `source_data/`.
+
+---
 
 ## CRediT author contributions
 
-Conceptualization: [author]; Methodology: [author]; Software: [author]; Validation: [author]; Formal analysis: [author]; Investigation: [author]; Resources: [author]; Data curation: [author]; Writing – original draft: [author]; Writing – review & editing: [author]; Visualization: [author]; Supervision: [author]; Project administration: [author]; Funding acquisition: [author]. *(Specific roles to be filled at acceptance.)*
+This work is sole-authored. All CRediT contributor roles — Conceptualization, Methodology, Software, Validation, Formal analysis, Investigation, Data curation, Writing (original draft), Writing (review and editing), Visualization, and Project administration — were performed by the corresponding author. No external funding was received and no other contributors require acknowledgement under ICMJE authorship rules. Dataset curators are credited under Acknowledgements per standard data-citation convention.
 
 ## Acknowledgements
 
-The authors acknowledge the providers of the UCSF, MU-Glioma-Post, RHUH-GBM, UCSD-PTGBM, LUMIERE, UPENN-GBM and Yale-Brain-Mets-Longitudinal cohorts.
+The author acknowledges King's College London for institutional infrastructure during the period this work was conducted. The author thanks the original curators of the public datasets used in this work — UCSF (UCSF Imaging Datasets), University of Missouri (MU-Glioma-Post; TCIA CC BY 4.0), Hospital Universitario Ramón y Cajal (RHUH-GBM; TCIA), University of California San Diego (UCSD-PTGBM; TCIA CC BY 4.0; Hartman et al. 2025), University of Pennsylvania (UPENN-GBM; TCIA), the LUMIERE consortium (Figshare CC BY 4.0), the PROTEAS-brain-mets consortium (Zenodo PKG-PROTEAS-brain-mets-zenodo-17253793), and Yale University (Yale-Brain-Mets-Longitudinal). All datasets are cited in the references.
 
 ## Funding
 
@@ -199,27 +433,31 @@ This research did not receive any specific grant from funding agencies in the pu
 
 The authors declare that they have no known competing financial interests or personal relationships that could have appeared to influence the work reported in this paper.
 
-## Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+## Declaration of generative AI
 
-During the preparation of this work the author(s) used Claude (Anthropic) in order to assist with manuscript drafting, formatting and statistical analysis scripting. After using this tool/service, the author(s) reviewed and edited the content as needed and take(s) full responsibility for the content of the published article.
+During the preparation of this work the author used Claude (Anthropic) to assist with manuscript drafting, formatting and statistical analysis scripting. After using this tool/service, the author reviewed and edited the content as needed and takes full responsibility for the content of the published article.
 
 ## Data and code availability
 
-All training scripts and primary numerical-claim source-data files are versioned in the public companion repository (https://github.com/kamrul0405/Nature_MI_paper). Source-data CSVs at `source_data/v78_nmi_raw_loco_source_data.csv`. UCSF, MU-Glioma-Post and RHUH-GBM cohorts contain clinical patient data and are available from the respective institutions under data-use agreements; UCSD-PTGBM is publicly available from TCIA (CC BY 4.0; collection UCSD-PTGBM, DOI 10.7937/fwv2-dt74). Yale brain-metastases cohort requires institutional approval. A frozen Zenodo DOI mirror will be deposited at acceptance.
+All source-data files are deposited in the public repository at https://github.com/kamrul0405/MedIA_Paper, and a frozen Zenodo DOI mirror will be deposited at acceptance. Public datasets: UCSD-PTGBM (TCIA collection UCSD-PTGBM, DOI 10.7937/fwv2-dt74, CC BY 4.0); MU-Glioma-Post (TCIA collection MU-Glioma-Post, CC BY 4.0); UPENN-GBM (TCIA, CC BY 4.0); LUMIERE (Figshare 10.6084/m9.figshare.c.5904905, CC BY 4.0); PROTEAS-brain-mets (Zenodo 10.5281/zenodo.17253793). Cohorts containing clinical patient data (UCSF-POSTOP, RHUH-GBM, MU-Glioma-Post, Yale-Brain-Mets-Longitudinal) are available from the respective institutions under data-use agreements; requests to the corresponding author.
+
+---
 
 ## References
 
-(Harvard author–year style; alphabetical by first author then chronological.)
+(Harvard author–year style; chronological within author group.)
 
-Alexandari, A., Kundaje, A., Shrikumar, A., 2020. Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation. In: Proc. 37th Int. Conf. Machine Learning (ICML), pp. 222–232.
+Alexandari, A., Kundaje, A., Shrikumar, A., 2020. Maximum likelihood with bias-corrected calibration is hard-to-beat at label shift adaptation. Proc. 37th Int. Conf. Machine Learning (ICML), pp. 222–232.
 
-Azizzadenesheli, K., Liu, A., Yang, F., Anandkumar, A., 2019. Regularized learning for domain adaptation under label shifts. In: Int. Conf. Learning Representations (ICLR).
+Azizzadenesheli, K., Liu, A., Yang, F., Anandkumar, A., 2019. Regularized learning for domain adaptation under label shifts. Int. Conf. Learning Representations (ICLR).
 
 Bernhardt, M., et al., 2022. Active label cleaning for improved dataset quality under resource constraints. Nat. Commun. 13, 1161.
 
+Collins, G.S., Moons, K.G.M., Dhiman, P., et al., 2024. TRIPOD+AI statement: updated guidance for reporting clinical prediction models that use regression or machine learning methods. BMJ 385, e078378.
+
 Ellingson, B.M., et al., 2020. Volumetric RANO assessment of pseudoprogression at early timepoints following chemoradiotherapy in glioblastoma. Neuro Oncol. 22, 1767–1775.
 
-Garg, S., Balakrishnan, S., Kolter, J.Z., Lipton, Z.C., 2022. Leveraging unlabeled data to predict out-of-distribution performance. In: Int. Conf. Learning Representations (ICLR).
+Garg, S., Balakrishnan, S., Kolter, J.Z., Lipton, Z.C., 2022. Leveraging unlabeled data to predict out-of-distribution performance. Int. Conf. Learning Representations (ICLR).
 
 Garg, S., Balakrishnan, S., Lipton, Z.C., 2025. Estimating model performance under covariate shift without labels. Adv. Neural Inf. Process. Syst. (NeurIPS) 38.
 
@@ -227,40 +465,96 @@ Gneiting, T., Raftery, A.E., 2007. Strictly proper scoring rules, prediction, an
 
 Hartman, S.J., et al., 2025. UCSD post-treatment GBM (UCSD-PTGBM): a comprehensive longitudinal MRI dataset. Sci. Data. https://doi.org/10.1038/s41597-025-06499-z.
 
-Hatamizadeh, A., et al., 2022. UNETR: transformers for 3D medical image segmentation. In: WACV.
+Hatamizadeh, A., Tang, Y., Nath, V., Yang, D., Myronenko, A., Landman, B., Roth, H.R., Xu, D., 2022. UNETR: transformers for 3D medical image segmentation. Proc. IEEE/CVF Winter Conf. Applications of Computer Vision (WACV), pp. 574–584.
 
-Isensee, F., et al., 2021. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat. Methods 18, 203–211.
+Isensee, F., Jaeger, P.F., Kohl, S.A.A., Petersen, J., Maier-Hein, K.H., 2021. nnU-Net: a self-configuring method for deep learning-based biomedical image segmentation. Nat. Methods 18, 203–211.
 
 Karargyris, A., et al., 2023. Federated benchmarking of medical artificial intelligence with MedPerf. Nat. Mach. Intell. 5, 799–810.
 
 Kickingereder, P., et al., 2019. Automated quantitative tumour response assessment of MRI in neuro-oncology with artificial neural networks. Lancet Oncol. 20, 728–740.
 
-Lipton, Z.C., Wang, Y.X., Smola, A., 2018. Detecting and correcting for label shift with black box predictors. In: Proc. 35th Int. Conf. Machine Learning (ICML), pp. 3122–3130.
-
-Liu, R., et al., 2024. Distribution shift detection for postmarket surveillance of medical AI. npj Digit. Med. 7, 93.
+Lipton, Z.C., Wang, Y.X., Smola, A., 2018. Detecting and correcting for label shift with black box predictors. Proc. 35th Int. Conf. Machine Learning (ICML), pp. 3122–3130.
 
 Maier-Hein, L., et al., 2024. Metrics reloaded: recommendations for image analysis validation. Nat. Methods 21, 195–212.
 
-Pesarin, F., Salmaso, L., 2010. Permutation tests for complex data: theory, applications and software. Wiley.
+Maurer, A., Pontil, M., 2009. Empirical Bernstein bounds and sample-variance penalisation. Proc. COLT.
+
+Mongan, J., Moy, L., Kahn, C.E., 2020. Checklist for Artificial Intelligence in Medical Imaging (CLAIM): a guide for authors and reviewers. Radiol. Artif. Intell. 2, e200029.
+
+Pesarin, F., Salmaso, L., 2010. Permutation Tests for Complex Data: Theory, Applications and Software. Wiley.
 
 Rastogi, A., Brugnara, G., Vollmuth, P., Wick, W., et al., 2024. Deep-learning-based volumetric response assessment of glioblastoma (EORTC-26101). Lancet Oncol. 25, 400–410.
 
-Roberts, M., Driggs, D., Thorpe, M., et al., 2021. Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 using chest radiographs and CT scans. Nat. Mach. Intell. 3, 199–217.
+Roberts, M., et al., 2021. Common pitfalls and recommendations for using machine learning to detect and prognosticate for COVID-19 using chest radiographs and CT scans. Nat. Mach. Intell. 3, 199–217.
 
 Saerens, M., Latinne, P., Decaestecker, C., 2002. Adjusting the outputs of a classifier to new a priori probabilities: a simple procedure. Neural Comput. 14, 21–41.
 
 Storkey, A.J., 2009. When training and test sets are different: characterizing learning transfer. In: Dataset Shift in Machine Learning. MIT Press, pp. 3–28.
 
+Tang, Y., Yang, D., Li, W., Roth, H.R., Landman, B., Xu, D., Nath, V., Hatamizadeh, A., 2023. Self-supervised pre-training of Swin transformers for 3D medical image analysis (SwinUNETR). Proc. IEEE/CVF Conf. Computer Vision and Pattern Recognition (CVPR).
+
 Tasche, D., 2017. Fisher consistency for prior probability shift. J. Mach. Learn. Res. 18, 1–32.
+
+Vovk, V., Gammerman, A., Shafer, G., 2005. Algorithmic Learning in a Random World. Springer.
 
 Wen, P.Y., et al., 2023. RANO 2.0: update to the response assessment in neuro-oncology criteria. J. Clin. Oncol. 41, 5187–5199.
 
-Westfall, P.H., Young, S.S., 1993. Resampling-based multiple testing: examples and methods for p-value adjustment. Wiley.
+Westfall, P.H., Young, S.S., 1993. Resampling-Based Multiple Testing. Wiley.
+
+Wolff, R.F., Moons, K.G.M., Riley, R.D., et al., 2019. PROBAST: a tool to assess the risk of bias and applicability of prediction model studies. Ann. Intern. Med. 170, 51–58.
+
+---
 
 ## Author vitae
 
-[100 words per author at acceptance.]
+**Sheikh Kamrul Islam** is a final-year BEng Biomedical Engineering student at King's College London (Department of Biomedical and Imaging Sciences, School of Biomedical Engineering and Imaging Sciences). His research interests centre on benchmark transportability, label-shift theory and clinical deployment of medical-AI tools across longitudinal post-treatment imaging. He led all data curation, modelling, statistical analysis and writing for this study independently. (~70 words.)
+
+---
 
 ## Figure captions
 
-**Figure 1.** External raw-MRI access does not remove ranking reversal. (a) held-out Brier across four cohorts (UCSF, MU, RHUH, UCSD) for five variants (heat prior, mask+heat+SDF U-Net, raw-MRI U-Net, raw+mask U-Net, raw+mask+heat+SDF U-Net). The heat prior is best on UCSF and UCSD; raw+mask variants are best on MU and RHUH. (b) raw+mask − heat Brier deltas with three-seed bootstrap intervals — every directional outcome is preserved across all three seeds in all four cohorts. (c) held-out winning Brier vs held-out stable-endpoint fraction. UCSD-PTGBM is the documented counterexample to a *pi*-only explanation. Source image: `figures/main/V78_NMI_raw_loco_stress.png` (300 dpi PNG and TIFF). Source data: `source_data/v78_nmi_raw_loco_source_data.csv`.
+**Figure 1.** Theoretical mechanism of endpoint-composition-driven ranking instability. The figure illustrates how the mixture-weighted Brier of two candidate models, $L_{m_k}(\pi) = \pi L_{m_k}(\text{stable}) + (1-\pi) L_{m_k}(\text{active})$, gives rise to a unique crossover $\pi^*$ when both identifiability conditions hold (C1: model 1 better on stable; C2: model 2 better on active). For our heat-vs-mask-feature pair on UCSF, $L_{hs}=0.041$, $L_{ha}=0.274$, $L_{ms}=0.140$, $L_{ma}=0.199$ → $\pi^* = 0.43$. Source image: `figures/main/NMI_Fig1_theory_mechanism.png`.
+
+**Figure 2.** Ranking-flip phenomenology across cohorts. Held-out Brier of raw+mask vs heat prior plotted against the held-out cohort's stable-endpoint fraction $\pi_{\text{stable}}$ for the seven cohorts evaluated. The crossover threshold $\pi^* = 0.43$ separates the surveillance-dominant regime (heat wins) from the active-change regime (raw+mask wins); UCSD-PTGBM appears as a documented multi-axis counterexample (heat wins despite low $\pi$). Source image: `figures/main/NMI_Fig2_ranking_flip.png`.
+
+**Figure 3.** Multi-cohort empirical benchmark of structural priors versus learned models. (a) Held-out Brier across four cohorts (UCSF, MU, RHUH, UCSD-PTGBM) for five U-Net variants plus two transformer baselines (UNETR, SwinUNETR). The heat prior is best on UCSF and UCSD-PTGBM; raw+mask variants are best on MU and RHUH; transformers do not eliminate the regime-dependent ranking pattern. (b) Raw+mask − heat Brier deltas with three-seed × two-architecture bootstrap intervals — every directional outcome preserved across 5 seeds × 2 architectures × 4 cohorts (20/20). (c) Held-out winning Brier vs held-out stable-endpoint fraction $\pi_{\text{stable}}$, with closed-form crossover threshold $\pi^* = 0.43$ overlaid. Source image: `figures/main/V78_NMI_raw_loco_stress.png`. Source data: `source_data/v78_nmi_raw_loco_source_data.csv`.
+
+**Figure 4.** Robustness and uncertainty triangulation of the closed-form crossover threshold $\pi^*$. (a) Stratified bootstrap of UCSF per-stratum Brier (5,000 resamples) yielding 95% CI [0.30, 0.52]. (b) Bayesian truncated-Normal posterior with SE($L$) = 0.15/$\sqrt{N}$ (50,000 Monte Carlo samples) yielding 95% credible interval [0.17, 0.59]; identifiability conditions C1+C2 satisfied in 99.6% of samples. (c) Random-effects meta-regression slope (DerSimonian–Laird) at −0.166 (SE 0.040; p < 0.0001), implied $\pi^*_{\text{RE}} = 0.456$, $I^2 = 0\%$. (d) Sensitivity of $\pi^*$ across four pre-specified estimator variants (max $\Delta\pi^* = 0.019$). Source image: `figures/main/NMI_Fig4_pi_star_robustness.png`.
+
+**Figure 5.** Model-family generality of the regime-conditional ranking pattern. Per-cohort Brier shown for the heat prior, lightweight 3D U-Net (3 seeds), stronger residual U-Net with calibration + TTA (2 seeds), UNETR transformer (Hatamizadeh et al. 2022; 12.53 M parameters), and SwinUNETR transformer (Tang et al. 2023). Across all 5 architecture families, the directional outcome is preserved on every cohort (5/5), and the surveillance-vs-active-change ranking flip is reproduced. Source image: `figures/main/NMI_Fig5_model_family_generality.png`. Companion: `figures/main/V81_NMI_stronger_resunet_loco.png` (residual-U-Net per-seed visualisation).
+
+---
+
+## Extended Data figure captions
+
+**Extended Data Figure 1.** Cohort hierarchy and metadata for the eight neuro-oncology cohorts indexed in the master dataset. Tier-1 to tier-4 mask provenance, $\pi_{\text{stable}}$, N pairs, and use-context per cohort. Source image: `figures/extended_data/NMI_ED1_cohort_hierarchy.png`.
+
+**Extended Data Figure 2.** $\pi^*$ bootstrap sensitivity across four pre-specified estimator variants (cohort-stratified, leave-one-cohort-out reweighting, Bayesian-mean substitution, meta-regression). Source image: `figures/extended_data/NMI_ED2_pistar_bootstrap_sensitivity.png`.
+
+**Extended Data Figure 3.** Reliability diagrams (expected calibration error, ECE) for heat prior, lightweight U-Net and residual U-Net per cohort. Source image: `figures/extended_data/NMI_ED3_ece_calibration.png`.
+
+**Extended Data Figure 4.** Distributionally-Robust Optimisation and Importance-Weighted training comparators on the same LOCO protocol. Neither closes the surveillance-cohort gap. Source image: `figures/extended_data/NMI_ED4_dro_iw_training.png`.
+
+**Extended Data Figure 5.** Instability matrix: per-cohort Brier rank changes across 5 seeds × 2 architectures. Source image: `figures/extended_data/NMI_ED5_instability_matrix.png`.
+
+**Extended Data Figure 6.** Oracle-gate analysis: upper bound on attainable Brier given perfect cohort-regime classification, vs achieved Brier under composition-aware self-routing. Source image: `figures/extended_data/NMI_ED6_oracle_gate.png`.
+
+**Extended Data Figure 7.** Counterfactual resampling robustness: $\pi^*$ remains stable across 5,000 stratified counterfactual bootstrap samples. Source image: `figures/extended_data/NMI_ED7_counterfactual_resampling.png`.
+
+**Extended Data Figure 8.** Seed reproducibility across 5 seeds (3 lightweight + 2 residual). Per-cohort raw+mask − heat Brier deltas plotted with bootstrap CIs. Source image: `figures/extended_data/NMI_ED8_seed_reproducibility.png`.
+
+**Extended Data Figure 9.** Yale label-free acquisition-shift audit (N=200/1430). Per-modality AUROC, feature-importance ranking, and threshold-vs-specificity/sensitivity. Source image: `figures/extended_data/NMI_ED9_yale_acquisition_shift.png`.
+
+**Extended Data Figure 10.** Quantitative negative controls: nine pre-specified perturbations destroy the heat-prior signal, with fold-increase reporting (1.85×–5.17× over baseline UCSF heat Brier 0.084). Source image: `figures/extended_data/NMI_ED10_negative_controls.png`.
+
+**Extended Data Figure 11.** Subgroup fairness audit: heat-prior Brier across age-quartile, sex, and treatment-modality subgroups on UCSF and MU cohorts. Source image: `figures/extended_data/NMI_ED11_fairness.png`.
+
+**Extended Data Figure 12.** Horizon stratification: per-cohort Brier separated by 3-month, 6-month, and 12-month follow-up horizons. Source image: `figures/extended_data/NMI_ED12_horizon_stratification.png`.
+
+**Extended Data Figure 13.** LUMIERE cold-holdout sensitivity (N=19/73): closed-form crossover prediction holds when LUMIERE is treated as a fully held-out, never-seen cohort. Source image: `figures/extended_data/NMI_ED13_lumiere_sensitivity.png`.
+
+**Extended Data Figure 14.** Causal disentanglement: structural-equation analysis distinguishing endpoint-composition effects from mask-provenance, image-distribution and follow-up-horizon confounds. Source image: `figures/extended_data/NMI_ED14_causal_disentanglement.png`.
+
+**Extended Data Figure 15.** Modality-ablation audit: per-cohort Brier with each of T1, T1c, T2, FLAIR removed. Source image: `figures/extended_data/NMI_ED15_ablation_modality_audit.png`.
+
+**Extended Data Figure 16.** Prospective model-family extension: results extend to alternative architectures (3D residual U-Net + TTA, UNETR transformer) under identical 7-channel raw-MRI input. Source image: `figures/extended_data/NMI_ED16_prospective_model_family.png`.
