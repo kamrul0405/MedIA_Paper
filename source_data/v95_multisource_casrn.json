@@ -1,0 +1,57 @@
+{
+  "version": "v95",
+  "experiment": "Multi-source CASRN with pi-estimator trained on 3 source cohorts",
+  "timestamp": "2026-05-07T15:40:27",
+  "cohorts_per_pi_observed": {
+    "UCSF-POSTOP": 0.8108108108108109,
+    "MU-Glioma-Post": 0.3443708609271523,
+    "RHUH-GBM": 0.2894736842105263,
+    "UCSD-PTGBM": 0.24324324324324326
+  },
+  "results": [
+    {
+      "held_out": "UCSF-POSTOP",
+      "pi_observed": 0.8108108108108109,
+      "pi_estimated_multi_source": 0.3230748772621155,
+      "alpha_routing": 0.3230748772621155,
+      "casrn_brier_mean": 0.1067394731767677,
+      "casrn_brier_sd": 0.051296089328297045,
+      "learned_brier_mean": 0.13393712559450618,
+      "learned_brier_sd": 0.053112206282203395,
+      "heat_brier_mean": 0.0843849817237414
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "pi_observed": 0.3443708609271523,
+      "pi_estimated_multi_source": 0.7092546820640564,
+      "alpha_routing": 0.7092546820640564,
+      "casrn_brier_mean": 0.25304994616188753,
+      "casrn_brier_sd": 0.1473036273227507,
+      "learned_brier_mean": 0.25727898153223544,
+      "learned_brier_sd": 0.128926774449264,
+      "heat_brier_mean": 0.25984641468608816
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "pi_observed": 0.2894736842105263,
+      "pi_estimated_multi_source": 0.6874182820320129,
+      "alpha_routing": 0.6874182820320129,
+      "casrn_brier_mean": 0.3921967429157935,
+      "casrn_brier_sd": 0.19026671542845397,
+      "learned_brier_mean": 0.26389359996507045,
+      "learned_brier_sd": 0.07734812119385465,
+      "heat_brier_mean": 0.48312593663209363
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "pi_observed": 0.24324324324324326,
+      "pi_estimated_multi_source": 0.6142852306365967,
+      "alpha_routing": 0.6142852306365967,
+      "casrn_brier_mean": 0.09258009488552783,
+      "casrn_brier_sd": 0.08774525009971064,
+      "learned_brier_mean": 0.11746137912662045,
+      "learned_brier_sd": 0.10419051023593284,
+      "heat_brier_mean": 0.08745592594724812
+    }
+  ]
+}
