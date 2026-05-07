@@ -187,9 +187,13 @@ The four-cohort raw-MRI LOCO results are visualised in Figure 3 (per-cohort Brie
 
 *Bold = lowest Brier per row. Source: `source_data/v78_raw_mri_loco.json`.*
 
-### 3.3 Five-seed × two-architecture directional preservation: 20/20
+### 3.3 Multi-seed × multi-architecture directional preservation (random-effects analysis)
 
-The raw+mask comparator was re-trained from three lightweight-U-Net seeds (7901/7902/7903) and two stronger residual-U-Net seeds (8101/8102 — residual 3D U-Net with GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip TTA). Across all 5 seeds × 4 cohorts × 2 architectures = 20 train-test conditions, every directional outcome is preserved (binomial p = 9.5×10⁻⁷ under p=0.5 null). Per-cohort raw+mask − heat Brier deltas:
+The raw+mask comparator was re-trained from three lightweight-U-Net seeds (7901/7902/7903) and two stronger residual-U-Net seeds (8101/8102 — residual 3D U-Net with GroupNorm, dropout, source-validation early stopping, source-only affine calibration, H/W-flip TTA). Across all 5 seeds × 4 cohorts × 2 architectures, every directional outcome is preserved.
+
+**Primary statistical claim.** The headline statistical evidence is the **per-cohort directional accuracy across N = 7 cohorts** (binomial p = 0.0078, §3.1) — these are the genuinely-independent observations under the LOCO design. The within-cohort multi-seed evidence is *supportive*, not primary: seed-replicates within the same architecture share both training data and architectural inductive bias and therefore are *not* statistically independent in the strict sense. We report the within-cohort consistency below as a robustness check rather than as a multiplicative independent-trial inflation.
+
+**Within-cohort robustness (per-cohort SD across seeds is small relative to the heat-vs-learned delta):**
 
 | Cohort | Lightweight seeds (3) | Stronger ResUNet seeds (2) | Direction |
 |---|---|---|---|
@@ -427,9 +431,29 @@ All source-data files and training scripts are versioned in the public repositor
 
 ## 5. Methods (extended)
 
-### 5.1 Heat-kernel risk map (closed-form structural prior; no learning)
+### 5.1 Heat-kernel structural prior — formal physics derivation
 
-The heat-kernel risk map is a **closed-form Gaussian convolution** of the binary baseline lesion mask $M_t$ in standardised crop coordinates: $\hat{r}(\mathbf{x}) = G_\sigma * M_t(\mathbf{x})$ with $\sigma = 2.5$ voxels. **It involves no learned parameters**, no training data, and no target-domain fine-tuning — it is the simplest possible structural prior that produces a continuous voxel-level risk in $[0, 1]$ from a binary mask. We use it as a benchmark baseline rather than as a methodological novelty: any candidate AI risk map (radiomics-based, deep-learning-based, or foundation-model-based) can be substituted for the heat-kernel prior in the same evaluation framework, and the ranking-stability question characterised here applies. The kernel parameter $\sigma = 2.5$ voxels was selected on a held-out UCSF development subset (N=80) not used in any external validation, and frozen before all reported experiments.
+The heat-kernel structural prior is a **closed-form solution to the heat equation** applied to the baseline lesion mask. We make this physical interpretation explicit because it grounds the prior in classical PDE theory rather than presenting it as an ad-hoc smoothing.
+
+**Definition.** Given the binary baseline lesion mask $M_t(\mathbf{x}) \in \{0, 1\}$ in standardised crop coordinates $\mathbf{x} \in \mathbb{R}^3$, the heat-kernel risk map at scale parameter $\sigma$ is
+
+$$\hat{r}_\sigma(\mathbf{x}) = G_\sigma * M_t(\mathbf{x}) = \int_{\mathbb{R}^3} G_\sigma(\mathbf{x} - \mathbf{y}) \, M_t(\mathbf{y}) \, d\mathbf{y},$$
+
+where $G_\sigma(\mathbf{x}) = (2\pi\sigma^2)^{-3/2} \exp\left(-\|\mathbf{x}\|^2 / (2\sigma^2)\right)$ is the 3D isotropic Gaussian kernel. The Gaussian kernel is the *fundamental solution* of the heat equation
+
+$$\frac{\partial u}{\partial t} = \tfrac{1}{2}\nabla^2 u, \quad u(\mathbf{x}, 0) = M_t(\mathbf{x}),$$
+
+evaluated at evolution time $t = \sigma^2 / 2$. Setting $\sigma = 2.5$ voxels therefore corresponds to evolving the binary mask under isotropic diffusion for $t = 3.125$ voxel-time units, by which time the lesion's characteristic length $\ell_{\text{lesion}}$ (median $\sim 25$ voxels in our cohort) has been spatially correlated over a scale $\sigma / \ell_{\text{lesion}} \approx 0.10$ — small relative to the lesion's bounding-box, large relative to the lesion's positive-voxel density (~0.4–0.9% of the cube). The interpretation is therefore: **the heat prior is a parabolic-PDE smoothing operator over a highly sparse lesion support, not a learned global image classifier** (multi-site geometry summary in `source_data/v92_multisite_physics_atlas.json`).
+
+**Information-theoretic interpretation.** Under the Saerens et al. (2002) label-shift assumption $P_{\text{target}}(Y) \neq P_{\text{source}}(Y)$ but $P(\mathbf{x} | Y)$ unchanged, the optimal-Brier predictor $f^*$ minimises the expected Brier loss $\mathbb{E}[(f(\mathbf{x}) - Y)^2]$. For a binary Y this is equivalent to the Bayes-optimal class-posterior estimator $f^*(\mathbf{x}) = P(Y=1 | \mathbf{x})$. The closed-form crossover $\pi^*$ in §2.5 emerges as the value of $\pi_{\text{target}}$ at which two candidate predictors $m_1, m_2$ achieve equal mixture-weighted Brier; it is a property of the *Bayesian decision boundary* in the simplex of cohort compositions, not a learned threshold. The information-theoretic decomposition
+
+$$L_m(\pi) - L_{m^*}(\pi) = \sum_{c \in \{\text{stable, active}\}} \pi_c \cdot D_{\text{Br}}(m \| m^* | c),$$
+
+where $D_{\text{Br}}(m \| m^* | c)$ is the per-stratum Brier divergence of $m$ from the per-stratum optimal predictor, makes explicit that the regime-dependent ranking is a consequence of *unequal Brier divergences* across the two strata — exactly the asymmetry that the closed-form crossover quantifies.
+
+**Scale-space and choice of σ.** The kernel scale $\sigma = 2.5$ voxels was selected on a held-out UCSF development subset (N = 80) not used in any external validation, and frozen before all reported experiments. Under the scale-space framework (Lindeberg 1994; Witkin 1983), $\sigma$ corresponds to the structural scale at which lesion edges are first smoothly resolved. For our cohort the median lesion-equivalent radius is ~12 voxels, so $\sigma/r_{\text{lesion}} \approx 0.21$ — consistent with detecting peri-lesional risk at ~20% of lesion radius beyond the GTV boundary, the clinically relevant peri-tumour zone.
+
+**No learning required.** The heat-kernel involves *no learned parameters*, *no training data*, *no domain-specific fine-tuning*, and *no target-domain labels*. Any candidate learned voxel-wise method (radiomic, deep-learning-based, or foundation-model-based) can be substituted for the heat-kernel prior in the same evaluation framework with the same statistical infrastructure (cluster-bootstrap CIs, threshold sweeps, calibration, fairness, conformal coverage). The heat-kernel is therefore positioned as a **deliberately-simple physics-grounded benchmark baseline** rather than a methodological novelty in itself; the methodological novelty is the empirical demonstration of regime-dependent ranking instability across architecture families.
 
 ### 5.2 Lightweight 3D U-Net
 
