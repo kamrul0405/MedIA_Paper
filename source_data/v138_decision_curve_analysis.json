@@ -1,0 +1,439 @@
+{
+  "version": "v138",
+  "experiment": "Decision-curve analysis (Vickers & Elkin 2006) on PROTEAS-brain-mets",
+  "timestamp": "2026-05-08T19:23:56",
+  "n_followups": 126,
+  "n_patients": 44,
+  "thresholds_tau": [
+    0.1,
+    0.2,
+    0.3,
+    0.4,
+    0.5,
+    0.6,
+    0.7
+  ],
+  "n_bootstrap_replicates": 5000,
+  "results": {
+    "tau_0.1": {
+      "treatall": {
+        "mean": -0.108112,
+        "ci95": [
+          -0.108937,
+          -0.10719
+        ]
+      },
+      "persistence": {
+        "mean": 0.000947,
+        "ci95": [
+          0.000654,
+          0.001267
+        ]
+      },
+      "sigma_4.0": {
+        "mean": 0.001114,
+        "ci95": [
+          0.000732,
+          0.001518
+        ]
+      },
+      "sigma_7.0": {
+        "mean": 0.001003,
+        "ci95": [
+          0.000606,
+          0.001424
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": 0.001118,
+        "ci95": [
+          0.000737,
+          0.001524
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": 0.001012,
+        "ci95": [
+          0.000604,
+          0.001439
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": 0.000171,
+        "ci95": [
+          5.9e-05,
+          0.000293
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": 5.9e-05,
+        "ci95": [
+          -0.000118,
+          0.000241
+        ],
+        "excludes_zero": false
+      }
+    },
+    "tau_0.2": {
+      "treatall": {
+        "mean": -0.246626,
+        "ci95": [
+          -0.247563,
+          -0.245568
+        ]
+      },
+      "persistence": {
+        "mean": 0.000785,
+        "ci95": [
+          0.000484,
+          0.001114
+        ]
+      },
+      "sigma_4.0": {
+        "mean": 0.000787,
+        "ci95": [
+          0.000443,
+          0.001161
+        ]
+      },
+      "sigma_7.0": {
+        "mean": 0.000612,
+        "ci95": [
+          0.000252,
+          0.001014
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": 0.000784,
+        "ci95": [
+          0.000433,
+          0.001161
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": 0.000616,
+        "ci95": [
+          0.000236,
+          0.001026
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -2e-06,
+        "ci95": [
+          -7.7e-05,
+          7.8e-05
+        ],
+        "excludes_zero": false
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -0.000172,
+        "ci95": [
+          -0.000293,
+          -4.7e-05
+        ],
+        "excludes_zero": true
+      }
+    },
+    "tau_0.3": {
+      "treatall": {
+        "mean": -0.424723,
+        "ci95": [
+          -0.42581,
+          -0.423531
+        ]
+      },
+      "persistence": {
+        "mean": 0.000579,
+        "ci95": [
+          0.000267,
+          0.000919
+        ]
+      },
+      "sigma_4.0": {
+        "mean": 0.00053,
+        "ci95": [
+          0.000185,
+          0.000907
+        ]
+      },
+      "sigma_7.0": {
+        "mean": 0.000366,
+        "ci95": [
+          6e-06,
+          0.000756
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": 0.000522,
+        "ci95": [
+          0.000164,
+          0.000892
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": 0.000364,
+        "ci95": [
+          -3e-06,
+          0.000757
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -5.7e-05,
+        "ci95": [
+          -0.000108,
+          -5e-06
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -0.000217,
+        "ci95": [
+          -0.000292,
+          -0.000139
+        ],
+        "excludes_zero": true
+      }
+    },
+    "tau_0.4": {
+      "treatall": {
+        "mean": -0.662179,
+        "ci95": [
+          -0.663437,
+          -0.660813
+        ]
+      },
+      "persistence": {
+        "mean": 0.000305,
+        "ci95": [
+          -3.3e-05,
+          0.000651
+        ]
+      },
+      "sigma_4.0": {
+        "mean": 0.000306,
+        "ci95": [
+          -5.2e-05,
+          0.000672
+        ]
+      },
+      "sigma_7.0": {
+        "mean": 0.000173,
+        "ci95": [
+          -0.000169,
+          0.000542
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": 0.000251,
+        "ci95": [
+          -0.000107,
+          0.000633
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": 0.000121,
+        "ci95": [
+          -0.000248,
+          0.000525
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -5.2e-05,
+        "ci95": [
+          -8.2e-05,
+          -2.1e-05
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -0.000183,
+        "ci95": [
+          -0.000229,
+          -0.000136
+        ],
+        "excludes_zero": true
+      }
+    },
+    "tau_0.5": {
+      "treatall": {
+        "mean": -0.994586,
+        "ci95": [
+          -0.996073,
+          -0.992875
+        ]
+      },
+      "persistence": {
+        "mean": -8.3e-05,
+        "ci95": [
+          -0.000467,
+          0.000307
+        ]
+      },
+      "sigma_4.0": {
+        "mean": 8.8e-05,
+        "ci95": [
+          -0.000263,
+          0.000463
+        ]
+      },
+      "sigma_7.0": {
+        "mean": -3e-06,
+        "ci95": [
+          -0.000321,
+          0.000334
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": -0.000113,
+        "ci95": [
+          -0.000512,
+          0.000305
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": -0.000213,
+        "ci95": [
+          -0.000612,
+          0.000196
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -3.1e-05,
+        "ci95": [
+          -4.7e-05,
+          -1.6e-05
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -0.00013,
+        "ci95": [
+          -0.000158,
+          -0.000102
+        ],
+        "excludes_zero": true
+      }
+    },
+    "tau_0.6": {
+      "treatall": {
+        "mean": -1.493266,
+        "ci95": [
+          -1.495163,
+          -1.491216
+        ]
+      },
+      "persistence": {
+        "mean": -0.000663,
+        "ci95": [
+          -0.00115,
+          -0.000191
+        ]
+      },
+      "sigma_4.0": {
+        "mean": -0.000136,
+        "ci95": [
+          -0.000506,
+          0.000233
+        ]
+      },
+      "sigma_7.0": {
+        "mean": -0.000162,
+        "ci95": [
+          -0.00045,
+          0.000122
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": -0.000683,
+        "ci95": [
+          -0.001188,
+          -0.000204
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": -0.000737,
+        "ci95": [
+          -0.001238,
+          -0.000248
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -1.5e-05,
+        "ci95": [
+          -2.3e-05,
+          -8e-06
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -7.5e-05,
+        "ci95": [
+          -9.2e-05,
+          -5.8e-05
+        ],
+        "excludes_zero": true
+      }
+    },
+    "tau_0.7": {
+      "treatall": {
+        "mean": -2.324313,
+        "ci95": [
+          -2.326861,
+          -2.321485
+        ]
+      },
+      "persistence": {
+        "mean": -0.001631,
+        "ci95": [
+          -0.002311,
+          -0.001
+        ]
+      },
+      "sigma_4.0": {
+        "mean": -0.00037,
+        "ci95": [
+          -0.000773,
+          1.9e-05
+        ]
+      },
+      "sigma_7.0": {
+        "mean": -0.000282,
+        "ci95": [
+          -0.000542,
+          -2.2e-05
+        ]
+      },
+      "bimodal_4.0": {
+        "mean": -0.001645,
+        "ci95": [
+          -0.002304,
+          -0.001009
+        ]
+      },
+      "bimodal_7.0": {
+        "mean": -0.001673,
+        "ci95": [
+          -0.002354,
+          -0.001019
+        ]
+      },
+      "bimodal_4.0_vs_persistence_delta": {
+        "mean": -5e-06,
+        "ci95": [
+          -8e-06,
+          -3e-06
+        ],
+        "excludes_zero": true
+      },
+      "bimodal_7.0_vs_persistence_delta": {
+        "mean": -3.5e-05,
+        "ci95": [
+          -4.5e-05,
+          -2.5e-05
+        ],
+        "excludes_zero": true
+      }
+    }
+  }
+}

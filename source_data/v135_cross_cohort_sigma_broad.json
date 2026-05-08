@@ -1,0 +1,755 @@
+{
+  "version": "v135",
+  "timestamp": "2026-05-08T19:13:46",
+  "sigma_broad_grid": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    6.0,
+    7.0
+  ],
+  "cohorts": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 85.12,
+              "overall_ci95_pct": [
+                83.03,
+                87.03
+              ],
+              "outgrowth_mean_pct": 13.08,
+              "outgrowth_ci95_pct": [
+                11.91,
+                14.31
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 86.28,
+              "overall_ci95_pct": [
+                84.26,
+                88.17
+              ],
+              "outgrowth_mean_pct": 25.51,
+              "outgrowth_ci95_pct": [
+                23.7,
+                27.41
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 87.0,
+              "overall_ci95_pct": [
+                84.97,
+                88.95
+              ],
+              "outgrowth_mean_pct": 32.11,
+              "outgrowth_ci95_pct": [
+                29.9,
+                34.37
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 87.62,
+              "overall_ci95_pct": [
+                85.63,
+                89.48
+              ],
+              "outgrowth_mean_pct": 36.77,
+              "outgrowth_ci95_pct": [
+                34.36,
+                39.25
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 88.32,
+              "overall_ci95_pct": [
+                86.33,
+                90.13
+              ],
+              "outgrowth_mean_pct": 41.39,
+              "outgrowth_ci95_pct": [
+                38.77,
+                44.06
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 89.17,
+              "overall_ci95_pct": [
+                87.32,
+                90.87
+              ],
+              "outgrowth_mean_pct": 46.75,
+              "outgrowth_ci95_pct": [
+                44.02,
+                49.45
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 90.16,
+              "overall_ci95_pct": [
+                88.39,
+                91.81
+              ],
+              "outgrowth_mean_pct": 53.34,
+              "outgrowth_ci95_pct": [
+                50.56,
+                56.11
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        },
+        "heat_ge_0.8": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 84.13,
+              "overall_ci95_pct": [
+                82.07,
+                86.09
+              ],
+              "outgrowth_mean_pct": 1.37,
+              "outgrowth_ci95_pct": [
+                1.08,
+                1.7
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 84.26,
+              "overall_ci95_pct": [
+                82.19,
+                86.16
+              ],
+              "outgrowth_mean_pct": 3.27,
+              "outgrowth_ci95_pct": [
+                2.65,
+                3.99
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 84.33,
+              "overall_ci95_pct": [
+                82.29,
+                86.33
+              ],
+              "outgrowth_mean_pct": 4.05,
+              "outgrowth_ci95_pct": [
+                3.34,
+                4.87
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 84.41,
+              "overall_ci95_pct": [
+                82.41,
+                86.3
+              ],
+              "outgrowth_mean_pct": 4.67,
+              "outgrowth_ci95_pct": [
+                3.84,
+                5.59
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 84.51,
+              "overall_ci95_pct": [
+                82.49,
+                86.43
+              ],
+              "outgrowth_mean_pct": 5.62,
+              "outgrowth_ci95_pct": [
+                4.66,
+                6.68
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 84.69,
+              "overall_ci95_pct": [
+                82.64,
+                86.6
+              ],
+              "outgrowth_mean_pct": 6.93,
+              "outgrowth_ci95_pct": [
+                5.82,
+                8.15
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 84.93,
+              "overall_ci95_pct": [
+                82.92,
+                86.84
+              ],
+              "outgrowth_mean_pct": 8.69,
+              "outgrowth_ci95_pct": [
+                7.45,
+                10.06
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        }
+      }
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 70.16,
+              "overall_ci95_pct": [
+                66.05,
+                74.05
+              ],
+              "outgrowth_mean_pct": 5.99,
+              "outgrowth_ci95_pct": [
+                4.53,
+                7.71
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 71.25,
+              "overall_ci95_pct": [
+                67.06,
+                75.25
+              ],
+              "outgrowth_mean_pct": 15.84,
+              "outgrowth_ci95_pct": [
+                12.67,
+                19.24
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 72.17,
+              "overall_ci95_pct": [
+                67.93,
+                76.17
+              ],
+              "outgrowth_mean_pct": 22.57,
+              "outgrowth_ci95_pct": [
+                18.65,
+                26.78
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 72.96,
+              "overall_ci95_pct": [
+                68.67,
+                77.07
+              ],
+              "outgrowth_mean_pct": 28.1,
+              "outgrowth_ci95_pct": [
+                23.52,
+                32.87
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 73.84,
+              "overall_ci95_pct": [
+                69.68,
+                77.91
+              ],
+              "outgrowth_mean_pct": 33.21,
+              "outgrowth_ci95_pct": [
+                28.25,
+                38.42
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 75.01,
+              "overall_ci95_pct": [
+                70.86,
+                79.03
+              ],
+              "outgrowth_mean_pct": 38.6,
+              "outgrowth_ci95_pct": [
+                33.36,
+                44.06
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 76.39,
+              "overall_ci95_pct": [
+                72.32,
+                80.24
+              ],
+              "outgrowth_mean_pct": 44.57,
+              "outgrowth_ci95_pct": [
+                38.93,
+                50.26
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        },
+        "heat_ge_0.8": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 69.54,
+              "overall_ci95_pct": [
+                65.51,
+                73.43
+              ],
+              "outgrowth_mean_pct": 0.54,
+              "outgrowth_ci95_pct": [
+                0.24,
+                1.0
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 69.69,
+              "overall_ci95_pct": [
+                65.53,
+                73.65
+              ],
+              "outgrowth_mean_pct": 2.0,
+              "outgrowth_ci95_pct": [
+                1.21,
+                3.04
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 69.77,
+              "overall_ci95_pct": [
+                65.76,
+                73.77
+              ],
+              "outgrowth_mean_pct": 3.82,
+              "outgrowth_ci95_pct": [
+                2.53,
+                5.31
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 69.96,
+              "overall_ci95_pct": [
+                65.8,
+                74.01
+              ],
+              "outgrowth_mean_pct": 6.18,
+              "outgrowth_ci95_pct": [
+                4.21,
+                8.51
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 70.09,
+              "overall_ci95_pct": [
+                65.99,
+                74.16
+              ],
+              "outgrowth_mean_pct": 8.03,
+              "outgrowth_ci95_pct": [
+                5.51,
+                10.88
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 70.18,
+              "overall_ci95_pct": [
+                66.06,
+                74.12
+              ],
+              "outgrowth_mean_pct": 9.29,
+              "outgrowth_ci95_pct": [
+                6.44,
+                12.46
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 70.44,
+              "overall_ci95_pct": [
+                66.35,
+                74.46
+              ],
+              "outgrowth_mean_pct": 10.91,
+              "outgrowth_ci95_pct": [
+                7.82,
+                14.39
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        }
+      }
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 71.34,
+              "overall_ci95_pct": [
+                60.88,
+                80.88
+              ],
+              "outgrowth_mean_pct": 7.31,
+              "outgrowth_ci95_pct": [
+                2.78,
+                14.09
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 72.03,
+              "overall_ci95_pct": [
+                61.55,
+                81.77
+              ],
+              "outgrowth_mean_pct": 16.22,
+              "outgrowth_ci95_pct": [
+                8.34,
+                25.91
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 72.54,
+              "overall_ci95_pct": [
+                62.13,
+                81.99
+              ],
+              "outgrowth_mean_pct": 21.35,
+              "outgrowth_ci95_pct": [
+                12.54,
+                31.48
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 72.82,
+              "overall_ci95_pct": [
+                62.37,
+                82.24
+              ],
+              "outgrowth_mean_pct": 26.88,
+              "outgrowth_ci95_pct": [
+                16.85,
+                38.09
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 73.51,
+              "overall_ci95_pct": [
+                62.85,
+                83.29
+              ],
+              "outgrowth_mean_pct": 32.41,
+              "outgrowth_ci95_pct": [
+                21.18,
+                44.63
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 73.92,
+              "overall_ci95_pct": [
+                63.28,
+                83.6
+              ],
+              "outgrowth_mean_pct": 36.23,
+              "outgrowth_ci95_pct": [
+                23.74,
+                49.48
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 74.42,
+              "overall_ci95_pct": [
+                63.82,
+                83.96
+              ],
+              "outgrowth_mean_pct": 38.93,
+              "outgrowth_ci95_pct": [
+                26.47,
+                52.03
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        },
+        "heat_ge_0.8": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 71.13,
+              "overall_ci95_pct": [
+                60.72,
+                80.41
+              ],
+              "outgrowth_mean_pct": 0.03,
+              "outgrowth_ci95_pct": [
+                0.01,
+                0.05
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 71.19,
+              "overall_ci95_pct": [
+                60.96,
+                80.8
+              ],
+              "outgrowth_mean_pct": 3.04,
+              "outgrowth_ci95_pct": [
+                0.38,
+                7.98
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 71.13,
+              "overall_ci95_pct": [
+                60.85,
+                80.73
+              ],
+              "outgrowth_mean_pct": 5.4,
+              "outgrowth_ci95_pct": [
+                0.93,
+                12.48
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 71.25,
+              "overall_ci95_pct": [
+                60.97,
+                80.85
+              ],
+              "outgrowth_mean_pct": 7.92,
+              "outgrowth_ci95_pct": [
+                1.43,
+                16.79
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 71.32,
+              "overall_ci95_pct": [
+                60.96,
+                80.74
+              ],
+              "outgrowth_mean_pct": 8.55,
+              "outgrowth_ci95_pct": [
+                1.97,
+                17.38
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 71.33,
+              "overall_ci95_pct": [
+                60.98,
+                80.96
+              ],
+              "outgrowth_mean_pct": 8.92,
+              "outgrowth_ci95_pct": [
+                2.32,
+                17.63
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 71.45,
+              "overall_ci95_pct": [
+                61.06,
+                80.92
+              ],
+              "outgrowth_mean_pct": 10.08,
+              "outgrowth_ci95_pct": [
+                3.24,
+                19.05
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        }
+      }
+    },
+    "LUMIERE": {
+      "n": 22,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 40.64,
+              "overall_ci95_pct": [
+                27.66,
+                54.02
+              ],
+              "outgrowth_mean_pct": 3.78,
+              "outgrowth_ci95_pct": [
+                1.99,
+                6.16
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 43.74,
+              "overall_ci95_pct": [
+                29.48,
+                58.03
+              ],
+              "outgrowth_mean_pct": 12.79,
+              "outgrowth_ci95_pct": [
+                6.63,
+                20.19
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 46.95,
+              "overall_ci95_pct": [
+                32.5,
+                61.54
+              ],
+              "outgrowth_mean_pct": 20.97,
+              "outgrowth_ci95_pct": [
+                11.4,
+                32.3
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 50.23,
+              "overall_ci95_pct": [
+                35.47,
+                64.86
+              ],
+              "outgrowth_mean_pct": 28.39,
+              "outgrowth_ci95_pct": [
+                16.64,
+                41.58
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 53.09,
+              "overall_ci95_pct": [
+                38.41,
+                67.57
+              ],
+              "outgrowth_mean_pct": 34.85,
+              "outgrowth_ci95_pct": [
+                21.75,
+                49.16
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 56.62,
+              "overall_ci95_pct": [
+                42.21,
+                70.64
+              ],
+              "outgrowth_mean_pct": 40.71,
+              "outgrowth_ci95_pct": [
+                27.23,
+                55.3
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 59.58,
+              "overall_ci95_pct": [
+                44.73,
+                73.56
+              ],
+              "outgrowth_mean_pct": 46.34,
+              "outgrowth_ci95_pct": [
+                31.92,
+                61.48
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        },
+        "heat_ge_0.8": {
+          "sigma_broad_results": {
+            "sb_1.0": {
+              "overall_mean_pct": 39.37,
+              "overall_ci95_pct": [
+                26.4,
+                52.37
+              ],
+              "outgrowth_mean_pct": 0.03,
+              "outgrowth_ci95_pct": [
+                0.0,
+                0.06
+              ]
+            },
+            "sb_2.0": {
+              "overall_mean_pct": 39.54,
+              "overall_ci95_pct": [
+                26.81,
+                52.63
+              ],
+              "outgrowth_mean_pct": 0.51,
+              "outgrowth_ci95_pct": [
+                0.16,
+                0.95
+              ]
+            },
+            "sb_3.0": {
+              "overall_mean_pct": 39.75,
+              "overall_ci95_pct": [
+                26.96,
+                52.83
+              ],
+              "outgrowth_mean_pct": 1.14,
+              "outgrowth_ci95_pct": [
+                0.45,
+                1.98
+              ]
+            },
+            "sb_4.0": {
+              "overall_mean_pct": 40.11,
+              "overall_ci95_pct": [
+                27.41,
+                53.02
+              ],
+              "outgrowth_mean_pct": 2.07,
+              "outgrowth_ci95_pct": [
+                0.83,
+                3.51
+              ]
+            },
+            "sb_5.0": {
+              "overall_mean_pct": 40.95,
+              "overall_ci95_pct": [
+                28.23,
+                53.74
+              ],
+              "outgrowth_mean_pct": 3.93,
+              "outgrowth_ci95_pct": [
+                1.78,
+                6.46
+              ]
+            },
+            "sb_6.0": {
+              "overall_mean_pct": 42.51,
+              "overall_ci95_pct": [
+                29.23,
+                55.95
+              ],
+              "outgrowth_mean_pct": 7.32,
+              "outgrowth_ci95_pct": [
+                2.78,
+                12.98
+              ]
+            },
+            "sb_7.0": {
+              "overall_mean_pct": 44.33,
+              "overall_ci95_pct": [
+                31.1,
+                57.68
+              ],
+              "outgrowth_mean_pct": 11.35,
+              "outgrowth_ci95_pct": [
+                4.22,
+                20.75
+              ]
+            }
+          },
+          "best_overall_sigma_broad": "sb_7.0",
+          "best_outgrowth_sigma_broad": "sb_7.0"
+        }
+      }
+    }
+  }
+}

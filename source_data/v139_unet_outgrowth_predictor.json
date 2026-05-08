@@ -1,0 +1,25 @@
+{
+  "version": "v139",
+  "experiment": "GPU U-Net learned outgrowth predictor vs hand-crafted bimodal kernel on PROTEAS",
+  "timestamp": "2026-05-08T19:35:30",
+  "device": "cuda",
+  "epochs": 30,
+  "lopo_stride": 4,
+  "target_shape": [
+    32,
+    64,
+    64
+  ],
+  "n_test_followups": 36,
+  "n_test_patients": 11,
+  "aggregate": {
+    "learned_overall_mean_pct": 10.950831671752844,
+    "learned_outgrowth_mean_pct": 38.78580833910624,
+    "bimodal_overall_mean_pct": 60.06585789378196,
+    "bimodal_outgrowth_mean_pct": 22.567448128377823,
+    "delta_overall_mean_pp": -49.115026222029115,
+    "delta_outgrowth_mean_pp": 16.218360210728417,
+    "delta_overall_sd_pp": 37.13251901909271,
+    "delta_outgrowth_sd_pp": 34.25331953032615
+  }
+}
