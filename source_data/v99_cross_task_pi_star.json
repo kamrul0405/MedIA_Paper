@@ -1,0 +1,82 @@
+{
+  "version": "v99",
+  "experiment": "Cross-task generalisation pilot \u2014 closed-form pi* on synthetic multi-cohort longitudinal task",
+  "timestamp": "2026-05-08T14:13:12",
+  "task_type": "synthetic non-imaging longitudinal binary-outcome (16-d Gaussian; LR trained with 20% label noise)",
+  "low_bias_prior_value": 0.3,
+  "label_noise_rate": 0.2,
+  "source_cohort_n": 600,
+  "source_cohort_pi": 0.5,
+  "per_stratum_brier_source": {
+    "L_m1_stable": 0.08999999999999998,
+    "L_m1_active": 0.48999999999999994,
+    "L_m2_stable": 0.05840717968256267,
+    "L_m2_active": 0.07598918517456581
+  },
+  "identifiability_C1": false,
+  "identifiability_C2": true,
+  "pi_star_predicted": 1.0826133204272548,
+  "target_cohort_n_per": 300,
+  "target_cohorts": [
+    {
+      "pi": 0.1,
+      "L_m1_aggregate": 0.44333333333333325,
+      "L_m2_aggregate": 0.07807977835380717,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.25,
+      "L_m1_aggregate": 0.40333333333333327,
+      "L_m2_aggregate": 0.07211535343157169,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.4,
+      "L_m1_aggregate": 0.32599999999999996,
+      "L_m2_aggregate": 0.06667086086064274,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.5,
+      "L_m1_aggregate": 0.26866666666666666,
+      "L_m2_aggregate": 0.06969443742471318,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.6,
+      "L_m1_aggregate": 0.25133333333333324,
+      "L_m2_aggregate": 0.06887923352350062,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.75,
+      "L_m1_aggregate": 0.186,
+      "L_m2_aggregate": 0.06454728133735825,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    },
+    {
+      "pi": 0.9,
+      "L_m1_aggregate": 0.12999999999999998,
+      "L_m2_aggregate": 0.056858035736241846,
+      "predicted_winner": "m2_learned",
+      "actual_winner": "m2_learned",
+      "match": true
+    }
+  ],
+  "directional_accuracy": 1.0,
+  "n_correct": 7,
+  "n_total": 7,
+  "binomial_p_value": 0.0078125
+}

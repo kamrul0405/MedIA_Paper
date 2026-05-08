@@ -1,0 +1,64 @@
+{
+  "version": "v100",
+  "experiment": "Information-geometric simplex partition (K=2 binary; K=3 multi-class)",
+  "timestamp": "2026-05-08T14:14:31",
+  "K_2_case": {
+    "per_stratum_brier": {
+      "L_heat_stable": 0.041,
+      "L_heat_active": 0.274,
+      "L_learned_stable": 0.14,
+      "L_learned_active": 0.199
+    },
+    "pi_star": 0.4310344827586207
+  },
+  "K_3_case": {
+    "model_per_stratum_brier": [
+      [
+        0.04,
+        0.3,
+        0.2
+      ],
+      [
+        0.14,
+        0.2,
+        0.18
+      ],
+      [
+        0.2,
+        0.15,
+        0.1
+      ]
+    ],
+    "n_models": 3,
+    "n_strata": 3,
+    "region_areas": {
+      "m0_area_fraction": 0.3182178217821782,
+      "m1_area_fraction": 0.0035643564356435645,
+      "m2_area_fraction": 0.6782178217821783
+    },
+    "hyperplane_boundaries": [
+      {
+        "m_i": 0,
+        "m_j": 1,
+        "a_pi_s": -0.12000000000000002,
+        "b_pi_p": 0.07999999999999996,
+        "c_const": 0.020000000000000018
+      },
+      {
+        "m_i": 0,
+        "m_j": 2,
+        "a_pi_s": -0.26,
+        "b_pi_p": 0.04999999999999999,
+        "c_const": 0.1
+      },
+      {
+        "m_i": 1,
+        "m_j": 2,
+        "a_pi_s": -0.13999999999999999,
+        "b_pi_p": -0.02999999999999997,
+        "c_const": 0.07999999999999999
+      }
+    ],
+    "interpretation": "Region R_j contains the simplex points where model m_j achieves minimum Brier; boundaries are linear hyperplanes parameterised by per-stratum Brier differences."
+  }
+}
