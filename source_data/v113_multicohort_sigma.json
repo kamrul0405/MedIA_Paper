@@ -1,0 +1,251 @@
+{
+  "version": "v113",
+  "timestamp": "2026-05-08T14:39:38",
+  "sigma_grid_voxels": [
+    1.0,
+    1.5,
+    2.0,
+    2.5,
+    3.0,
+    3.5,
+    4.0
+  ],
+  "cohorts": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "median_lesion_radius_voxels": 15.32,
+      "sigma_sweep": [
+        {
+          "sigma_voxels": 1.0,
+          "evolution_time_t": 0.5,
+          "sigma_over_radius": 0.065,
+          "heat_ge_0.5_mean_pct": 84.16,
+          "heat_ge_0.8_mean_pct": 72.2
+        },
+        {
+          "sigma_voxels": 1.5,
+          "evolution_time_t": 1.125,
+          "sigma_over_radius": 0.098,
+          "heat_ge_0.5_mean_pct": 83.61,
+          "heat_ge_0.8_mean_pct": 66.62
+        },
+        {
+          "sigma_voxels": 2.0,
+          "evolution_time_t": 2.0,
+          "sigma_over_radius": 0.131,
+          "heat_ge_0.5_mean_pct": 82.83,
+          "heat_ge_0.8_mean_pct": 61.15
+        },
+        {
+          "sigma_voxels": 2.5,
+          "evolution_time_t": 3.125,
+          "sigma_over_radius": 0.163,
+          "heat_ge_0.5_mean_pct": 81.98,
+          "heat_ge_0.8_mean_pct": 56.36
+        },
+        {
+          "sigma_voxels": 3.0,
+          "evolution_time_t": 4.5,
+          "sigma_over_radius": 0.196,
+          "heat_ge_0.5_mean_pct": 81.18,
+          "heat_ge_0.8_mean_pct": 52.15
+        },
+        {
+          "sigma_voxels": 3.5,
+          "evolution_time_t": 6.125,
+          "sigma_over_radius": 0.228,
+          "heat_ge_0.5_mean_pct": 80.55,
+          "heat_ge_0.8_mean_pct": 48.57
+        },
+        {
+          "sigma_voxels": 4.0,
+          "evolution_time_t": 8.0,
+          "sigma_over_radius": 0.261,
+          "heat_ge_0.5_mean_pct": 80.11,
+          "heat_ge_0.8_mean_pct": 45.68
+        }
+      ],
+      "optimal_sigma_at_heat_05": 1.0,
+      "optimal_sigma_at_heat_08": 1.0,
+      "optimal_sigma_over_radius_at_heat_05": 0.065,
+      "optimal_sigma_over_radius_at_heat_08": 0.065
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "median_lesion_radius_voxels": 16.92,
+      "sigma_sweep": [
+        {
+          "sigma_voxels": 1.0,
+          "evolution_time_t": 0.5,
+          "sigma_over_radius": 0.059,
+          "heat_ge_0.5_mean_pct": 69.78,
+          "heat_ge_0.8_mean_pct": 64.15
+        },
+        {
+          "sigma_voxels": 1.5,
+          "evolution_time_t": 1.125,
+          "sigma_over_radius": 0.089,
+          "heat_ge_0.5_mean_pct": 69.88,
+          "heat_ge_0.8_mean_pct": 61.93
+        },
+        {
+          "sigma_voxels": 2.0,
+          "evolution_time_t": 2.0,
+          "sigma_over_radius": 0.118,
+          "heat_ge_0.5_mean_pct": 69.96,
+          "heat_ge_0.8_mean_pct": 59.73
+        },
+        {
+          "sigma_voxels": 2.5,
+          "evolution_time_t": 3.125,
+          "sigma_over_radius": 0.148,
+          "heat_ge_0.5_mean_pct": 69.99,
+          "heat_ge_0.8_mean_pct": 57.71
+        },
+        {
+          "sigma_voxels": 3.0,
+          "evolution_time_t": 4.5,
+          "sigma_over_radius": 0.177,
+          "heat_ge_0.5_mean_pct": 70.04,
+          "heat_ge_0.8_mean_pct": 55.85
+        },
+        {
+          "sigma_voxels": 3.5,
+          "evolution_time_t": 6.125,
+          "sigma_over_radius": 0.207,
+          "heat_ge_0.5_mean_pct": 70.12,
+          "heat_ge_0.8_mean_pct": 54.11
+        },
+        {
+          "sigma_voxels": 4.0,
+          "evolution_time_t": 8.0,
+          "sigma_over_radius": 0.236,
+          "heat_ge_0.5_mean_pct": 70.25,
+          "heat_ge_0.8_mean_pct": 52.56
+        }
+      ],
+      "optimal_sigma_at_heat_05": 4.0,
+      "optimal_sigma_at_heat_08": 1.0,
+      "optimal_sigma_over_radius_at_heat_05": 0.236,
+      "optimal_sigma_over_radius_at_heat_08": 0.059
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "median_lesion_radius_voxels": 18.82,
+      "sigma_sweep": [
+        {
+          "sigma_voxels": 1.0,
+          "evolution_time_t": 0.5,
+          "sigma_over_radius": 0.053,
+          "heat_ge_0.5_mean_pct": 71.18,
+          "heat_ge_0.8_mean_pct": 68.04
+        },
+        {
+          "sigma_voxels": 1.5,
+          "evolution_time_t": 1.125,
+          "sigma_over_radius": 0.08,
+          "heat_ge_0.5_mean_pct": 71.27,
+          "heat_ge_0.8_mean_pct": 66.83
+        },
+        {
+          "sigma_voxels": 2.0,
+          "evolution_time_t": 2.0,
+          "sigma_over_radius": 0.106,
+          "heat_ge_0.5_mean_pct": 71.32,
+          "heat_ge_0.8_mean_pct": 65.72
+        },
+        {
+          "sigma_voxels": 2.5,
+          "evolution_time_t": 3.125,
+          "sigma_over_radius": 0.133,
+          "heat_ge_0.5_mean_pct": 71.32,
+          "heat_ge_0.8_mean_pct": 64.7
+        },
+        {
+          "sigma_voxels": 3.0,
+          "evolution_time_t": 4.5,
+          "sigma_over_radius": 0.159,
+          "heat_ge_0.5_mean_pct": 71.35,
+          "heat_ge_0.8_mean_pct": 63.74
+        },
+        {
+          "sigma_voxels": 3.5,
+          "evolution_time_t": 6.125,
+          "sigma_over_radius": 0.186,
+          "heat_ge_0.5_mean_pct": 71.39,
+          "heat_ge_0.8_mean_pct": 62.85
+        },
+        {
+          "sigma_voxels": 4.0,
+          "evolution_time_t": 8.0,
+          "sigma_over_radius": 0.213,
+          "heat_ge_0.5_mean_pct": 71.42,
+          "heat_ge_0.8_mean_pct": 61.95
+        }
+      ],
+      "optimal_sigma_at_heat_05": 4.0,
+      "optimal_sigma_at_heat_08": 1.0,
+      "optimal_sigma_over_radius_at_heat_05": 0.213,
+      "optimal_sigma_over_radius_at_heat_08": 0.053
+    },
+    "LUMIERE": {
+      "n": 22,
+      "median_lesion_radius_voxels": 12.11,
+      "sigma_sweep": [
+        {
+          "sigma_voxels": 1.0,
+          "evolution_time_t": 0.5,
+          "sigma_over_radius": 0.083,
+          "heat_ge_0.5_mean_pct": 39.46,
+          "heat_ge_0.8_mean_pct": 27.13
+        },
+        {
+          "sigma_voxels": 1.5,
+          "evolution_time_t": 1.125,
+          "sigma_over_radius": 0.124,
+          "heat_ge_0.5_mean_pct": 39.54,
+          "heat_ge_0.8_mean_pct": 24.93
+        },
+        {
+          "sigma_voxels": 2.0,
+          "evolution_time_t": 2.0,
+          "sigma_over_radius": 0.165,
+          "heat_ge_0.5_mean_pct": 39.92,
+          "heat_ge_0.8_mean_pct": 22.6
+        },
+        {
+          "sigma_voxels": 2.5,
+          "evolution_time_t": 3.125,
+          "sigma_over_radius": 0.206,
+          "heat_ge_0.5_mean_pct": 41.34,
+          "heat_ge_0.8_mean_pct": 20.84
+        },
+        {
+          "sigma_voxels": 3.0,
+          "evolution_time_t": 4.5,
+          "sigma_over_radius": 0.248,
+          "heat_ge_0.5_mean_pct": 43.17,
+          "heat_ge_0.8_mean_pct": 19.87
+        },
+        {
+          "sigma_voxels": 3.5,
+          "evolution_time_t": 6.125,
+          "sigma_over_radius": 0.289,
+          "heat_ge_0.5_mean_pct": 44.87,
+          "heat_ge_0.8_mean_pct": 19.46
+        },
+        {
+          "sigma_voxels": 4.0,
+          "evolution_time_t": 8.0,
+          "sigma_over_radius": 0.33,
+          "heat_ge_0.5_mean_pct": 46.63,
+          "heat_ge_0.8_mean_pct": 19.57
+        }
+      ],
+      "optimal_sigma_at_heat_05": 4.0,
+      "optimal_sigma_at_heat_08": 1.0,
+      "optimal_sigma_over_radius_at_heat_05": 0.33,
+      "optimal_sigma_over_radius_at_heat_08": 0.083
+    }
+  }
+}
