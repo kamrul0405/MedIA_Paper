@@ -1,0 +1,84 @@
+{
+  "version": "v134",
+  "experiment": "Heat-equation evolution-time physics interpretation of disease-stratified sigma scaling laws",
+  "timestamp": "2026-05-08T18:55:03",
+  "glioma_sigma_law": {
+    "intercept": -3.0944,
+    "slope": 1.2733,
+    "slope_ci": [
+      1.158,
+      1.389
+    ],
+    "formula": "sigma = exp(-3.0944) * r_eq^1.2733"
+  },
+  "brain_mets_sigma_law": {
+    "intercept": 0.7359,
+    "slope": -0.383,
+    "formula": "sigma = exp(0.7359) * r_eq^-0.383"
+  },
+  "glioma_t_law": {
+    "log_t_intercept": -6.881947180559945,
+    "t_intercept_voxel_time": 0.0010261440109229788,
+    "t_slope_on_log_r": 2.5466,
+    "interpretation": "t_opt = 1.026144e-03 * r_eq^2.5466"
+  },
+  "brain_mets_t_law": {
+    "log_t_intercept": 0.7786528194400547,
+    "t_intercept_voxel_time": 2.178535407153471,
+    "t_slope_on_log_r": -0.766,
+    "interpretation": "t_opt = 2.178535e+00 * r_eq^-0.7660"
+  },
+  "glioma_t_interpretation": {
+    "is_random_walk_like": false,
+    "is_volume_like": true,
+    "is_constant": false,
+    "is_anti_physics": false,
+    "distance_from_random_walk": 0.5466000000000002,
+    "distance_from_volume": 0.4533999999999998
+  },
+  "brain_mets_t_interpretation": {
+    "is_random_walk_like": false,
+    "is_volume_like": false,
+    "is_constant": false,
+    "is_anti_physics": true,
+    "distance_from_random_walk": 2.766,
+    "distance_from_volume": 3.766
+  },
+  "concrete_predictions": [
+    {
+      "r_eq_voxels": 5,
+      "glioma_sigma": 0.3516557003385742,
+      "brain_mets_sigma": 1.1269166552110146,
+      "glioma_t_voxel_time": 0.06183086579030654,
+      "brain_mets_t_voxel_time": 0.6349705738959903
+    },
+    {
+      "r_eq_voxels": 10,
+      "glioma_sigma": 0.8500004491461485,
+      "brain_mets_sigma": 0.8641662664969668,
+      "glioma_t_voxel_time": 0.36125038177432706,
+      "brain_mets_t_voxel_time": 0.3733916680756533
+    },
+    {
+      "r_eq_voxels": 15,
+      "glioma_sigma": 1.4244137435919098,
+      "brain_mets_sigma": 0.7398681924037851,
+      "glioma_t_voxel_time": 1.0144772564667595,
+      "brain_mets_t_voxel_time": 0.27370247106542217
+    },
+    {
+      "r_eq_voxels": 20,
+      "glioma_sigma": 2.0545686102998744,
+      "brain_mets_sigma": 0.6626784090004172,
+      "glioma_t_voxel_time": 2.1106260872147784,
+      "brain_mets_t_voxel_time": 0.21957133687766212
+    },
+    {
+      "r_eq_voxels": 25,
+      "glioma_sigma": 2.729707847232903,
+      "brain_mets_sigma": 0.6083959101496825,
+      "glioma_t_voxel_time": 3.7256524656224443,
+      "brain_mets_t_voxel_time": 0.18507279174343028
+    }
+  ]
+}

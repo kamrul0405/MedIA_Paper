@@ -1,0 +1,1531 @@
+{
+  "version": "v131",
+  "timestamp": "2026-05-08T19:04:55",
+  "sigma_broad": 4.0,
+  "cohorts": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "overall": {
+            "pers": {
+              "mean_pct": 84.03,
+              "ci95_pct": [
+                82.03,
+                85.89
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 84.05,
+              "ci95_pct": [
+                81.99,
+                85.98
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 84.18,
+              "ci95_pct": [
+                82.09,
+                86.13
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 81.97,
+              "ci95_pct": [
+                79.8,
+                83.99
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 80.12,
+              "ci95_pct": [
+                77.99,
+                82.23
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 87.65,
+              "ci95_pct": [
+                85.7,
+                89.49
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.28,
+              "ci95_pct": [
+                0.22,
+                0.36
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_1.0": {
+              "mean_pct": 13.09,
+              "ci95_pct": [
+                11.91,
+                14.32
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_2.5": {
+              "mean_pct": 29.18,
+              "ci95_pct": [
+                27.13,
+                31.25
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_4.0": {
+              "mean_pct": 36.81,
+              "ci95_pct": [
+                34.35,
+                39.33
+              ],
+              "n_with_outgrowth": 297
+            },
+            "bimodal": {
+              "mean_pct": 36.78,
+              "ci95_pct": [
+                34.32,
+                39.27
+              ],
+              "n_with_outgrowth": 297
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 3.6,
+                "ci95_pp": [
+                  3.21,
+                  4.07
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 36.78,
+                "ci95_pp": [
+                  34.29,
+                  39.26
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 3.58,
+                "ci95_pp": [
+                  3.19,
+                  4.06
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 36.5,
+                "ci95_pp": [
+                  34.09,
+                  38.98
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 3.47,
+                "ci95_pp": [
+                  3.05,
+                  3.99
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 23.7,
+                "ci95_pp": [
+                  21.85,
+                  25.6
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 5.66,
+                "ci95_pp": [
+                  5.13,
+                  6.21
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 7.6,
+                "ci95_pp": [
+                  6.75,
+                  8.52
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 7.52,
+                "ci95_pp": [
+                  6.85,
+                  8.23
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "overall": {
+            "pers": {
+              "mean_pct": 84.04,
+              "ci95_pct": [
+                82.02,
+                85.95
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 81.54,
+              "ci95_pct": [
+                79.42,
+                83.51
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 72.2,
+              "ci95_pct": [
+                69.89,
+                74.41
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 56.36,
+              "ci95_pct": [
+                53.8,
+                58.92
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 45.71,
+              "ci95_pct": [
+                43.22,
+                48.23
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 84.43,
+              "ci95_pct": [
+                82.38,
+                86.32
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_1.0": {
+              "mean_pct": 1.37,
+              "ci95_pct": [
+                1.08,
+                1.71
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_2.5": {
+              "mean_pct": 3.71,
+              "ci95_pct": [
+                3.05,
+                4.49
+              ],
+              "n_with_outgrowth": 297
+            },
+            "sigma_4.0": {
+              "mean_pct": 4.67,
+              "ci95_pct": [
+                3.84,
+                5.6
+              ],
+              "n_with_outgrowth": 297
+            },
+            "bimodal": {
+              "mean_pct": 4.67,
+              "ci95_pct": [
+                3.85,
+                5.6
+              ],
+              "n_with_outgrowth": 297
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 0.39,
+                "ci95_pp": [
+                  0.28,
+                  0.55
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 4.67,
+                "ci95_pp": [
+                  3.86,
+                  5.6
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 2.89,
+                "ci95_pp": [
+                  2.65,
+                  3.16
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 4.67,
+                "ci95_pp": [
+                  3.86,
+                  5.61
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 12.23,
+                "ci95_pp": [
+                  11.45,
+                  13.04
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 3.3,
+                "ci95_pp": [
+                  2.68,
+                  3.99
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 28.06,
+                "ci95_pp": [
+                  26.51,
+                  29.61
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.95,
+                "ci95_pp": [
+                  0.65,
+                  1.3
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 38.75,
+                "ci95_pp": [
+                  36.89,
+                  40.58
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "overall": {
+            "pers": {
+              "mean_pct": 69.53,
+              "ci95_pct": [
+                65.46,
+                73.44
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 69.49,
+              "ci95_pct": [
+                65.4,
+                73.45
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 69.79,
+              "ci95_pct": [
+                65.73,
+                73.72
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 70.02,
+              "ci95_pct": [
+                65.75,
+                74.26
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 70.25,
+              "ci95_pct": [
+                65.71,
+                74.61
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 72.94,
+              "ci95_pct": [
+                68.79,
+                77.02
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.1,
+              "ci95_pct": [
+                0.04,
+                0.2
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_1.0": {
+              "mean_pct": 5.99,
+              "ci95_pct": [
+                4.51,
+                7.76
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_2.5": {
+              "mean_pct": 19.41,
+              "ci95_pct": [
+                15.87,
+                23.25
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_4.0": {
+              "mean_pct": 28.12,
+              "ci95_pct": [
+                23.53,
+                32.8
+              ],
+              "n_with_outgrowth": 149
+            },
+            "bimodal": {
+              "mean_pct": 28.09,
+              "ci95_pct": [
+                23.6,
+                32.71
+              ],
+              "n_with_outgrowth": 149
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 3.43,
+                "ci95_pp": [
+                  3.05,
+                  3.84
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 28.06,
+                "ci95_pp": [
+                  23.67,
+                  32.79
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 3.42,
+                "ci95_pp": [
+                  3.04,
+                  3.82
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 28.0,
+                "ci95_pp": [
+                  23.57,
+                  32.67
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 3.16,
+                "ci95_pp": [
+                  2.82,
+                  3.53
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 22.11,
+                "ci95_pp": [
+                  18.53,
+                  25.93
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 2.95,
+                "ci95_pp": [
+                  2.56,
+                  3.4
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 8.67,
+                "ci95_pp": [
+                  7.19,
+                  10.22
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 2.69,
+                "ci95_pp": [
+                  2.22,
+                  3.19
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "overall": {
+            "pers": {
+              "mean_pct": 69.49,
+              "ci95_pct": [
+                65.37,
+                73.52
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 68.32,
+              "ci95_pct": [
+                64.11,
+                72.4
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 64.14,
+              "ci95_pct": [
+                59.84,
+                68.3
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 57.72,
+              "ci95_pct": [
+                53.16,
+                62.24
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 52.51,
+              "ci95_pct": [
+                47.63,
+                57.38
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 69.95,
+              "ci95_pct": [
+                65.8,
+                74.01
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_1.0": {
+              "mean_pct": 0.54,
+              "ci95_pct": [
+                0.24,
+                1.02
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_2.5": {
+              "mean_pct": 2.83,
+              "ci95_pct": [
+                1.82,
+                4.06
+              ],
+              "n_with_outgrowth": 149
+            },
+            "sigma_4.0": {
+              "mean_pct": 6.15,
+              "ci95_pct": [
+                4.16,
+                8.45
+              ],
+              "n_with_outgrowth": 149
+            },
+            "bimodal": {
+              "mean_pct": 6.15,
+              "ci95_pct": [
+                4.14,
+                8.53
+              ],
+              "n_with_outgrowth": 149
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 0.42,
+                "ci95_pp": [
+                  0.33,
+                  0.52
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 6.13,
+                "ci95_pp": [
+                  4.1,
+                  8.45
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 1.61,
+                "ci95_pp": [
+                  1.46,
+                  1.78
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 6.15,
+                "ci95_pp": [
+                  4.11,
+                  8.53
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 5.79,
+                "ci95_pp": [
+                  5.25,
+                  6.37
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 5.61,
+                "ci95_pp": [
+                  3.75,
+                  7.79
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 12.21,
+                "ci95_pp": [
+                  10.92,
+                  13.57
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 3.33,
+                "ci95_pp": [
+                  2.05,
+                  4.91
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 17.37,
+                "ci95_pp": [
+                  15.62,
+                  19.23
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "overall": {
+            "pers": {
+              "mean_pct": 71.02,
+              "ci95_pct": [
+                60.77,
+                80.47
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 71.04,
+              "ci95_pct": [
+                60.87,
+                80.42
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 71.06,
+              "ci95_pct": [
+                60.57,
+                80.45
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 71.29,
+              "ci95_pct": [
+                60.59,
+                80.76
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 71.43,
+              "ci95_pct": [
+                60.85,
+                81.38
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 72.95,
+              "ci95_pct": [
+                62.52,
+                82.4
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_1.0": {
+              "mean_pct": 7.32,
+              "ci95_pct": [
+                2.81,
+                14.33
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_2.5": {
+              "mean_pct": 18.83,
+              "ci95_pct": [
+                10.32,
+                28.9
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_4.0": {
+              "mean_pct": 26.82,
+              "ci95_pct": [
+                17.01,
+                37.59
+              ],
+              "n_with_outgrowth": 34
+            },
+            "bimodal": {
+              "mean_pct": 26.85,
+              "ci95_pct": [
+                16.97,
+                37.78
+              ],
+              "n_with_outgrowth": 34
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 1.83,
+                "ci95_pp": [
+                  1.32,
+                  2.34
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 26.92,
+                "ci95_pp": [
+                  16.86,
+                  37.76
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 1.82,
+                "ci95_pp": [
+                  1.32,
+                  2.34
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 26.99,
+                "ci95_pp": [
+                  17.06,
+                  37.76
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 1.71,
+                "ci95_pp": [
+                  1.27,
+                  2.18
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 19.52,
+                "ci95_pp": [
+                  12.28,
+                  27.41
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 1.57,
+                "ci95_pp": [
+                  1.16,
+                  2.0
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 8.04,
+                "ci95_pp": [
+                  4.5,
+                  12.11
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 1.46,
+                "ci95_pp": [
+                  0.93,
+                  2.05
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "overall": {
+            "pers": {
+              "mean_pct": 71.01,
+              "ci95_pct": [
+                60.68,
+                80.38
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 70.34,
+              "ci95_pct": [
+                59.84,
+                79.92
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 68.11,
+              "ci95_pct": [
+                57.54,
+                78.0
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 64.69,
+              "ci95_pct": [
+                53.91,
+                74.85
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 62.06,
+              "ci95_pct": [
+                51.02,
+                72.71
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 71.23,
+              "ci95_pct": [
+                60.99,
+                80.82
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_1.0": {
+              "mean_pct": 0.03,
+              "ci95_pct": [
+                0.01,
+                0.05
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_2.5": {
+              "mean_pct": 3.83,
+              "ci95_pct": [
+                0.63,
+                9.23
+              ],
+              "n_with_outgrowth": 34
+            },
+            "sigma_4.0": {
+              "mean_pct": 7.94,
+              "ci95_pct": [
+                1.45,
+                16.91
+              ],
+              "n_with_outgrowth": 34
+            },
+            "bimodal": {
+              "mean_pct": 7.98,
+              "ci95_pct": [
+                1.47,
+                16.81
+              ],
+              "n_with_outgrowth": 34
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 0.2,
+                "ci95_pp": [
+                  0.09,
+                  0.35
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 7.87,
+                "ci95_pp": [
+                  1.44,
+                  16.68
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 0.85,
+                "ci95_pp": [
+                  0.63,
+                  1.07
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 7.91,
+                "ci95_pp": [
+                  1.4,
+                  16.74
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 3.22,
+                "ci95_pp": [
+                  2.5,
+                  3.94
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 7.94,
+                "ci95_pp": [
+                  1.42,
+                  16.98
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 6.55,
+                "ci95_pp": [
+                  5.03,
+                  8.07
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 4.09,
+                "ci95_pp": [
+                  0.81,
+                  9.42
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 9.31,
+                "ci95_pp": [
+                  7.0,
+                  11.68
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        }
+      }
+    },
+    "LUMIERE": {
+      "n": 22,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "overall": {
+            "pers": {
+              "mean_pct": 39.27,
+              "ci95_pct": [
+                26.55,
+                52.49
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 39.33,
+              "ci95_pct": [
+                26.36,
+                52.25
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 39.51,
+              "ci95_pct": [
+                26.34,
+                52.88
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 41.33,
+              "ci95_pct": [
+                26.93,
+                55.89
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 46.74,
+              "ci95_pct": [
+                32.18,
+                61.73
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 50.23,
+              "ci95_pct": [
+                35.41,
+                64.96
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.01
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_1.0": {
+              "mean_pct": 3.8,
+              "ci95_pct": [
+                1.94,
+                6.2
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_2.5": {
+              "mean_pct": 16.85,
+              "ci95_pct": [
+                9.17,
+                25.85
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_4.0": {
+              "mean_pct": 28.27,
+              "ci95_pct": [
+                16.8,
+                41.38
+              ],
+              "n_with_outgrowth": 22
+            },
+            "bimodal": {
+              "mean_pct": 28.22,
+              "ci95_pct": [
+                16.69,
+                41.19
+              ],
+              "n_with_outgrowth": 22
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 10.87,
+                "ci95_pp": [
+                  7.05,
+                  15.37
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 28.35,
+                "ci95_pp": [
+                  16.67,
+                  41.33
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 10.93,
+                "ci95_pp": [
+                  7.06,
+                  15.36
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 28.32,
+                "ci95_pp": [
+                  16.75,
+                  41.69
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 10.73,
+                "ci95_pp": [
+                  6.92,
+                  15.19
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 24.45,
+                "ci95_pp": [
+                  14.14,
+                  36.27
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 8.87,
+                "ci95_pp": [
+                  5.87,
+                  12.31
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 11.44,
+                "ci95_pp": [
+                  7.05,
+                  16.49
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 3.58,
+                "ci95_pp": [
+                  1.41,
+                  6.74
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "overall": {
+            "pers": {
+              "mean_pct": 39.2,
+              "ci95_pct": [
+                26.36,
+                52.52
+              ]
+            },
+            "sigma_0.5": {
+              "mean_pct": 37.41,
+              "ci95_pct": [
+                24.54,
+                50.55
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 27.03,
+              "ci95_pct": [
+                15.87,
+                39.09
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 20.76,
+              "ci95_pct": [
+                11.23,
+                31.48
+              ]
+            },
+            "sigma_4.0": {
+              "mean_pct": 19.56,
+              "ci95_pct": [
+                10.77,
+                29.57
+              ]
+            },
+            "bimodal": {
+              "mean_pct": 40.19,
+              "ci95_pct": [
+                27.21,
+                53.24
+              ]
+            }
+          },
+          "outgrowth": {
+            "pers": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_0.5": {
+              "mean_pct": 0.0,
+              "ci95_pct": [
+                0.0,
+                0.0
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_1.0": {
+              "mean_pct": 0.03,
+              "ci95_pct": [
+                0.0,
+                0.06
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_2.5": {
+              "mean_pct": 0.73,
+              "ci95_pct": [
+                0.25,
+                1.32
+              ],
+              "n_with_outgrowth": 22
+            },
+            "sigma_4.0": {
+              "mean_pct": 2.07,
+              "ci95_pct": [
+                0.83,
+                3.53
+              ],
+              "n_with_outgrowth": 22
+            },
+            "bimodal": {
+              "mean_pct": 2.08,
+              "ci95_pct": [
+                0.84,
+                3.52
+              ],
+              "n_with_outgrowth": 22
+            }
+          },
+          "paired_deltas_bimodal_minus": {
+            "pers": {
+              "overall": {
+                "mean_pp": 0.73,
+                "ci95_pp": [
+                  0.34,
+                  1.18
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 2.09,
+                "ci95_pp": [
+                  0.86,
+                  3.55
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_0.5": {
+              "overall": {
+                "mean_pp": 2.6,
+                "ci95_pp": [
+                  1.68,
+                  3.58
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 2.07,
+                "ci95_pp": [
+                  0.82,
+                  3.53
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_1.0": {
+              "overall": {
+                "mean_pp": 12.92,
+                "ci95_pp": [
+                  8.52,
+                  17.47
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 2.05,
+                "ci95_pp": [
+                  0.84,
+                  3.44
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_2.5": {
+              "overall": {
+                "mean_pp": 19.18,
+                "ci95_pp": [
+                  12.79,
+                  25.71
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 1.34,
+                "ci95_pp": [
+                  0.57,
+                  2.23
+                ],
+                "excludes_zero": true
+              }
+            },
+            "sigma_4.0": {
+              "overall": {
+                "mean_pp": 20.49,
+                "ci95_pp": [
+                  13.4,
+                  27.98
+                ],
+                "excludes_zero": true
+              },
+              "outgrowth": {
+                "mean_pp": 0.0,
+                "ci95_pp": [
+                  0.0,
+                  0.0
+                ],
+                "excludes_zero": false
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

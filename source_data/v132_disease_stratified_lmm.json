@@ -1,0 +1,53 @@
+{
+  "version": "v132",
+  "experiment": "Disease-stratified LMM combining 5 cohorts on per-patient sigma_opt",
+  "timestamp": "2026-05-08T18:52:49",
+  "model": "log(sigma_opt) ~ log(r_eq) * disease + (1|cohort)",
+  "n_observations": 631,
+  "n_glioma": 505,
+  "n_brain_mets": 126,
+  "result": {
+    "n": 631,
+    "n_groups": 5,
+    "beta": [
+      -3.0943813955700405,
+      1.273263931481847,
+      3.830270772901974,
+      -1.6563123266578765
+    ],
+    "beta_names": [
+      "intercept",
+      "log_r_eq",
+      "is_metast",
+      "log_r_eq:is_metast"
+    ],
+    "se": [
+      0.14052179338626922,
+      0.05177608315777911,
+      0.2140934957975211,
+      0.08062671714498379
+    ],
+    "ci_lo": [
+      -3.37033172795001,
+      1.1715884047722787,
+      3.409843664038387,
+      -1.8146434214917264
+    ],
+    "ci_hi": [
+      -2.8184310631900713,
+      1.3749394581914154,
+      4.250697881765561,
+      -1.4979812318240266
+    ],
+    "p_values": [
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "tau2": 0.0,
+    "sigma_e2": 0.5245242885291648,
+    "ICC_pct": 0.0
+  },
+  "interaction_excludes_zero": true
+}
