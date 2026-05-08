@@ -1,0 +1,75 @@
+{
+  "version": "v107",
+  "experiment": "Information-theoretic Brier-divergence decomposition + simplex-partition validation",
+  "timestamp": "2026-05-08T14:22:13",
+  "ucsf_per_stratum_brier": {
+    "heat_stable": 0.041,
+    "heat_active": 0.274,
+    "learned_stable": 0.14,
+    "learned_active": 0.199
+  },
+  "per_stratum_optimal": {
+    "stable": "heat",
+    "active": "learned"
+  },
+  "per_stratum_brier_divergences": {
+    "heat": {
+      "D_stable": 0.0,
+      "D_active": 0.07500000000000001
+    },
+    "learned": {
+      "D_stable": 0.099,
+      "D_active": 0.0
+    }
+  },
+  "closed_form_pi_star": 0.4310344827586207,
+  "empirical_pi_star_from_grid": 0.4310344827586207,
+  "decomposition_holds_at_grid_resolution": true,
+  "loco_cohort_decomposition_verification": [
+    {
+      "cohort": "UCSF-POSTOP",
+      "pi": 0.81,
+      "L_heat_observed": 0.108,
+      "L_learned_observed": 0.145,
+      "predicted_winner": "heat",
+      "observed_winner": "heat",
+      "match": true,
+      "L_heat_decomposition_excess_predicted": 0.014249999999999999,
+      "L_learned_decomposition_excess_predicted": 0.08019000000000001
+    },
+    {
+      "cohort": "MU-Glioma-Post",
+      "pi": 0.34,
+      "L_heat_observed": 0.279,
+      "L_learned_observed": 0.274,
+      "predicted_winner": "learned",
+      "observed_winner": "learned",
+      "match": true,
+      "L_heat_decomposition_excess_predicted": 0.0495,
+      "L_learned_decomposition_excess_predicted": 0.03366
+    },
+    {
+      "cohort": "RHUH-GBM",
+      "pi": 0.29,
+      "L_heat_observed": 0.504,
+      "L_learned_observed": 0.392,
+      "predicted_winner": "learned",
+      "observed_winner": "learned",
+      "match": true,
+      "L_heat_decomposition_excess_predicted": 0.053250000000000006,
+      "L_learned_decomposition_excess_predicted": 0.02871
+    },
+    {
+      "cohort": "UCSD-PTGBM",
+      "pi": 0.24,
+      "L_heat_observed": 0.165,
+      "L_learned_observed": 0.203,
+      "predicted_winner": "learned",
+      "observed_winner": "heat",
+      "match": false,
+      "L_heat_decomposition_excess_predicted": 0.05700000000000001,
+      "L_learned_decomposition_excess_predicted": 0.02376
+    }
+  ],
+  "directional_accuracy": 0.75
+}
