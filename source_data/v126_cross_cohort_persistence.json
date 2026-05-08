@@ -1,0 +1,496 @@
+{
+  "version": "v126",
+  "timestamp": "2026-05-08T17:46:11",
+  "n_bootstrap_replicates": 10000,
+  "alpha": 0.05,
+  "cohorts": {
+    "UCSF-POSTOP": {
+      "thresholds": {
+        "heat_ge_0.5": {
+          "n_patients": 297,
+          "persistence": {
+            "mean_pct": 84.02,
+            "ci95_pct": [
+              81.97,
+              86.0
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 84.06,
+              "ci95_pct": [
+                82.0,
+                86.02
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 84.16,
+              "ci95_pct": [
+                82.06,
+                86.07
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 81.94,
+              "ci95_pct": [
+                79.78,
+                84.04
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": 0.02,
+              "ci95_pp": [
+                0.02,
+                0.02
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": 0.13,
+              "ci95_pp": [
+                0.01,
+                0.24
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": -2.05,
+              "ci95_pp": [
+                -2.58,
+                -1.55
+              ],
+              "excludes_zero": true
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "n_patients": 297,
+          "persistence": {
+            "mean_pct": 84.03,
+            "ci95_pct": [
+              82.01,
+              86.0
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 81.54,
+              "ci95_pct": [
+                79.43,
+                83.52
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 72.21,
+              "ci95_pct": [
+                69.96,
+                74.43
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 56.37,
+              "ci95_pct": [
+                53.77,
+                58.86
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": -2.5,
+              "ci95_pp": [
+                -2.7,
+                -2.31
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": -11.83,
+              "ci95_pp": [
+                -12.62,
+                -11.09
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": -27.68,
+              "ci95_pp": [
+                -29.24,
+                -26.13
+              ],
+              "excludes_zero": true
+            }
+          }
+        }
+      }
+    },
+    "MU-Glioma-Post": {
+      "thresholds": {
+        "heat_ge_0.5": {
+          "n_patients": 151,
+          "persistence": {
+            "mean_pct": 69.54,
+            "ci95_pct": [
+              65.47,
+              73.46
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 69.52,
+              "ci95_pct": [
+                65.46,
+                73.61
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 69.81,
+              "ci95_pct": [
+                65.66,
+                73.82
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 69.97,
+              "ci95_pct": [
+                65.58,
+                74.12
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": 0.01,
+              "ci95_pp": [
+                0.0,
+                0.01
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": 0.26,
+              "ci95_pp": [
+                0.15,
+                0.36
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": 0.48,
+              "ci95_pp": [
+                0.0,
+                0.92
+              ],
+              "excludes_zero": true
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "n_patients": 151,
+          "persistence": {
+            "mean_pct": 69.5,
+            "ci95_pct": [
+              65.4,
+              73.58
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 68.33,
+              "ci95_pct": [
+                64.16,
+                72.46
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 64.12,
+              "ci95_pct": [
+                59.78,
+                68.32
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 57.75,
+              "ci95_pct": [
+                53.15,
+                62.4
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": -1.19,
+              "ci95_pp": [
+                -1.33,
+                -1.05
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": -5.37,
+              "ci95_pp": [
+                -5.95,
+                -4.84
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": -11.8,
+              "ci95_pp": [
+                -13.16,
+                -10.47
+              ],
+              "excludes_zero": true
+            }
+          }
+        }
+      }
+    },
+    "RHUH-GBM": {
+      "thresholds": {
+        "heat_ge_0.5": {
+          "n_patients": 39,
+          "persistence": {
+            "mean_pct": 71.08,
+            "ci95_pct": [
+              60.77,
+              80.51
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 71.04,
+              "ci95_pct": [
+                60.75,
+                80.54
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 71.13,
+              "ci95_pct": [
+                60.81,
+                80.62
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 71.32,
+              "ci95_pct": [
+                60.46,
+                81.06
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": 0.0,
+              "ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "excludes_zero": false
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": 0.12,
+              "ci95_pp": [
+                0.03,
+                0.2
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": 0.25,
+              "ci95_pp": [
+                -0.21,
+                0.67
+              ],
+              "excludes_zero": false
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "n_patients": 39,
+          "persistence": {
+            "mean_pct": 71.09,
+            "ci95_pct": [
+              60.92,
+              80.69
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 70.48,
+              "ci95_pct": [
+                60.41,
+                80.1
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 68.12,
+              "ci95_pct": [
+                57.57,
+                77.82
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 64.74,
+              "ci95_pct": [
+                53.97,
+                74.95
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": -0.65,
+              "ci95_pp": [
+                -0.82,
+                -0.48
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": -3.02,
+              "ci95_pp": [
+                -3.73,
+                -2.32
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": -6.36,
+              "ci95_pp": [
+                -7.88,
+                -4.83
+              ],
+              "excludes_zero": true
+            }
+          }
+        }
+      }
+    },
+    "LUMIERE": {
+      "thresholds": {
+        "heat_ge_0.5": {
+          "n_patients": 22,
+          "persistence": {
+            "mean_pct": 39.28,
+            "ci95_pct": [
+              26.38,
+              52.35
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 39.38,
+              "ci95_pct": [
+                26.53,
+                52.65
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 39.53,
+              "ci95_pct": [
+                26.43,
+                53.03
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 41.44,
+              "ci95_pct": [
+                27.4,
+                55.66
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": 0.0,
+              "ci95_pp": [
+                0.0,
+                0.0
+              ],
+              "excludes_zero": false
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": 0.14,
+              "ci95_pp": [
+                -0.51,
+                0.8
+              ],
+              "excludes_zero": false
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": 2.01,
+              "ci95_pp": [
+                -1.71,
+                5.54
+              ],
+              "excludes_zero": false
+            }
+          }
+        },
+        "heat_ge_0.8": {
+          "n_patients": 22,
+          "persistence": {
+            "mean_pct": 39.3,
+            "ci95_pct": [
+              26.56,
+              52.3
+            ]
+          },
+          "sigma_methods": {
+            "sigma_0.5": {
+              "mean_pct": 37.4,
+              "ci95_pct": [
+                24.77,
+                50.03
+              ]
+            },
+            "sigma_1.0": {
+              "mean_pct": 27.15,
+              "ci95_pct": [
+                16.02,
+                39.0
+              ]
+            },
+            "sigma_2.5": {
+              "mean_pct": 20.83,
+              "ci95_pct": [
+                11.24,
+                31.38
+              ]
+            }
+          },
+          "paired_deltas_vs_persistence": {
+            "sigma_0.5_minus_pers": {
+              "mean_pp": -1.86,
+              "ci95_pp": [
+                -2.56,
+                -1.22
+              ],
+              "excludes_zero": true
+            },
+            "sigma_1.0_minus_pers": {
+              "mean_pp": -12.19,
+              "ci95_pp": [
+                -16.45,
+                -8.08
+              ],
+              "excludes_zero": true
+            },
+            "sigma_2.5_minus_pers": {
+              "mean_pp": -18.44,
+              "ci95_pp": [
+                -24.9,
+                -12.15
+              ],
+              "excludes_zero": true
+            }
+          }
+        }
+      }
+    }
+  }
+}

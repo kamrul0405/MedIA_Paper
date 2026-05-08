@@ -1,0 +1,210 @@
+{
+  "version": "v128",
+  "experiment": "Multi-seed (42/123/999) v125 calibration-regularised CASRN for robustness audit",
+  "timestamp": "2026-05-08T18:15:09",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "lambda_cal": 5.0,
+  "cohort_dropout": 0.3,
+  "per_seed_results": [
+    {
+      "seed": 42,
+      "held_out": "UCSF-POSTOP",
+      "pi_observed": 0.8108108108108109,
+      "pi_train_mean": 0.3185840707964602,
+      "pi_est": 0.24957522749900818,
+      "casrn_brier": 0.10868576176093288,
+      "learned_brier": 0.1278787450078321,
+      "heat_brier": 0.0843849817237414,
+      "regret": 0.02430078003719148
+    },
+    {
+      "seed": 42,
+      "held_out": "MU-Glioma-Post",
+      "pi_observed": 0.3443708609271523,
+      "pi_train_mean": 0.7008086253369272,
+      "pi_est": 0.7497010827064514,
+      "casrn_brier": 0.24432124633539393,
+      "learned_brier": 0.23605256884772058,
+      "heat_brier": 0.25984641468608816,
+      "regret": 0.008268677487673348
+    },
+    {
+      "seed": 42,
+      "held_out": "RHUH-GBM",
+      "pi_observed": 0.2894736842105263,
+      "pi_train_mean": 0.621900826446281,
+      "pi_est": 0.6647318601608276,
+      "casrn_brier": 0.3949165957930841,
+      "learned_brier": 0.27646026328990336,
+      "heat_brier": 0.48312593663209363,
+      "regret": 0.11845633250318072
+    },
+    {
+      "seed": 42,
+      "held_out": "UCSD-PTGBM",
+      "pi_observed": 0.24324324324324326,
+      "pi_train_mean": 0.6247422680412371,
+      "pi_est": 0.48922133445739746,
+      "casrn_brier": 0.08834959183445175,
+      "learned_brier": 0.09855203328628999,
+      "heat_brier": 0.08745592594724812,
+      "regret": 0.0008936658872036318
+    },
+    {
+      "seed": 123,
+      "held_out": "UCSF-POSTOP",
+      "pi_observed": 0.8108108108108109,
+      "pi_train_mean": 0.3185840707964602,
+      "pi_est": 0.2668007016181946,
+      "casrn_brier": 0.11519407045184257,
+      "learned_brier": 0.14213759562856443,
+      "heat_brier": 0.0843849817237414,
+      "regret": 0.030809088728101175
+    },
+    {
+      "seed": 123,
+      "held_out": "MU-Glioma-Post",
+      "pi_observed": 0.3443708609271523,
+      "pi_train_mean": 0.7008086253369272,
+      "pi_est": 0.8191131949424744,
+      "casrn_brier": 0.24591370264302617,
+      "learned_brier": 0.23291590330591858,
+      "heat_brier": 0.25984641468608816,
+      "regret": 0.012997799337107596
+    },
+    {
+      "seed": 123,
+      "held_out": "RHUH-GBM",
+      "pi_observed": 0.2894736842105263,
+      "pi_train_mean": 0.621900826446281,
+      "pi_est": 0.6849033236503601,
+      "casrn_brier": 0.42004381433913585,
+      "learned_brier": 0.317844348518472,
+      "heat_brier": 0.48312593663209363,
+      "regret": 0.10219946582066386
+    },
+    {
+      "seed": 123,
+      "held_out": "UCSD-PTGBM",
+      "pi_observed": 0.24324324324324326,
+      "pi_train_mean": 0.6247422680412371,
+      "pi_est": 0.5421345829963684,
+      "casrn_brier": 0.08932254466580579,
+      "learned_brier": 0.10181221428855851,
+      "heat_brier": 0.08745592594724812,
+      "regret": 0.0018666187185576721
+    },
+    {
+      "seed": 999,
+      "held_out": "UCSF-POSTOP",
+      "pi_observed": 0.8108108108108109,
+      "pi_train_mean": 0.3185840707964602,
+      "pi_est": 0.30925658345222473,
+      "casrn_brier": 0.1164767652249744,
+      "learned_brier": 0.15167674629609226,
+      "heat_brier": 0.0843849817237414,
+      "regret": 0.032091783501233
+    },
+    {
+      "seed": 999,
+      "held_out": "MU-Glioma-Post",
+      "pi_observed": 0.3443708609271523,
+      "pi_train_mean": 0.7008086253369272,
+      "pi_est": 0.7524717450141907,
+      "casrn_brier": 0.24783906811811277,
+      "learned_brier": 0.24054817121401922,
+      "heat_brier": 0.25984641468608816,
+      "regret": 0.007290896904093541
+    },
+    {
+      "seed": 999,
+      "held_out": "RHUH-GBM",
+      "pi_observed": 0.2894736842105263,
+      "pi_train_mean": 0.621900826446281,
+      "pi_est": 0.5869092345237732,
+      "casrn_brier": 0.40980343148112297,
+      "learned_brier": 0.3293369592804658,
+      "heat_brier": 0.48312593663209363,
+      "regret": 0.08046647220065717
+    },
+    {
+      "seed": 999,
+      "held_out": "UCSD-PTGBM",
+      "pi_observed": 0.24324324324324326,
+      "pi_train_mean": 0.6247422680412371,
+      "pi_est": 0.5402249097824097,
+      "casrn_brier": 0.10045035691409548,
+      "learned_brier": 0.14449786333165862,
+      "heat_brier": 0.08745592594724812,
+      "regret": 0.012994430966847367
+    }
+  ],
+  "aggregate": {
+    "UCSF-POSTOP": {
+      "n_seeds": 3,
+      "regret_mean": 0.029067217422175218,
+      "regret_se": 0.0024118126294679202,
+      "regret_min": 0.02430078003719148,
+      "regret_max": 0.032091783501233,
+      "casrn_brier_mean": 0.11345219914591663,
+      "casrn_brier_se": 0.0024118126294679202,
+      "learned_brier_mean": 0.1405643623108296,
+      "learned_brier_se": 0.006914779187436891,
+      "heat_brier_mean": 0.08438498172374138,
+      "pi_est_mean": 0.2752108375231425,
+      "pi_est_se": 0.017734278028330754
+    },
+    "MU-Glioma-Post": {
+      "n_seeds": 3,
+      "regret_mean": 0.009519124576291496,
+      "regret_se": 0.00176209130354253,
+      "regret_min": 0.007290896904093541,
+      "regret_max": 0.012997799337107596,
+      "casrn_brier_mean": 0.24602467236551095,
+      "casrn_brier_se": 0.001017022325750366,
+      "learned_brier_mean": 0.23650554778921942,
+      "learned_brier_se": 0.002214856714427734,
+      "heat_brier_mean": 0.25984641468608816,
+      "pi_est_mean": 0.7737620075543722,
+      "pi_est_se": 0.022689695095196506
+    },
+    "RHUH-GBM": {
+      "n_seeds": 3,
+      "regret_mean": 0.10037409017483391,
+      "regret_se": 0.01100464097002723,
+      "regret_min": 0.08046647220065717,
+      "regret_max": 0.11845633250318072,
+      "casrn_brier_mean": 0.4082546138711143,
+      "casrn_brier_se": 0.007294824762735719,
+      "learned_brier_mean": 0.3078805236962804,
+      "learned_brier_se": 0.016056614405856564,
+      "heat_brier_mean": 0.48312593663209363,
+      "pi_est_mean": 0.6455148061116537,
+      "pi_est_se": 0.0298757524350658
+    },
+    "UCSD-PTGBM": {
+      "n_seeds": 3,
+      "regret_mean": 0.0052515718575362235,
+      "regret_se": 0.0038816044660677745,
+      "regret_min": 0.0008936658872036318,
+      "regret_max": 0.012994430966847367,
+      "casrn_brier_mean": 0.09270749780478434,
+      "casrn_brier_se": 0.0038816044660677745,
+      "learned_brier_mean": 0.1149540369688357,
+      "learned_brier_se": 0.01480186308272668,
+      "heat_brier_mean": 0.08745592594724812,
+      "pi_est_mean": 0.5238602757453918,
+      "pi_est_se": 0.017328241910350373
+    }
+  },
+  "v110_baseline": {
+    "UCSF-POSTOP": 0.015,
+    "MU-Glioma-Post": 0.004,
+    "RHUH-GBM": 0.094,
+    "UCSD-PTGBM": -0.0016
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "version": "v123",
+  "experiment": "Random-effects meta-analysis of cohort-conditional sigma optima at heat>=0.50 vs lesion-equivalent radius",
+  "timestamp": "2026-05-08T17:30:29",
+  "cohorts": [
+    {
+      "name": "UCSF-POSTOP",
+      "sigma_opt": 0.75,
+      "r_eq": 15.32,
+      "n": 297,
+      "log_sigma": -0.2876820724517809,
+      "log_r": 2.729159164312445,
+      "var_log_sigma": 0.00037411148522259637
+    },
+    {
+      "name": "MU-Glioma-Post",
+      "sigma_opt": 2.5,
+      "r_eq": 16.92,
+      "n": 151,
+      "log_sigma": 0.9162907318741551,
+      "log_r": 2.8284963541780774,
+      "var_log_sigma": 6.622516556291391e-05
+    },
+    {
+      "name": "RHUH-GBM",
+      "sigma_opt": 2.0,
+      "r_eq": 18.82,
+      "n": 39,
+      "log_sigma": 0.6931471805599453,
+      "log_r": 2.9349201341572337,
+      "var_log_sigma": 0.00040064102564102563
+    },
+    {
+      "name": "LUMIERE",
+      "sigma_opt": 2.5,
+      "r_eq": 12.11,
+      "n": 22,
+      "log_sigma": 0.9162907318741551,
+      "log_r": 2.494031557565001,
+      "var_log_sigma": 0.00045454545454545444
+    },
+    {
+      "name": "PROTEAS-brain-mets",
+      "sigma_opt": 1.0,
+      "r_eq": 6.0,
+      "n": 42,
+      "log_sigma": 0.0,
+      "log_r": 1.791759469228055,
+      "var_log_sigma": 0.0014880952380952382
+    }
+  ],
+  "model": "log(sigma_opt) = intercept + beta * log(r_eq)",
+  "method": "DerSimonian-Laird RE meta-regression",
+  "result": {
+    "intercept": -0.794960335562503,
+    "intercept_ci": [
+      -3.914586718835868,
+      2.3246660477108616
+    ],
+    "slope_beta": 0.48623686686207557,
+    "slope_se": 0.6148461586121928,
+    "slope_ci": [
+      -0.7188616040178224,
+      1.6913353377419735
+    ],
+    "slope_p": 0.4290450242121451,
+    "slope_z": 0.7908268760426035,
+    "tau2": 0.31480364287281176,
+    "I2_pct": 99.90934483612477,
+    "Q": 3309.243369886188,
+    "Q_df": 3,
+    "Q_p": 0.0,
+    "predictive_interval_slope_95": [
+      -2.1627352468772427,
+      3.1352089806013943
+    ]
+  }
+}

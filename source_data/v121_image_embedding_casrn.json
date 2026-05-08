@@ -1,0 +1,64 @@
+{
+  "version": "v121",
+  "experiment": "Image-embedding CASRN with 3D CNN encoder + cohort one-hot residual",
+  "timestamp": "2026-05-08T17:24:34",
+  "embed_dim": 128,
+  "epochs_pi": 35,
+  "epochs_unet": 18,
+  "cohorts_pi_observed": {
+    "UCSF-POSTOP": 0.8108108108108109,
+    "MU-Glioma-Post": 0.3443708609271523,
+    "RHUH-GBM": 0.2894736842105263,
+    "UCSD-PTGBM": 0.24324324324324326
+  },
+  "results": [
+    {
+      "held_out": "UCSF-POSTOP",
+      "pi_observed": 0.8108108108108109,
+      "pi_estimated_image_embedding": 0.3835214078426361,
+      "pi_estimated_per_patient_std": 0.3286603093147278,
+      "alpha_routing": 0.3835214078426361,
+      "casrn_brier_mean": 0.10729076457839157,
+      "casrn_brier_sd": 0.04930761792307691,
+      "learned_brier_mean": 0.1458022667478921,
+      "heat_brier_mean": 0.0843849817237414,
+      "regret_vs_best_individual": 0.02290578285465017
+    },
+    {
+      "held_out": "MU-Glioma-Post",
+      "pi_observed": 0.3443708609271523,
+      "pi_estimated_image_embedding": 0.8908959031105042,
+      "pi_estimated_per_patient_std": 0.2755489647388458,
+      "alpha_routing": 0.8908959031105042,
+      "casrn_brier_mean": 0.25330344038022473,
+      "casrn_brier_sd": 0.15158500196246721,
+      "learned_brier_mean": 0.2371033588486002,
+      "heat_brier_mean": 0.25984641468608816,
+      "regret_vs_best_individual": 0.016200081531624527
+    },
+    {
+      "held_out": "RHUH-GBM",
+      "pi_observed": 0.2894736842105263,
+      "pi_estimated_image_embedding": 0.8170803785324097,
+      "pi_estimated_per_patient_std": 0.3564833402633667,
+      "alpha_routing": 0.8170803785324097,
+      "casrn_brier_mean": 0.44326491163749443,
+      "casrn_brier_sd": 0.22489096484248117,
+      "learned_brier_mean": 0.3107525784718363,
+      "heat_brier_mean": 0.48312593663209363,
+      "regret_vs_best_individual": 0.13251233316565814
+    },
+    {
+      "held_out": "UCSD-PTGBM",
+      "pi_observed": 0.24324324324324326,
+      "pi_estimated_image_embedding": 0.31396931409835815,
+      "pi_estimated_per_patient_std": 0.3262895941734314,
+      "alpha_routing": 0.31396931409835815,
+      "casrn_brier_mean": 0.0901658209748692,
+      "casrn_brier_sd": 0.0825445381768432,
+      "learned_brier_mean": 0.09576455291952132,
+      "heat_brier_mean": 0.08745592594724812,
+      "regret_vs_best_individual": 0.00270989502762109
+    }
+  ]
+}
