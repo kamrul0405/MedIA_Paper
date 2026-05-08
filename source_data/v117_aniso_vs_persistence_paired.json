@@ -1,0 +1,269 @@
+{
+  "version": "v117",
+  "timestamp": "2026-05-08T16:47:55",
+  "n_matched": 242,
+  "n_bootstrap_replicates": 10000,
+  "alpha": 0.05,
+  "thresholds": {
+    "heat_ge_0.5": {
+      "methods": {
+        "persistence": {
+          "mean_pct": 51.87,
+          "ci95_pct": [
+            42.42,
+            61.78
+          ]
+        },
+        "sigma_1.0": {
+          "mean_pct": 51.26,
+          "ci95_pct": [
+            41.49,
+            61.19
+          ]
+        },
+        "sigma_2.5": {
+          "mean_pct": 47.32,
+          "ci95_pct": [
+            37.75,
+            57.26
+          ]
+        },
+        "aniso_bed": {
+          "mean_pct": 52.84,
+          "ci95_pct": [
+            42.94,
+            62.91
+          ]
+        },
+        "const_sigma": {
+          "mean_pct": 47.3,
+          "ci95_pct": [
+            37.75,
+            57.39
+          ]
+        },
+        "iso_bed": {
+          "mean_pct": 49.41,
+          "ci95_pct": [
+            39.71,
+            59.39
+          ]
+        }
+      },
+      "paired_deltas_vs_aniso": {
+        "aniso_minus_persistence": {
+          "mean_pp": 0.9,
+          "ci95_pp": [
+            0.58,
+            1.24
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_sigma_1.0": {
+          "mean_pp": 1.52,
+          "ci95_pp": [
+            1.17,
+            1.88
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_sigma_2.5": {
+          "mean_pp": 5.45,
+          "ci95_pp": [
+            4.07,
+            6.98
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_const_sigma": {
+          "mean_pp": 5.45,
+          "ci95_pp": [
+            4.09,
+            6.97
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_iso_bed": {
+          "mean_pp": 3.38,
+          "ci95_pp": [
+            2.59,
+            4.31
+          ],
+          "excludes_zero": true
+        }
+      },
+      "paired_deltas_vs_persistence": {
+        "sigma_1.0_minus_persistence": {
+          "mean_pp": -0.61,
+          "ci95_pp": [
+            -0.89,
+            -0.35
+          ],
+          "excludes_zero": true
+        },
+        "sigma_2.5_minus_persistence": {
+          "mean_pp": -4.54,
+          "ci95_pp": [
+            -6.01,
+            -3.24
+          ],
+          "excludes_zero": true
+        },
+        "aniso_bed_minus_persistence": {
+          "mean_pp": 0.9,
+          "ci95_pp": [
+            0.59,
+            1.24
+          ],
+          "excludes_zero": true
+        },
+        "iso_bed_minus_persistence": {
+          "mean_pp": -2.48,
+          "ci95_pp": [
+            -3.44,
+            -1.65
+          ],
+          "excludes_zero": true
+        },
+        "const_sigma_minus_persistence": {
+          "mean_pp": -4.53,
+          "ci95_pp": [
+            -6.02,
+            -3.23
+          ],
+          "excludes_zero": true
+        }
+      }
+    },
+    "heat_ge_0.8": {
+      "methods": {
+        "persistence": {
+          "mean_pct": 51.95,
+          "ci95_pct": [
+            42.16,
+            61.86
+          ]
+        },
+        "sigma_1.0": {
+          "mean_pct": 43.51,
+          "ci95_pct": [
+            34.5,
+            53.18
+          ]
+        },
+        "sigma_2.5": {
+          "mean_pct": 30.13,
+          "ci95_pct": [
+            22.51,
+            38.31
+          ]
+        },
+        "aniso_bed": {
+          "mean_pct": 49.44,
+          "ci95_pct": [
+            39.84,
+            59.33
+          ]
+        },
+        "const_sigma": {
+          "mean_pct": 30.11,
+          "ci95_pct": [
+            22.49,
+            38.39
+          ]
+        },
+        "iso_bed": {
+          "mean_pct": 37.13,
+          "ci95_pct": [
+            28.45,
+            45.94
+          ]
+        }
+      },
+      "paired_deltas_vs_aniso": {
+        "aniso_minus_persistence": {
+          "mean_pp": -2.45,
+          "ci95_pp": [
+            -3.47,
+            -1.59
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_sigma_1.0": {
+          "mean_pp": 6.0,
+          "ci95_pp": [
+            4.61,
+            7.45
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_sigma_2.5": {
+          "mean_pp": 19.33,
+          "ci95_pp": [
+            15.61,
+            23.42
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_const_sigma": {
+          "mean_pp": 19.32,
+          "ci95_pp": [
+            15.52,
+            23.48
+          ],
+          "excludes_zero": true
+        },
+        "aniso_minus_iso_bed": {
+          "mean_pp": 12.32,
+          "ci95_pp": [
+            9.89,
+            14.88
+          ],
+          "excludes_zero": true
+        }
+      },
+      "paired_deltas_vs_persistence": {
+        "sigma_1.0_minus_persistence": {
+          "mean_pp": -8.44,
+          "ci95_pp": [
+            -10.09,
+            -6.86
+          ],
+          "excludes_zero": true
+        },
+        "sigma_2.5_minus_persistence": {
+          "mean_pp": -21.76,
+          "ci95_pp": [
+            -26.07,
+            -17.8
+          ],
+          "excludes_zero": true
+        },
+        "aniso_bed_minus_persistence": {
+          "mean_pp": -2.45,
+          "ci95_pp": [
+            -3.46,
+            -1.6
+          ],
+          "excludes_zero": true
+        },
+        "iso_bed_minus_persistence": {
+          "mean_pp": -14.77,
+          "ci95_pp": [
+            -17.98,
+            -11.83
+          ],
+          "excludes_zero": true
+        },
+        "const_sigma_minus_persistence": {
+          "mean_pp": -21.74,
+          "ci95_pp": [
+            -26.05,
+            -17.78
+          ],
+          "excludes_zero": true
+        }
+      }
+    }
+  }
+}

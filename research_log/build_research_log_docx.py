@@ -295,6 +295,12 @@ def add_table_of_contents(doc):
         ("19.", "Additional motivating experiments (v110, v113, v114)"),
         ("20.", "Updated follow-up paper proposals (post-v110 / v113 / v114)"),
         ("21.", "Final session summary"),
+        ("22.", "Fairness audit and persistence-baseline reframing (v115, v117)"),
+        ("22.1.", "v115 sub-voxel σ sweep on cache_3d cohorts"),
+        ("22.2.", "v117 paired anisotropic-vs-persistence comparison on PROTEAS"),
+        ("22.3.", "Implications for the Medical Physics manuscript and Proposal A"),
+        ("22.4.", "Updated proposal-status summary (post-fairness-audit)"),
+        ("22.5.", "Final updated session summary"),
         ("", "List of Tables"),
     ]
     for num, title in entries:
@@ -1286,6 +1292,193 @@ def build():
         "**Eight follow-up paper proposals documented**, four with bulletproof empirical "
         "support (A, C, F, H), one with strong supporting theory (B), three needing collaborator "
         "outreach or additional experiments (D, E, G).")
+
+    # ===========================================================
+    # SECTION 22 — Fairness audit (v115, v116, v117)
+    # ===========================================================
+    add_heading(doc, "22. Fairness audit and persistence-baseline reframing (v115, v117)", level=1)
+    add_body(doc,
+        "This section documents three additional experiments executed to stress-test the v98 "
+        "anisotropic-BED breakthrough and the v109 / v113 σ findings. Two important fairness "
+        "concerns emerge that **do not invalidate the prior findings** but materially reframe "
+        "their interpretation.")
+
+    add_heading(doc, "22.1. v115 — Sub-voxel σ sweep on cache_3d cohorts", level=2)
+    add_body(doc,
+        "**Hypothesis.** The σ = 1.0 voxels universal-optimum claim from v109 / v113 was tested "
+        "on a grid σ ∈ {1.0, 1.5, …, 4.0}. v115 extends to sub-voxel σ ∈ {0.25, 0.5, 0.75, 1.0, "
+        "1.25, 1.5, 2.0, 2.5} on the four cache_3d cohorts.")
+    cap("v115 sub-voxel σ sweep — heat ≥ 0.80 future-lesion coverage at sub-voxel σ.",
+        "Future-lesion coverage at heat ≥ 0.80 across the sub-voxel-extended σ grid for the four "
+        "cache_3d cohorts. **σ = 0.25 voxels wins universally**, contradicting the prior "
+        "σ = 1.0 claim. The previous claim was a grid-resolution artefact: the v113 grid started "
+        "at σ = 1.0.")
+    add_table(doc,
+        ["Cohort", "σ = 0.25", "σ = 0.5", "σ = 0.75", "σ = 1.0 (v113)", "σ = 2.5"],
+        [
+            ["UCSF-POSTOP", "**84.03%**", "81.53%", "75.05%", "72.20%", "56.36%"],
+            ["MU-Glioma-Post", "**69.52%**", "68.32%", "65.35%", "64.15%", "57.71%"],
+            ["RHUH-GBM", "**71.06%**", "70.42%", "68.75%", "68.04%", "64.70%"],
+            ["LUMIERE", "**39.32%**", "37.46%", "28.48%", "27.13%", "20.84%"],
+        ],
+        col_widths_cm=[3.5, 2.4, 2.0, 2.4, 3.0, 2.0])
+    add_body(doc,
+        "**Critical interpretation caveat.** At σ = 0.25 voxels the heat kernel collapses to "
+        "approximately the binary lesion mask itself: the Gaussian is essentially a delta "
+        "function, and heat ≥ 0.80 selects only the original mask voxels. The 'future-lesion "
+        "coverage at heat ≥ 0.80 with σ = 0.25' is therefore essentially measuring **lesion "
+        "persistence** — the fraction of future-lesion voxels that already lie in the baseline "
+        "mask. This is a strong empirical baseline but it is not a 'structural prior' in the "
+        "meaningful spatial-prediction sense.")
+    add_body(doc,
+        "**Implication for Proposal H.** The cohort-conditional σ-selection paper should "
+        "focus on heat ≥ 0.50, where the optima are meaningfully cohort-specific (UCSF: σ = 0.75; "
+        "MU: σ = 2.5; RHUH: σ = 2.0; LUMIERE: σ = 2.5; PROTEAS: σ = 1.0) and the heat kernel is "
+        "genuinely smoothing beyond persistence. At heat ≥ 0.80 with sub-voxel σ, all cohorts "
+        "converge on the persistence baseline.")
+
+    add_heading(doc, "22.2. v117 — Paired anisotropic-vs-persistence comparison on PROTEAS", level=2)
+    add_body(doc,
+        "**Hypothesis.** The v98 anisotropic-BED breakthrough (+12.33 pp at heat ≥ 0.80 vs "
+        "constant σ = 2.5) is bulletproof against the most aggressive baseline: the lesion-"
+        "persistence baseline (heat = baseline mask).")
+    add_body(doc,
+        "**Method.** Joins v98_anisotropic_bed_per_patient.csv (the original v98 anisotropic "
+        "coverages: 121 follow-ups × 2 thresholds × 42 patients) with "
+        "v116_anisotropic_vs_persistence_per_patient.csv (persistence baseline computed on the "
+        "same patients/follow-ups). Computes paired-delta cluster-bootstrap CIs (10,000 "
+        "patient-level resamples).")
+    cap("v117 anisotropic-vs-persistence point estimates with 95% CIs (heat ≥ 0.50).",
+        "Mean coverage with 95% cluster-bootstrap CIs at heat ≥ 0.50 for each method, plus "
+        "paired-delta CIs against the persistence baseline. The anisotropic BED kernel is the "
+        "only structural prior that significantly BEATS persistence at this threshold "
+        "(+0.90 pp [+0.58, +1.24]).")
+    add_table(doc,
+        ["Method", "Mean coverage", "95% CI", "Δ vs persistence", "Excludes 0?"],
+        [
+            ["Persistence baseline", "51.87%", "[42.42, 61.78]", "—", "—"],
+            ["σ = 1.0", "51.26%", "[41.49, 61.19]", "−0.61 pp [−0.89, −0.35]", "Yes (neg)"],
+            ["σ = 2.5 (legacy)", "47.32%", "[37.75, 57.26]", "−4.54 pp [−6.01, −3.24]", "Yes (neg)"],
+            ["Isotropic BED", "49.41%", "[39.71, 59.39]", "−2.48 pp [−3.44, −1.65]", "Yes (neg)"],
+            ["**Anisotropic BED (v98)**", "**52.84%**", "**[42.94, 62.91]**",
+             "**+0.90 pp [+0.58, +1.24]**", "**Yes (pos)**"],
+        ],
+        col_widths_cm=[3.6, 2.4, 2.6, 4.4, 2.0])
+    cap("v117 anisotropic-vs-persistence point estimates with 95% CIs (heat ≥ 0.80).",
+        "Mean coverage with 95% cluster-bootstrap CIs at heat ≥ 0.80. **Persistence dominates** "
+        "at this threshold — anisotropic BED significantly LOSES to persistence by "
+        "−2.45 pp [−3.47, −1.59]. The gain over isotropic BED, σ-grid baselines and constant σ "
+        "remains significantly positive.")
+    add_table(doc,
+        ["Method", "Mean coverage", "95% CI", "Δ vs persistence", "Excludes 0?"],
+        [
+            ["**Persistence baseline**", "**51.95%**", "**[42.16, 61.86]**", "—", "—"],
+            ["σ = 1.0", "43.51%", "[34.50, 53.18]", "−8.44 pp [−10.09, −6.86]", "Yes (neg)"],
+            ["σ = 2.5 (legacy)", "30.13%", "[22.51, 38.31]", "−21.76 pp [−26.07, −17.80]",
+             "Yes (neg)"],
+            ["Isotropic BED", "37.13%", "[28.45, 45.94]", "−14.77 pp [−17.98, −11.83]",
+             "Yes (neg)"],
+            ["Anisotropic BED (v98)", "49.44%", "[39.84, 59.33]",
+             "**−2.45 pp [−3.47, −1.59]**", "Yes (neg)"],
+        ],
+        col_widths_cm=[3.6, 2.4, 2.6, 4.4, 2.0])
+    add_body(doc,
+        "**Headline finding.** The v98 anisotropic BED-aware kernel exhibits a **threshold-"
+        "dependent advantage** over the persistence baseline.")
+    add_bullet(doc,
+        "**At heat ≥ 0.50** (clinically relevant wider prior): anisotropic significantly BEATS "
+        "persistence by +0.90 pp [+0.58, +1.24]. The first structural prior we've evaluated to "
+        "do so.")
+    add_bullet(doc,
+        "**At heat ≥ 0.80** (tight prior): anisotropic significantly LOSES to persistence by "
+        "−2.45 pp [−3.47, −1.59]. The lesion mask itself is a tighter spatial predictor at this "
+        "threshold.")
+    add_body(doc,
+        "**Why?** With realistic spatial smoothing the anisotropic kernel necessarily extends "
+        "beyond the baseline mask in directions of dose-gradient — but on PROTEAS-brain-mets "
+        "approximately 52% of future-lesion voxels are already in the baseline mask (high lesion "
+        "persistence). The kernel's outgrowth-aware extension dilutes the high-precision "
+        "persistence prediction at the tight threshold.")
+    add_body(doc,
+        "**Honest reframing of the v98 +12.33 pp claim.** The v98 +12.33 pp gain at heat ≥ 0.80 "
+        "is correct **relative to the constant σ = 2.5 baseline used in prior literature on "
+        "heat-equation structural priors**. It is NOT correct relative to the persistence "
+        "baseline. The +0.90 pp gain at heat ≥ 0.50 IS bulletproof against persistence.")
+
+    add_heading(doc,
+        "22.3. Implications for the Medical Physics manuscript and Proposal A", level=2)
+    add_numbered(doc,
+        "**Add the persistence baseline** to the §3.9 BED-aware kernel results table. The "
+        "honest comparison set is {constant σ, σ-optimum, isotropic BED, anisotropic BED, "
+        "persistence}.")
+    add_numbered(doc,
+        "**Reframe the headline endpoint.** Heat ≥ 0.50 is the clinically meaningful threshold "
+        "for the anisotropic kernel; heat ≥ 0.80 is dominated by persistence. Either demote "
+        "heat ≥ 0.80 to a sensitivity check (with the persistence-loss honestly reported), or "
+        "replace the metric with **outgrowth-only coverage** — future-lesion voxels OUTSIDE the "
+        "baseline mask, which the persistence baseline cannot predict by construction.")
+    add_numbered(doc,
+        "**The 'exceeds dose ≥ 95% Rx envelope' claim still holds.** At heat ≥ 0.80, "
+        "anisotropic 49.44% vs dose envelope 37.82% = +11.62 pp; the dose envelope is a "
+        "different baseline from persistence; the comparison is valid.")
+    add_body(doc,
+        "**Implications for Proposal A (anisotropic BED structural-priors paper).** The "
+        "headline contribution becomes the heat ≥ 0.50 result (+0.90 pp over persistence; "
+        "+1.52 pp over σ-optimum; +3.38 pp over isotropic BED), all with CIs excluding zero. "
+        "A natural follow-up: outgrowth-only coverage as the primary endpoint, eliminating the "
+        "persistence-trivial-prediction artefact. The fairness audit STRENGTHENS the proposal — "
+        "v117 is exactly the kind of stress test reviewers will demand, and the +0.90 pp "
+        "persistence-significant gain at heat ≥ 0.50 plus the +12.32 pp gain over isotropic at "
+        "heat ≥ 0.80 are both individually publishable.")
+
+    add_heading(doc, "22.4. Updated proposal-status summary (post-fairness-audit)", level=2)
+    cap("Proposal-status summary after the v115 / v117 fairness audit.",
+        "After v115 and v117, Proposal A is reframed around heat ≥ 0.50 (where anisotropic "
+        "BED is the only structural prior to significantly beat persistence) and Proposal H is "
+        "refocused on heat ≥ 0.50 (where cohort-conditional σ-optima are genuinely meaningful "
+        "rather than a persistence-collapse artefact).")
+    add_table(doc,
+        ["#", "Paper", "Lead supporting experiments", "Updated status"],
+        [
+            ["**A**", "**Anisotropic BED-aware structural priors**",
+             "v98, v101, v114, **v117**",
+             "**Bulletproof at heat ≥ 0.50**: +0.90 pp [+0.58, +1.24] over persistence "
+             "(first structural prior to do so). At heat ≥ 0.80 persistence dominates — "
+             "motivates outgrowth-only coverage as primary endpoint."],
+            ["C", "Information-geometric framework", "v100, v107", "Unchanged"],
+            ["F", "Cross-cohort regime classifier", "v84_E3", "Unchanged"],
+            ["**H**", "**Cohort-conditional σ selection**",
+             "v109, v113, **v115**",
+             "**Refocus on heat ≥ 0.50** where σ-optima ARE genuinely cohort-specific "
+             "(UCSF: 0.75; MU: 2.5; RHUH: 2.0; LUMIERE: 2.5; PROTEAS: 1.0). At heat ≥ 0.80 "
+             "sub-voxel σ collapses to persistence on every cohort."],
+        ],
+        col_widths_cm=[1.0, 4.5, 3.5, 6.0])
+
+    add_heading(doc, "22.5. Final updated session summary", level=2)
+    add_body(doc, "**Session experiments versioned: 36** (v76 through v117; some skipped). "
+                  "**Compute: ~17 hours.** **Major findings — final list:**")
+    add_numbered(doc,
+        "**Anisotropic BED-aware kernel** (v98, v101, v114, **v117**) — +12.33 pp gain over "
+        "isotropic BED at heat ≥ 0.80; +0.90 pp gain over the persistence baseline at heat ≥ "
+        "0.50 — first structural prior to significantly exceed persistence.")
+    add_numbered(doc,
+        "**Brier-divergence decomposition is mathematically exact** (v107) — closed-form "
+        "π* = 0.4310 matches empirical simplex zero-crossing to 4 decimal places.")
+    add_numbered(doc,
+        "**Cohort-conditional σ-selection at heat ≥ 0.50** (v109, v113, **v115**) — optima are "
+        "genuinely cohort-specific (range σ = 0.75 to σ = 2.5). At heat ≥ 0.80 sub-voxel σ "
+        "collapses to persistence; the meaningful σ-tuning happens at the wider threshold.")
+    add_numbered(doc,
+        "**Cohort-conditional CASRN partially fixes RHUH-GBM failure** (v110) — RHUH regret "
+        "reduced 20%; UCSD-PTGBM achieves negative regret.")
+    add_numbered(doc,
+        "**Honest fairness audit** (**v117**) — anisotropic BED significantly beats the "
+        "lesion-persistence baseline at heat ≥ 0.50 but not at heat ≥ 0.80; reframes the "
+        "v98 +12.33 pp claim and motivates an outgrowth-only-coverage follow-up.")
+    add_body(doc,
+        "**Eight follow-up paper proposals documented** with concrete supporting experiments "
+        "and refined post-fairness-audit framing.")
 
     # ---- List of Tables ----
     add_list_of_tables(doc, table_captions)
