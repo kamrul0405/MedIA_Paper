@@ -1,0 +1,91 @@
+{
+  "version": "v162",
+  "experiment": "DHEPL ablation: uniform-weight vs learned-router (v157)",
+  "timestamp": "2026-05-09T10:04:39",
+  "all_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "sigma_grid": [
+    2.0,
+    4.0,
+    7.0,
+    10.0
+  ],
+  "uniform_weights": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "learned_outgrowth_pct": 96.3893634485984,
+      "uniform_dhepl_outgrowth_pct": 20.85386044428197,
+      "ensemble_outgrowth_pct": 97.70452276770612,
+      "ensemble_overall_pct": 99.35840845491086
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "learned_outgrowth_pct": 64.04212150988512,
+      "uniform_dhepl_outgrowth_pct": 11.604730190388896,
+      "ensemble_outgrowth_pct": 64.05900973890705,
+      "ensemble_overall_pct": 85.80046108272397
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "learned_outgrowth_pct": 84.80400165108833,
+      "uniform_dhepl_outgrowth_pct": 7.470485724123914,
+      "ensemble_outgrowth_pct": 84.80583886975852,
+      "ensemble_overall_pct": 90.0592698666606
+    },
+    "LUMIERE": {
+      "n": 22,
+      "learned_outgrowth_pct": 76.26467193740129,
+      "uniform_dhepl_outgrowth_pct": 18.32287755918583,
+      "ensemble_outgrowth_pct": 77.11015770044199,
+      "ensemble_overall_pct": 80.20067845677782
+    },
+    "PROTEAS-brain-mets": {
+      "n": 126,
+      "learned_outgrowth_pct": 65.4045637628386,
+      "uniform_dhepl_outgrowth_pct": 65.17905007068583,
+      "ensemble_outgrowth_pct": 88.15310671220715,
+      "ensemble_overall_pct": 92.0138585942109
+    }
+  },
+  "v157_learned_router_baseline": {
+    "UCSF-POSTOP": {
+      "learned": 96.04,
+      "ens_out": 97.38,
+      "ens_ovr": 99.25
+    },
+    "MU-Glioma-Post": {
+      "learned": 58.3,
+      "ens_out": 58.3,
+      "ens_ovr": 82.79
+    },
+    "RHUH-GBM": {
+      "learned": 91.59,
+      "ens_out": 91.59,
+      "ens_ovr": 95.75
+    },
+    "LUMIERE": {
+      "learned": 74.06,
+      "ens_out": 74.25,
+      "ens_ovr": 77.95
+    },
+    "PROTEAS-brain-mets": {
+      "learned": 71.26,
+      "ens_out": 75.65,
+      "ens_ovr": 82.85
+    }
+  },
+  "cohort_mean_v157_ens_out_pct": 79.434,
+  "cohort_mean_v162_uniform_ens_out_pct": 82.36652715780416,
+  "v162_minus_v157_cohort_mean_pp": 2.9325271578041594
+}

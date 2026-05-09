@@ -1,0 +1,252 @@
+{
+  "version": "v159",
+  "experiment": "Multi-seed v156 universal foundation 5-fold LOCO",
+  "timestamp": "2026-05-09T09:38:13",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 97.79706914138772,
+          "bimodal_outgrowth": 53.32453365237186,
+          "ensemble_outgrowth": 98.30799489135114,
+          "ensemble_overall": 99.26233065107061
+        },
+        "123": {
+          "learned_outgrowth": 93.76171911957599,
+          "bimodal_outgrowth": 53.32453365237186,
+          "ensemble_outgrowth": 96.37339294743829,
+          "ensemble_overall": 98.78000392845651
+        },
+        "999": {
+          "learned_outgrowth": 88.50778583651626,
+          "bimodal_outgrowth": 53.32453365237186,
+          "ensemble_outgrowth": 89.56735115894593,
+          "ensemble_overall": 96.51414537982834
+        }
+      },
+      "learned_outgrowth_mean": 93.35552469915997,
+      "learned_outgrowth_se": 2.689265172863133,
+      "learned_outgrowth_min": 88.50778583651626,
+      "learned_outgrowth_max": 97.79706914138772,
+      "bimodal_outgrowth_mean": 53.32453365237186,
+      "bimodal_outgrowth_se": 0.0,
+      "bimodal_outgrowth_min": 53.32453365237186,
+      "bimodal_outgrowth_max": 53.32453365237186,
+      "ensemble_outgrowth_mean": 94.74957966591178,
+      "ensemble_outgrowth_se": 2.650615676539765,
+      "ensemble_outgrowth_min": 89.56735115894593,
+      "ensemble_outgrowth_max": 98.30799489135114,
+      "ensemble_overall_mean": 98.18549331978515,
+      "ensemble_overall_se": 0.8471939406329067,
+      "ensemble_overall_min": 96.51414537982834,
+      "ensemble_overall_max": 99.26233065107061
+    },
+    "MU-Glioma-Post": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 61.43744647636253,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 69.42372295842237,
+          "ensemble_overall": 85.63192137071304
+        },
+        "123": {
+          "learned_outgrowth": 51.674418970480986,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 60.89365166841034,
+          "ensemble_overall": 82.52597905209315
+        },
+        "999": {
+          "learned_outgrowth": 58.22295519095554,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 64.69822705343933,
+          "ensemble_overall": 82.99078064995325
+        }
+      },
+      "learned_outgrowth_mean": 57.111606879266354,
+      "learned_outgrowth_se": 2.8726003215768756,
+      "learned_outgrowth_min": 51.674418970480986,
+      "learned_outgrowth_max": 61.43744647636253,
+      "bimodal_outgrowth_mean": 44.55955558818172,
+      "bimodal_outgrowth_se": 0.0,
+      "bimodal_outgrowth_min": 44.55955558818172,
+      "bimodal_outgrowth_max": 44.55955558818172,
+      "ensemble_outgrowth_mean": 65.00520056009067,
+      "ensemble_outgrowth_se": 2.467198384369827,
+      "ensemble_outgrowth_min": 60.89365166841034,
+      "ensemble_outgrowth_max": 69.42372295842237,
+      "ensemble_overall_mean": 83.71622702425314,
+      "ensemble_overall_se": 0.9671993508987919,
+      "ensemble_overall_min": 82.52597905209315,
+      "ensemble_overall_max": 85.63192137071304
+    },
+    "RHUH-GBM": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 91.82606228561474,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 91.95569303800008,
+          "ensemble_overall": 95.52045726165872
+        },
+        "123": {
+          "learned_outgrowth": 76.16366503448536,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 76.7510795086973,
+          "ensemble_overall": 91.70814144860432
+        },
+        "999": {
+          "learned_outgrowth": 61.73083427420134,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 62.60300232577166,
+          "ensemble_overall": 82.8160451290818
+        }
+      },
+      "learned_outgrowth_mean": 76.57352053143381,
+      "learned_outgrowth_se": 8.690160593280666,
+      "learned_outgrowth_min": 61.73083427420134,
+      "learned_outgrowth_max": 91.82606228561474,
+      "bimodal_outgrowth_mean": 38.95412695356683,
+      "bimodal_outgrowth_se": 0.0,
+      "bimodal_outgrowth_min": 38.95412695356683,
+      "bimodal_outgrowth_max": 38.95412695356683,
+      "ensemble_outgrowth_mean": 77.103258290823,
+      "ensemble_outgrowth_se": 8.475221441214575,
+      "ensemble_outgrowth_min": 62.60300232577166,
+      "ensemble_outgrowth_max": 91.95569303800008,
+      "ensemble_overall_mean": 90.01488127978162,
+      "ensemble_overall_se": 3.7639017613855192,
+      "ensemble_overall_min": 82.8160451290818,
+      "ensemble_overall_max": 95.52045726165872
+    },
+    "LUMIERE": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 62.79830533859143,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 70.10650786653677,
+          "ensemble_overall": 75.76119312899169
+        },
+        "123": {
+          "learned_outgrowth": 50.02623054112435,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 61.404596898523586,
+          "ensemble_overall": 69.52064459736863
+        },
+        "999": {
+          "learned_outgrowth": 60.420431166167596,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 65.46840467892588,
+          "ensemble_overall": 72.47160430718196
+        }
+      },
+      "learned_outgrowth_mean": 57.748322348627795,
+      "learned_outgrowth_se": 3.9215897204919306,
+      "learned_outgrowth_min": 50.02623054112435,
+      "learned_outgrowth_max": 62.79830533859143,
+      "bimodal_outgrowth_mean": 46.24018149949317,
+      "bimodal_outgrowth_se": 0.0,
+      "bimodal_outgrowth_min": 46.24018149949317,
+      "bimodal_outgrowth_max": 46.24018149949317,
+      "ensemble_outgrowth_mean": 65.65983648132875,
+      "ensemble_outgrowth_se": 2.513848193841165,
+      "ensemble_outgrowth_min": 61.404596898523586,
+      "ensemble_outgrowth_max": 70.10650786653677,
+      "ensemble_overall_mean": 72.58448067784742,
+      "ensemble_overall_se": 1.8023750349817733,
+      "ensemble_overall_min": 69.52064459736863,
+      "ensemble_overall_max": 75.76119312899169
+    },
+    "PROTEAS-brain-mets": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 58.879443269348144,
+          "bimodal_outgrowth": 20.889585152779254,
+          "ensemble_outgrowth": 74.3590659694053,
+          "ensemble_overall": 89.60699277468012
+        },
+        "123": {
+          "learned_outgrowth": 68.88106146288665,
+          "bimodal_outgrowth": 20.889585152779254,
+          "ensemble_outgrowth": 85.60391355858077,
+          "ensemble_overall": 93.04920335503725
+        },
+        "999": {
+          "learned_outgrowth": 95.95333916454899,
+          "bimodal_outgrowth": 20.889585152779254,
+          "ensemble_outgrowth": 96.23734349355333,
+          "ensemble_overall": 97.28248781642951
+        }
+      },
+      "learned_outgrowth_mean": 74.57128129892793,
+      "learned_outgrowth_se": 11.0740295368474,
+      "learned_outgrowth_min": 58.879443269348144,
+      "learned_outgrowth_max": 95.95333916454899,
+      "bimodal_outgrowth_mean": 20.889585152779254,
+      "bimodal_outgrowth_se": 0.0,
+      "bimodal_outgrowth_min": 20.889585152779254,
+      "bimodal_outgrowth_max": 20.889585152779254,
+      "ensemble_outgrowth_mean": 85.40010767384648,
+      "ensemble_outgrowth_se": 6.316536748485399,
+      "ensemble_outgrowth_min": 74.3590659694053,
+      "ensemble_outgrowth_max": 96.23734349355333,
+      "ensemble_overall_mean": 93.31289464871564,
+      "ensemble_overall_se": 2.2196438045890146,
+      "ensemble_overall_min": 89.60699277468012,
+      "ensemble_overall_max": 97.28248781642951
+    }
+  },
+  "cohort_mean_summary": {
+    "learned_outgrowth": {
+      "mean": 71.87205115148318,
+      "se": 1.9397440586028944,
+      "min": 68.10141902571067,
+      "max": 74.54766530226091,
+      "per_seed": {
+        "42": 74.54766530226091,
+        "123": 68.10141902571067,
+        "999": 72.96706912647794
+      }
+    },
+    "bimodal_outgrowth": {
+      "mean": 40.79359656927856,
+      "se": 0.0,
+      "min": 40.79359656927856,
+      "max": 40.79359656927856,
+      "per_seed": {
+        "42": 40.79359656927856,
+        "123": 40.79359656927856,
+        "999": 40.79359656927856
+      }
+    },
+    "ensemble_outgrowth": {
+      "mean": 77.58359653440013,
+      "se": 1.6296622134076149,
+      "min": 75.71486574212722,
+      "max": 80.83059694474314,
+      "per_seed": {
+        "42": 80.83059694474314,
+        "123": 76.20532691633005,
+        "999": 75.71486574212722
+      }
+    },
+    "ensemble_overall": {
+      "mean": 87.56279539007659,
+      "se": 0.8222396582034599,
+      "min": 86.41501265649497,
+      "max": 89.15657903742283,
+      "per_seed": {
+        "42": 89.15657903742283,
+        "123": 87.11679447631198,
+        "999": 86.41501265649497
+      }
+    }
+  },
+  "v156_single_seed_baseline_pct": {
+    "ensemble_outgrowth": 80.34,
+    "ensemble_overall": 89.1
+  }
+}
