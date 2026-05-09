@@ -1,0 +1,385 @@
+{
+  "version": "v186",
+  "experiment": "UODSL confirmation suite (5 stress tests)",
+  "timestamp": "2026-05-09T18:35:54",
+  "test_1_per_patient_lambda": {
+    "n_per_cohort_valid": {
+      "UCSF-POSTOP": 191,
+      "MU-Glioma-Post": 102,
+      "RHUH-GBM": 13,
+      "LUMIERE": 12,
+      "PROTEAS-brain-mets": 29,
+      "UPENN-GBM": 12,
+      "Yale-Brain-Mets": 16
+    },
+    "median_lambda_per_cohort": {
+      "UCSF-POSTOP": 1.1464886121670324,
+      "MU-Glioma-Post": 3.626572309207363,
+      "RHUH-GBM": 5.267686558986787,
+      "LUMIERE": 2.2325842913246214,
+      "PROTEAS-brain-mets": 1.106151560879424,
+      "UPENN-GBM": 5.6199424017157265,
+      "Yale-Brain-Mets": 1.5315292852871998
+    },
+    "iqr_per_cohort": {
+      "UCSF-POSTOP": [
+        0.7452176781715023,
+        2.2190500188541393
+      ],
+      "MU-Glioma-Post": [
+        2.1168012173608868,
+        7.143834202577182
+      ],
+      "RHUH-GBM": [
+        2.852472985378792,
+        7.041546674567401
+      ],
+      "LUMIERE": [
+        1.3692178759227693,
+        4.3978304264302075
+      ],
+      "PROTEAS-brain-mets": [
+        0.8450824193902378,
+        2.9038452834497113
+      ],
+      "UPENN-GBM": [
+        2.908932175461972,
+        9.558339772136819
+      ],
+      "Yale-Brain-Mets": [
+        1.2673549909464925,
+        2.3028081962575224
+      ]
+    }
+  },
+  "test_2_bin_sensitivity": {
+    "lambda_per_cohort_per_strategy": {
+      "UCSF-POSTOP": {
+        "integer (round-23 default)": 7.303143764907129,
+        "half-step": 7.7135131324496164,
+        "log-spaced": 6.768034592359342
+      },
+      "MU-Glioma-Post": {
+        "integer (round-23 default)": 57.059290090852684,
+        "half-step": 62.432385589652085,
+        "log-spaced": 45.896721593826754
+      },
+      "RHUH-GBM": {
+        "integer (round-23 default)": 12.0362453707626,
+        "half-step": 11.32292602211555,
+        "log-spaced": 15.121486936878371
+      },
+      "LUMIERE": {
+        "integer (round-23 default)": 22.03413806799157,
+        "half-step": 25.56202763711592,
+        "log-spaced": 17.610787444357246
+      },
+      "PROTEAS-brain-mets": {
+        "integer (round-23 default)": 4.390417775080008,
+        "half-step": 4.220672452922207,
+        "log-spaced": 4.055381720046597
+      },
+      "UPENN-GBM": {
+        "integer (round-23 default)": 22.88655373744886,
+        "half-step": 26.499780210092915,
+        "log-spaced": 22.366981211766618
+      },
+      "Yale-Brain-Mets": {
+        "integer (round-23 default)": 3.3584411659841824,
+        "half-step": 3.6652759643824284,
+        "log-spaced": 3.2153693063325393
+      }
+    },
+    "lambda_cv_across_strategies": {
+      "UCSF-POSTOP": 0.05330919953733972,
+      "MU-Glioma-Post": 0.12492768350517912,
+      "RHUH-GBM": 0.12851552408421177,
+      "LUMIERE": 0.14965894834298687,
+      "PROTEAS-brain-mets": 0.03239621746386647,
+      "UPENN-GBM": 0.07684813084689578,
+      "Yale-Brain-Mets": 0.054990938254361
+    }
+  },
+  "test_3_statistical_cluster_separation": {
+    "kruskal_wallis_H": 107.81875064980454,
+    "kruskal_wallis_p_value": 5.832608181539876e-21,
+    "n_pairs_tested": 21,
+    "n_pairs_significant_bonferroni": 9,
+    "fraction_significant": 0.42857142857142855,
+    "silhouette_3cluster": -0.3481757536784556,
+    "pairwise_mannwhitney": [
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "MU-Glioma-Post",
+        "median_1": 1.1464886121670324,
+        "median_2": 3.626572309207363,
+        "u": 3627.0,
+        "p_two_sided": 8.837293420463906e-19,
+        "p_bonferroni": 1.8558316182974203e-17
+      },
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "RHUH-GBM",
+        "median_1": 1.1464886121670324,
+        "median_2": 5.267686558986787,
+        "u": 328.0,
+        "p_two_sided": 9.29380011172675e-06,
+        "p_bonferroni": 0.00019516980234626175
+      },
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "LUMIERE",
+        "median_1": 1.1464886121670324,
+        "median_2": 2.2325842913246214,
+        "u": 723.0,
+        "p_two_sided": 0.032322453082448674,
+        "p_bonferroni": 0.6787715147314222
+      },
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "PROTEAS-brain-mets",
+        "median_1": 1.1464886121670324,
+        "median_2": 1.106151560879424,
+        "u": 2487.0,
+        "p_two_sided": 0.3772722935927665,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "UPENN-GBM",
+        "median_1": 1.1464886121670324,
+        "median_2": 5.6199424017157265,
+        "u": 270.0,
+        "p_two_sided": 9.193813125243425e-06,
+        "p_bonferroni": 0.00019307007563011192
+      },
+      {
+        "cohort_1": "UCSF-POSTOP",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 1.1464886121670324,
+        "median_2": 1.5315292852871998,
+        "u": 1129.0,
+        "p_two_sided": 0.08337107239041704,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "MU-Glioma-Post",
+        "cohort_2": "RHUH-GBM",
+        "median_1": 3.626572309207363,
+        "median_2": 5.267686558986787,
+        "u": 557.0,
+        "p_two_sided": 0.35141813568932434,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "MU-Glioma-Post",
+        "cohort_2": "LUMIERE",
+        "median_1": 3.626572309207363,
+        "median_2": 2.2325842913246214,
+        "u": 791.0,
+        "p_two_sided": 0.09932774936097127,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "MU-Glioma-Post",
+        "cohort_2": "PROTEAS-brain-mets",
+        "median_1": 3.626572309207363,
+        "median_2": 1.106151560879424,
+        "u": 2382.0,
+        "p_two_sided": 5.637317624269574e-07,
+        "p_bonferroni": 1.1838367010966105e-05
+      },
+      {
+        "cohort_1": "MU-Glioma-Post",
+        "cohort_2": "UPENN-GBM",
+        "median_1": 3.626572309207363,
+        "median_2": 5.6199424017157265,
+        "u": 517.0,
+        "p_two_sided": 0.38291664254139646,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "MU-Glioma-Post",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 3.626572309207363,
+        "median_2": 1.5315292852871998,
+        "u": 1315.0,
+        "p_two_sided": 8.90938042791343e-05,
+        "p_bonferroni": 0.0018709698898618202
+      },
+      {
+        "cohort_1": "RHUH-GBM",
+        "cohort_2": "LUMIERE",
+        "median_1": 5.267686558986787,
+        "median_2": 2.2325842913246214,
+        "u": 114.0,
+        "p_two_sided": 0.05348979986738018,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "RHUH-GBM",
+        "cohort_2": "PROTEAS-brain-mets",
+        "median_1": 5.267686558986787,
+        "median_2": 1.106151560879424,
+        "u": 328.0,
+        "p_two_sided": 0.00015568774240147672,
+        "p_bonferroni": 0.0032694425904310114
+      },
+      {
+        "cohort_1": "RHUH-GBM",
+        "cohort_2": "UPENN-GBM",
+        "median_1": 5.267686558986787,
+        "median_2": 5.6199424017157265,
+        "u": 78.0,
+        "p_two_sided": 1.0,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "RHUH-GBM",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 5.267686558986787,
+        "median_2": 1.5315292852871998,
+        "u": 184.0,
+        "p_two_sided": 0.0004897411386413879,
+        "p_bonferroni": 0.010284563911469145
+      },
+      {
+        "cohort_1": "LUMIERE",
+        "cohort_2": "PROTEAS-brain-mets",
+        "median_1": 2.2325842913246214,
+        "median_2": 1.106151560879424,
+        "u": 233.0,
+        "p_two_sided": 0.09369419838215548,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "LUMIERE",
+        "cohort_2": "UPENN-GBM",
+        "median_1": 2.2325842913246214,
+        "median_2": 5.6199424017157265,
+        "u": 38.0,
+        "p_two_sided": 0.053097957285583426,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "LUMIERE",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 2.2325842913246214,
+        "median_2": 1.5315292852871998,
+        "u": 120.0,
+        "p_two_sided": 0.2752904346391588,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "PROTEAS-brain-mets",
+        "cohort_2": "UPENN-GBM",
+        "median_1": 1.106151560879424,
+        "median_2": 5.6199424017157265,
+        "u": 42.0,
+        "p_two_sided": 0.00016461094498389169,
+        "p_bonferroni": 0.0034568298446617254
+      },
+      {
+        "cohort_1": "PROTEAS-brain-mets",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 1.106151560879424,
+        "median_2": 1.5315292852871998,
+        "u": 189.0,
+        "p_two_sided": 0.3135869297366477,
+        "p_bonferroni": 1.0
+      },
+      {
+        "cohort_1": "UPENN-GBM",
+        "cohort_2": "Yale-Brain-Mets",
+        "median_1": 5.6199424017157265,
+        "median_2": 1.5315292852871998,
+        "u": 175.0,
+        "p_two_sided": 0.000268150753099122,
+        "p_bonferroni": 0.005631165815081562
+      }
+    ]
+  },
+  "test_4_theory_vs_empirical": {
+    "sigma_kernel": 7.0,
+    "lambda_theory_tau_0p3_brain_mets": 3.8340579025361627,
+    "lambda_theory_tau_1_GBM": 7.0,
+    "lambda_theory_tau_8_heterogeneous": 19.79898987322333,
+    "cohort_per_patient_median": {
+      "UCSF-POSTOP": 1.1464886121670324,
+      "MU-Glioma-Post": 3.626572309207363,
+      "RHUH-GBM": 5.267686558986787,
+      "LUMIERE": 2.2325842913246214,
+      "PROTEAS-brain-mets": 1.106151560879424,
+      "UPENN-GBM": 5.6199424017157265,
+      "Yale-Brain-Mets": 1.5315292852871998
+    }
+  },
+  "test_5_holdout_prediction": {
+    "rows": [
+      {
+        "cohort": "UCSF-POSTOP",
+        "disease_group": "GBM",
+        "observed_median_lambda": 1.1464886121670324,
+        "predicted_median_lambda": 5.267686558986787,
+        "abs_err_voxels": 4.121197946819755,
+        "n_same_group_other": 1,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "MU-Glioma-Post",
+        "disease_group": "Mixed",
+        "observed_median_lambda": 3.626572309207363,
+        "predicted_median_lambda": 3.926263346520174,
+        "abs_err_voxels": 0.29969103731281077,
+        "n_same_group_other": 2,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "RHUH-GBM",
+        "disease_group": "GBM",
+        "observed_median_lambda": 5.267686558986787,
+        "predicted_median_lambda": 1.1464886121670324,
+        "abs_err_voxels": 4.121197946819755,
+        "n_same_group_other": 1,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "LUMIERE",
+        "disease_group": "Mixed",
+        "observed_median_lambda": 2.2325842913246214,
+        "predicted_median_lambda": 4.623257355461545,
+        "abs_err_voxels": 2.390673064136924,
+        "n_same_group_other": 2,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "PROTEAS-brain-mets",
+        "disease_group": "Brain-mets",
+        "observed_median_lambda": 1.106151560879424,
+        "predicted_median_lambda": 1.5315292852871998,
+        "abs_err_voxels": 0.4253777244077759,
+        "n_same_group_other": 1,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "UPENN-GBM",
+        "disease_group": "Mixed",
+        "observed_median_lambda": 5.6199424017157265,
+        "predicted_median_lambda": 2.9295783002659923,
+        "abs_err_voxels": 2.690364101449734,
+        "n_same_group_other": 2,
+        "note": "same-group prediction"
+      },
+      {
+        "cohort": "Yale-Brain-Mets",
+        "disease_group": "Brain-mets",
+        "observed_median_lambda": 1.5315292852871998,
+        "predicted_median_lambda": 1.106151560879424,
+        "abs_err_voxels": 0.4253777244077759,
+        "n_same_group_other": 1,
+        "note": "same-group prediction"
+      }
+    ],
+    "mean_abs_error_voxels": 2.06769707790779
+  }
+}
