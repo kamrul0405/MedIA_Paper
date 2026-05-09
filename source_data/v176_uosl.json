@@ -1,0 +1,122 @@
+{
+  "version": "v176",
+  "experiment": "Universal Outgrowth Scaling Law (UOSL) + Yale extension",
+  "timestamp": "2026-05-09T14:07:29",
+  "equation": "P(N, S) = P_inf - (P_inf - P_0) * exp(-alpha * N^beta * S)",
+  "physical_origin": "Bimodal kernel max(M, G_sigma * M) is the steady-state of the constrained Fisher-KPP equation dphi/dt = D nabla^2 phi + epsilon^{-1} max(M - phi, 0) with D = sigma^2/2, epsilon -> 0",
+  "fit_on": "v174_cohort_scaling_upenn.json (5 (N, P) data points)",
+  "uosl_params": {
+    "P_inf": 0.9474115399452864,
+    "P_0": 0.7120876618736335,
+    "alpha": 0.023991028524983003,
+    "beta": 4.999999999999999
+  },
+  "fit_quality": {
+    "rmse": 0.030921560336319553,
+    "r": 0.947930711891355,
+    "fit_N": [
+      1.0,
+      2.0,
+      3.0,
+      4.0,
+      5.0
+    ],
+    "fit_S": [
+      0.9191450300180579,
+      0.9191450300180579,
+      0.9344205477816198,
+      0.9257671435871001,
+      0.881013536502643
+    ],
+    "fit_P_obs": [
+      0.7184749477292762,
+      0.8283662125388189,
+      0.9874642163546131,
+      0.8937216097958046,
+      0.9616244611334124
+    ],
+    "fit_P_pred": [
+      0.7172200482262132,
+      0.8312103294656785,
+      0.9463979897261149,
+      0.9474115399140657,
+      0.9474115399452864
+    ]
+  },
+  "n_per_cohort": {
+    "UCSF-POSTOP": 297,
+    "MU-Glioma-Post": 151,
+    "RHUH-GBM": 39,
+    "LUMIERE": 22,
+    "PROTEAS-brain-mets": 126
+  },
+  "out_of_sample_validations": [
+    {
+      "name": "v159 LOCO held=UCSF-POSTOP",
+      "N": 4,
+      "S": 0.7928068605762258,
+      "P_observed": 0.9474957966591178,
+      "P_predicted": 0.9474115391267723,
+      "abs_err_pp": 0.0084257532345422,
+      "source": "v159_multiseed_v156.json"
+    },
+    {
+      "name": "v159 LOCO held=MU-Glioma-Post",
+      "N": 4,
+      "S": 0.9090798657818342,
+      "P_observed": 0.6500520056009067,
+      "P_predicted": 0.9474115398982447,
+      "abs_err_pp": 29.735953429733797,
+      "source": "v159_multiseed_v156.json"
+    },
+    {
+      "name": "v159 LOCO held=RHUH-GBM",
+      "N": 4,
+      "S": 0.8567576846664141,
+      "P_observed": 0.7710325829082301,
+      "P_predicted": 0.9474115397751802,
+      "abs_err_pp": 17.637895686695014,
+      "source": "v159_multiseed_v156.json"
+    },
+    {
+      "name": "v159 LOCO held=LUMIERE",
+      "N": 4,
+      "S": 0.7727354977429854,
+      "P_observed": 0.6565983648132875,
+      "P_predicted": 0.9474115386050785,
+      "abs_err_pp": 29.081317379179104,
+      "source": "v159_multiseed_v156.json"
+    },
+    {
+      "name": "v159 LOCO held=PROTEAS-brain-mets",
+      "N": 4,
+      "S": 0.0,
+      "P_observed": 0.8540010767384648,
+      "P_predicted": 0.7120876618736335,
+      "abs_err_pp": 14.191341486483132,
+      "source": "v159_multiseed_v156.json"
+    },
+    {
+      "name": "v172 zero-shot UPENN (N_local=0)",
+      "N": 5,
+      "S": 0.881013536502643,
+      "P_observed": 0.9285444608960921,
+      "P_predicted": 0.9474115399452864,
+      "abs_err_pp": 1.8867079049194269,
+      "source": "v172_few_shot_upenn.json"
+    }
+  ],
+  "validation_summary": {
+    "n_points": 6,
+    "rmse": 0.19347692463772678,
+    "r_pearson": -0.1979792783307782
+  },
+  "yale_extension": {
+    "n_pairs": 2,
+    "S_index_5_cohort": 0.3071602257867544,
+    "S_index_4_glioma": 0.0,
+    "P_predicted_5cohort": 0.947411539921814,
+    "P_observed_zero_shot": 0.8251282051282052,
+    "n_eval": 2
+  }
+}

@@ -1,0 +1,100 @@
+{
+  "version": "v177",
+  "experiment": "Refined UOSL (v2) + Yale full 5-cohort extension",
+  "timestamp": "2026-05-09T14:16:06",
+  "equation": "P = P_0 + (P_inf - P_0) * sigmoid(a * (N_eff - n_c)),  N_eff = log(1 + n_train) * S",
+  "physical_origin": "Bimodal kernel max(M, G_sigma * M) is the steady-state of constrained Fisher-KPP diffusion dphi/dt = D nabla^2 phi + epsilon^{-1} max(M - phi, 0) with D = sigma^2/2.",
+  "fit_on": "v174 (5 datapoints) + v159 LOCO (5 datapoints) = 10 points",
+  "uosl_v2_params": {
+    "P_0": 0.7744284929304919,
+    "P_inf": 0.955535882985948,
+    "a": 49.70532305365146,
+    "n_c": 5.6662704558389185
+  },
+  "fit_quality": {
+    "rmse": 0.09107197531416864,
+    "r": 0.6344905724954703,
+    "fit_labels": [
+      "v174 N=1->UPENN",
+      "v174 N=2->UPENN",
+      "v174 N=3->UPENN",
+      "v174 N=4->UPENN",
+      "v174 N=5->UPENN",
+      "v159 LOCO held=UCSF-POSTOP",
+      "v159 LOCO held=MU-Glioma-Post",
+      "v159 LOCO held=RHUH-GBM",
+      "v159 LOCO held=LUMIERE",
+      "v159 LOCO held=PROTEAS-brain-mets"
+    ],
+    "fit_n_train": [
+      297.0,
+      448.0,
+      487.0,
+      509.0,
+      635.0,
+      338.0,
+      484.0,
+      596.0,
+      613.0,
+      509.0
+    ],
+    "fit_S": [
+      0.9191450300180579,
+      0.9191450300180579,
+      0.9344205477816198,
+      0.9257671435871001,
+      0.881013536502643,
+      0.7928068605762258,
+      0.9090798657818342,
+      0.8567576846664141,
+      0.7727354977429854,
+      0.0
+    ],
+    "fit_P_obs": [
+      0.7184749477292762,
+      0.8283662125388189,
+      0.9874642163546131,
+      0.8937216097958046,
+      0.9616244611334124,
+      0.9474957966591178,
+      0.6500520056009067,
+      0.7710325829082301,
+      0.6565983648132875,
+      0.8540010767384648
+    ],
+    "fit_P_pred": [
+      0.774428493025908,
+      0.7865378446097395,
+      0.955025862865863,
+      0.9545772841927636,
+      0.9081067741104415,
+      0.7744284929304919,
+      0.7923937624070926,
+      0.7744428669363956,
+      0.774428492930492,
+      0.7744284929304919
+    ]
+  },
+  "out_of_sample_validations": [
+    {
+      "name": "v172 zero-shot UPENN (N_local=0)",
+      "n_train": 635,
+      "S": 0.881013536502643,
+      "P_observed": 0.9285444608960921,
+      "P_predicted": 0.9081067741104415,
+      "abs_err_pp": 2.043768678565061,
+      "source": "v172_few_shot_upenn.json"
+    }
+  ],
+  "validation_summary": {
+    "n_points": 1,
+    "rmse": NaN
+  },
+  "yale_extension": {
+    "n_pairs": 19,
+    "S_index_5_cohort": 0.3071602257867544,
+    "P_predicted": 0.7744284929304919,
+    "P_observed_zero_shot": 0.7870540519203794,
+    "n_eval": 19
+  }
+}
