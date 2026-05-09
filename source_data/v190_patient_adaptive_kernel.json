@@ -1,0 +1,136 @@
+{
+  "version": "v190",
+  "experiment": "Patient-adaptive kernel: predict per-patient lambda from baseline mask features, set sigma_patient = lambda_pred / 4",
+  "timestamp": "2026-05-09T20:46:15",
+  "feature_names": [
+    "volume",
+    "surface_area",
+    "sphericity",
+    "extent_z",
+    "extent_y",
+    "extent_x"
+  ],
+  "n_total_patients": 692,
+  "n_valid_lambda_patients": 375,
+  "loco_per_cohort": {
+    "LUMIERE": {
+      "n_train": 363,
+      "n_test": 12,
+      "linear_R2": -0.5709450675635366,
+      "linear_MAE": 6.2049428477071205,
+      "rf_R2": -0.5709450675635366,
+      "rf_MAE": 6.2049428477071205
+    },
+    "MU-Glioma-Post": {
+      "n_train": 273,
+      "n_test": 102,
+      "linear_R2": -0.21763582535742976,
+      "linear_MAE": 9.141158517085962,
+      "rf_R2": -0.21763582535742976,
+      "rf_MAE": 9.141158517085962
+    },
+    "PROTEAS-brain-mets": {
+      "n_train": 346,
+      "n_test": 29,
+      "linear_R2": -2.5142449000446097,
+      "linear_MAE": 2.5121115421611933,
+      "rf_R2": -2.5142449000446097,
+      "rf_MAE": 2.5121115421611933
+    },
+    "RHUH-GBM": {
+      "n_train": 362,
+      "n_test": 13,
+      "linear_R2": -0.22157850796739997,
+      "linear_MAE": 8.270727526640048,
+      "rf_R2": -0.22157850796739997,
+      "rf_MAE": 8.270727526640048
+    },
+    "UCSF-POSTOP": {
+      "n_train": 184,
+      "n_test": 191,
+      "linear_R2": -1.0951165191848307,
+      "linear_MAE": 2.8828846216613884,
+      "rf_R2": -1.0951165191848307,
+      "rf_MAE": 2.8828846216613884
+    },
+    "UPENN-GBM": {
+      "n_train": 363,
+      "n_test": 12,
+      "linear_R2": -0.7539000564992355,
+      "linear_MAE": 4.226066496350192,
+      "rf_R2": -0.7539000564992355,
+      "rf_MAE": 4.226066496350192
+    },
+    "Yale-Brain-Mets": {
+      "n_train": 359,
+      "n_test": 16,
+      "linear_R2": -0.001310700643072149,
+      "linear_MAE": 0.5076253759252523,
+      "rf_R2": -0.001310700643072149,
+      "rf_MAE": 0.5076253759252523
+    }
+  },
+  "loco_aggregate": {
+    "linear_R2": -0.09972433725217877,
+    "linear_MAE": 4.791183845846881,
+    "rf_R2": -0.09972433725217877,
+    "rf_MAE": 4.791183845846881
+  },
+  "patient_adaptive_by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "auc_adaptive_mean": 0.874236277842007,
+      "sigma_adaptive_mean": 1.0,
+      "sigma_adaptive_std": 0.0,
+      "lambda_predicted_mean": 2.104047119710937
+    },
+    "MU-Glioma-Post": {
+      "n": 149,
+      "auc_adaptive_mean": 0.6996356614932389,
+      "sigma_adaptive_mean": 1.0020768156851216,
+      "sigma_adaptive_std": 0.016900736274125656,
+      "lambda_predicted_mean": 2.6899928364638623
+    },
+    "RHUH-GBM": {
+      "n": 34,
+      "auc_adaptive_mean": 0.6521109010851253,
+      "sigma_adaptive_mean": 1.0,
+      "sigma_adaptive_std": 0.0,
+      "lambda_predicted_mean": 2.8208821475827888
+    },
+    "LUMIERE": {
+      "n": 22,
+      "auc_adaptive_mean": 0.7403665674973309,
+      "sigma_adaptive_mean": 1.0087249799771794,
+      "sigma_adaptive_std": 0.039982881182398594,
+      "lambda_predicted_mean": 2.5135352004946365
+    },
+    "PROTEAS-brain-mets": {
+      "n": 97,
+      "auc_adaptive_mean": 0.9253025066373484,
+      "sigma_adaptive_mean": 1.0476190476190477,
+      "sigma_adaptive_std": 0.30491067797299276,
+      "lambda_predicted_mean": 1.9515408840815667
+    },
+    "UPENN-GBM": {
+      "n": 39,
+      "auc_adaptive_mean": 0.6491784346419996,
+      "sigma_adaptive_mean": 1.009106061879735,
+      "sigma_adaptive_std": 0.04954124436378571,
+      "lambda_predicted_mean": 3.1313142609686557
+    },
+    "Yale-Brain-Mets": {
+      "n": 19,
+      "auc_adaptive_mean": 0.8966896226597777,
+      "sigma_adaptive_mean": 1.0,
+      "sigma_adaptive_std": 0.0,
+      "lambda_predicted_mean": 1.5686504786841426
+    }
+  },
+  "overall_mean_auc_adaptive": 0.7767885674081182,
+  "comparison": {
+    "foundation_v184_mean_auc": 0.7214,
+    "kernel_universal_sigma3_v189_mean_auc": 0.7856,
+    "kernel_patient_adaptive_v190_mean_auc": 0.7767885674081182
+  }
+}
