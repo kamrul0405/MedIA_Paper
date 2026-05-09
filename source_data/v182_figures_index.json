@@ -1,0 +1,40 @@
+{
+  "version": "v182",
+  "experiment": "Publication-grade figures",
+  "timestamp": "2026-05-09T17:12:47",
+  "figures": {
+    "fig01": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig01_v174_cohort_scaling.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig01_v174_cohort_scaling.png"
+    ],
+    "fig02": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig02_uosl_law_with_datapoints.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig02_uosl_law_with_datapoints.png"
+    ],
+    "fig03": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig03_scaling_law_comparison.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig03_scaling_law_comparison.png"
+    ],
+    "fig04": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig04_yale_3seed_violin.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig04_yale_3seed_violin.png"
+    ],
+    "fig05": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig05_v159_per_cohort_violin.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig05_v159_per_cohort_violin.png"
+    ],
+    "fig06": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig06_loocv_scatter.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig06_loocv_scatter.png"
+    ],
+    "fig07": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig07_permutation_null.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig07_permutation_null.png"
+    ],
+    "fig08": [
+      "C:\\Users\\kamru\\Downloads\\MedIA_Paper\\figures\\fig08_uosl_param_posteriors.png",
+      "C:\\Users\\kamru\\Downloads\\RTO_paper\\figures\\fig08_uosl_param_posteriors.png"
+    ]
+  },
+  "elapsed_s": 392.09976077079773
+}

@@ -1,0 +1,79 @@
+{
+  "version": "v183",
+  "experiment": "Expanded UOSL calibration: 5 v174 + 15 v159 per-seed = 20 datapoints",
+  "timestamp": "2026-05-09T17:14:28",
+  "n_calibration_points": 20,
+  "fit_params": {
+    "P_0": 0.8013595463897971,
+    "P_inf": 0.9534862508777268,
+    "a": 4.414729484901238,
+    "n_c": 13.425871344903664
+  },
+  "param_ci_95": {
+    "P_0": {
+      "point": 0.8013595463897971,
+      "ci_lo": 0.7410966877379256,
+      "ci_hi": 0.8599646061674004
+    },
+    "P_inf": {
+      "point": 0.9534862508777268,
+      "ci_lo": 0.9534862508777268,
+      "ci_hi": 0.9534862508777268
+    },
+    "a": {
+      "point": 4.414729484901238,
+      "ci_lo": 4.414729484901238,
+      "ci_hi": 4.414729484901238
+    },
+    "n_c": {
+      "point": 13.425871344903664,
+      "ci_lo": 13.425871344903664,
+      "ci_hi": 13.425871344903664
+    }
+  },
+  "within_fit_rmse": 0.13450561660624927,
+  "within_fit_r": 0.1969649044470135,
+  "loocv_rmse": 0.14158485949626948,
+  "loocv_mae": 0.13031978155237128,
+  "loocv_r": -0.999999999999995,
+  "mean_baseline_rmse": 0.1345056166062493,
+  "uosl_beats_mean_baseline_loocv": false,
+  "yale": {
+    "S": 0.3071602257867544,
+    "P_pred": 0.8013595463897971,
+    "P_obs": 0.7871,
+    "err_pp": 1.4259546389797095,
+    "ci_95_lo": 0.7410966877379256,
+    "ci_95_hi": 0.8599646061674004,
+    "obs_in_ci_95": true
+  },
+  "v172_upenn": {
+    "S": 0.881013536502643,
+    "P_pred": 0.8013595463897973,
+    "P_obs": 0.9285,
+    "err_pp": 12.714045361020265,
+    "ci_95_lo": 0.7410966877379259,
+    "ci_95_hi": 0.8599646061674006,
+    "obs_in_ci_95": false
+  },
+  "permutation_test": {
+    "n_perm": 1000,
+    "n_perm_successful": 1000,
+    "p_value_rmse": 0.164,
+    "p_value_yale_err": 1.0,
+    "p_value_upenn_err": 1.0
+  },
+  "round20_comparison": {
+    "rmse_within_fit_10pt": 0.0911,
+    "rmse_within_fit_20pt": 0.13450561660624927,
+    "rmse_loocv_10pt": 0.128,
+    "rmse_loocv_20pt": 0.14158485949626948,
+    "rmse_loocv_change_pp": 1.3584859496269475,
+    "p_rmse_10pt": 0.1566,
+    "p_rmse_20pt": 0.164,
+    "p_yale_10pt": 0.1742,
+    "p_yale_20pt": 1.0,
+    "p_upenn_10pt": 0.0505,
+    "p_upenn_20pt": 1.0
+  }
+}
