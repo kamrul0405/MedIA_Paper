@@ -1,0 +1,66 @@
+{
+  "version": "v172",
+  "experiment": "Few-shot UPENN-GBM adaptation curve",
+  "timestamp": "2026-05-09T12:26:48",
+  "pretrain_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "n_pretrain": 635,
+  "test_cohort": "UPENN-GBM",
+  "n_upenn": 41,
+  "epochs_pretrain": 25,
+  "epochs_finetune": 10,
+  "lr_pretrain": 0.001,
+  "lr_finetune": 0.0005,
+  "by_n": {
+    "0": {
+      "n_finetune": 0,
+      "n_test": 41,
+      "learned_outgrowth_pct": 92.21937684107276,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 92.85444608960921,
+      "ensemble_overall_pct": 97.22748203589359,
+      "time_s": 0.2769660949707031
+    },
+    "5": {
+      "n_finetune": 5,
+      "n_test": 36,
+      "learned_outgrowth_pct": 90.5793887584377,
+      "bimodal_outgrowth_pct": 62.219775471675156,
+      "ensemble_outgrowth_pct": 90.94096848738327,
+      "ensemble_overall_pct": 96.28060096846573,
+      "time_s": 0.7027788162231445
+    },
+    "10": {
+      "n_finetune": 10,
+      "n_test": 31,
+      "learned_outgrowth_pct": 94.65438714361234,
+      "bimodal_outgrowth_pct": 63.410189259346694,
+      "ensemble_outgrowth_pct": 95.2386526149895,
+      "ensemble_overall_pct": 98.23024977644627,
+      "time_s": 0.9175276756286621
+    },
+    "20": {
+      "n_finetune": 20,
+      "n_test": 21,
+      "learned_outgrowth_pct": 93.88410635876266,
+      "bimodal_outgrowth_pct": 52.230301478028565,
+      "ensemble_outgrowth_pct": 93.89600346834686,
+      "ensemble_overall_pct": 98.19536296252797,
+      "time_s": 1.4062213897705078
+    },
+    "41": {
+      "n_finetune": 41,
+      "n_test": 41,
+      "learned_outgrowth_pct": 99.23758024967412,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 99.26396222701023,
+      "ensemble_overall_pct": 99.71504023807437,
+      "time_s": 2.860476016998291
+    }
+  }
+}

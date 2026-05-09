@@ -1,0 +1,30 @@
+{
+  "version": "v173",
+  "experiment": "Test-time augmentation robustness on UPENN-GBM",
+  "timestamp": "2026-05-09T12:36:13",
+  "n_test": 41,
+  "augmentations": [
+    "original",
+    "flip_D",
+    "flip_H",
+    "flip_W",
+    "flip_DH",
+    "flip_DW",
+    "flip_HW",
+    "flip_DHW"
+  ],
+  "single_pass_ens_out_pct": 92.7862834197216,
+  "tta_ensemble_ens_out_pct": 92.9796383124727,
+  "tta_minus_single_pp": 0.19335489275110262,
+  "mean_patient_stability_std": 0.02185850551089353,
+  "per_aug_cohort_mean_pct": {
+    "original": 92.7862834197216,
+    "flip_D": 92.7862834197216,
+    "flip_H": 91.99049784661665,
+    "flip_W": 93.50204883060829,
+    "flip_DH": 91.99049784661665,
+    "flip_DW": 93.50204883060829,
+    "flip_HW": 92.46451380558854,
+    "flip_DHW": 92.46451380558854
+  }
+}
