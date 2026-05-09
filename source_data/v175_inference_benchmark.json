@@ -1,0 +1,28 @@
+{
+  "version": "v175",
+  "experiment": "Inference cost benchmark",
+  "timestamp": "2026-05-09T12:53:12",
+  "device_gpu": "cuda",
+  "n_benchmark_patients": 50,
+  "target_shape": [
+    16,
+    48,
+    48
+  ],
+  "bimodal_preprocessing_total_s": 0.23459482192993164,
+  "bimodal_preprocessing_per_patient_ms": 4.691896438598633,
+  "n_parameters": 795913,
+  "n_trainable": 795913,
+  "model_size_mb_fp32": 3.0361671447753906,
+  "cpu_single_pass_total_s": 6.945312023162842,
+  "cpu_single_pass_per_patient_ms": 138.90624046325684,
+  "gpu_single_pass_total_s": 0.24765849113464355,
+  "gpu_single_pass_per_patient_ms": 4.953169822692871,
+  "gpu_peak_memory_mb_single": 36.52392578125,
+  "gpu_tta_8augs_total_s": 1.9339559078216553,
+  "gpu_tta_8augs_per_patient_ms": 38.679118156433105,
+  "gpu_5_ensemble_total_s": 1.0755870342254639,
+  "gpu_5_ensemble_per_patient_ms": 21.511740684509277,
+  "deployment_total_per_patient_ms": 9.645066261291504,
+  "deployment_throughput_patients_per_sec": 103.6799512734604
+}

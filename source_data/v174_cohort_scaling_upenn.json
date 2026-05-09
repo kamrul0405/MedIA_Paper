@@ -1,0 +1,90 @@
+{
+  "version": "v174",
+  "experiment": "Training-cohort-scaling law on UPENN external",
+  "timestamp": "2026-05-09T13:00:40",
+  "cohort_order": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "test_cohort": "UPENN-GBM",
+  "by_n": {
+    "1": {
+      "n_train_cohorts": 1,
+      "train_cohorts": [
+        "UCSF-POSTOP"
+      ],
+      "n_train_patients": 297,
+      "n_test_upenn": 41,
+      "learned_outgrowth_pct": 49.96211735319066,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 71.84749477292762,
+      "ensemble_overall_pct": 92.06569140621296,
+      "time_s": 50.96702814102173
+    },
+    "2": {
+      "n_train_cohorts": 2,
+      "train_cohorts": [
+        "UCSF-POSTOP",
+        "MU-Glioma-Post"
+      ],
+      "n_train_patients": 448,
+      "n_test_upenn": 41,
+      "learned_outgrowth_pct": 80.41294590129726,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 82.83662125388189,
+      "ensemble_overall_pct": 94.14009825170545,
+      "time_s": 69.51426696777344
+    },
+    "3": {
+      "n_train_cohorts": 3,
+      "train_cohorts": [
+        "UCSF-POSTOP",
+        "MU-Glioma-Post",
+        "RHUH-GBM"
+      ],
+      "n_train_patients": 487,
+      "n_test_upenn": 41,
+      "learned_outgrowth_pct": 98.56527978939718,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 98.74642163546132,
+      "ensemble_overall_pct": 99.46977121111742,
+      "time_s": 76.54802513122559
+    },
+    "4": {
+      "n_train_cohorts": 4,
+      "train_cohorts": [
+        "UCSF-POSTOP",
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "LUMIERE"
+      ],
+      "n_train_patients": 509,
+      "n_test_upenn": 41,
+      "learned_outgrowth_pct": 87.95570385938505,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 89.37216097958046,
+      "ensemble_overall_pct": 95.73669048107247,
+      "time_s": 79.60870695114136
+    },
+    "5": {
+      "n_train_cohorts": 5,
+      "train_cohorts": [
+        "UCSF-POSTOP",
+        "MU-Glioma-Post",
+        "RHUH-GBM",
+        "LUMIERE",
+        "PROTEAS-brain-mets"
+      ],
+      "n_train_patients": 635,
+      "n_test_upenn": 41,
+      "learned_outgrowth_pct": 96.00181815593568,
+      "bimodal_outgrowth_pct": 63.29317285783779,
+      "ensemble_outgrowth_pct": 96.16244611334123,
+      "ensemble_overall_pct": 98.47739724660164,
+      "time_s": 98.94195008277893
+    }
+  }
+}
