@@ -1,0 +1,92 @@
+{
+  "version": "v179",
+  "experiment": "Yale-Brain-Mets-Longitudinal multi-seed zero-shot bootstrap",
+  "timestamp": "2026-05-09T14:44:05",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "n_yale_eval": 19,
+  "by_seed": {
+    "42": {
+      "learned_outgrowth_pct": 74.90232750269746,
+      "bimodal_outgrowth_pct": 67.47970681421076,
+      "ensemble_outgrowth_pct": 79.81837619507465,
+      "ensemble_outgrowth_ci_lo_pct": 73.51805950723491,
+      "ensemble_outgrowth_ci_hi_pct": 85.87015901134788,
+      "ensemble_overall_pct": 80.84555699073786,
+      "ensemble_overall_ci_lo_pct": 74.80385886860066,
+      "ensemble_overall_ci_hi_pct": 86.6941759097636,
+      "n_patients": 19
+    },
+    "123": {
+      "learned_outgrowth_pct": 56.282297248589465,
+      "bimodal_outgrowth_pct": 67.47970681421076,
+      "ensemble_outgrowth_pct": 74.23281260051857,
+      "ensemble_outgrowth_ci_lo_pct": 68.18981124867508,
+      "ensemble_outgrowth_ci_hi_pct": 80.25932756582688,
+      "ensemble_overall_pct": 75.62905313587686,
+      "ensemble_overall_ci_lo_pct": 69.7603525957676,
+      "ensemble_overall_ci_hi_pct": 81.44269853744865,
+      "n_patients": 19
+    },
+    "999": {
+      "learned_outgrowth_pct": 84.9623271442537,
+      "bimodal_outgrowth_pct": 67.47970681421076,
+      "ensemble_outgrowth_pct": 86.12482830993441,
+      "ensemble_outgrowth_ci_lo_pct": 80.58950322675283,
+      "ensemble_outgrowth_ci_hi_pct": 91.23237219525289,
+      "ensemble_overall_pct": 86.77776883410952,
+      "ensemble_overall_ci_lo_pct": 81.4817831738944,
+      "ensemble_overall_ci_hi_pct": 91.71882453062346,
+      "n_patients": 19
+    }
+  },
+  "summary_across_seeds": {
+    "learned_outgrowth_pct": {
+      "mean": 72.0489839651802,
+      "se": 8.401234149642683,
+      "min": 56.282297248589465,
+      "max": 84.9623271442537,
+      "values": [
+        74.90232750269746,
+        56.282297248589465,
+        84.9623271442537
+      ]
+    },
+    "bimodal_outgrowth_pct": {
+      "mean": 67.47970681421076,
+      "se": 0.0,
+      "min": 67.47970681421076,
+      "max": 67.47970681421076,
+      "values": [
+        67.47970681421076,
+        67.47970681421076,
+        67.47970681421076
+      ]
+    },
+    "ensemble_outgrowth_pct": {
+      "mean": 80.05867236850922,
+      "se": 3.435031105947164,
+      "min": 74.23281260051857,
+      "max": 86.12482830993441,
+      "values": [
+        79.81837619507465,
+        74.23281260051857,
+        86.12482830993441
+      ]
+    },
+    "ensemble_overall_pct": {
+      "mean": 81.08412632024141,
+      "se": 3.2205668198698447,
+      "min": 75.62905313587686,
+      "max": 86.77776883410952,
+      "values": [
+        80.84555699073786,
+        75.62905313587686,
+        86.77776883410952
+      ]
+    }
+  }
+}
