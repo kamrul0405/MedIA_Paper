@@ -1,0 +1,74 @@
+{
+  "version": "v154",
+  "experiment": "Multi-seed v152 cross-disease robustness audit",
+  "timestamp": "2026-05-09T08:16:22",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE"
+  ],
+  "n_train": 509,
+  "test_cohort": "PROTEAS-brain-mets",
+  "n_test_followups": 126,
+  "n_test_patients": 44,
+  "per_seed_aggregate_pct": {
+    "42": {
+      "learned_outgrowth": 62.832163102503216,
+      "bimodal_outgrowth": 20.889585152779254,
+      "ensemble_outgrowth": 79.3361862896289,
+      "learned_overall": 31.98275952509455,
+      "ensemble_overall": 91.2088334548005
+    },
+    "123": {
+      "learned_outgrowth": 54.71816448774276,
+      "bimodal_outgrowth": 20.889585152779254,
+      "ensemble_outgrowth": 75.05711840850786,
+      "learned_overall": 29.90991184208831,
+      "ensemble_overall": 90.37293400848341
+    },
+    "999": {
+      "learned_outgrowth": 77.98953083417695,
+      "bimodal_outgrowth": 20.889585152779254,
+      "ensemble_outgrowth": 88.16564119839563,
+      "learned_overall": 35.78348533169511,
+      "ensemble_overall": 92.82496928925895
+    }
+  },
+  "multi_seed_summary_pct": {
+    "learned_outgrowth": {
+      "mean": 65.17995280814098,
+      "se": 6.81965811176072,
+      "min": 54.71816448774276,
+      "max": 77.98953083417695
+    },
+    "ensemble_outgrowth": {
+      "mean": 80.8529819655108,
+      "se": 3.859354189284018,
+      "min": 75.05711840850786,
+      "max": 88.16564119839563
+    },
+    "learned_overall": {
+      "mean": 32.558718899625994,
+      "se": 1.719836550885572,
+      "min": 29.90991184208831,
+      "max": 35.78348533169511
+    },
+    "ensemble_overall": {
+      "mean": 91.46891225084762,
+      "se": 0.7196874297584511,
+      "min": 90.37293400848341,
+      "max": 92.82496928925895
+    }
+  },
+  "comparison_to_in_disease": {
+    "v140_in_disease_ens_out_pct": 44.93,
+    "v154_cross_disease_ens_out_mean_pct": 80.8529819655108,
+    "gain_pp": 35.92298196551081
+  }
+}

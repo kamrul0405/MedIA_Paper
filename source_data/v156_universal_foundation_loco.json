@@ -1,0 +1,58 @@
+{
+  "version": "v156",
+  "experiment": "Universal foundation model 5-fold LOCO across all 5 cohorts",
+  "timestamp": "2026-05-09T08:24:49",
+  "all_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "epochs": 25,
+  "seed": 42,
+  "n_total_test_followups": 635,
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "learned_outgrowth_pct": 96.43554158324267,
+      "bimodal_outgrowth_pct": 53.32453365237186,
+      "ensemble_outgrowth_pct": 97.18019365298441,
+      "ensemble_overall_pct": 98.72499819362312
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "learned_outgrowth_pct": 62.16818170946697,
+      "bimodal_outgrowth_pct": 44.55955558818172,
+      "ensemble_outgrowth_pct": 70.96259961101804,
+      "ensemble_overall_pct": 86.62968383332947
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "learned_outgrowth_pct": 89.09890247984377,
+      "bimodal_outgrowth_pct": 38.95412695356683,
+      "ensemble_outgrowth_pct": 89.340830058031,
+      "ensemble_overall_pct": 95.37718630105974
+    },
+    "LUMIERE": {
+      "n": 22,
+      "learned_outgrowth_pct": 65.6866025733698,
+      "bimodal_outgrowth_pct": 46.24018149949317,
+      "ensemble_outgrowth_pct": 72.04671191583819,
+      "ensemble_overall_pct": 76.89985881905756
+    },
+    "PROTEAS-brain-mets": {
+      "n": 126,
+      "learned_outgrowth_pct": 52.31210263283656,
+      "bimodal_outgrowth_pct": 20.889585152779254,
+      "ensemble_outgrowth_pct": 72.15951672088575,
+      "ensemble_overall_pct": 87.85281670293782
+    }
+  },
+  "cohort_mean_pct": {
+    "learned_outgrowth_pct": 73.14026619575195,
+    "bimodal_outgrowth_pct": 40.79359656927856,
+    "ensemble_outgrowth_pct": 80.33797039175148,
+    "ensemble_overall_pct": 89.09690877000153
+  }
+}
