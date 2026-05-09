@@ -1,0 +1,36 @@
+{
+  "version": "v153",
+  "experiment": "Deep ensemble (5 seeds) for uncertainty quantification on LUMIERE",
+  "timestamp": "2026-05-09T08:01:27",
+  "seeds": [
+    42,
+    123,
+    999,
+    7,
+    31
+  ],
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM"
+  ],
+  "n_train": 487,
+  "test_cohort": "LUMIERE",
+  "n_test": 22,
+  "results": {
+    "learned_outgrowth_5ens_mean_pct": 67.0072424422978,
+    "bimodal_outgrowth_pct": 46.24018149949317,
+    "ensemble_outgrowth_5ens_mean_pct": 74.24152694728747,
+    "learned_overall_5ens_mean_pct": 34.481564959406064,
+    "ensemble_overall_5ens_mean_pct": 79.12183365898015,
+    "mean_per_voxel_uncertainty": 0.11952038879760286,
+    "low_uncertainty_voxel_outgrowth_coverage_pct": 25.44627707967304,
+    "high_uncertainty_voxel_outgrowth_coverage_pct": 41.56096536262476
+  },
+  "comparison_to_prior_rounds": {
+    "v141_single_seed_ens_out_pct": 56.46,
+    "v144_multiseed_mean_ens_out_pct": 60.51,
+    "v148_ucsf_mu_ens_out_pct": 67.69,
+    "v153_5ens_ucsf_mu_rhuh_ens_out_pct": 74.24152694728747
+  }
+}

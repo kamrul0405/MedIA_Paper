@@ -1,0 +1,35 @@
+{
+  "version": "v152",
+  "experiment": "Cross-disease test: 4 glioma cohorts -> PROTEAS-brain-mets LOPO",
+  "timestamp": "2026-05-09T07:54:39",
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE"
+  ],
+  "n_train": 509,
+  "test_cohort": "PROTEAS-brain-mets",
+  "n_test_followups": 126,
+  "n_test_patients": 44,
+  "target_shape": [
+    16,
+    48,
+    48
+  ],
+  "results_proteas": {
+    "learned_outgrowth_pct": 64.35908785720402,
+    "learned_overall_pct": 34.511214280262955,
+    "bimodal_outgrowth_pct": 20.889585152779254,
+    "bimodal_overall_pct": 60.65796785426013,
+    "ensemble_outgrowth_pct": 79.15727670115162,
+    "ensemble_overall_pct": 92.2823057094053
+  },
+  "comparison_to_v140_in_disease": {
+    "v140_bimodal_outgrowth_pct": 22.51,
+    "v140_learned_outgrowth_pct": 37.39,
+    "v140_ensemble_outgrowth_pct": 44.93,
+    "delta_v152_minus_v140_learned_outgrowth_pp": 26.969087857204016,
+    "delta_v152_minus_v140_ensemble_outgrowth_pp": 34.22727670115162
+  }
+}
