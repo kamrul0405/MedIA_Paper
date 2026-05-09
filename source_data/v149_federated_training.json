@@ -1,0 +1,43 @@
+{
+  "version": "v149",
+  "experiment": "Federated training simulation (FedAvg) across UCSF+MU+RHUH, test LUMIERE",
+  "timestamp": "2026-05-09T07:42:33",
+  "client_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM"
+  ],
+  "test_cohort": "LUMIERE",
+  "n_rounds": 5,
+  "local_epochs": 5,
+  "seed": 42,
+  "client_n_patients": {
+    "UCSF-POSTOP": 297,
+    "MU-Glioma-Post": 151,
+    "RHUH-GBM": 39
+  },
+  "n_test": 22,
+  "results_lumiere": {
+    "learned_outgrowth_pct": 52.20035746255402,
+    "bimodal_outgrowth_pct": 46.24018149949317,
+    "ensemble_outgrowth_pct": 61.6169406457626,
+    "learned_overall_pct": 22.72651458444264,
+    "ensemble_overall_pct": 67.96141881359017
+  },
+  "comparison": {
+    "v141_centralized_ucsf_only": {
+      "ens_out": 56.46,
+      "ens_ovr": 65.39
+    },
+    "v148_centralized_ucsf_mu": {
+      "ens_out": 67.69,
+      "ens_ovr": 74.52
+    },
+    "v149_federated_ucsf_mu_rhuh": {
+      "ens_out": 61.6169406457626,
+      "ens_ovr": 67.96141881359017
+    },
+    "federated_vs_v148_centralized_ens_out_pp_diff": -6.073059354237401,
+    "federated_relative_to_v148_centralized_pct": 91.02812918564426
+  }
+}

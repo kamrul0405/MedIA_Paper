@@ -1,0 +1,43 @@
+{
+  "version": "v150",
+  "experiment": "Triple-cohort training (UCSF+MU+RHUH) -> LUMIERE LOCO",
+  "timestamp": "2026-05-09T07:40:47",
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM"
+  ],
+  "n_train": 487,
+  "test_cohort": "LUMIERE",
+  "n_test": 22,
+  "results_lumiere": {
+    "learned_outgrowth_pct": 75.48942269724701,
+    "bimodal_outgrowth_pct": 46.24018149949317,
+    "ensemble_outgrowth_pct": 81.49752264002174,
+    "learned_overall_pct": 43.67430464943439,
+    "ensemble_overall_pct": 87.17783918447172
+  },
+  "scaling_comparison_lumiere": {
+    "v141_ucsf_only_n297": {
+      "learned_out": 42.26,
+      "bim_out": 46.24,
+      "ens_out": 56.46,
+      "learned_ovr": 18.35,
+      "ens_ovr": 65.39
+    },
+    "v148_ucsf_mu_n448": {
+      "learned_out": 60.0,
+      "bim_out": 46.24,
+      "ens_out": 67.69,
+      "learned_ovr": 30.56,
+      "ens_ovr": 74.52
+    },
+    "v150_ucsf_mu_rhuh_n487": {
+      "learned_out": 75.48942269724701,
+      "ens_out": 81.49752264002174,
+      "ens_ovr": 87.17783918447172
+    },
+    "gain_v141_to_v150_ens_out_pp": 25.03752264002174,
+    "gain_v148_to_v150_ens_out_pp": 13.807522640021745
+  }
+}
