@@ -1,0 +1,29 @@
+{
+  "version": "v181",
+  "experiment": "UOSL permutation/null-shuffle test (10,000 feature permutations)",
+  "timestamp": "2026-05-09T16:48:15",
+  "n_perm": 1000,
+  "n_perm_successful": 792,
+  "n_perm_failed": 208,
+  "true_within_fit_rmse": 0.09107197531416864,
+  "true_yale_err": 0.012671507069508148,
+  "true_upenn_err": 0.020393225889558497,
+  "p_value_rmse": 0.15656565656565657,
+  "p_value_yale_err": 0.17424242424242425,
+  "p_value_upenn_err": 0.050505050505050504,
+  "perm_rmse_quantiles": {
+    "p05": 0.07560336687452204,
+    "p50": 0.10896989327630027,
+    "p95": 0.11782684639937974
+  },
+  "perm_yale_err_quantiles": {
+    "p05": 0.003630807500967048,
+    "p50": 0.03482365950762556,
+    "p95": 0.1489126061621187
+  },
+  "perm_upenn_err_quantiles": {
+    "p05": 0.020299953047063283,
+    "p50": 0.09695171018639565,
+    "p95": 0.16975742634551644
+  }
+}
