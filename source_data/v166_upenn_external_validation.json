@@ -1,0 +1,29 @@
+{
+  "version": "v166",
+  "experiment": "UPENN-GBM TRUE external validation (6th cohort)",
+  "timestamp": "2026-05-09T11:33:46",
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "n_train": 635,
+  "test_cohort": "UPENN-GBM",
+  "n_test": 41,
+  "limitation": "UPENN-GBM is processed as 2D 48x48 cropped masks; tiled to 3D (16,48,48) along depth axis",
+  "results_upenn": {
+    "learned_outgrowth_pct": 90.66494012013982,
+    "learned_overall_pct": 12.886243639328848,
+    "bimodal_outgrowth_pct": 63.29317285783779,
+    "bimodal_overall_pct": 90.01017234333692,
+    "ensemble_outgrowth_pct": 95.30496897852495,
+    "ensemble_overall_pct": 98.24717847365812
+  },
+  "comparison_to_loco_5cohort": {
+    "v156_5cohort_mean_ens_out_pct": 80.34,
+    "v159_multiseed_cohort_mean_ens_out_pct": 77.58,
+    "v166_upenn_external_ens_out_pct": 95.30496897852495
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "version": "v170",
+  "timestamp": "2026-05-09T11:31:10",
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "n_above_50pct": 295,
+      "n_below_50pct": 2,
+      "auc_bimodal_score": 0.9983050847457627,
+      "auc_bimodal_ci95": [
+        NaN,
+        NaN
+      ],
+      "auc_learned_score": 1.0,
+      "sensitivity_at_90pct_specificity_bimodal": 0.9966101694915255
+    },
+    "MU-Glioma-Post": {
+      "n": 149,
+      "n_above_50pct": 112,
+      "n_below_50pct": 37,
+      "auc_bimodal_score": 0.8701737451737451,
+      "auc_bimodal_ci95": [
+        0.8128768780239369,
+        0.9233225108225109
+      ],
+      "auc_learned_score": 0.9765926640926641,
+      "sensitivity_at_90pct_specificity_bimodal": 0.6785714285714286
+    },
+    "RHUH-GBM": {
+      "n": 34,
+      "n_above_50pct": 31,
+      "n_below_50pct": 3,
+      "auc_bimodal_score": 0.6989247311827957,
+      "auc_bimodal_ci95": [
+        NaN,
+        NaN
+      ],
+      "auc_learned_score": 1.0,
+      "sensitivity_at_90pct_specificity_bimodal": 0.5806451612903226
+    },
+    "LUMIERE": {
+      "n": 22,
+      "n_above_50pct": 16,
+      "n_below_50pct": 6,
+      "auc_bimodal_score": 0.7708333333333333,
+      "auc_bimodal_ci95": [
+        NaN,
+        NaN
+      ],
+      "auc_learned_score": 1.0,
+      "sensitivity_at_90pct_specificity_bimodal": 0.5625
+    },
+    "PROTEAS-brain-mets": {
+      "n": 100,
+      "n_above_50pct": 86,
+      "n_below_50pct": 14,
+      "auc_bimodal_score": 0.7645348837209303,
+      "auc_bimodal_ci95": [
+        0.6353342699506253,
+        0.8750243621545003
+      ],
+      "auc_learned_score": 0.8492524916943522,
+      "sensitivity_at_90pct_specificity_bimodal": 0.43023255813953487
+    }
+  },
+  "pooled": {
+    "n": 602,
+    "n_above_50pct": 540,
+    "n_below_50pct": 62,
+    "auc_bimodal_as_score": 0.8567951015531661,
+    "auc_bimodal_ci95": [
+      0.8205023669842008,
+      0.8878679185232087
+    ],
+    "auc_learned_as_score": 0.9652927120669057
+  },
+  "note": "Patient-level binary endpoint defined as 'ensemble outgrowth >= 50%'. AUC-bimodal: how well does bimodal-only outgrowth coverage predict whether the ensemble model achieves >50% outgrowth on this patient. AUC=1 means bimodal score perfectly identifies patients where the ensemble succeeds; AUC=0.5 means no information. The high AUC values indicate that easy patients (where bimodal already does well) are also easy for the ensemble \u2014 i.e., the ensemble extends performance predictably."
+}
