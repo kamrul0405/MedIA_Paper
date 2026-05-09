@@ -1,0 +1,122 @@
+{
+  "version": "v157",
+  "experiment": "DHEPL universal foundation model 5-fold LOCO",
+  "all_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post",
+    "RHUH-GBM",
+    "LUMIERE",
+    "PROTEAS-brain-mets"
+  ],
+  "sigma_grid": [
+    2.0,
+    4.0,
+    7.0,
+    10.0
+  ],
+  "n_total_test_followups": 635,
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "learned_outgrowth_pct": 96.03673818997162,
+      "dhepl_outgrowth_pct": 20.355211084199702,
+      "ensemble_outgrowth_pct": 97.38052738794065,
+      "ensemble_overall_pct": 99.25317775918381,
+      "avg_dhepl_weights": {
+        "sigma_2.0": 0.3398551415112685,
+        "sigma_4.0": 0.18390455194795974,
+        "sigma_7.0": 0.22134858555464632,
+        "sigma_10.0": 0.2548917155173491
+      }
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "learned_outgrowth_pct": 58.30493448210331,
+      "dhepl_outgrowth_pct": 9.606398973589458,
+      "ensemble_outgrowth_pct": 58.30493448210331,
+      "ensemble_overall_pct": 82.78507740900727,
+      "avg_dhepl_weights": {
+        "sigma_2.0": 0.543542497994884,
+        "sigma_4.0": 0.3984028207545249,
+        "sigma_7.0": 0.04050025567165669,
+        "sigma_10.0": 0.017554427102356163
+      }
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "learned_outgrowth_pct": 91.59054503494605,
+      "dhepl_outgrowth_pct": 8.18728086730201,
+      "ensemble_outgrowth_pct": 91.59480809075457,
+      "ensemble_overall_pct": 95.75324567278372,
+      "avg_dhepl_weights": {
+        "sigma_2.0": 0.20353991385453787,
+        "sigma_4.0": 0.15167075567520583,
+        "sigma_7.0": 0.25033635813265276,
+        "sigma_10.0": 0.39445297978818417
+      }
+    },
+    "LUMIERE": {
+      "n": 22,
+      "learned_outgrowth_pct": 74.06366783364021,
+      "dhepl_outgrowth_pct": 12.992416368567628,
+      "ensemble_outgrowth_pct": 74.25320943355833,
+      "ensemble_overall_pct": 77.95376393611885,
+      "avg_dhepl_weights": {
+        "sigma_2.0": 0.47470642355355347,
+        "sigma_4.0": 0.3207591636614366,
+        "sigma_7.0": 0.10227009789510207,
+        "sigma_10.0": 0.10226433588699861
+      }
+    },
+    "PROTEAS-brain-mets": {
+      "n": 126,
+      "learned_outgrowth_pct": 71.25660411572153,
+      "dhepl_outgrowth_pct": 57.19142026105077,
+      "ensemble_outgrowth_pct": 75.64740233585837,
+      "ensemble_overall_pct": 82.84829541700392,
+      "avg_dhepl_weights": {
+        "sigma_2.0": 0.21895299579889055,
+        "sigma_4.0": 0.6079953700777084,
+        "sigma_7.0": 0.1361767105639927,
+        "sigma_10.0": 0.03687492290896083
+      }
+    }
+  },
+  "cohort_mean_pct": {
+    "learned_outgrowth_pct": 78.25049793127656,
+    "dhepl_outgrowth_pct": 21.666545510941916,
+    "ensemble_outgrowth_pct": 79.43617634604304,
+    "ensemble_overall_pct": 87.71871203881952
+  },
+  "comparison_to_v156_fixed_bimodal": {
+    "UCSF-POSTOP": {
+      "learned_out": 96.44,
+      "ens_out": 97.18,
+      "ens_ovr": 98.72
+    },
+    "MU-Glioma-Post": {
+      "learned_out": 62.17,
+      "ens_out": 70.96,
+      "ens_ovr": 86.63
+    },
+    "RHUH-GBM": {
+      "learned_out": 89.1,
+      "ens_out": 89.34,
+      "ens_ovr": 95.38
+    },
+    "LUMIERE": {
+      "learned_out": 65.69,
+      "ens_out": 72.05,
+      "ens_ovr": 76.9
+    },
+    "PROTEAS-brain-mets": {
+      "learned_out": 52.31,
+      "ens_out": 72.16,
+      "ens_ovr": 87.85
+    }
+  },
+  "v156_cohort_mean_ens_out_pct": 80.33800000000001,
+  "v156_cohort_mean_ens_ovr_pct": 89.096,
+  "v157_minus_v156_cohort_mean_ens_out_pp": -0.9018236539569671,
+  "v157_minus_v156_cohort_mean_ens_ovr_pp": -1.3772879611804854
+}
