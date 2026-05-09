@@ -1,0 +1,257 @@
+{
+  "version": "v163",
+  "experiment": "Multi-seed v157 DHEPL universal foundation 5-fold LOCO",
+  "timestamp": "2026-05-09T11:18:24",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 83.65318849817672,
+          "ensemble_outgrowth": 89.0870317331834,
+          "ensemble_overall": 97.648849820794,
+          "weight_sigma_2.0": 0.9694507910747721,
+          "weight_sigma_4.0": 0.007024466855018729,
+          "weight_sigma_7.0": 0.013274645424990442,
+          "weight_sigma_10.0": 0.0102500949597444
+        },
+        "123": {
+          "learned_outgrowth": 95.04848351091766,
+          "ensemble_outgrowth": 96.56489164764253,
+          "ensemble_overall": 99.01350331576138,
+          "weight_sigma_2.0": 0.16305521456681518,
+          "weight_sigma_4.0": 0.3187261130472626,
+          "weight_sigma_7.0": 0.24398843392177863,
+          "weight_sigma_10.0": 0.27423023736035385
+        },
+        "999": {
+          "learned_outgrowth": 95.88497697451326,
+          "ensemble_outgrowth": 97.82497355056168,
+          "ensemble_overall": 98.94355167477538,
+          "weight_sigma_2.0": 0.7938645144905707,
+          "weight_sigma_4.0": 0.06537727533090194,
+          "weight_sigma_7.0": 0.06126113441029583,
+          "weight_sigma_10.0": 0.0794970722060011
+        }
+      },
+      "learned_outgrowth_mean": 91.52888299453588,
+      "learned_outgrowth_se": 3.9452441064589006,
+      "ensemble_outgrowth_mean": 94.49229897712921,
+      "ensemble_outgrowth_se": 2.727003061015957,
+      "ensemble_overall_mean": 98.53530160377693,
+      "ensemble_overall_se": 0.44368565474682614,
+      "weight_sigma_2.0_mean": 0.6421235067107193,
+      "weight_sigma_2.0_se": 0.244838352479368,
+      "weight_sigma_4.0_mean": 0.13037595174439442,
+      "weight_sigma_4.0_se": 0.09566974445345497,
+      "weight_sigma_7.0_mean": 0.10617473791902164,
+      "weight_sigma_7.0_se": 0.0702854581587103,
+      "weight_sigma_10.0_mean": 0.12132580150869977,
+      "weight_sigma_10.0_se": 0.07902238257137519
+    },
+    "MU-Glioma-Post": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 52.24634712123743,
+          "ensemble_outgrowth": 52.24867555746799,
+          "ensemble_overall": 80.18731244627118,
+          "weight_sigma_2.0": 0.6215485606761958,
+          "weight_sigma_4.0": 0.31668074952056074,
+          "weight_sigma_7.0": 0.037046369337877694,
+          "weight_sigma_10.0": 0.024724318615056032
+        },
+        "123": {
+          "learned_outgrowth": 54.38475571569945,
+          "ensemble_outgrowth": 54.51651727713321,
+          "ensemble_overall": 81.746599302232,
+          "weight_sigma_2.0": 0.5516486066757449,
+          "weight_sigma_4.0": 0.07375558869086749,
+          "weight_sigma_7.0": 0.18946191621635924,
+          "weight_sigma_10.0": 0.18513389085635346
+        },
+        "999": {
+          "learned_outgrowth": 59.33198096318779,
+          "ensemble_outgrowth": 59.472524624799064,
+          "ensemble_overall": 83.81469624793037,
+          "weight_sigma_2.0": 0.09503967889788136,
+          "weight_sigma_4.0": 0.19206927800612733,
+          "weight_sigma_7.0": 0.41136483576716176,
+          "weight_sigma_10.0": 0.3015262074521835
+        }
+      },
+      "learned_outgrowth_mean": 55.321027933374886,
+      "learned_outgrowth_se": 2.0983331467890753,
+      "ensemble_outgrowth_mean": 55.41257248646676,
+      "ensemble_outgrowth_se": 2.1329310850349685,
+      "ensemble_overall_mean": 81.91620266547785,
+      "ensemble_overall_se": 1.0505637037249893,
+      "weight_sigma_2.0_mean": 0.4227456154166074,
+      "weight_sigma_2.0_se": 0.1650907694921471,
+      "weight_sigma_4.0_mean": 0.19416853873918516,
+      "weight_sigma_4.0_se": 0.07013430832517493,
+      "weight_sigma_7.0_mean": 0.21262437377379959,
+      "weight_sigma_7.0_se": 0.10867528568717597,
+      "weight_sigma_10.0_mean": 0.17046147230786435,
+      "weight_sigma_10.0_se": 0.08024188705719083
+    },
+    "RHUH-GBM": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 73.04056581058478,
+          "ensemble_outgrowth": 73.04056581058478,
+          "ensemble_overall": 88.7929279821615,
+          "weight_sigma_2.0": 0.35381304807005787,
+          "weight_sigma_4.0": 0.20303152730831733,
+          "weight_sigma_7.0": 0.22580620097235227,
+          "weight_sigma_10.0": 0.21734922240750912
+        },
+        "123": {
+          "learned_outgrowth": 72.0771891528136,
+          "ensemble_outgrowth": 72.07794582286007,
+          "ensemble_overall": 86.1990911144417,
+          "weight_sigma_2.0": 0.3544322036875364,
+          "weight_sigma_4.0": 0.090036688085932,
+          "weight_sigma_7.0": 0.2811606667506007,
+          "weight_sigma_10.0": 0.27437043227016544
+        },
+        "999": {
+          "learned_outgrowth": 74.77044177914125,
+          "ensemble_outgrowth": 74.77158767680415,
+          "ensemble_overall": 86.82097505549619,
+          "weight_sigma_2.0": 0.9187559424302517,
+          "weight_sigma_4.0": 0.030516000392918404,
+          "weight_sigma_7.0": 0.032944043596776634,
+          "weight_sigma_10.0": 0.017784002693728186
+        }
+      },
+      "learned_outgrowth_mean": 73.29606558084656,
+      "learned_outgrowth_se": 0.787900697372043,
+      "ensemble_outgrowth_mean": 73.29669977008301,
+      "ensemble_outgrowth_se": 0.7880630396180227,
+      "ensemble_overall_mean": 87.2709980506998,
+      "ensemble_overall_se": 0.7818541948992443,
+      "weight_sigma_2.0_mean": 0.5423337313959488,
+      "weight_sigma_2.0_se": 0.18821119038497214,
+      "weight_sigma_4.0_mean": 0.10786140526238924,
+      "weight_sigma_4.0_se": 0.0505921343146671,
+      "weight_sigma_7.0_mean": 0.1799703037732432,
+      "weight_sigma_7.0_se": 0.07522980372721827,
+      "weight_sigma_10.0_mean": 0.16983455245713422,
+      "weight_sigma_10.0_se": 0.07778684947998558
+    },
+    "LUMIERE": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 68.03376036868808,
+          "ensemble_outgrowth": 69.22155513838199,
+          "ensemble_overall": 73.23402164919212,
+          "weight_sigma_2.0": 0.11608658485453237,
+          "weight_sigma_4.0": 0.6910978095097975,
+          "weight_sigma_7.0": 0.11118827582421628,
+          "weight_sigma_10.0": 0.08162733106027273
+        },
+        "123": {
+          "learned_outgrowth": 68.1808061141605,
+          "ensemble_outgrowth": 68.37112088111648,
+          "ensemble_overall": 73.26162654932506,
+          "weight_sigma_2.0": 0.8685338524254885,
+          "weight_sigma_4.0": 0.05568533466959542,
+          "weight_sigma_7.0": 0.037937491116198624,
+          "weight_sigma_10.0": 0.03784332801164551
+        },
+        "999": {
+          "learned_outgrowth": 61.903500475664906,
+          "ensemble_outgrowth": 62.284018792710114,
+          "ensemble_overall": 67.81920651139693,
+          "weight_sigma_2.0": 0.45235337452455,
+          "weight_sigma_4.0": 0.2658297626343979,
+          "weight_sigma_7.0": 0.17973021333190528,
+          "weight_sigma_10.0": 0.10208665214436637
+        }
+      },
+      "learned_outgrowth_mean": 66.03935565283783,
+      "learned_outgrowth_se": 2.068363213407036,
+      "ensemble_outgrowth_mean": 66.62556493740287,
+      "ensemble_outgrowth_se": 2.184611086773038,
+      "ensemble_overall_mean": 71.4382849033047,
+      "ensemble_overall_se": 1.8095567424748114,
+      "weight_sigma_2.0_mean": 0.47899127060152363,
+      "weight_sigma_2.0_se": 0.2176207754706225,
+      "weight_sigma_4.0_mean": 0.33753763560459693,
+      "weight_sigma_4.0_se": 0.186899052592632,
+      "weight_sigma_7.0_mean": 0.10961866009077341,
+      "weight_sigma_7.0_se": 0.04093955621196588,
+      "weight_sigma_10.0_mean": 0.07385243707209486,
+      "weight_sigma_10.0_se": 0.018948508352031407
+    },
+    "PROTEAS-brain-mets": {
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 83.37454910333385,
+          "ensemble_outgrowth": 84.91538517199523,
+          "ensemble_overall": 89.57918286338142,
+          "weight_sigma_2.0": 0.22052559966132754,
+          "weight_sigma_4.0": 0.3380643879137342,
+          "weight_sigma_7.0": 0.32710756668968805,
+          "weight_sigma_10.0": 0.11430244230561787
+        },
+        "123": {
+          "learned_outgrowth": 76.23355836458025,
+          "ensemble_outgrowth": 76.36067957670146,
+          "ensemble_overall": 82.39383288691712,
+          "weight_sigma_2.0": 0.9424457133762421,
+          "weight_sigma_4.0": 0.04011462315443962,
+          "weight_sigma_7.0": 0.009507549690112235,
+          "weight_sigma_10.0": 0.007932118624300948
+        },
+        "999": {
+          "learned_outgrowth": 86.83795022092461,
+          "ensemble_outgrowth": 93.79930917265995,
+          "ensemble_overall": 96.85288503698088,
+          "weight_sigma_2.0": 0.9264973823040251,
+          "weight_sigma_4.0": 0.052987392311767925,
+          "weight_sigma_7.0": 0.015712604126227752,
+          "weight_sigma_10.0": 0.004802617455078732
+        }
+      },
+      "learned_outgrowth_mean": 82.14868589627957,
+      "learned_outgrowth_se": 3.1219831898187578,
+      "ensemble_outgrowth_mean": 85.0251246404522,
+      "ensemble_outgrowth_se": 5.034397766349111,
+      "ensemble_overall_mean": 89.6086335957598,
+      "ensemble_overall_se": 4.173994800299989,
+      "weight_sigma_2.0_mean": 0.6964895651138648,
+      "weight_sigma_2.0_se": 0.2380265108644941,
+      "weight_sigma_4.0_mean": 0.14372213445998058,
+      "weight_sigma_4.0_se": 0.09724215590397123,
+      "weight_sigma_7.0_mean": 0.11744257350200936,
+      "weight_sigma_7.0_se": 0.10484779873930083,
+      "weight_sigma_10.0_mean": 0.04234572612833251,
+      "weight_sigma_10.0_se": 0.0359896985106194
+    }
+  },
+  "cohort_mean_summary": {
+    "learned_outgrowth": {
+      "mean": 73.66680361157493,
+      "se": 1.0881998205312835,
+      "min": 72.06968218040416,
+      "max": 75.74577008268636
+    },
+    "ensemble_outgrowth": {
+      "mean": 74.97045216230681,
+      "se": 1.3305001144443864,
+      "min": 73.57823104109075,
+      "max": 77.63048276350699
+    },
+    "ensemble_overall": {
+      "mean": 85.75388416380382,
+      "se": 0.6752040817094274,
+      "min": 84.52293063373546,
+      "max": 86.85026290531594
+    }
+  }
+}

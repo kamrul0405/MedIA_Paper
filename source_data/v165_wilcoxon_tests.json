@@ -1,0 +1,123 @@
+{
+  "version": "v165",
+  "timestamp": "2026-05-09T10:15:52",
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "tests": {
+        "ens_out_vs_bim_out": {
+          "n": 297,
+          "median_diff_pp": 43.942992874109265,
+          "wilcoxon_W": 44225.5,
+          "p_value": 1.2425202331091963e-50,
+          "cliffs_delta": 0.9663299663299664
+        },
+        "ens_out_vs_learned_out": {
+          "n": 297,
+          "median_diff_pp": 0.45385779122542047,
+          "wilcoxon_W": 44005.0,
+          "p_value": 1.1098933959708737e-49,
+          "cliffs_delta": 0.8956228956228957
+        }
+      }
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "tests": {
+        "ens_out_vs_bim_out": {
+          "n": 149,
+          "median_diff_pp": 22.71534761696546,
+          "wilcoxon_W": 11059.5,
+          "p_value": 1.6356544189043363e-25,
+          "cliffs_delta": 0.8590604026845637
+        },
+        "ens_out_vs_learned_out": {
+          "n": 149,
+          "median_diff_pp": 2.4120800104588835,
+          "wilcoxon_W": 11059.5,
+          "p_value": 1.6356544189043363e-25,
+          "cliffs_delta": 0.8590604026845637
+        }
+      }
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "tests": {
+        "ens_out_vs_bim_out": {
+          "n": 34,
+          "median_diff_pp": 57.19778721999504,
+          "wilcoxon_W": 587.5,
+          "p_value": 3.526609596660756e-07,
+          "cliffs_delta": 0.8529411764705882
+        },
+        "ens_out_vs_learned_out": {
+          "n": 34,
+          "median_diff_pp": 0.07348359719941966,
+          "wilcoxon_W": 542.5,
+          "p_value": 1.2005397418241288e-05,
+          "cliffs_delta": 0.5882352941176471
+        }
+      }
+    },
+    "LUMIERE": {
+      "n": 22,
+      "tests": {
+        "ens_out_vs_bim_out": {
+          "n": 22,
+          "median_diff_pp": 12.404795757825738,
+          "wilcoxon_W": 245.5,
+          "p_value": 5.475064060397171e-05,
+          "cliffs_delta": 0.7727272727272727
+        },
+        "ens_out_vs_learned_out": {
+          "n": 22,
+          "median_diff_pp": 2.5383258094292565,
+          "wilcoxon_W": 235.0,
+          "p_value": 0.00019841836453213908,
+          "cliffs_delta": 0.6363636363636364
+        }
+      }
+    },
+    "PROTEAS-brain-mets": {
+      "n": 126,
+      "tests": {
+        "ens_out_vs_bim_out": {
+          "n": 100,
+          "median_diff_pp": 59.92125984251968,
+          "wilcoxon_W": 4964.5,
+          "p_value": 2.3325904667102155e-17,
+          "cliffs_delta": 0.82
+        },
+        "ens_out_vs_learned_out": {
+          "n": 100,
+          "median_diff_pp": 5.67765567765568,
+          "wilcoxon_W": 4752.5,
+          "p_value": 6.979373511536351e-15,
+          "cliffs_delta": 0.66
+        }
+      }
+    }
+  },
+  "pooled": {
+    "n": 635,
+    "tests": {
+      "ens_out_vs_bim_out": {
+        "n": 602,
+        "median_diff_pp": 40.06578947368421,
+        "wilcoxon_W": 180618.0,
+        "p_value": 1.083744792160298e-98,
+        "cliffs_delta": 0.9019933554817275
+      },
+      "ens_out_vs_learned_out": {
+        "n": 602,
+        "median_diff_pp": 0.6111180537301197,
+        "wilcoxon_W": 178560.0,
+        "p_value": 1.9564085640428194e-94,
+        "cliffs_delta": 0.8205980066445183
+      }
+    }
+  },
+  "n_tests": 12,
+  "bonferroni_threshold": 0.004166666666666667,
+  "n_significant_at_bonferroni": 12
+}

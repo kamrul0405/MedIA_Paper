@@ -1,0 +1,203 @@
+{
+  "version": "v164",
+  "timestamp": "2026-05-09T10:17:06",
+  "by_cohort": {
+    "UCSF-POSTOP": {
+      "n": 297,
+      "n_failures_bottom_10pct": 29,
+      "failure_vs_success_lesion_size": {
+        "fail_median_baseline_voxels": 4942.0,
+        "succ_median_baseline_voxels": 15642.0,
+        "fail_median_outgrowth_voxels": 4590.0,
+        "succ_median_outgrowth_voxels": 1180.0,
+        "fail_median_r_eq_voxels": 10.566667552864853,
+        "succ_median_r_eq_voxels": 15.514365694092008
+      },
+      "ens_out_distribution_pct": {
+        "min": 14.084507042253522,
+        "p10": 95.05302482719051,
+        "p25": 98.07256235827666,
+        "median": 99.32803909590714,
+        "p75": 99.79360165118679,
+        "p90": 100.0,
+        "max": 100.0,
+        "mean": 97.18019365298441,
+        "n_at_zero": 0,
+        "n_lt_50": 2,
+        "n_gte_80": 290
+      },
+      "lesion_size_tertiles": {
+        "small": {
+          "n": 99,
+          "median_r_eq_voxels": 12.088739993517038,
+          "mean_ens_out_pct": 94.05905995661195,
+          "median_ens_out_pct": 99.08466819221968
+        },
+        "medium": {
+          "n": 99,
+          "median_r_eq_voxels": 15.324953772815212,
+          "mean_ens_out_pct": 98.56150235210416,
+          "median_ens_out_pct": 98.99159663865547
+        },
+        "large": {
+          "n": 99,
+          "median_r_eq_voxels": 17.80558958039153,
+          "mean_ens_out_pct": 98.92001865023713,
+          "median_ens_out_pct": 99.64131994261119
+        }
+      }
+    },
+    "MU-Glioma-Post": {
+      "n": 151,
+      "n_failures_bottom_10pct": 15,
+      "failure_vs_success_lesion_size": {
+        "fail_median_baseline_voxels": 8746.0,
+        "succ_median_baseline_voxels": 21901.5,
+        "fail_median_outgrowth_voxels": 14869.0,
+        "succ_median_outgrowth_voxels": 2772.0,
+        "fail_median_r_eq_voxels": 12.781258580236898,
+        "succ_median_r_eq_voxels": 17.35648087761643
+      },
+      "ens_out_distribution_pct": {
+        "min": 2.0163919158051598,
+        "p10": NaN,
+        "p25": NaN,
+        "median": NaN,
+        "p75": NaN,
+        "p90": NaN,
+        "max": 100.0,
+        "mean": NaN,
+        "n_at_zero": 0,
+        "n_lt_50": 37,
+        "n_gte_80": 66
+      },
+      "lesion_size_tertiles": {
+        "small": {
+          "n": 50,
+          "median_r_eq_voxels": 12.396622298889561,
+          "mean_ens_out_pct": NaN,
+          "median_ens_out_pct": NaN
+        },
+        "medium": {
+          "n": 50,
+          "median_r_eq_voxels": 16.922262788592114,
+          "mean_ens_out_pct": 67.4258986325369,
+          "median_ens_out_pct": 68.86549628332844
+        },
+        "large": {
+          "n": 51,
+          "median_r_eq_voxels": 19.366329908988416,
+          "mean_ens_out_pct": 88.67190760087091,
+          "median_ens_out_pct": 95.75971731448763
+        }
+      }
+    },
+    "RHUH-GBM": {
+      "n": 39,
+      "n_failures_bottom_10pct": 3,
+      "failure_vs_success_lesion_size": {
+        "fail_median_baseline_voxels": 14584.0,
+        "succ_median_baseline_voxels": 28314.0,
+        "fail_median_outgrowth_voxels": 4433.0,
+        "succ_median_outgrowth_voxels": 1927.0,
+        "fail_median_r_eq_voxels": 15.15639849986669,
+        "succ_median_r_eq_voxels": 18.907588801357534
+      },
+      "ens_out_distribution_pct": {
+        "min": 16.155544651619238,
+        "p10": NaN,
+        "p25": NaN,
+        "median": NaN,
+        "p75": NaN,
+        "p90": NaN,
+        "max": 100.0,
+        "mean": NaN,
+        "n_at_zero": 0,
+        "n_lt_50": 3,
+        "n_gte_80": 28
+      },
+      "lesion_size_tertiles": {
+        "small": {
+          "n": 13,
+          "median_r_eq_voxels": 14.78174465406504,
+          "mean_ens_out_pct": 75.95925259914955,
+          "median_ens_out_pct": 90.31899522062909
+        },
+        "medium": {
+          "n": 13,
+          "median_r_eq_voxels": 18.819312322506363,
+          "mean_ens_out_pct": 96.2361783951147,
+          "median_ens_out_pct": 100.0
+        },
+        "large": {
+          "n": 13,
+          "median_r_eq_voxels": 20.31716839417205,
+          "mean_ens_out_pct": NaN,
+          "median_ens_out_pct": NaN
+        }
+      }
+    },
+    "LUMIERE": {
+      "n": 22,
+      "n_failures_bottom_10pct": 2,
+      "failure_vs_success_lesion_size": {
+        "fail_median_baseline_voxels": 6044.0,
+        "succ_median_baseline_voxels": 7445.0,
+        "fail_median_outgrowth_voxels": 10151.5,
+        "succ_median_outgrowth_voxels": 2055.5,
+        "fail_median_r_eq_voxels": 9.942791970528896,
+        "succ_median_r_eq_voxels": 12.112381326363328
+      },
+      "ens_out_distribution_pct": {
+        "min": 3.4823120656980415,
+        "p10": 24.92657683810598,
+        "p25": 48.741862246293564,
+        "median": 82.14377725928881,
+        "p75": 100.0,
+        "p90": 100.0,
+        "max": 100.0,
+        "mean": 72.0467119158382,
+        "n_at_zero": 0,
+        "n_lt_50": 6,
+        "n_gte_80": 11
+      },
+      "lesion_size_tertiles": {
+        "small": {
+          "n": 7,
+          "median_r_eq_voxels": 6.015920332305007,
+          "mean_ens_out_pct": 54.3491961804944,
+          "median_ens_out_pct": 53.48596750369276
+        },
+        "medium": {
+          "n": 7,
+          "median_r_eq_voxels": 12.013121746186764,
+          "mean_ens_out_pct": 88.2175643887363,
+          "median_ens_out_pct": 98.45261121856866
+        },
+        "large": {
+          "n": 8,
+          "median_r_eq_voxels": 16.956273914758004,
+          "mean_ens_out_pct": 73.38254227047817,
+          "median_ens_out_pct": 98.17518248175182
+        }
+      }
+    },
+    "PROTEAS-brain-mets": {
+      "n": 126,
+      "n_failures_bottom_10pct": 12,
+      "ens_out_distribution_pct": {
+        "min": NaN,
+        "p10": NaN,
+        "p25": NaN,
+        "median": NaN,
+        "p75": NaN,
+        "p90": NaN,
+        "max": NaN,
+        "mean": NaN,
+        "n_at_zero": 5,
+        "n_lt_50": 14,
+        "n_gte_80": 45
+      }
+    }
+  }
+}
