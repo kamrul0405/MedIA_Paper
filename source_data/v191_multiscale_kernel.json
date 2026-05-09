@@ -1,0 +1,683 @@
+{
+  "version": "v191",
+  "experiment": "Multi-scale bimodal kernel \u2014 universal recipe",
+  "timestamp": "2026-05-09T21:10:46",
+  "sigma_sets": {
+    "single_3": [
+      3
+    ],
+    "multi_2_7_15": [
+      2,
+      7,
+      15
+    ],
+    "multi_1_5_15": [
+      1,
+      5,
+      15
+    ],
+    "multi_1_3_7_15_30": [
+      1,
+      3,
+      7,
+      15,
+      30
+    ],
+    "multi_1_7_30": [
+      1,
+      7,
+      30
+    ],
+    "multi_2_5_10_20": [
+      2,
+      5,
+      10,
+      20
+    ]
+  },
+  "results": {
+    "single_3__max": {
+      "sigmas": [
+        3
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8594615766201693,
+          "dice_mean": 0.27941829040967825,
+          "coverage_mean": 0.32111423187109633,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7248955480140798,
+          "dice_mean": 0.21296713834325084,
+          "coverage_mean": 0.22548369180946418,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.679398300954868,
+          "dice_mean": 0.15325826960467814,
+          "coverage_mean": 0.21395573475970547,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7491883989746363,
+          "dice_mean": 0.1765157541178384,
+          "coverage_mean": 0.20971771723950014,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.929401193766401,
+          "dice_mean": 0.08606368443024456,
+          "coverage_mean": 0.4536143269263283,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6658131859766334,
+          "dice_mean": 0.3562803444277786,
+          "coverage_mean": 0.3275792295058007,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8912936203461662,
+          "dice_mean": 0.07254378353895052,
+          "coverage_mean": 0.29161468552208963,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.785635974950422
+    },
+    "single_3__mean": {
+      "sigmas": [
+        3
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8594615766201693,
+          "dice_mean": 0.27941829040967825,
+          "coverage_mean": 0.32111423187109633,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7248955480140798,
+          "dice_mean": 0.21296713834325084,
+          "coverage_mean": 0.22548369180946418,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.679398300954868,
+          "dice_mean": 0.15325826960467814,
+          "coverage_mean": 0.21395573475970547,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7491883989746363,
+          "dice_mean": 0.1765157541178384,
+          "coverage_mean": 0.20971771723950014,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.929401193766401,
+          "dice_mean": 0.08606368443024456,
+          "coverage_mean": 0.4536143269263283,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6658131859766334,
+          "dice_mean": 0.3562803444277786,
+          "coverage_mean": 0.3275792295058007,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8912936203461662,
+          "dice_mean": 0.07254378353895052,
+          "coverage_mean": 0.29161468552208963,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.785635974950422
+    },
+    "multi_2_7_15__max": {
+      "sigmas": [
+        2,
+        7,
+        15
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.7354872831503507,
+          "dice_mean": 0.2057859149678379,
+          "coverage_mean": 0.897404594091164,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.6916224191060184,
+          "dice_mean": 0.4188522927072873,
+          "coverage_mean": 0.8025490821650894,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.7134100019296828,
+          "dice_mean": 0.3650113164079904,
+          "coverage_mean": 0.7463623984959313,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.6970267235934581,
+          "dice_mean": 0.25439716182202504,
+          "coverage_mean": 0.7477368206395112,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.8372825256331153,
+          "dice_mean": 0.0076939764242776884,
+          "coverage_mean": 0.8407388809067767,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6879159041364292,
+          "dice_mean": 0.7207230720874922,
+          "coverage_mean": 0.9796058607396211,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.7470712673916662,
+          "dice_mean": 0.007958458189666113,
+          "coverage_mean": 0.882544312841043,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7299737321343888
+    },
+    "multi_2_7_15__mean": {
+      "sigmas": [
+        2,
+        7,
+        15
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8338315859507356,
+          "dice_mean": 0.3113346851541745,
+          "coverage_mean": 0.6418491311043496,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7143523886175571,
+          "dice_mean": 0.33090451107007235,
+          "coverage_mean": 0.4514452676596349,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.696134131242731,
+          "dice_mean": 0.2415754889413859,
+          "coverage_mean": 0.392652324976084,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7272444930430573,
+          "dice_mean": 0.25194515131939715,
+          "coverage_mean": 0.4543221577036645,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.9002226689433209,
+          "dice_mean": 0.026695219787792292,
+          "coverage_mean": 0.72427933608532,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6785141877063136,
+          "dice_mean": 0.5696754540960156,
+          "coverage_mean": 0.6358729240551437,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8305495897838051,
+          "dice_mean": 0.01847954948295478,
+          "coverage_mean": 0.6478130991041567,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7686927207553601
+    },
+    "multi_1_5_15__max": {
+      "sigmas": [
+        1,
+        5,
+        15
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.7350544164328003,
+          "dice_mean": 0.20571957285211298,
+          "coverage_mean": 0.8972076963997458,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.6915532100217233,
+          "dice_mean": 0.4188119428475781,
+          "coverage_mean": 0.802495630835784,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.7134959463509446,
+          "dice_mean": 0.3649524435102417,
+          "coverage_mean": 0.7462962929791134,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.6967392783087237,
+          "dice_mean": 0.2544134326851817,
+          "coverage_mean": 0.7477262718937571,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.837174823587612,
+          "dice_mean": 0.007698363351235355,
+          "coverage_mean": 0.8507388809067767,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6879399484287075,
+          "dice_mean": 0.7207230720874922,
+          "coverage_mean": 0.9796058607396211,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.7446617077565215,
+          "dice_mean": 0.007959652929492179,
+          "coverage_mean": 0.882544312841043,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7295170472695761
+    },
+    "multi_1_5_15__mean": {
+      "sigmas": [
+        1,
+        5,
+        15
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8458554296423411,
+          "dice_mean": 0.3302924712566848,
+          "coverage_mean": 0.5296999819001217,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7114281880355402,
+          "dice_mean": 0.27701373441013544,
+          "coverage_mean": 0.3346190394657599,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.6929393164153137,
+          "dice_mean": 0.1983918915660674,
+          "coverage_mean": 0.3019205302716102,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.727562722961607,
+          "dice_mean": 0.22248131039324584,
+          "coverage_mean": 0.3436374760864249,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.9036396960973293,
+          "dice_mean": 0.04648092408229183,
+          "coverage_mean": 0.6476618916206597,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6783952182042446,
+          "dice_mean": 0.49131811580031914,
+          "coverage_mean": 0.5191784130665931,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8353085922808052,
+          "dice_mean": 0.03177335199576536,
+          "coverage_mean": 0.5252598630870938,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7707327376624544
+    },
+    "multi_1_3_7_15_30__max": {
+      "sigmas": [
+        1,
+        3,
+        7,
+        15,
+        30
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.6374413650982076,
+          "dice_mean": 0.19053027947970896,
+          "coverage_mean": 0.9992056717408829,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.671638656045756,
+          "dice_mean": 0.4710168991656487,
+          "coverage_mean": 0.9982065957591089,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.7284481977934008,
+          "dice_mean": 0.455777460719857,
+          "coverage_mean": 0.9837679253584242,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.6446153577694793,
+          "dice_mean": 0.29492453756388604,
+          "coverage_mean": 0.9861085096102582,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.7692001220889914,
+          "dice_mean": 0.003758874489448902,
+          "coverage_mean": 0.97,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.7064169520039958,
+          "dice_mean": 0.7274994902998188,
+          "coverage_mean": 1.0,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.6881629374501861,
+          "dice_mean": 0.0049674759295601795,
+          "coverage_mean": 1.0,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.6922747983214309
+    },
+    "multi_1_3_7_15_30__mean": {
+      "sigmas": [
+        1,
+        3,
+        7,
+        15,
+        30
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8433147724661811,
+          "dice_mean": 0.31151195489025596,
+          "coverage_mean": 0.725186280755151,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7102258768976882,
+          "dice_mean": 0.35632924814460565,
+          "coverage_mean": 0.510201652505032,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.6931897794742964,
+          "dice_mean": 0.2658452246771842,
+          "coverage_mean": 0.43785482778936435,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7273097713753142,
+          "dice_mean": 0.2606594507684237,
+          "coverage_mean": 0.4992153310359331,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.9022539305681387,
+          "dice_mean": 0.025887748364506358,
+          "coverage_mean": 0.7429360994882162,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6805490327325403,
+          "dice_mean": 0.6016435397286669,
+          "coverage_mean": 0.6844141971871294,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8328634512902316,
+          "dice_mean": 0.01707895471472234,
+          "coverage_mean": 0.6775390562889976,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7699580878291987
+    },
+    "multi_1_7_30__max": {
+      "sigmas": [
+        1,
+        7,
+        30
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.6356508251213323,
+          "dice_mean": 0.19053027947970896,
+          "coverage_mean": 0.9992056717408829,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.6713687716579646,
+          "dice_mean": 0.4710168991656487,
+          "coverage_mean": 0.9982065957591089,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.7285704762547354,
+          "dice_mean": 0.455777460719857,
+          "coverage_mean": 0.9837679253584242,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.6396606961269324,
+          "dice_mean": 0.29492453756388604,
+          "coverage_mean": 0.9861085096102582,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.7399854698600161,
+          "dice_mean": 0.003758874489448902,
+          "coverage_mean": 0.97,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.7065182079803392,
+          "dice_mean": 0.7274994902998188,
+          "coverage_mean": 1.0,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.676647457189916,
+          "dice_mean": 0.0049674759295601795,
+          "coverage_mean": 1.0,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.6854859863130337
+    },
+    "multi_1_7_30__mean": {
+      "sigmas": [
+        1,
+        7,
+        30
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8520129709211165,
+          "dice_mean": 0.3275741971441165,
+          "coverage_mean": 0.7243077330789675,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.7111179024350317,
+          "dice_mean": 0.3499936420689781,
+          "coverage_mean": 0.4965815343951207,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.6907316506003193,
+          "dice_mean": 0.2650288884040675,
+          "coverage_mean": 0.42988597050486876,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7270602826241875,
+          "dice_mean": 0.26065633854413234,
+          "coverage_mean": 0.501375277923571,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.9061177465434476,
+          "dice_mean": 0.025230256265910384,
+          "coverage_mean": 0.7437589495954121,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6727511188146453,
+          "dice_mean": 0.5917758674049676,
+          "coverage_mean": 0.6696303833654595,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.833393170734386,
+          "dice_mean": 0.017047062964024317,
+          "coverage_mean": 0.6895574881006467,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7704549775247334
+    },
+    "multi_2_5_10_20__max": {
+      "sigmas": [
+        2,
+        5,
+        10,
+        20
+      ],
+      "mode": "max",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.6809221068152193,
+          "dice_mean": 0.19669918347405058,
+          "coverage_mean": 0.9545185450970283,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.6757225231066794,
+          "dice_mean": 0.43993332619497644,
+          "coverage_mean": 0.8964234263524418,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.7144856944700727,
+          "dice_mean": 0.41170916901072974,
+          "coverage_mean": 0.858842628696028,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.6693051965190153,
+          "dice_mean": 0.25811101741888093,
+          "coverage_mean": 0.7996987346244603,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.7960530313418624,
+          "dice_mean": 0.006183573007931431,
+          "coverage_mean": 0.8874043381114931,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.7072097178979215,
+          "dice_mean": 0.7260534194820896,
+          "coverage_mean": 0.9968916852580653,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.7076111882671703,
+          "dice_mean": 0.0067158360142608176,
+          "coverage_mean": 0.9571862844400512,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7073299226311344
+    },
+    "multi_2_5_10_20__mean": {
+      "sigmas": [
+        2,
+        5,
+        10,
+        20
+      ],
+      "mode": "mean",
+      "per_cohort": {
+        "UCSF-POSTOP": {
+          "auc_mean": 0.8316596380266411,
+          "dice_mean": 0.30200381956528594,
+          "coverage_mean": 0.696520609658398,
+          "n_eval": 297
+        },
+        "MU-Glioma-Post": {
+          "auc_mean": 0.712703919993002,
+          "dice_mean": 0.3521199694110389,
+          "coverage_mean": 0.5059259464447039,
+          "n_eval": 149
+        },
+        "RHUH-GBM": {
+          "auc_mean": 0.6976440953503271,
+          "dice_mean": 0.25941628291414753,
+          "coverage_mean": 0.43192206215022416,
+          "n_eval": 34
+        },
+        "LUMIERE": {
+          "auc_mean": 0.7254375171958659,
+          "dice_mean": 0.25921064686600714,
+          "coverage_mean": 0.4978422375104335,
+          "n_eval": 22
+        },
+        "PROTEAS-brain-mets": {
+          "auc_mean": 0.9006040167759246,
+          "dice_mean": 0.025953087026778884,
+          "coverage_mean": 0.7388647602270081,
+          "n_eval": 100
+        },
+        "UPENN-GBM": {
+          "auc_mean": 0.6799775147950538,
+          "dice_mean": 0.6002231593959813,
+          "coverage_mean": 0.6839606777778783,
+          "n_eval": 39
+        },
+        "Yale-Brain-Mets": {
+          "auc_mean": 0.8329624937329597,
+          "dice_mean": 0.01803310406192731,
+          "coverage_mean": 0.6701147755534876,
+          "n_eval": 19
+        }
+      },
+      "mean_auc_across_cohorts": 0.7687127422671106
+    }
+  },
+  "baselines": {
+    "foundation_v184_mean_auc": 0.7214,
+    "kernel_single_sigma3_v189_mean_auc": 0.7856,
+    "kernel_per_cohort_optimal_v189_mean_auc": 0.803
+  }
+}
