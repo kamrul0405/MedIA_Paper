@@ -1,0 +1,155 @@
+{
+  "version": "v188",
+  "experiment": "Mechanistic interpretability (residual analysis) + adversarial robustness",
+  "timestamp": "2026-05-09T19:52:59",
+  "interpretability": {
+    "upenn_summary": {
+      "cohort": "UPENN-GBM",
+      "n_patients": 41,
+      "mean_R_outside_mask_mean": 0.3285777646957374,
+      "std_R_mean": 0.14628322467934796,
+      "sparsity_pct_mean": 0.8515662806083528,
+      "corr_abs_R_distance_mean": 0.3381777340463655,
+      "R_separation_outgrowth_vs_non_mean": -0.0031633230451589976
+    },
+    "yale_summary": {
+      "cohort": "Yale-Brain-Mets",
+      "n_patients": 19,
+      "mean_R_outside_mask_mean": -0.26012358696837173,
+      "std_R_mean": 0.253545092124688,
+      "sparsity_pct_mean": 11.169607522231091,
+      "corr_abs_R_distance_mean": -0.7262274449367385,
+      "R_separation_outgrowth_vs_non_mean": -0.3541844926382366
+    }
+  },
+  "robustness": {
+    "perturbations": [
+      "baseline",
+      "erode_1",
+      "erode_2",
+      "dilate_1",
+      "dilate_2",
+      "flip_1pct"
+    ],
+    "results_by_perturbation": {
+      "baseline": {
+        "upenn": {
+          "kind": "baseline",
+          "n_eval": 41,
+          "ensemble_outgrowth_coverage_mean": 0.9424162143479516,
+          "auc_mean": 0.6400154795565628,
+          "dice_mean": 0.7133836604635648
+        },
+        "yale": {
+          "kind": "baseline",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.6747970681421076,
+          "auc_mean": 0.8269281172623031,
+          "dice_mean": 0.017490384776600858
+        }
+      },
+      "erode_1": {
+        "upenn": {
+          "kind": "erode_1",
+          "n_eval": 41,
+          "ensemble_outgrowth_coverage_mean": 0.8272421759081366,
+          "auc_mean": 0.6501685214471576,
+          "dice_mean": 0.7727475524416674
+        },
+        "yale": {
+          "kind": "erode_1",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.0,
+          "auc_mean": 0.8421075589281153,
+          "dice_mean": 0.0
+        }
+      },
+      "erode_2": {
+        "upenn": {
+          "kind": "erode_2",
+          "n_eval": 41,
+          "ensemble_outgrowth_coverage_mean": 0.7801406394446118,
+          "auc_mean": 0.6492661189141883,
+          "dice_mean": 0.7685846597096593
+        },
+        "yale": {
+          "kind": "erode_2",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.0,
+          "auc_mean": 0.8421075589281153,
+          "dice_mean": 0.0
+        }
+      },
+      "dilate_1": {
+        "upenn": {
+          "kind": "dilate_1",
+          "n_eval": 40,
+          "ensemble_outgrowth_coverage_mean": 0.9565089619474894,
+          "auc_mean": 0.6303806210971783,
+          "dice_mean": 0.6724946276631196
+        },
+        "yale": {
+          "kind": "dilate_1",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.6699049357584687,
+          "auc_mean": 0.8175935179604451,
+          "dice_mean": 0.013170613307972593
+        }
+      },
+      "dilate_2": {
+        "upenn": {
+          "kind": "dilate_2",
+          "n_eval": 38,
+          "ensemble_outgrowth_coverage_mean": 0.9645299961313346,
+          "auc_mean": 0.6562634362520479,
+          "dice_mean": 0.6470725538336848
+        },
+        "yale": {
+          "kind": "dilate_2",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.7502441113185523,
+          "auc_mean": 0.8282043290505311,
+          "dice_mean": 0.008847448324576943
+        }
+      },
+      "flip_1pct": {
+        "upenn": {
+          "kind": "flip_1pct",
+          "n_eval": 41,
+          "ensemble_outgrowth_coverage_mean": 0.9254724533679981,
+          "auc_mean": 0.6434143213563293,
+          "dice_mean": 0.7383276428923364
+        },
+        "yale": {
+          "kind": "flip_1pct",
+          "n_eval": 19,
+          "ensemble_outgrowth_coverage_mean": 0.9446901557504053,
+          "auc_mean": 0.814172871744961,
+          "dice_mean": 0.007090982895367133
+        }
+      }
+    },
+    "delta_auc_vs_baseline": {
+      "erode_1": {
+        "upenn_delta_auc": 0.01015304189059485,
+        "yale_delta_auc": 0.015179441665812199
+      },
+      "erode_2": {
+        "upenn_delta_auc": 0.00925063935762549,
+        "yale_delta_auc": 0.015179441665812199
+      },
+      "dilate_1": {
+        "upenn_delta_auc": -0.009634858459384499,
+        "yale_delta_auc": -0.009334599301857982
+      },
+      "dilate_2": {
+        "upenn_delta_auc": 0.016247956695485066,
+        "yale_delta_auc": 0.00127621178822801
+      },
+      "flip_1pct": {
+        "upenn_delta_auc": 0.003398841799766461,
+        "yale_delta_auc": -0.012755245517342084
+      }
+    }
+  }
+}
