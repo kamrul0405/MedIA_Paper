@@ -1,0 +1,49 @@
+{
+  "version": "v148",
+  "experiment": "Augmented training cohort UCSF+MU -> LOCO test",
+  "training_cohorts": [
+    "UCSF-POSTOP",
+    "MU-Glioma-Post"
+  ],
+  "n_train": 448,
+  "v141_baseline_for_reference": {
+    "RHUH-GBM": {
+      "learned_out": 47.54,
+      "bim_out": 38.95,
+      "ens_out": 55.35,
+      "learned_ovr": 7.5,
+      "ens_ovr": 79.28
+    },
+    "LUMIERE": {
+      "learned_out": 42.26,
+      "bim_out": 46.24,
+      "ens_out": 56.46,
+      "learned_ovr": 18.35,
+      "ens_ovr": 65.39
+    }
+  },
+  "by_cohort": {
+    "RHUH-GBM": {
+      "n": 39,
+      "learned_outgrowth_pct": 69.11258015339514,
+      "bimodal_outgrowth_pct": 38.95412695356683,
+      "ensemble_outgrowth_pct": 69.78926253561272,
+      "learned_overall_pct": 15.6982089603669,
+      "ensemble_overall_pct": 86.91276546900866,
+      "delta_learned_outgrowth_vs_v141_pp": 21.572580153395144,
+      "delta_ensemble_outgrowth_vs_v141_pp": 14.43926253561272,
+      "delta_ensemble_overall_vs_v141_pp": 7.63276546900866
+    },
+    "LUMIERE": {
+      "n": 22,
+      "learned_outgrowth_pct": 60.003881752948296,
+      "bimodal_outgrowth_pct": 46.24018149949317,
+      "ensemble_outgrowth_pct": 67.68561237811042,
+      "learned_overall_pct": 30.555052003463327,
+      "ensemble_overall_pct": 74.51551834670333,
+      "delta_learned_outgrowth_vs_v141_pp": 17.743881752948298,
+      "delta_ensemble_outgrowth_vs_v141_pp": 11.22561237811042,
+      "delta_ensemble_overall_vs_v141_pp": 9.12551834670333
+    }
+  }
+}

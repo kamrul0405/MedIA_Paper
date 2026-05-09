@@ -1,0 +1,131 @@
+{
+  "version": "v144",
+  "experiment": "Multi-seed UCSF -> LOCO U-Net robustness audit",
+  "timestamp": "2026-05-09T07:10:43",
+  "seeds": [
+    42,
+    123,
+    999
+  ],
+  "epochs": 25,
+  "device": "cuda",
+  "by_cohort": {
+    "MU-Glioma-Post": {
+      "n_patients": 151,
+      "n_seeds": 3,
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 49.22416141006935,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 59.779465712300514,
+          "learned_overall": 10.893358939676776,
+          "bimodal_overall": 76.38354216821868,
+          "ensemble_overall": 82.0378664360276
+        },
+        "123": {
+          "learned_outgrowth": 53.47333709942593,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 62.423263203197145,
+          "learned_overall": 12.124132291238931,
+          "bimodal_overall": 76.38354216821868,
+          "ensemble_overall": 83.00703768489511
+        },
+        "999": {
+          "learned_outgrowth": 56.43907253854139,
+          "bimodal_outgrowth": 44.55955558818172,
+          "ensemble_outgrowth": 64.03139426165205,
+          "learned_overall": 12.694158964302416,
+          "bimodal_overall": 76.38354216821868,
+          "ensemble_overall": 83.47395240539652
+        }
+      },
+      "learned_outgrowth_mean": 53.04552368267889,
+      "learned_outgrowth_se": 2.093721080405172,
+      "bimodal_outgrowth_mean": 44.55955558818172,
+      "ensemble_outgrowth_mean": 62.0780410590499,
+      "ensemble_outgrowth_se": 1.2395036431040838,
+      "ensemble_outgrowth_min": 59.779465712300514,
+      "ensemble_outgrowth_max": 64.03139426165205,
+      "ensemble_overall_mean": 82.8396188421064,
+      "ensemble_overall_se": 0.4229292807491961
+    },
+    "RHUH-GBM": {
+      "n_patients": 39,
+      "n_seeds": 3,
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 47.682467620712934,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 56.04561554124283,
+          "learned_overall": 8.039500425690933,
+          "bimodal_overall": 74.40135704653412,
+          "ensemble_overall": 79.91820723097854
+        },
+        "123": {
+          "learned_outgrowth": 49.779235711449374,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 57.82760897942632,
+          "learned_overall": 8.800270988243817,
+          "bimodal_overall": 74.40135704653412,
+          "ensemble_overall": 80.57546682532893
+        },
+        "999": {
+          "learned_outgrowth": 51.69294330745215,
+          "bimodal_outgrowth": 38.95412695356683,
+          "ensemble_outgrowth": 58.172226476130064,
+          "learned_overall": 9.126916197765752,
+          "bimodal_overall": 74.40135704653412,
+          "ensemble_overall": 80.77638751355768
+        }
+      },
+      "learned_outgrowth_mean": 49.71821554653815,
+      "learned_outgrowth_se": 1.1581265624383683,
+      "bimodal_outgrowth_mean": 38.95412695356683,
+      "ensemble_outgrowth_mean": 57.34848366559974,
+      "ensemble_outgrowth_se": 0.6589864229399454,
+      "ensemble_outgrowth_min": 56.04561554124283,
+      "ensemble_outgrowth_max": 58.172226476130064,
+      "ensemble_overall_mean": 80.42335385662172,
+      "ensemble_overall_se": 0.2591473942171362
+    },
+    "LUMIERE": {
+      "n_patients": 22,
+      "n_seeds": 3,
+      "per_seed": {
+        "42": {
+          "learned_outgrowth": 45.27174985150108,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 57.827979505482766,
+          "learned_overall": 19.724432129308607,
+          "bimodal_overall": 59.61909822803031,
+          "ensemble_overall": 66.05058262546737
+        },
+        "123": {
+          "learned_outgrowth": 49.20165259829623,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 61.067977947098726,
+          "learned_overall": 23.324749243220026,
+          "bimodal_overall": 59.61909822803031,
+          "ensemble_overall": 69.16356589693629
+        },
+        "999": {
+          "learned_outgrowth": 52.74477517859088,
+          "bimodal_outgrowth": 46.24018149949317,
+          "ensemble_outgrowth": 62.63368259769213,
+          "learned_overall": 24.305806605906383,
+          "bimodal_overall": 59.61909822803031,
+          "ensemble_overall": 69.27637173740855
+        }
+      },
+      "learned_outgrowth_mean": 49.0727258761294,
+      "learned_outgrowth_se": 2.158239518650785,
+      "bimodal_outgrowth_mean": 46.24018149949317,
+      "ensemble_outgrowth_mean": 60.50988001675787,
+      "ensemble_outgrowth_se": 1.4150736762333513,
+      "ensemble_outgrowth_min": 57.827979505482766,
+      "ensemble_outgrowth_max": 62.63368259769213,
+      "ensemble_overall_mean": 68.16350675327074,
+      "ensemble_overall_se": 1.0569638225914484
+    }
+  }
+}
