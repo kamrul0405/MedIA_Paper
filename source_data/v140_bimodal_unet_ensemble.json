@@ -1,0 +1,76 @@
+{
+  "version": "v140",
+  "experiment": "Bimodal + U-Net ensemble on PROTEAS",
+  "timestamp": "2026-05-09T06:56:20",
+  "n_test_followups": 36,
+  "ci_method": "vectorised cluster-bootstrap (per-fu)",
+  "n_bootstrap": 5000,
+  "methods": {
+    "bimodal": {
+      "overall_mean_pct": 60.11,
+      "overall_ci95_pct": [
+        47.87,
+        71.85
+      ],
+      "outgrowth_mean_pct": 22.51,
+      "outgrowth_ci95_pct": [
+        13.44,
+        32.44
+      ]
+    },
+    "learned": {
+      "overall_mean_pct": 9.78,
+      "overall_ci95_pct": [
+        6.38,
+        13.49
+      ],
+      "outgrowth_mean_pct": 37.39,
+      "outgrowth_ci95_pct": [
+        24.83,
+        50.58
+      ]
+    },
+    "ensemble": {
+      "overall_mean_pct": 65.56,
+      "overall_ci95_pct": [
+        53.09,
+        77.41
+      ],
+      "outgrowth_mean_pct": 44.93,
+      "outgrowth_ci95_pct": [
+        31.11,
+        58.87
+      ]
+    }
+  },
+  "paired_deltas": {
+    "ensemble - bimodal": {
+      "overall_pp": [
+        5.29,
+        3.0,
+        7.78,
+        true
+      ],
+      "outgrowth_pp": [
+        22.14,
+        12.73,
+        32.71,
+        true
+      ]
+    },
+    "ensemble - learned": {
+      "overall_pp": [
+        55.51,
+        44.1,
+        66.94,
+        true
+      ],
+      "outgrowth_pp": [
+        7.59,
+        3.16,
+        12.92,
+        true
+      ]
+    }
+  }
+}

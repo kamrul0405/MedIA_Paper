@@ -1,0 +1,135 @@
+{
+  "version": "v142",
+  "experiment": "Time-stratified bimodal kernel coverage on PROTEAS",
+  "timestamp": "2026-05-09T06:40:06",
+  "n_total_followups": 126,
+  "n_bootstrap": 5000,
+  "strata": {
+    "early_fu1": {
+      "n_followups": 42,
+      "n_patients": 42,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "persistence_overall_mean_pct": 71.49,
+          "bimodal_overall_mean_pct": 77.83,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 24.92,
+          "delta_overall_pp": 6.43,
+          "delta_overall_ci95_pp": [
+            3.19,
+            10.47
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 24.91,
+          "delta_outgrowth_ci95_pp": [
+            16.26,
+            34.09
+          ],
+          "delta_outgrowth_excludes_zero": true
+        },
+        "heat_ge_0.8": {
+          "persistence_overall_mean_pct": 71.52,
+          "bimodal_overall_mean_pct": 72.22,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 2.48,
+          "delta_overall_pp": 0.74,
+          "delta_overall_ci95_pp": [
+            0.26,
+            1.3
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 2.47,
+          "delta_outgrowth_ci95_pp": [
+            0.95,
+            4.35
+          ],
+          "delta_outgrowth_excludes_zero": true
+        }
+      }
+    },
+    "mid_fu2": {
+      "n_followups": 35,
+      "n_patients": 35,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "persistence_overall_mean_pct": 51.05,
+          "bimodal_overall_mean_pct": 57.0,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 18.06,
+          "delta_overall_pp": 6.0,
+          "delta_overall_ci95_pp": [
+            2.94,
+            9.65
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 18.05,
+          "delta_outgrowth_ci95_pp": [
+            10.05,
+            27.18
+          ],
+          "delta_outgrowth_excludes_zero": true
+        },
+        "heat_ge_0.8": {
+          "persistence_overall_mean_pct": 51.28,
+          "bimodal_overall_mean_pct": 51.84,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 1.32,
+          "delta_overall_pp": 0.59,
+          "delta_overall_ci95_pp": [
+            0.16,
+            1.16
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 1.32,
+          "delta_outgrowth_ci95_pp": [
+            0.4,
+            2.54
+          ],
+          "delta_outgrowth_excludes_zero": true
+        }
+      }
+    },
+    "late_fu3plus": {
+      "n_followups": 49,
+      "n_patients": 26,
+      "thresholds": {
+        "heat_ge_0.5": {
+          "persistence_overall_mean_pct": 37.01,
+          "bimodal_overall_mean_pct": 40.79,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 7.5,
+          "delta_overall_pp": 3.73,
+          "delta_overall_ci95_pp": [
+            1.86,
+            6.03
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 7.5,
+          "delta_outgrowth_ci95_pp": [
+            4.75,
+            10.68
+          ],
+          "delta_outgrowth_excludes_zero": true
+        },
+        "heat_ge_0.8": {
+          "persistence_overall_mean_pct": 37.04,
+          "bimodal_overall_mean_pct": 37.33,
+          "persistence_outgrowth_mean_pct": 0.0,
+          "bimodal_outgrowth_mean_pct": 0.38,
+          "delta_overall_pp": 0.27,
+          "delta_overall_ci95_pp": [
+            0.05,
+            0.57
+          ],
+          "delta_overall_excludes_zero": true,
+          "delta_outgrowth_pp": 0.38,
+          "delta_outgrowth_ci95_pp": [
+            0.1,
+            0.75
+          ],
+          "delta_outgrowth_excludes_zero": true
+        }
+      }
+    }
+  }
+}

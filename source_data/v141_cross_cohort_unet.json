@@ -1,0 +1,98 @@
+{
+  "version": "v141",
+  "experiment": "Cross-cohort learned 3D U-Net (UCSF train -> LOCO test)",
+  "timestamp": "2026-05-09T06:39:30",
+  "device": "cuda",
+  "epochs": 25,
+  "n_total_test_followups": 509,
+  "by_setup": {
+    "UCSF_5fold_fold1": {
+      "n": 59,
+      "learned_overall_mean_pct": 9.64213451201337,
+      "learned_outgrowth_mean_pct": 74.79006077131322,
+      "bimodal_overall_mean_pct": 88.7558325893745,
+      "bimodal_outgrowth_mean_pct": 52.41211164404608,
+      "ensemble_overall_mean_pct": 92.78260465108073,
+      "ensemble_outgrowth_mean_pct": 78.3467847738596,
+      "delta_learned_minus_bimodal_outgrowth_pp": 22.377949127267136,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 25.93467312981351
+    },
+    "UCSF_5fold_fold2": {
+      "n": 59,
+      "learned_overall_mean_pct": 9.405365257517264,
+      "learned_outgrowth_mean_pct": 82.51206431954922,
+      "bimodal_overall_mean_pct": 90.60358703833825,
+      "bimodal_outgrowth_mean_pct": 55.747446867799056,
+      "ensemble_overall_mean_pct": 94.56691707305983,
+      "ensemble_outgrowth_mean_pct": 85.50778900398723,
+      "delta_learned_minus_bimodal_outgrowth_pp": 26.764617451750176,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 29.76034213618818
+    },
+    "UCSF_5fold_fold3": {
+      "n": 59,
+      "learned_overall_mean_pct": 10.76431499148853,
+      "learned_outgrowth_mean_pct": 82.62291224644952,
+      "bimodal_overall_mean_pct": 91.81326605776414,
+      "bimodal_outgrowth_mean_pct": 53.84942685059815,
+      "ensemble_overall_mean_pct": 96.4835012152354,
+      "ensemble_outgrowth_mean_pct": 85.74929991092061,
+      "delta_learned_minus_bimodal_outgrowth_pp": 28.773485395851377,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 31.89987306032248
+    },
+    "UCSF_5fold_fold4": {
+      "n": 59,
+      "learned_overall_mean_pct": 9.508820775968747,
+      "learned_outgrowth_mean_pct": 73.27899379592412,
+      "bimodal_overall_mean_pct": 89.48796291219918,
+      "bimodal_outgrowth_mean_pct": 54.48118592707595,
+      "ensemble_overall_mean_pct": 93.57841213994105,
+      "ensemble_outgrowth_mean_pct": 80.3104342983394,
+      "delta_learned_minus_bimodal_outgrowth_pp": 18.797807868848178,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 25.829248371263446
+    },
+    "UCSF_5fold_fold5": {
+      "n": 61,
+      "learned_overall_mean_pct": 8.518592372215087,
+      "learned_outgrowth_mean_pct": 76.84355116412826,
+      "bimodal_overall_mean_pct": 90.07373824428214,
+      "bimodal_outgrowth_mean_pct": 50.23715391266899,
+      "ensemble_overall_mean_pct": 94.33096047070573,
+      "ensemble_outgrowth_mean_pct": 80.94455769600197,
+      "delta_learned_minus_bimodal_outgrowth_pp": 26.606397251459267,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 30.707403783332964
+    },
+    "UCSF_train_LOCO_test_LUMIERE": {
+      "n": 22,
+      "learned_overall_mean_pct": 18.350929938531422,
+      "learned_outgrowth_mean_pct": 42.25738957910238,
+      "bimodal_overall_mean_pct": 59.61909822803031,
+      "bimodal_outgrowth_mean_pct": 46.24018149949317,
+      "ensemble_overall_mean_pct": 65.39240352037268,
+      "ensemble_outgrowth_mean_pct": 56.46106655121126,
+      "delta_learned_minus_bimodal_outgrowth_pp": -3.982791920390786,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 10.220885051718094
+    },
+    "UCSF_train_LOCO_test_MU-Glioma-Post": {
+      "n": 151,
+      "learned_overall_mean_pct": 10.741904080192734,
+      "learned_outgrowth_mean_pct": 49.950721807055906,
+      "bimodal_overall_mean_pct": 76.38354216821868,
+      "bimodal_outgrowth_mean_pct": 44.55955558818172,
+      "ensemble_overall_mean_pct": 81.99384837394713,
+      "ensemble_outgrowth_mean_pct": 60.13592863342774,
+      "delta_learned_minus_bimodal_outgrowth_pp": 5.391166218874198,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 15.576373045246022
+    },
+    "UCSF_train_LOCO_test_RHUH-GBM": {
+      "n": 39,
+      "learned_overall_mean_pct": 7.4951439487285585,
+      "learned_outgrowth_mean_pct": 47.54395445591804,
+      "bimodal_overall_mean_pct": 74.40135704653412,
+      "bimodal_outgrowth_mean_pct": 38.95412695356683,
+      "ensemble_overall_mean_pct": 79.27588918437014,
+      "ensemble_outgrowth_mean_pct": 55.351253441620386,
+      "delta_learned_minus_bimodal_outgrowth_pp": 8.589827502351216,
+      "delta_ensemble_minus_bimodal_outgrowth_pp": 16.397126488053534
+    }
+  }
+}
