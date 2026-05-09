@@ -1,0 +1,125 @@
+{
+  "version": "v187",
+  "experiment": "Senior-Nature-reviewer core-claims audit",
+  "timestamp": "2026-05-09T19:06:39",
+  "audits": {
+    "audit_1_bimodal_ablation": {
+      "A_full_bimodal": {
+        "kernel_key": "kernel_full",
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.9823943326452969,
+          "kernel_only_outgrowth_coverage_mean": 0.6329317285783779,
+          "auc_mean": 0.6502621366753939,
+          "dice_mean": 0.7248914631258039,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.6747970681421076,
+          "kernel_only_outgrowth_coverage_mean": 0.6747970681421076,
+          "auc_mean": 0.8269286584564628,
+          "dice_mean": 0.017490384776600858,
+          "n_eval": 19
+        }
+      },
+      "B_persistence_only": {
+        "kernel_key": "kernel_persist",
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.942495073253298,
+          "kernel_only_outgrowth_coverage_mean": 0.0,
+          "auc_mean": 0.6446555849797968,
+          "dice_mean": 0.7087074692596366,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.00260895193705944,
+          "kernel_only_outgrowth_coverage_mean": 0.0,
+          "auc_mean": 0.7593440025179132,
+          "dice_mean": 0.004987337224179329,
+          "n_eval": 19
+        }
+      },
+      "C_gaussian_only": {
+        "kernel_key": "kernel_gaussian",
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.9495407032311037,
+          "kernel_only_outgrowth_coverage_mean": 0.6329317285783779,
+          "auc_mean": 0.6508848975525469,
+          "dice_mean": 0.7214815430858343,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.6778238659057475,
+          "kernel_only_outgrowth_coverage_mean": 0.6747970681421076,
+          "auc_mean": 0.8277058193847112,
+          "dice_mean": 0.01754253578560907,
+          "n_eval": 19
+        }
+      }
+    },
+    "audit_3_foundation_adds_value": {
+      "upenn": {
+        "kernel_only_pct": 63.29317285783779,
+        "ensemble_pct": 98.23943326452968,
+        "delta_pp": 34.9462604066919
+      },
+      "yale": {
+        "kernel_only_pct": 67.47970681421076,
+        "ensemble_pct": 67.47970681421076,
+        "delta_pp": 0.0
+      }
+    },
+    "audit_2_sigma_sensitivity": {
+      "sigma=3.0": {
+        "sigma": 3.0,
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.9686918939222573,
+          "kernel_only_outgrowth_coverage_mean": 0.3275792295058007,
+          "auc_mean": 0.6452269452385563,
+          "dice_mean": 0.7213378764669166,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.2993480682363234,
+          "kernel_only_outgrowth_coverage_mean": 0.29161468552208963,
+          "auc_mean": 0.8889748741194692,
+          "dice_mean": 0.07326523359608776,
+          "n_eval": 19
+        }
+      },
+      "sigma=7.0": {
+        "sigma": 7.0,
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.9622319208796022,
+          "kernel_only_outgrowth_coverage_mean": 0.6329317285783779,
+          "auc_mean": 0.6396387110983557,
+          "dice_mean": 0.7140519914572862,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.6747970681421076,
+          "kernel_only_outgrowth_coverage_mean": 0.6747970681421076,
+          "auc_mean": 0.8269285076538873,
+          "dice_mean": 0.01749021659389751,
+          "n_eval": 19
+        }
+      },
+      "sigma=15.0": {
+        "sigma": 15.0,
+        "upenn": {
+          "ensemble_outgrowth_coverage_mean": 0.9890768644041356,
+          "kernel_only_outgrowth_coverage_mean": 0.9796058607396211,
+          "auc_mean": 0.640689821357066,
+          "dice_mean": 0.7247042197334104,
+          "n_eval": 41
+        },
+        "yale": {
+          "ensemble_outgrowth_coverage_mean": 0.882544312841043,
+          "kernel_only_outgrowth_coverage_mean": 0.882544312841043,
+          "auc_mean": 0.7414983020165052,
+          "dice_mean": 0.007959666345427557,
+          "n_eval": 19
+        }
+      }
+    }
+  }
+}
