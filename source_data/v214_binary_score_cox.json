@@ -1,0 +1,136 @@
+{
+  "version": "v214",
+  "experiment": "Binary-classifier-derived risk score in continuous Cox PH \u2014 unification with rounds 32-38 negatives",
+  "timestamp": "2026-05-10T15:30:40",
+  "horizon_for_binary": 365,
+  "n_total": 130,
+  "n_events": 130,
+  "n_censored": 0,
+  "binary_classifier": {
+    "n_labelled": 130,
+    "n_pos": 109,
+    "n_neg": 21,
+    "auc_in_sample": 0.728265618173875,
+    "p_hat_min": 0.11808184609149791,
+    "p_hat_max": 0.9846128975868863,
+    "p_hat_mean": 0.8381711944535447
+  },
+  "cox_models": {
+    "clin_only": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt"
+      ],
+      "n_features": 3,
+      "beta": [
+        0.05131689661033435,
+        -0.20435544614190712,
+        -0.04345019976336299
+      ],
+      "partial_loglik": -501.5736240482,
+      "BIC": 1017.7498514477667,
+      "C_index": 0.5852708533077661
+    },
+    "Vkernel_only": {
+      "features": [
+        "v_kernel_s3"
+      ],
+      "n_features": 1,
+      "beta": [
+        0.26544930293356056
+      ],
+      "partial_loglik": -502.19990555360454,
+      "BIC": 1009.2673455576646,
+      "C_index": 0.574784276126558
+    },
+    "Vkernel_plus_clin": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "v_kernel_s3"
+      ],
+      "n_features": 4,
+      "beta": [
+        0.07364695327010354,
+        -0.18426845947290493,
+        -0.0378101429524661,
+        0.2545213763172547
+      ],
+      "partial_loglik": -497.9150490121641,
+      "BIC": 1015.3002358261506,
+      "C_index": 0.6160115052732502
+    },
+    "phat_only": {
+      "features": [
+        "p_hat_365"
+      ],
+      "n_features": 1,
+      "beta": [
+        0.3141432017240414
+      ],
+      "partial_loglik": -499.875905313538,
+      "BIC": 1004.6193450775315,
+      "C_index": 0.5936001917545541
+    },
+    "phat_plus_clin": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "p_hat_365"
+      ],
+      "n_features": 4,
+      "beta": [
+        0.20059800348513454,
+        0.08168670778769954,
+        0.010616382555594519,
+        0.35328957443843684
+      ],
+      "partial_loglik": -498.25441338773214,
+      "BIC": 1015.9789645772867,
+      "C_index": 0.6143336529242569
+    }
+  },
+  "LRT_clin_vs_VkernelPlusClin": {
+    "LR": 7.31715007207174,
+    "df": 1,
+    "P": 0.006829963593519506
+  },
+  "LRT_clin_vs_phatPlusClin": {
+    "LR": 6.638421320935663,
+    "df": 1,
+    "P": 0.00998023358896949
+  },
+  "RCS_Cox": {
+    "knots": [
+      484.5,
+      968.5,
+      1337.75
+    ],
+    "C_index": 0.6157718120805369,
+    "partial_loglik": -497.81262281959766,
+    "LRT_linear_vs_RCS_LR": 0.20485238513288095,
+    "LRT_linear_vs_RCS_P": 0.650832323264037
+  },
+  "bootstrap": {
+    "delta_C_phat_minus_clin_mean": 0.03671249920765285,
+    "delta_C_phat_minus_clin_95_CI": [
+      -0.006735217713099233,
+      0.10594471599485082
+    ],
+    "delta_C_phat_minus_clin_P_le_0": 0.071,
+    "delta_C_Vk_minus_clin_mean": 0.0332832627148722,
+    "delta_C_Vk_minus_clin_95_CI": [
+      -0.012687423390519563,
+      0.10429786204700943
+    ],
+    "delta_C_phat_minus_Vk_mean": 0.003429236492780653,
+    "delta_C_phat_minus_Vk_95_CI": [
+      -0.009167331183550616,
+      0.017745104258791194
+    ],
+    "delta_C_phat_minus_Vk_P_le_0": 0.311
+  }
+}
