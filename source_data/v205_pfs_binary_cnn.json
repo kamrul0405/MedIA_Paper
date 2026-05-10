@@ -1,0 +1,47 @@
+{
+  "version": "v205",
+  "experiment": "End-to-end 3D CNN binary 365-day-PFS classifier with mask-only vs mask+kernel ablation",
+  "timestamp": "2026-05-10T13:21:14",
+  "device": "cuda",
+  "horizon_days": 365,
+  "n_folds": 5,
+  "epochs_per_fold": 40,
+  "n_total": 130,
+  "n_pos": 109,
+  "n_neg": 21,
+  "variants": {
+    "mask_only": {
+      "in_channels": 1,
+      "fold_aucs": [
+        0.509090909090909,
+        0.6363636363636364,
+        0.7727272727272727,
+        0.6818181818181818,
+        0.5
+      ],
+      "fold_auc_mean": 0.62,
+      "fold_auc_std": 0.10403432364305432,
+      "pooled_oof_auc": 0.5281782437745741,
+      "n_folds": 5
+    },
+    "mask_plus_kernel": {
+      "in_channels": 2,
+      "fold_aucs": [
+        0.6454545454545454,
+        0.7727272727272727,
+        1.0,
+        0.7045454545454546,
+        0.6071428571428572
+      ],
+      "fold_auc_mean": 0.745974025974026,
+      "fold_auc_std": 0.13880887408608422,
+      "pooled_oof_auc": 0.6068152031454783,
+      "n_folds": 5
+    }
+  },
+  "v202_baselines": {
+    "logistic_clinical_only_AUC": 0.6199,
+    "logistic_clinical_plus_Vkernel_AUC": 0.7283
+  },
+  "elapsed_seconds": 138.7369749546051
+}
