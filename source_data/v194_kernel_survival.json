@@ -1,0 +1,99 @@
+{
+  "version": "v194",
+  "experiment": "Kernel -> survival correlation on RHUH-GBM",
+  "timestamp": "2026-05-10T09:39:56",
+  "n_patients": 39,
+  "spearman": {
+    "V_kernel_sigma1_vs_OS_days": {
+      "n": 39,
+      "rho": -0.011135293834175546,
+      "p_value": 0.9463592930944305
+    },
+    "V_kernel_sigma1_vs_PFS_days": {
+      "n": 39,
+      "rho": 0.06306625507901242,
+      "p_value": 0.7028955854559582
+    },
+    "V_kernel_sigma3_vs_OS_days": {
+      "n": 39,
+      "rho": 0.039374462320783836,
+      "p_value": 0.8118924441053924
+    },
+    "V_kernel_sigma3_vs_PFS_days": {
+      "n": 39,
+      "rho": 0.08006478070884322,
+      "p_value": 0.6280199900720232
+    },
+    "V_kernel_sigma7_vs_OS_days": {
+      "n": 39,
+      "rho": 0.0439293487075069,
+      "p_value": 0.7905926608127961
+    },
+    "V_kernel_sigma7_vs_PFS_days": {
+      "n": 39,
+      "rho": 0.09899286413811462,
+      "p_value": 0.5487913924661255
+    },
+    "V_kernel_sigma15_vs_OS_days": {
+      "n": 39,
+      "rho": -0.030163469849854973,
+      "p_value": 0.8553603179509677
+    },
+    "V_kernel_sigma15_vs_PFS_days": {
+      "n": 39,
+      "rho": 0.07378915946491366,
+      "p_value": 0.6552867755080617
+    },
+    "baseline_mask_volume_vs_OS_days": {
+      "n": 39,
+      "rho": 0.03714762897616367,
+      "p_value": 0.8223554749820076
+    },
+    "baseline_mask_volume_vs_PFS_days": {
+      "n": 39,
+      "rho": -0.022470772841167126,
+      "p_value": 0.8919942232140565
+    }
+  },
+  "logrank_median_split_sigma3": {
+    "chi2": 0.043427351692652646,
+    "p_value": 0.8349226662087499,
+    "median_threshold_voxels": 765.0,
+    "n_high": 19,
+    "n_low": 20,
+    "median_OS_high": 331.0,
+    "median_OS_low": 364.0
+  },
+  "cox_univariate": {
+    "V_kernel_sigma1": {
+      "HR_per_SD": 1.0741483463072317,
+      "p_value": 0.70863354162644,
+      "beta": 0.07152811160157449,
+      "n": 39
+    },
+    "V_kernel_sigma3": {
+      "HR_per_SD": 0.9811886410189061,
+      "p_value": 0.9154350456691553,
+      "beta": -0.018990543286392002,
+      "n": 39
+    },
+    "V_kernel_sigma7": {
+      "HR_per_SD": 1.0169603787851815,
+      "p_value": 0.921764587695248,
+      "beta": 0.01681815739421221,
+      "n": 39
+    },
+    "V_kernel_sigma15": {
+      "HR_per_SD": 0.9033267794576909,
+      "p_value": 0.6170579077190448,
+      "beta": -0.1016709090157076,
+      "n": 39
+    },
+    "baseline_mask_volume": {
+      "HR_per_SD": 1.044213408321164,
+      "p_value": 0.8270602137215219,
+      "beta": 0.043263882671463215,
+      "n": 39
+    }
+  }
+}
