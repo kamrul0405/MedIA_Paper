@@ -1,0 +1,137 @@
+{
+  "version": "v210",
+  "experiment": "Inverse-variance meta-analysis + reverse-direction LOCO + pooled MU+RHUH 5-fold CV + power analysis",
+  "timestamp": "2026-05-10T14:47:34",
+  "horizon_days": 365,
+  "n_bootstraps": 1000,
+  "n_folds": 5,
+  "cohorts": {
+    "MU": {
+      "n_complete": 130,
+      "n_pos": 109
+    },
+    "RHUH": {
+      "n_complete": 31,
+      "n_pos": 23
+    }
+  },
+  "loco_directions": {
+    "train_MU_test_RHUH": {
+      "n_train": 130,
+      "n_test": 31,
+      "in_sample_auc_clin": 0.6242900830056793,
+      "in_sample_auc_full": 0.7313237221494102,
+      "in_sample_delta": 0.10703363914373087,
+      "external_auc_clin": 0.5217391304347826,
+      "external_auc_full": 0.5163043478260869,
+      "external_delta_point": -0.005434782608695676,
+      "external_delta_bootstrap_mean": 0.010452078959617413,
+      "external_delta_variance": 0.011531815171251241,
+      "external_delta_95_CI": [
+        -0.1964556277056277,
+        0.2384615384615384
+      ],
+      "p_one_sided": 0.4804804804804805,
+      "n_bootstrap_valid": 999
+    },
+    "train_RHUH_test_MU": {
+      "n_train": 31,
+      "n_test": 130,
+      "in_sample_auc_clin": 0.6467391304347826,
+      "in_sample_auc_full": 0.6847826086956521,
+      "in_sample_delta": 0.03804347826086951,
+      "external_auc_clin": 0.5980777632153779,
+      "external_auc_full": 0.5107033639143731,
+      "external_delta_point": -0.08737439930100477,
+      "external_delta_bootstrap_mean": -0.03415594562927373,
+      "external_delta_variance": 0.00633108985224559,
+      "external_delta_95_CI": [
+        -0.15727551196658252,
+        0.13614994074552897
+      ],
+      "p_one_sided": 0.698,
+      "n_bootstrap_valid": 1000
+    }
+  },
+  "pooled_5fold_cv": {
+    "n_pooled": 161,
+    "auc_clin_oof": 0.5825496342737722,
+    "auc_full_oof": 0.6436781609195403,
+    "delta_point": 0.06112852664576818,
+    "delta_bootstrap_mean": 0.05433925074505514,
+    "delta_95_CI": [
+      -0.04004672058997575,
+      0.14317011870155025
+    ],
+    "p_one_sided": 0.115,
+    "by_cohort_subset": {
+      "MU": {
+        "n": 130,
+        "n_pos": 109,
+        "auc_clin": 0.5941459152468327,
+        "auc_full": 0.6871996505024028,
+        "delta_point": 0.09305373525557015
+      },
+      "RHUH": {
+        "n": 31,
+        "n_pos": 23,
+        "auc_clin": 0.532608695652174,
+        "auc_full": 0.5380434782608696,
+        "delta_point": 0.005434782608695676
+      }
+    }
+  },
+  "meta_analysis": {
+    "mu_mean": 0.09879137529481184,
+    "mu_variance": 0.002585072251735909,
+    "rhuh_mean": 0.010452078959617413,
+    "rhuh_variance": 0.011531815171251241,
+    "weight_mu": 386.8363831333872,
+    "weight_rhuh": 86.71661704160807,
+    "pooled_delta": 0.0826147595259468,
+    "pooled_se": 0.04595319412333451,
+    "pooled_95_CI": [
+      -0.007453500955788853,
+      0.17268302000768243
+    ],
+    "z_score": 1.7978023313072802,
+    "one_sided_p": 0.0361041688954018
+  },
+  "power_analysis": {
+    "31": {
+      "se_delta_estimated": 0.10738628949382338,
+      "mde_alpha05_beta20": 0.2670697019711388,
+      "power_at_delta_0_108": 0.2613187659019548
+    },
+    "50": {
+      "se_delta_estimated": 0.08455604890352772,
+      "mde_alpha05_beta20": 0.21029089362307346,
+      "power_at_delta_0_108": 0.356533295539145
+    },
+    "100": {
+      "se_delta_estimated": 0.05979015557002578,
+      "mde_alpha05_beta20": 0.14869811690265414,
+      "power_at_delta_0_108": 0.564078301073896
+    },
+    "150": {
+      "se_delta_estimated": 0.04881845759606288,
+      "mde_alpha05_beta20": 0.1214115040414084,
+      "power_at_delta_0_108": 0.7147373410861297
+    },
+    "200": {
+      "se_delta_estimated": 0.04227802445176386,
+      "mde_alpha05_beta20": 0.10514544681153673,
+      "power_at_delta_0_108": 0.8184617789213959
+    },
+    "300": {
+      "se_delta_estimated": 0.034519862413243986,
+      "mde_alpha05_beta20": 0.0858508978217378,
+      "power_at_delta_0_108": 0.9310469193269004
+    },
+    "500": {
+      "se_delta_estimated": 0.026738970447973066,
+      "mde_alpha05_beta20": 0.06649981950410902,
+      "power_at_delta_0_108": 0.9916682287006106
+    }
+  }
+}

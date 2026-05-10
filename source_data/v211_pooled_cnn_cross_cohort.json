@@ -1,0 +1,46 @@
+{
+  "version": "v211",
+  "experiment": "Pooled MU+RHUH CNN (cohort-stratified 5-fold CV) + LOCO cross-cohort baselines",
+  "timestamp": "2026-05-10T14:48:43",
+  "device": "cuda",
+  "horizon_days": 365,
+  "epochs_per_fold": 30,
+  "n_folds": 5,
+  "n_total": 161,
+  "n_mu": 130,
+  "n_rhuh": 31,
+  "pooled_5fold_cv": {
+    "pooled_oof_auc": 0.6010971786833855,
+    "per_cohort": {
+      "MU": {
+        "n": 130,
+        "n_pos": 109,
+        "n_neg": 21,
+        "auc": 0.6675404106596767
+      },
+      "RHUH": {
+        "n": 31,
+        "n_pos": 23,
+        "n_neg": 8,
+        "auc": 0.5760869565217391
+      }
+    }
+  },
+  "loco_baselines": {
+    "train_MU_test_RHUH": {
+      "n_train": 130,
+      "n_test": 31,
+      "n_test_pos": 23,
+      "n_test_neg": 8,
+      "external_auc": 0.5108695652173912
+    },
+    "train_RHUH_test_MU": {
+      "n_train": 31,
+      "n_test": 130,
+      "n_test_pos": 109,
+      "n_test_neg": 21,
+      "external_auc": 0.6347750109218
+    }
+  },
+  "elapsed_seconds": 79.01167058944702
+}
