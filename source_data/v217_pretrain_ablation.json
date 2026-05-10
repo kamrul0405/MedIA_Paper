@@ -1,0 +1,90 @@
+{
+  "version": "v217",
+  "experiment": "Comprehensive 4-way pretraining-strategy ablation on RHUH transfer",
+  "timestamp": "2026-05-10T15:56:11",
+  "device": "cuda",
+  "horizon_days": 365,
+  "n_folds": 5,
+  "n_pretrain_samples": 509,
+  "n_mu_labelled": 130,
+  "n_rhuh_labelled": 31,
+  "results": {
+    "v1_random_init_scratch": {
+      "fold_aucs": [
+        0.8,
+        0.7,
+        0.8,
+        0.75,
+        0.5
+      ],
+      "fold_mean": 0.71,
+      "pooled_oof_auc": 0.5597826086956522
+    },
+    "v2_supervised_mu_pretrain": {
+      "fold_aucs": [
+        0.7,
+        0.6,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "fold_mean": 0.86,
+      "pooled_oof_auc": 0.7771739130434783
+    },
+    "v3_simclr_multicohort": {
+      "fold_aucs": [
+        0.8,
+        0.7,
+        0.7,
+        1.0,
+        0.75
+      ],
+      "fold_mean": 0.79,
+      "pooled_oof_auc": 0.7717391304347826
+    },
+    "v4_stacked_simclr_then_supervised": {
+      "fold_aucs": [
+        0.8,
+        0.7,
+        0.8,
+        1.0,
+        0.75
+      ],
+      "fold_mean": 0.8099999999999999,
+      "pooled_oof_auc": 0.7717391304347826
+    },
+    "bootstrap_v2_minus_v1": {
+      "mean": 0.15132829683623275,
+      "95_CI": [
+        -0.12677380952380957,
+        0.33365384615384613
+      ],
+      "p_one_sided": 0.12
+    },
+    "bootstrap_v3_minus_v1": {
+      "mean": 0.13558716528411469,
+      "95_CI": [
+        -0.1550595238095238,
+        0.3248188405797102
+      ],
+      "p_one_sided": 0.135
+    },
+    "bootstrap_v4_minus_v1": {
+      "mean": 0.1387365787861449,
+      "95_CI": [
+        -0.1389880952380953,
+        0.3048874223602485
+      ],
+      "p_one_sided": 0.125
+    },
+    "bootstrap_v4_minus_v2": {
+      "mean": -0.012591718050087857,
+      "95_CI": [
+        -0.14701802059496566,
+        0.11906055900621121
+      ],
+      "p_one_sided": 0.585
+    }
+  },
+  "elapsed_seconds": 117.30626583099365
+}
