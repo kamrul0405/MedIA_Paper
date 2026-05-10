@@ -1,0 +1,93 @@
+{
+  "version": "v199",
+  "experiment": "Yale longitudinal replication of round-34 patient-intrinsic lambda finding",
+  "timestamp": "2026-05-10T11:25:10",
+  "n_patients_with_multi_tp": 248,
+  "n_observations_total": 94,
+  "n_valid_lambda": 87,
+  "n_patients_with_multi_valid_lambda": 17,
+  "n_patients_with_3plus_followups": 7,
+  "variance_components": {
+    "inter_patient_variance": 0.6525045195451804,
+    "mean_intra_patient_variance": 0.22400555487715734,
+    "icc_proxy": 0.6566988454987294
+  },
+  "sign_test_p": 1.0,
+  "comparison_with_round34_PROTEAS": {
+    "proteas_icc_proxy": 0.834,
+    "yale_icc_proxy": 0.6566988454987294,
+    "verdict": "REPLICATES (Yale ICC >= 0.5)"
+  },
+  "per_patient_spearman": [
+    {
+      "pid": "YG_0Y74OO0HCJZA",
+      "n_followups": 3,
+      "rho": 1.0,
+      "p_value": 0.0,
+      "lambda_min": 1.5663234672253405,
+      "lambda_max": 3.732783422757233,
+      "lambda_mean": 2.591030244346731,
+      "lambda_std": 0.8883175407371179
+    },
+    {
+      "pid": "YG_35A3HP23TSH4",
+      "n_followups": 4,
+      "rho": -0.39999999999999997,
+      "p_value": 0.6000000000000001,
+      "lambda_min": 2.3896629161926572,
+      "lambda_max": 2.5960383277596173,
+      "lambda_mean": 2.486481730652652,
+      "lambda_std": 0.08686518673747536
+    },
+    {
+      "pid": "YG_40Q4JF43YGQZ",
+      "n_followups": 3,
+      "rho": 1.0,
+      "p_value": 0.0,
+      "lambda_min": 0.8743897153809749,
+      "lambda_max": 1.2143014915208317,
+      "lambda_mean": 1.0253611926903066,
+      "lambda_std": 0.14134173114693627
+    },
+    {
+      "pid": "YG_69FMUN9PHHKE",
+      "n_followups": 3,
+      "rho": -1.0,
+      "p_value": 0.0,
+      "lambda_min": 1.1296132991040704,
+      "lambda_max": 1.7645794952078449,
+      "lambda_mean": 1.3967623087692196,
+      "lambda_std": 0.26881973998672565
+    },
+    {
+      "pid": "YG_6ETKQK1WOLVP",
+      "n_followups": 3,
+      "rho": -1.0,
+      "p_value": 0.0,
+      "lambda_min": 2.3777832987373726,
+      "lambda_max": 3.1351893035743608,
+      "lambda_mean": 2.7218806041983754,
+      "lambda_std": 0.31305870251069856
+    },
+    {
+      "pid": "YG_6YBXEK0UYEKW",
+      "n_followups": 11,
+      "rho": 0.21818181818181823,
+      "p_value": 0.5192482475549817,
+      "lambda_min": 1.0416234510864326,
+      "lambda_max": 3.065584290021587,
+      "lambda_mean": 1.9404225214907982,
+      "lambda_std": 0.6014001005147707
+    },
+    {
+      "pid": "YG_7IAULMTMWPNA",
+      "n_followups": 8,
+      "rho": 0.5952380952380953,
+      "p_value": 0.11952980613879269,
+      "lambda_min": 0.7892683013668603,
+      "lambda_max": 2.727794840766316,
+      "lambda_mean": 1.211835324850397,
+      "lambda_std": 0.6047891408691226
+    }
+  ]
+}
