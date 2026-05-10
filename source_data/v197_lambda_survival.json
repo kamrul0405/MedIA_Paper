@@ -1,0 +1,39 @@
+{
+  "version": "v197",
+  "experiment": "Per-patient lambda -> survival in RHUH-GBM",
+  "timestamp": "2026-05-10T10:35:13",
+  "n_rhuh_total": 34,
+  "n_valid_lambda": 13,
+  "n_valid_lambda_with_OS": 13,
+  "n_complete_case": 13,
+  "spearman": {
+    "lambda_vs_OS_n": 13,
+    "lambda_vs_OS_rho": -0.2967032967032967,
+    "lambda_vs_OS_p": 0.3249215884859749,
+    "lambda_vs_PFS_n": 13,
+    "lambda_vs_PFS_rho": -0.10989010989010989,
+    "lambda_vs_PFS_p": 0.7208097995138618
+  },
+  "univariate_cox_lambda": {
+    "n": 13,
+    "events": 11,
+    "HR_per_SD": 1.279638643109861,
+    "p_value": 0.39532362923926434
+  },
+  "multivariate_cox": {
+    "n_complete_case": 13,
+    "M0_clinical_only_c_index": 0.7833333333333333,
+    "M1_clinical_plus_lambda_c_index": 0.8,
+    "M1_delta_c": 0.01666666666666672,
+    "M2_clinical_plus_lambda_plus_kernel_c_index": 0.8833333333333333,
+    "M2_delta_c": 0.09999999999999998,
+    "LRT_M0_vs_M1": {
+      "chi2": 1.0746354178457054,
+      "p_value": 0.2999007570588499
+    },
+    "LRT_M0_vs_M2": {
+      "chi2": 12.585373882722406,
+      "p_value": 0.0018497830050089314
+    }
+  }
+}
