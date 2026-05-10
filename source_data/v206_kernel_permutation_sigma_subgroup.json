@@ -1,0 +1,158 @@
+{
+  "version": "v206",
+  "experiment": "Permutation test + sigma sweep + IDH/MGMT subgroup analysis on binary 365-d PFS",
+  "timestamp": "2026-05-10T13:51:48",
+  "horizon_days": 365,
+  "sigma_list": [
+    1.0,
+    2.0,
+    3.0,
+    4.0,
+    5.0,
+    7.0,
+    10.0
+  ],
+  "sigma_primary": 3.0,
+  "n_permutations": 1000,
+  "n_bootstraps": 1000,
+  "n_total": 130,
+  "n_pos": 109,
+  "n_neg": 21,
+  "sigma_sweep": {
+    "1": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.7059851463521188,
+      "delta_AUC_point": 0.08606378331148967,
+      "delta_AUC_bootstrap_mean": 0.07689999031855496,
+      "delta_AUC_95_CI": [
+        -0.017279982223829142,
+        0.19234991541026025
+      ],
+      "p_one_sided": 0.075
+    },
+    "2": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.7230231542158146,
+      "delta_AUC_point": 0.10310179117518548,
+      "delta_AUC_bootstrap_mean": 0.08243258700864456,
+      "delta_AUC_95_CI": [
+        -0.007262095543345649,
+        0.18667204580947422
+      ],
+      "p_one_sided": 0.047
+    },
+    "3": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.728265618173875,
+      "delta_AUC_point": 0.10834425513324586,
+      "delta_AUC_bootstrap_mean": 0.08662231096563054,
+      "delta_AUC_95_CI": [
+        -0.004543655157636943,
+        0.19930627206503893
+      ],
+      "p_one_sided": 0.036
+    },
+    "4": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.7204019222367846,
+      "delta_AUC_point": 0.1004805591961554,
+      "delta_AUC_bootstrap_mean": 0.07513293004933391,
+      "delta_AUC_95_CI": [
+        -0.01666280238576538,
+        0.18100394054341412
+      ],
+      "p_one_sided": 0.056
+    },
+    "5": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.6889471384884229,
+      "delta_AUC_point": 0.06902577544779376,
+      "delta_AUC_bootstrap_mean": 0.05260016236606021,
+      "delta_AUC_95_CI": [
+        -0.02192982456140347,
+        0.15942123957680404
+      ],
+      "p_one_sided": 0.121
+    },
+    "7": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.6487549148099607,
+      "delta_AUC_point": 0.028833551769331556,
+      "delta_AUC_bootstrap_mean": 0.029157364394012245,
+      "delta_AUC_95_CI": [
+        -0.025904761904761875,
+        0.12000349497597203
+      ],
+      "p_one_sided": 0.228
+    },
+    "10": {
+      "auc_clin": 0.6199213630406292,
+      "auc_full": 0.6649191786806465,
+      "delta_AUC_point": 0.04499781564001737,
+      "delta_AUC_bootstrap_mean": 0.0465381260795252,
+      "delta_AUC_95_CI": [
+        -0.023676372762457678,
+        0.1589287954222164
+      ],
+      "p_one_sided": 0.156
+    }
+  },
+  "permutation_test": {
+    "delta_observed": 0.10834425513324586,
+    "n_null": 1000,
+    "null_mean": 0.02816033202271731,
+    "null_95th_percentile": 0.09132809086937528,
+    "null_99th_percentile": 0.11536041939711661,
+    "p_value_one_sided": 0.022
+  },
+  "subgroup_analysis": {
+    "IDH-WT": {
+      "n": 109,
+      "n_pos": 95,
+      "n_neg": 14,
+      "auc_clin": 0.5030075187969925,
+      "auc_full": 0.6691729323308271,
+      "delta_AUC_point": 0.16616541353383463,
+      "delta_AUC_95_CI": [
+        -0.019847796077684707,
+        0.24260047281323863
+      ],
+      "p_one_sided": 0.074,
+      "skipped": false
+    },
+    "IDH-mut": {
+      "n": 16,
+      "n_pos": 12,
+      "n_neg": 4,
+      "skipped": true
+    },
+    "MGMT-unmeth": {
+      "n": 66,
+      "n_pos": 58,
+      "n_neg": 8,
+      "auc_clin": 0.6400862068965517,
+      "auc_full": 0.6443965517241379,
+      "delta_AUC_point": 0.004310344827586188,
+      "delta_AUC_95_CI": [
+        -0.04465388007054669,
+        0.15254237288135597
+      ],
+      "p_one_sided": 0.3009814612868048,
+      "skipped": false
+    },
+    "MGMT-meth": {
+      "n": 45,
+      "n_pos": 37,
+      "n_neg": 8,
+      "auc_clin": 0.7297297297297297,
+      "auc_full": 0.8175675675675675,
+      "delta_AUC_point": 0.08783783783783783,
+      "delta_AUC_95_CI": [
+        -0.005050505050505083,
+        0.30827067669172936
+      ],
+      "p_one_sided": 0.048859934853420196,
+      "skipped": false
+    }
+  }
+}
