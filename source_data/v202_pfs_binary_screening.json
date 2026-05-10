@@ -1,0 +1,88 @@
+{
+  "version": "v202",
+  "experiment": "PFS as binary screening task (within X days) on MU-Glioma-Post",
+  "timestamp": "2026-05-10T12:11:30",
+  "horizons_days": [
+    180,
+    365,
+    730
+  ],
+  "horizon_results": {
+    "180": {
+      "n_labelled": 130,
+      "n_positive": 69,
+      "n_negative": 61,
+      "univariate_AUCs": {
+        "v_kernel_s3": {
+          "n": 130,
+          "AUC": 0.6022808259872139
+        },
+        "baseline_volume": {
+          "n": 130,
+          "AUC": 0.6433832293651143
+        },
+        "age": {
+          "n": 130,
+          "AUC": 0.6234259933966104
+        },
+        "idh1": {
+          "n": 130,
+          "AUC": 0.5454977424051919
+        },
+        "mgmt": {
+          "n": 130,
+          "AUC": 0.5081967226550227
+        },
+        "lambda": {
+          "n": 89,
+          "AUC": 0.5060606152665886
+        }
+      },
+      "multivariate": {
+        "n": 130,
+        "events": 69,
+        "auc_clinical_only": 0.6372059873748022,
+        "auc_clinical_plus_Vkernel": 0.6628652844028395,
+        "delta_AUC": 0.025659297028037376
+      }
+    },
+    "365": {
+      "n_labelled": 130,
+      "n_positive": 109,
+      "n_negative": 21,
+      "univariate_AUCs": {
+        "v_kernel_s3": {
+          "n": 130,
+          "AUC": 0.6924421162832352
+        },
+        "baseline_volume": {
+          "n": 130,
+          "AUC": 0.6290956744480701
+        },
+        "age": {
+          "n": 130,
+          "AUC": 0.5539536972840627
+        },
+        "idh1": {
+          "n": 130,
+          "AUC": 0.6404543504828498
+        },
+        "mgmt": {
+          "n": 130,
+          "AUC": 0.5548274389335087
+        },
+        "lambda": {
+          "n": 89,
+          "AUC": 0.6390476290668761
+        }
+      },
+      "multivariate": {
+        "n": 130,
+        "events": 109,
+        "auc_clinical_only": 0.619921360697065,
+        "auc_clinical_plus_Vkernel": 0.7282656250255449,
+        "delta_AUC": 0.10834426432847988
+      }
+    }
+  }
+}

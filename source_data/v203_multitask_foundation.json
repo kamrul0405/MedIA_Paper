@@ -1,0 +1,27 @@
+{
+  "version": "v203",
+  "experiment": "Multi-task foundation model (outgrowth + survival) with shared 3D U-Net encoder",
+  "timestamp": "2026-05-10T12:19:32",
+  "device": "cuda",
+  "epochs": 30,
+  "alpha_outgrowth": 1.0,
+  "beta_survival": 0.5,
+  "loco_1_train_MU_test_RHUH": {
+    "n_outgrowth_train": 470,
+    "n_survival_train": 75,
+    "n_test_RHUH": 39,
+    "c_index_test_RHUH": 0.4643510054844607
+  },
+  "loco_2_train_RHUH_test_MU": {
+    "n_outgrowth_train": 358,
+    "n_survival_train": 39,
+    "n_test_MU": 75,
+    "c_index_test_MU": 0.5457835685848715
+  },
+  "references": {
+    "v201_single_task_train_MU_test_RHUH": 0.4516,
+    "v201_single_task_train_RHUH_test_MU": 0.4897,
+    "clinical_cox_RHUH": 0.6664,
+    "clinical_cox_MU": 0.6011
+  }
+}
