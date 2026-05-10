@@ -1,0 +1,369 @@
+{
+  "version": "v218",
+  "experiment": "SOTA shape/morphological radiomics comparison vs V_kernel logistic",
+  "timestamp": "2026-05-10T16:40:57",
+  "horizon_days": 365,
+  "n_total": 130,
+  "n_pos": 109,
+  "n_neg": 21,
+  "shape_features": [
+    "volume",
+    "surface_area",
+    "sphericity",
+    "compactness2",
+    "elongation",
+    "flatness",
+    "bbox_ratio",
+    "d_boundary_mean",
+    "d_boundary_std",
+    "d_boundary_skew",
+    "d_boundary_kurt",
+    "n_components",
+    "max_comp_fraction"
+  ],
+  "kernel_features_multi_sigma": [
+    "v_kernel_s2",
+    "v_kernel_s3",
+    "v_kernel_s4",
+    "v_kernel_s5"
+  ],
+  "models": {
+    "clinical_only": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt"
+      ],
+      "n_features": 3,
+      "auc": 0.6199213630406292,
+      "auc_95_CI": [
+        0.5299963768115943,
+        0.7881935663243574
+      ],
+      "auc_bootstrap_mean": 0.6558720092193205
+    },
+    "Vkernel_s3_only": {
+      "features": [
+        "v_kernel_s3"
+      ],
+      "n_features": 1,
+      "auc": 0.692442114460463,
+      "auc_95_CI": [
+        0.5816447239384133,
+        0.7991231780322747
+      ],
+      "auc_bootstrap_mean": 0.6909110880314777
+    },
+    "Vkernel_multi_sigma": {
+      "features": [
+        "v_kernel_s2",
+        "v_kernel_s3",
+        "v_kernel_s4",
+        "v_kernel_s5"
+      ],
+      "n_features": 4,
+      "auc": 0.7579729139362167,
+      "auc_95_CI": [
+        0.6808634529542303,
+        0.8714481064549714
+      ],
+      "auc_bootstrap_mean": 0.7798720584768646
+    },
+    "clin_plus_Vkernel_s3": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "v_kernel_s3"
+      ],
+      "n_features": 4,
+      "auc": 0.728265618173875,
+      "auc_95_CI": [
+        0.6242578023828024,
+        0.8559203548644337
+      ],
+      "auc_bootstrap_mean": 0.7422337980939611
+    },
+    "clin_plus_Vkernel_multi": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "v_kernel_s2",
+        "v_kernel_s3",
+        "v_kernel_s4",
+        "v_kernel_s5"
+      ],
+      "n_features": 7,
+      "auc": 0.8147662734818699,
+      "auc_95_CI": [
+        0.758367891452754,
+        0.9184982764876632
+      ],
+      "auc_bootstrap_mean": 0.8403074229813897
+    },
+    "shape_only": {
+      "features": [
+        "volume",
+        "surface_area",
+        "sphericity",
+        "compactness2",
+        "elongation",
+        "flatness",
+        "bbox_ratio",
+        "d_boundary_mean",
+        "d_boundary_std",
+        "d_boundary_skew",
+        "d_boundary_kurt",
+        "n_components",
+        "max_comp_fraction"
+      ],
+      "n_features": 13,
+      "auc": 0.72870249017038,
+      "auc_95_CI": [
+        0.7162507197046671,
+        0.9103731579588357
+      ],
+      "auc_bootstrap_mean": 0.810946264925692
+    },
+    "clin_plus_shape": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "volume",
+        "surface_area",
+        "sphericity",
+        "compactness2",
+        "elongation",
+        "flatness",
+        "bbox_ratio",
+        "d_boundary_mean",
+        "d_boundary_std",
+        "d_boundary_skew",
+        "d_boundary_kurt",
+        "n_components",
+        "max_comp_fraction"
+      ],
+      "n_features": 16,
+      "auc": 0.7474879860200961,
+      "auc_95_CI": [
+        0.7522387781501516,
+        0.9388370577515315
+      ],
+      "auc_bootstrap_mean": 0.8445957327269838
+    },
+    "Vkernel_s3_plus_shape": {
+      "features": [
+        "v_kernel_s3",
+        "volume",
+        "surface_area",
+        "sphericity",
+        "compactness2",
+        "elongation",
+        "flatness",
+        "bbox_ratio",
+        "d_boundary_mean",
+        "d_boundary_std",
+        "d_boundary_skew",
+        "d_boundary_kurt",
+        "n_components",
+        "max_comp_fraction"
+      ],
+      "n_features": 14,
+      "auc": 0.7356924421144605,
+      "auc_95_CI": [
+        0.7267882242233658,
+        0.9196275848103679
+      ],
+      "auc_bootstrap_mean": 0.8256484194357624
+    },
+    "clin_plus_shape_plus_Vkernel_s3": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "volume",
+        "surface_area",
+        "sphericity",
+        "compactness2",
+        "elongation",
+        "flatness",
+        "bbox_ratio",
+        "d_boundary_mean",
+        "d_boundary_std",
+        "d_boundary_skew",
+        "d_boundary_kurt",
+        "n_components",
+        "max_comp_fraction",
+        "v_kernel_s3"
+      ],
+      "n_features": 17,
+      "auc": 0.7771952817824378,
+      "auc_95_CI": [
+        0.7676613154507892,
+        0.9538254051185086
+      ],
+      "auc_bootstrap_mean": 0.8657046456072449
+    },
+    "clin_plus_shape_plus_Vkernel_multi": {
+      "features": [
+        "age",
+        "idh1",
+        "mgmt",
+        "volume",
+        "surface_area",
+        "sphericity",
+        "compactness2",
+        "elongation",
+        "flatness",
+        "bbox_ratio",
+        "d_boundary_mean",
+        "d_boundary_std",
+        "d_boundary_skew",
+        "d_boundary_kurt",
+        "n_components",
+        "max_comp_fraction",
+        "v_kernel_s2",
+        "v_kernel_s3",
+        "v_kernel_s4",
+        "v_kernel_s5"
+      ],
+      "n_features": 20,
+      "auc": 0.8488422892092616,
+      "auc_95_CI": [
+        0.852164769619907,
+        0.9756358734674525
+      ],
+      "auc_bootstrap_mean": 0.9169551831613458
+    }
+  },
+  "reclassification_vs_clin": {
+    "Vkernel_s3_only": {
+      "NRI": 0.22542595019659234,
+      "NRI_p_one_sided": 0.337,
+      "NRI_95_CI": [
+        -0.6185358471015728,
+        0.8973499278499277
+      ],
+      "IDI": -0.024196056657624254,
+      "IDI_p_one_sided": 0.736,
+      "IDI_95_CI": [
+        -0.1845762112985302,
+        0.07141640730084405
+      ]
+    },
+    "Vkernel_multi_sigma": {
+      "NRI": 0.39755351681957185,
+      "NRI_p_one_sided": 0.208,
+      "NRI_95_CI": [
+        -0.4826513519174603,
+        1.1282124229492652
+      ],
+      "IDI": 0.04221148618841164,
+      "IDI_p_one_sided": 0.311,
+      "IDI_95_CI": [
+        -0.13060752025767292,
+        0.2429799357913794
+      ]
+    },
+    "clin_plus_Vkernel_s3": {
+      "NRI": 0.4307557885539537,
+      "NRI_p_one_sided": 0.035,
+      "NRI_95_CI": [
+        -0.03232512828140103,
+        0.9060141509433961
+      ],
+      "IDI": 0.053581687688783464,
+      "IDI_p_one_sided": 0.006,
+      "IDI_95_CI": [
+        0.004001517253635262,
+        0.15243984005082364
+      ]
+    },
+    "clin_plus_Vkernel_multi": {
+      "NRI": 0.8047182175622543,
+      "NRI_p_one_sided": 0.0,
+      "NRI_95_CI": [
+        0.3736709855683686,
+        1.3570558763920226
+      ],
+      "IDI": 0.1115730966043813,
+      "IDI_p_one_sided": 0.0,
+      "IDI_95_CI": [
+        0.0480681286506162,
+        0.28044640688410327
+      ]
+    },
+    "shape_only": {
+      "NRI": 0.35386631716906947,
+      "NRI_p_one_sided": 0.071,
+      "NRI_95_CI": [
+        -0.20084175084175085,
+        1.222479917481949
+      ],
+      "IDI": 0.012445309510645042,
+      "IDI_p_one_sided": 0.1,
+      "IDI_95_CI": [
+        -0.06645146502544637,
+        0.3337964648223674
+      ]
+    },
+    "clin_plus_shape": {
+      "NRI": 0.5190039318479684,
+      "NRI_p_one_sided": 0.0,
+      "NRI_95_CI": [
+        0.5155000198578181,
+        1.446317450478095
+      ],
+      "IDI": 0.08893536942279401,
+      "IDI_p_one_sided": 0.0,
+      "IDI_95_CI": [
+        0.08545400972642762,
+        0.39131032094061236
+      ]
+    },
+    "Vkernel_s3_plus_shape": {
+      "NRI": 0.5993883792048929,
+      "NRI_p_one_sided": 0.024,
+      "NRI_95_CI": [
+        0.0032475276468028587,
+        1.240031285375507
+      ],
+      "IDI": 0.027140662915161262,
+      "IDI_p_one_sided": 0.073,
+      "IDI_95_CI": [
+        -0.051725429496280374,
+        0.3525465143390064
+      ]
+    },
+    "clin_plus_shape_plus_Vkernel_s3": {
+      "NRI": 0.764525993883792,
+      "NRI_p_one_sided": 0.0,
+      "NRI_95_CI": [
+        0.5506372606098797,
+        1.4868969298245613
+      ],
+      "IDI": 0.10293135834097344,
+      "IDI_p_one_sided": 0.0,
+      "IDI_95_CI": [
+        0.09218012677294429,
+        0.42816952575651424
+      ]
+    },
+    "clin_plus_shape_plus_Vkernel_multi": {
+      "NRI": 0.8230668414154654,
+      "NRI_p_one_sided": 0.0,
+      "NRI_95_CI": [
+        0.8816972007187116,
+        1.654163075486605
+      ],
+      "IDI": 0.1566396050414528,
+      "IDI_p_one_sided": 0.0,
+      "IDI_95_CI": [
+        0.1710190891123034,
+        0.5047993552731386
+      ]
+    }
+  }
+}
