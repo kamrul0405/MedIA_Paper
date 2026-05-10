@@ -1,0 +1,46 @@
+{
+  "version": "v200",
+  "experiment": "Per-patient lambda vs molecular features (IDH1, MGMT) on MU-Glioma-Post",
+  "timestamp": "2026-05-10T11:36:39",
+  "n_total": 102,
+  "test_1_idh1": {
+    "n_mut": 18,
+    "n_wt": 80,
+    "mean_lambda_mut": 3.8943610098780823,
+    "mean_lambda_wt": 12.7071869412617,
+    "median_lambda_mut": 3.1228639191348977,
+    "median_lambda_wt": 4.44873047726034,
+    "mannwhitney_u": 576.0,
+    "p_value_raw": 0.18798307889719912,
+    "p_value_bonferroni": 0.5639492366915974
+  },
+  "test_2_mgmt": {
+    "n_methylated": 36,
+    "n_unmethylated": 49,
+    "mean_lambda_methylated": 6.369567739367401,
+    "mean_lambda_unmethylated": 16.10529128642108,
+    "median_lambda_methylated": 2.7848418616023616,
+    "median_lambda_unmethylated": 4.771425220303786,
+    "mannwhitney_u": 691.0,
+    "p_value_raw": 0.09021067930871182,
+    "p_value_bonferroni": 0.27063203792613544
+  },
+  "test_3_age": {
+    "n": 102,
+    "spearman_rho": -0.004696204664788402,
+    "p_value_raw": 0.962636724816181,
+    "p_value_bonferroni": 1.0
+  },
+  "subgroup_means": {
+    "IDH=0_MGMT=0": 18.03015567884652,
+    "IDH=0_MGMT=1": 7.653120568546562,
+    "IDH=1_MGMT=1": 3.81538901212719,
+    "IDH=1_MGMT=0": 2.936506756628777
+  },
+  "subgroup_n": {
+    "IDH=0_MGMT=0": 43,
+    "IDH=0_MGMT=1": 24,
+    "IDH=1_MGMT=1": 11,
+    "IDH=1_MGMT=0": 4
+  }
+}

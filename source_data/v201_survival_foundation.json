@@ -1,0 +1,32 @@
+{
+  "version": "v201",
+  "experiment": "Survival-supervised 3D U-Net (Cox PH loss) trained on baseline mask + bimodal kernel",
+  "timestamp": "2026-05-10T11:37:15",
+  "device": "cuda",
+  "epochs": 50,
+  "seed": 42,
+  "results": {
+    "train_MU_test_RHUH": {
+      "n_train": 75,
+      "n_test": 39,
+      "c_index_test": 0.4515539305301645
+    },
+    "train_RHUH_test_MU": {
+      "n_train": 39,
+      "n_test": 75,
+      "c_index_test": 0.48968512486427795
+    },
+    "train_RHUH_test_RHUH": {
+      "n_train": 39,
+      "n_test": 39,
+      "c_index_test": 0.7038391224862889,
+      "note": "within-training (overfit) C-index for comparison"
+    }
+  },
+  "references": {
+    "round_33_RHUH_clinical_C": 0.6664,
+    "round_33_RHUH_clinical_plus_Vkernel_C": 0.6618,
+    "round_35_RHUH_n13_clinical_lambda_Vkernel_C": 0.8833,
+    "round_36_MU_clinical_C": 0.6011
+  }
+}
