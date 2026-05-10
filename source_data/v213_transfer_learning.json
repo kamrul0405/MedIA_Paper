@@ -1,0 +1,60 @@
+{
+  "version": "v213",
+  "experiment": "Transfer learning: pretrain on MU, freeze encoder, head-only fine-tune on RHUH (5-fold CV)",
+  "timestamp": "2026-05-10T15:03:30",
+  "device": "cuda",
+  "horizon_days": 365,
+  "pretrain_epochs": 30,
+  "ft_epochs": 50,
+  "n_mu_pretrain": 130,
+  "n_rhuh": 31,
+  "n_folds": 5,
+  "transfer_5fold": {
+    "fold_aucs": [
+      0.9,
+      0.6,
+      1.0,
+      1.0,
+      0.75
+    ],
+    "fold_mean": 0.85,
+    "fold_std": 0.15491933384829668,
+    "pooled_oof_auc": 0.8043478260869565
+  },
+  "scratch_5fold": {
+    "fold_aucs": [
+      0.8,
+      0.7,
+      0.8,
+      0.75,
+      0.5
+    ],
+    "fold_mean": 0.71,
+    "fold_std": 0.11135528725660046,
+    "pooled_oof_auc": 0.6902173913043479
+  },
+  "bootstrap": {
+    "transfer_auc_mean": 0.7960579059978992,
+    "transfer_auc_95_CI": [
+      0.6296991655687308,
+      0.9349249482401657
+    ],
+    "scratch_auc_mean": 0.6824522073418396,
+    "scratch_auc_95_CI": [
+      0.5142694805194805,
+      0.875
+    ],
+    "delta_mean": 0.11360569865605942,
+    "delta_95_CI": [
+      0.005803571428571411,
+      0.23861413043478258
+    ],
+    "delta_p_one_sided": 0.025
+  },
+  "comparison": {
+    "v211_loco_mu_to_rhuh_no_finetune": 0.5109,
+    "v213_scratch_rhuh_5fold": 0.6902173913043479,
+    "v213_transfer_frozen_encoder": 0.8043478260869565
+  },
+  "elapsed_seconds": 30.8467435836792
+}
