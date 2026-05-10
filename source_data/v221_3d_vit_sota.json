@@ -1,0 +1,92 @@
+{
+  "version": "v221",
+  "experiment": "SOTA 3D Vision Transformer comparison + comprehensive architecture leaderboard",
+  "timestamp": "2026-05-10T17:03:02",
+  "device": "cuda",
+  "horizon_days": 365,
+  "n_folds": 5,
+  "epochs_per_fold": 30,
+  "n_mu": 130,
+  "vit_params": 237185,
+  "vit_5fold": {
+    "fold_aucs": [
+      0.5636363636363637,
+      0.8409090909090909,
+      0.5568181818181818,
+      0.7272727272727273,
+      0.7261904761904762
+    ],
+    "fold_mean": 0.682965367965368,
+    "fold_std": 0.10856361778624701,
+    "pooled_oof_auc": 0.5993883792048931
+  },
+  "sota_leaderboard": [
+    {
+      "method": "v202 logistic clinical only (3 features)",
+      "auc": 0.62,
+      "params_or_feats": 3,
+      "kind": "logistic"
+    },
+    {
+      "method": "v202 logistic clin + V_kernel \u03c3=3 (4 features)",
+      "auc": 0.728,
+      "params_or_feats": 4,
+      "kind": "logistic"
+    },
+    {
+      "method": "**v218 logistic clin + V_kernel multi-\u03c3 (7 feats)**",
+      "auc": 0.815,
+      "params_or_feats": 7,
+      "kind": "logistic"
+    },
+    {
+      "method": "v218 kitchen sink (clin+shape+V_k multi-\u03c3, 20 feats)",
+      "auc": 0.849,
+      "params_or_feats": 20,
+      "kind": "logistic"
+    },
+    {
+      "method": "v218 shape-only radiomics (13 feats)",
+      "auc": 0.729,
+      "params_or_feats": 13,
+      "kind": "logistic"
+    },
+    {
+      "method": "v207 SimpleCNN supervised (multi-seed mean)",
+      "auc": 0.586,
+      "params_or_feats": 488000,
+      "kind": "deep"
+    },
+    {
+      "method": "v209 deep ensemble 50 models",
+      "auc": 0.587,
+      "params_or_feats": 488000,
+      "kind": "deep"
+    },
+    {
+      "method": "v215 SimpleCNN + SimCLR pretrain",
+      "auc": 0.706,
+      "params_or_feats": 488000,
+      "kind": "deep"
+    },
+    {
+      "method": "v219(B) 3D ResNet-18 SOTA (4.7M params)",
+      "auc": 0.568,
+      "params_or_feats": 4680000,
+      "kind": "deep"
+    },
+    {
+      "method": "v219(C) 3D ResNet-18 + SimCLR",
+      "auc": 0.577,
+      "params_or_feats": 4680000,
+      "kind": "deep"
+    },
+    {
+      "method": "**v221 3D Vision Transformer SOTA**",
+      "auc": 0.5993883792048931,
+      "params_or_feats": 237185,
+      "kind": "deep"
+    }
+  ],
+  "elapsed_seconds": 102.92866659164429
+}

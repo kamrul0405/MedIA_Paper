@@ -1,0 +1,97 @@
+{
+  "version": "v220",
+  "experiment": "Multi-\u03c3 V_kernel comprehensive validation: cross-cohort + meta-analysis + continuous PFS Cox",
+  "timestamp": "2026-05-10T17:01:59",
+  "horizon_days": 365,
+  "n_bootstraps": 1000,
+  "cohorts": {
+    "MU": {
+      "n_cc": 130,
+      "n_pos": 109
+    },
+    "RHUH": {
+      "n_cc": 31,
+      "n_pos": 23
+    }
+  },
+  "cross_cohort": {
+    "features_clin": [
+      "age",
+      "idh1"
+    ],
+    "features_full": [
+      "age",
+      "idh1",
+      "v_kernel_s2",
+      "v_kernel_s3",
+      "v_kernel_s4",
+      "v_kernel_s5"
+    ],
+    "MU_in_sample": {
+      "auc_clin": 0.6242900830056793,
+      "auc_full": 0.8152031454783749,
+      "delta": 0.19091306247269557,
+      "bootstrap_mean": 0.19647311157582717,
+      "bootstrap_var": 0.004327662775060135,
+      "bootstrap_95_CI": [
+        0.07190964764613673,
+        0.3329728265618174
+      ]
+    },
+    "RHUH_external": {
+      "auc_clin": 0.5217391304347826,
+      "auc_full": 0.5326086956521738,
+      "delta_point": 0.010869565217391242,
+      "bootstrap_mean": 0.009950793428892272,
+      "bootstrap_var": 0.010128238610938988,
+      "bootstrap_95_CI": [
+        -0.1630731225296442,
+        0.21443001443001442
+      ],
+      "p_one_sided": 0.4864864864864865
+    }
+  },
+  "meta_analysis_multi_sigma": {
+    "weight_MU": 231.07160885152481,
+    "weight_RHUH": 98.73385081192218,
+    "pooled_delta": 0.14063393064836102,
+    "pooled_se": 0.05506442133250736,
+    "pooled_95_CI": [
+      0.03270766483664661,
+      0.24856019646007543
+    ],
+    "z_score": 2.5539890776140344,
+    "one_sided_p": 0.005324829859196023,
+    "vs_round_43_single_sigma": {
+      "pooled_delta": 0.083,
+      "p_one_sided": 0.036
+    }
+  },
+  "cox_pfs_multi_sigma": {
+    "n_total": 130,
+    "n_events": 130,
+    "clin_only": {
+      "C": 0.5852708533077661,
+      "partial_loglik": -501.5736240482
+    },
+    "clin_plus_Vk_s3": {
+      "C": 0.6160115052732502,
+      "partial_loglik": -497.9150490121641,
+      "LR_vs_clin": 7.31715007207174,
+      "df": 1,
+      "P_one_sided": 0.006829963593519506
+    },
+    "clin_plus_Vk_multi_sigma": {
+      "C": 0.6446548418024928,
+      "partial_loglik": -492.2482769216928,
+      "LR_vs_clin": 18.650694253014308,
+      "df": 4,
+      "P_one_sided": 0.0009203602686425061
+    },
+    "multi_sigma_incremental_vs_single_sigma": {
+      "LR": 11.333544180942567,
+      "df": 3,
+      "P_one_sided": 0.010052464904719116
+    }
+  }
+}
