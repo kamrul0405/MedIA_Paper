@@ -1,0 +1,144 @@
+{
+  "version": "v224",
+  "experiment": "Extended \u03c3-sweep + Conformal prediction intervals for multi-\u03c3 logistic",
+  "timestamp": "2026-05-10T17:39:24",
+  "horizon_days": 365,
+  "n_total": 130,
+  "n_pos": 109,
+  "alpha_conformal": 0.1,
+  "extended_sigma_sweep": {
+    "clin_only": {
+      "n_features": 3,
+      "auc": 0.6199213630406292,
+      "auc_95_CI": [
+        0.533112563966457,
+        0.7921492151178444
+      ],
+      "auc_bootstrap_mean": 0.6583980526551115
+    },
+    "multi_4_sigmas (round 47, \u03c3=2,3,4,5)": {
+      "n_features": 7,
+      "auc": 0.8147662734818699,
+      "auc_95_CI": [
+        0.7585113636363636,
+        0.9120805110837438
+      ],
+      "auc_bootstrap_mean": 0.8411769307323557
+    },
+    "EXTENDED multi_7_sigmas (\u03c3=1,2,3,4,5,7,10)": {
+      "n_features": 10,
+      "auc": 0.8121450415028396,
+      "auc_95_CI": [
+        0.7899451834862384,
+        0.9453660735412427
+      ],
+      "auc_bootstrap_mean": 0.8732681230830729
+    }
+  },
+  "extended_7sigma_betas": {
+    "intercept": 2.1737429025177444,
+    "age": -0.4080393316578263,
+    "idh1": -0.8267980547824305,
+    "mgmt": -0.03320099761669971,
+    "v_kernel_s1": 0.6930397527242681,
+    "v_kernel_s2": -3.0426482448675225,
+    "v_kernel_s3": 4.140473638206601,
+    "v_kernel_s4": 4.041567072945456,
+    "v_kernel_s5": -4.953393566856919,
+    "v_kernel_s7": -0.3450691589049011,
+    "v_kernel_s10": 0.5008204005626832
+  },
+  "conformal_split_results": {
+    "n_splits": 50,
+    "empirical_coverage_mean": 0.9076923076923077,
+    "empirical_coverage_std": 0.0,
+    "target_coverage": 0.9,
+    "mean_interval_width": 0.9026185551404278,
+    "interval_width_std": 0.07714352985796627,
+    "split_AUC_mean": 0.6882939009810428,
+    "split_AUC_std": 0.07917941236091973,
+    "q_quantile_example": 0.781647970331962,
+    "example_per_patient_intervals": [
+      {
+        "pid": "PatientID_0054",
+        "y": 1,
+        "p_pred": 0.8958332120369519,
+        "p_lower": 0.11418524170498989,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0064",
+        "y": 1,
+        "p_pred": 0.956995839012143,
+        "p_lower": 0.17534786868018104,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0052",
+        "y": 1,
+        "p_pred": 0.9802870793774602,
+        "p_lower": 0.1986391090454982,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0033",
+        "y": 1,
+        "p_pred": 0.8889178661983813,
+        "p_lower": 0.10726989586641933,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0014",
+        "y": 0,
+        "p_pred": 0.9270170253217404,
+        "p_lower": 0.14536905498977837,
+        "p_upper": 1.0,
+        "covered": false
+      },
+      {
+        "pid": "PatientID_0116",
+        "y": 1,
+        "p_pred": 0.7980400898102873,
+        "p_lower": 0.016392119478325307,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0113",
+        "y": 1,
+        "p_pred": 0.6979708440279591,
+        "p_lower": 0.0,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0239",
+        "y": 0,
+        "p_pred": 0.5346536001029333,
+        "p_lower": 0.0,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0039",
+        "y": 1,
+        "p_pred": 0.9087683532928488,
+        "p_lower": 0.1271203829608868,
+        "p_upper": 1.0,
+        "covered": true
+      },
+      {
+        "pid": "PatientID_0169",
+        "y": 1,
+        "p_pred": 0.6682331660561724,
+        "p_lower": 0.0,
+        "p_upper": 1.0,
+        "covered": true
+      }
+    ]
+  }
+}

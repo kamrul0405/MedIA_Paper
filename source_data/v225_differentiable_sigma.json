@@ -1,0 +1,77 @@
+{
+  "version": "v225",
+  "experiment": "Differentiable-\u03c3 end-to-end model: learnable \u03c3 in bimodal kernel",
+  "timestamp": "2026-05-10T17:41:00",
+  "device": "cuda",
+  "horizon_days": 365,
+  "n_folds": 5,
+  "epochs_per_fold": 60,
+  "n_kernels": 4,
+  "init_sigmas": [
+    1.5,
+    2.5,
+    3.5,
+    5.0
+  ],
+  "n_mu": 130,
+  "fold_aucs": [
+    0.7454545454545454,
+    0.625,
+    0.5909090909090909,
+    0.7272727272727273,
+    0.5357142857142857
+  ],
+  "fold_mean_auc": 0.6448701298701298,
+  "fold_std_auc": 0.08016112127127276,
+  "pooled_oof_auc": 0.6055045871559633,
+  "learned_sigmas_per_fold": [
+    [
+      1.6911342144012451,
+      2.3912816047668457,
+      3.218240976333618,
+      4.950307846069336
+    ],
+    [
+      1.6479988098144531,
+      2.4391143321990967,
+      3.3124115467071533,
+      4.760656356811523
+    ],
+    [
+      1.2507567405700684,
+      2.319410562515259,
+      3.897926092147827,
+      4.895110607147217
+    ],
+    [
+      1.4899898767471313,
+      2.488053798675537,
+      3.7920420169830322,
+      4.918271064758301
+    ],
+    [
+      NaN,
+      NaN,
+      NaN,
+      NaN
+    ]
+  ],
+  "learned_sigma_means_across_folds": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+  ],
+  "learned_sigma_stds_across_folds": [
+    NaN,
+    NaN,
+    NaN,
+    NaN
+  ],
+  "comparison": {
+    "v218_fixed_multi_sigma_in_sample": 0.815,
+    "v223_multi_sigma_5fold_OOF": 0.708,
+    "v225_differentiable_sigma_5fold_OOF": 0.6055045871559633
+  },
+  "elapsed_seconds": 160.32920694351196
+}
