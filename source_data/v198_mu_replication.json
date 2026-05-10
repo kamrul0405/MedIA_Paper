@@ -1,0 +1,42 @@
+{
+  "version": "v198",
+  "experiment": "MU-Glioma-Post replication of round-35 lambda + V_kernel synergy",
+  "timestamp": "2026-05-10T10:47:22",
+  "n_clinical_loaded": 201,
+  "n_with_mask": 151,
+  "n_valid_lambda": 102,
+  "n_valid_outcome": 49,
+  "n_complete_case": 49,
+  "outcome_used": "os_days",
+  "spearman": {
+    "lambda": {
+      "rho": 0.10562302330742726,
+      "p": 0.4701109443551799
+    },
+    "V_kernel": {
+      "rho": -0.19139708233147806,
+      "p": 0.18770114761104245
+    }
+  },
+  "multivariate_cox": {
+    "M0_c_index": 0.6011092150170648,
+    "M1_c_index": 0.5870307167235495,
+    "M1_delta_c": -0.014078498293515374,
+    "M2_c_index": 0.5554607508532423,
+    "M2_delta_c": -0.04564846416382251,
+    "LRT_M0_vs_M1": {
+      "chi2": 0.04677009412159805,
+      "p_value": 0.8287820113664682
+    },
+    "LRT_M0_vs_M2": {
+      "chi2": 2.750478763360775,
+      "p_value": 0.2527790778811644
+    }
+  },
+  "round35_RHUH_reference": {
+    "M0_c_index": 0.7833,
+    "M1_c_index": 0.8,
+    "M2_c_index": 0.8833,
+    "LRT_M0_vs_M2_p": 0.0018
+  }
+}
