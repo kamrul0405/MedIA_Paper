@@ -1,0 +1,61 @@
+{
+  "version": "v208",
+  "experiment": "Cross-cohort external validation: train on MU-Glioma-Post, test on RHUH-GBM",
+  "timestamp": "2026-05-10T14:23:01",
+  "horizon_days": 365,
+  "sigma_kernel": 3.0,
+  "features_clin": [
+    "age",
+    "idh1"
+  ],
+  "features_full": [
+    "age",
+    "idh1",
+    "v_kernel_s3"
+  ],
+  "training": {
+    "cohort": "MU-Glioma-Post",
+    "n_complete": 130,
+    "n_pos": 109,
+    "n_neg": 21,
+    "auc_clin_in_sample": 0.6242900830056793,
+    "auc_full_in_sample": 0.7313237221494102,
+    "delta_in_sample": 0.10703363914373087,
+    "beta_clin": [
+      1.7510633953557329,
+      -0.35032486879774105,
+      -0.7103891976709932
+    ],
+    "beta_full": [
+      1.8916558272199528,
+      -0.34733081406530864,
+      -0.6773491344684129,
+      0.712981863034596
+    ]
+  },
+  "external_test": {
+    "cohort": "RHUH-GBM",
+    "n_complete": 31,
+    "n_pos": 23,
+    "n_neg": 8,
+    "auc_clin_external": 0.5217391304347826,
+    "auc_full_external": 0.5163043478260869,
+    "delta_external_point": -0.005434782608695676,
+    "delta_external_bootstrap_mean": 0.010452078959617413,
+    "delta_external_bootstrap_median": 0.006666666666666599,
+    "delta_external_95_CI": [
+      -0.1964556277056277,
+      0.2384615384615384
+    ],
+    "p_one_sided": 0.4804804804804805,
+    "auc_clin_external_95_CI": [
+      0.505036075036075,
+      0.8077622377622378
+    ],
+    "auc_full_external_95_CI": [
+      0.5054155687307861,
+      0.8453674948240164
+    ],
+    "n_bootstrap_valid": 999
+  }
+}
