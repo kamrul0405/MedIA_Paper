@@ -1,0 +1,153 @@
+{
+  "version": "v222",
+  "experiment": "IPCW time-dependent AUC at multi-horizons with multi-\u03c3 V_kernel; compares to naive (excl-censored) AUC",
+  "timestamp": "2026-05-10T17:19:23",
+  "n_total": 130,
+  "n_events": 130,
+  "n_censored": 0,
+  "horizons": [
+    180,
+    270,
+    365,
+    450,
+    540,
+    730
+  ],
+  "horizon_results": {
+    "180": {
+      "n_cases": 69,
+      "n_controls": 61,
+      "n_excluded_naive": 0,
+      "naive": {
+        "auc_clin": 0.6372059871703493,
+        "auc_Vk_s3": 0.6628652886671419,
+        "auc_multi_sigma": 0.6799714896650035,
+        "delta_multi_sigma": 0.04276550249465427
+      },
+      "ipcw": {
+        "auc_clin": 0.6375623663578047,
+        "auc_Vk_s3": 0.6628652886671419,
+        "auc_multi_sigma": 0.6799714896650035,
+        "delta_Vk_s3": 0.025302922309337172,
+        "delta_multi_sigma": 0.042409123307198815
+      },
+      "bootstrap_ipcw_multi_sigma": {
+        "n_valid": 500,
+        "mean": 0.043786934437090114,
+        "95_CI": [
+          -0.03718755743455259,
+          0.11994911449205312
+        ],
+        "p_one_sided": 0.148
+      }
+    },
+    "270": {
+      "n_cases": 97,
+      "n_controls": 33,
+      "n_excluded_naive": 0,
+      "naive": {
+        "auc_clin": 0.6427067669172932,
+        "auc_Vk_s3": 0.7299248120300752,
+        "auc_multi_sigma": 0.7969924812030076,
+        "delta_multi_sigma": 0.15428571428571436
+      },
+      "ipcw": {
+        "auc_clin": 0.6800999687597625,
+        "auc_Vk_s3": 0.7228990940331147,
+        "auc_multi_sigma": 0.8078725398313027,
+        "delta_Vk_s3": 0.04279912527335217,
+        "delta_multi_sigma": 0.12777257107154016
+      },
+      "bootstrap_ipcw_multi_sigma": {
+        "n_valid": 500,
+        "mean": 0.13115061999743255,
+        "95_CI": [
+          0.01691233309825375,
+          0.23998392596145054
+        ],
+        "p_one_sided": 0.014
+      }
+    },
+    "365": {
+      "n_cases": 109,
+      "n_controls": 21,
+      "n_excluded_naive": 0,
+      "naive": {
+        "auc_clin": 0.6199213630406292,
+        "auc_Vk_s3": 0.728265618173875,
+        "auc_multi_sigma": 0.8147662734818699,
+        "delta_multi_sigma": 0.19484491044124075
+      },
+      "ipcw": {
+        "auc_clin": 0.6216688510266491,
+        "auc_Vk_s3": 0.728265618173875,
+        "auc_multi_sigma": 0.8147662734818698,
+        "delta_Vk_s3": 0.10659676714722588,
+        "delta_multi_sigma": 0.19309742245522066
+      },
+      "bootstrap_ipcw_multi_sigma": {
+        "n_valid": 500,
+        "mean": 0.19808343481627305,
+        "95_CI": [
+          0.07097553959405378,
+          0.3488040629095674
+        ],
+        "p_one_sided": 0.0
+      }
+    },
+    "450": {
+      "n_cases": 115,
+      "n_controls": 15,
+      "n_excluded_naive": 0,
+      "naive": {
+        "auc_clin": 0.6446376811594203,
+        "auc_Vk_s3": 0.7275362318840579,
+        "auc_multi_sigma": 0.8040579710144927,
+        "delta_multi_sigma": 0.1594202898550724
+      },
+      "ipcw": {
+        "auc_clin": 0.6463768115942029,
+        "auc_Vk_s3": 0.7275362318840579,
+        "auc_multi_sigma": 0.8040579710144927,
+        "delta_Vk_s3": 0.08115942028985501,
+        "delta_multi_sigma": 0.15768115942028982
+      },
+      "bootstrap_ipcw_multi_sigma": {
+        "n_valid": 500,
+        "mean": 0.1546676097859517,
+        "95_CI": [
+          0.014001010617572533,
+          0.31207202643903403
+        ],
+        "p_one_sided": 0.018
+      }
+    },
+    "540": {
+      "n_cases": 122,
+      "n_controls": 8,
+      "n_excluded_naive": 0,
+      "naive": {
+        "auc_clin": 0.7663934426229508,
+        "auc_Vk_s3": 0.7612704918032787,
+        "auc_multi_sigma": 0.8299180327868853,
+        "delta_multi_sigma": 0.06352459016393441
+      },
+      "ipcw": {
+        "auc_clin": 0.7694672131147541,
+        "auc_Vk_s3": 0.7612704918032787,
+        "auc_multi_sigma": 0.8299180327868853,
+        "delta_Vk_s3": -0.008196721311475419,
+        "delta_multi_sigma": 0.06045081967213117
+      },
+      "bootstrap_ipcw_multi_sigma": {
+        "n_valid": 500,
+        "mean": 0.06125979591749372,
+        "95_CI": [
+          -0.0455542257217848,
+          0.19638168617998142
+        ],
+        "p_one_sided": 0.15
+      }
+    }
+  }
+}
