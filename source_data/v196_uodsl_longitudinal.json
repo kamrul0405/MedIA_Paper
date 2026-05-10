@@ -1,0 +1,87 @@
+{
+  "version": "v196",
+  "experiment": "Longitudinal evolution of UODSL lambda in PROTEAS-brain-mets",
+  "timestamp": "2026-05-10T10:24:32",
+  "n_observations_total": 121,
+  "n_valid_lambda_fits": 29,
+  "n_patients_with_multi_followup": 6,
+  "n_patients_with_3plus_followup": 3,
+  "per_patient_spearman_summary": {
+    "n_patients": 3,
+    "mean_rho": -0.3,
+    "median_rho": -0.5,
+    "n_rho_positive": 1,
+    "n_rho_negative": 2,
+    "sign_test_p_value": 1.0
+  },
+  "by_followup_index": {
+    "0": {
+      "n": 5,
+      "mean": 1.0229569489441208,
+      "median": 0.9335349530476478,
+      "std": 0.19401293875581155
+    },
+    "1": {
+      "n": 8,
+      "mean": 2.106926500830155,
+      "median": 1.6531367681762672,
+      "std": 1.443602930216291
+    },
+    "2": {
+      "n": 8,
+      "mean": 2.204836243595132,
+      "median": 1.1273607517824584,
+      "std": 2.1408411421287594
+    },
+    "3": {
+      "n": 6,
+      "mean": 2.031653337781211,
+      "median": 1.5824960530343497,
+      "std": 1.2464496549545874
+    },
+    "4": {
+      "n": 2,
+      "mean": 2.0697674143648017,
+      "median": 2.0697674143648017,
+      "std": 1.4435237685860702
+    }
+  },
+  "variance_components": {
+    "inter_patient_variance": 2.5744444211810054,
+    "mean_intra_patient_variance": 0.42817240643694526,
+    "icc_proxy": 0.8336835695833259,
+    "interpretation": "HIGH ICC: lambda is more PATIENT-INTRINSIC than time-varying (patient biology dominates)."
+  },
+  "per_patient_spearman": [
+    {
+      "pid": "P08",
+      "n_followups": 3,
+      "rho": -0.5,
+      "p_value": 0.6666666666666666,
+      "lambda_min": 0.7236456097761313,
+      "lambda_max": 1.2292395424117724,
+      "lambda_mean": 1.019678904355776,
+      "lambda_std": 0.21527416074111305
+    },
+    {
+      "pid": "P13",
+      "n_followups": 4,
+      "rho": -0.7999999999999999,
+      "p_value": 0.2000000000000001,
+      "lambda_min": 0.6262436457787315,
+      "lambda_max": 1.3794850021146965,
+      "lambda_mean": 0.9185843891549453,
+      "lambda_std": 0.2794329209048615
+    },
+    {
+      "pid": "P28",
+      "n_followups": 4,
+      "rho": 0.39999999999999997,
+      "p_value": 0.6000000000000001,
+      "lambda_min": 3.21325524636554,
+      "lambda_max": 3.693498030628925,
+      "lambda_mean": 3.4965301085914238,
+      "lambda_std": 0.17618071045693665
+    }
+  ]
+}
